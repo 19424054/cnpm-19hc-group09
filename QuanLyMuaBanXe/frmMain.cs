@@ -17,5 +17,29 @@ namespace QuanLyMuaBanXe
         {
             InitializeComponent();
         }
+
+        private void tileItem3_ItemClick(object sender, TileItemEventArgs e)
+        {
+            myFroms.frmManagementMain frm = new myFroms.frmManagementMain();
+            frm.ShowDialog();
+        }
+
+        private void tileItem1_ItemClick(object sender, TileItemEventArgs e)
+        {
+            myFroms.frmBoPhanKyThuat frm = new myFroms.frmBoPhanKyThuat();
+            frm.ShowDialog();
+        }
+
+        private void tileItem4_ItemClick(object sender, TileItemEventArgs e)
+        {
+            myFroms.frmBoPhanTiepNhan frm = new myFroms.frmBoPhanTiepNhan();
+            frm.ShowDialog();
+        }
+
+        private void tileItem2_ItemClick(object sender, TileItemEventArgs e)
+        {
+            myFroms.frmBoPhanBanXe frm = new myFroms.frmBoPhanBanXe();
+            frm.ShowDialog();
+        }
     }
 }

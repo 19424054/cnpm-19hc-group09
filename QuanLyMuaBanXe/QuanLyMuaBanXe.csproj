@@ -38,6 +38,10 @@
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,10 +67,105 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="myDataSet\dsSystem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSystem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="myFroms\frmAddInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmAddInfor.Designer.cs">
+      <DependentUpon>frmAddInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myFroms\frmAddInforCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmAddInforCustomer.Designer.cs">
+      <DependentUpon>frmAddInforCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myFroms\frmBoPhanBanXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmBoPhanBanXe.Designer.cs">
+      <DependentUpon>frmBoPhanBanXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myFroms\frmBoPhanKyThuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmBoPhanKyThuat.Designer.cs">
+      <DependentUpon>frmBoPhanKyThuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myFroms\frmBoPhanTiepNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmBoPhanTiepNhan.Designer.cs">
+      <DependentUpon>frmBoPhanTiepNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myFroms\frmKiemTraTinhTrangXeBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmKiemTraTinhTrangXeBan.Designer.cs">
+      <DependentUpon>frmKiemTraTinhTrangXeBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myFroms\frmManagementMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmManagementMain.Designer.cs">
+      <DependentUpon>frmManagementMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myFroms\frmThongTinSuaChua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmThongTinSuaChua.Designer.cs">
+      <DependentUpon>frmThongTinSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myUsercontrol\usListCustomerInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myUsercontrol\usListCustomerInfo.Designer.cs">
+      <DependentUpon>usListCustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myUsercontrol\usListProduction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myUsercontrol\usListProduction.Designer.cs">
+      <DependentUpon>usListProduction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmAddInfor.resx">
+      <DependentUpon>frmAddInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmAddInforCustomer.resx">
+      <DependentUpon>frmAddInforCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmBoPhanBanXe.resx">
+      <DependentUpon>frmBoPhanBanXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmBoPhanKyThuat.resx">
+      <DependentUpon>frmBoPhanKyThuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmBoPhanTiepNhan.resx">
+      <DependentUpon>frmBoPhanTiepNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmKiemTraTinhTrangXeBan.resx">
+      <DependentUpon>frmKiemTraTinhTrangXeBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmManagementMain.resx">
+      <DependentUpon>frmManagementMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmThongTinSuaChua.resx">
+      <DependentUpon>frmThongTinSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myUsercontrol\usListCustomerInfo.resx">
+      <DependentUpon>usListCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myUsercontrol\usListProduction.resx">
+      <DependentUpon>usListProduction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -78,6 +177,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="myDataSet\dsSystem.xsc">
+      <DependentUpon>dsSystem.xsd</DependentUpon>
+    </None>
+    <None Include="myDataSet\dsSystem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSystem.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="myDataSet\dsSystem.xss">
+      <DependentUpon>dsSystem.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,8 +201,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="myFroms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
