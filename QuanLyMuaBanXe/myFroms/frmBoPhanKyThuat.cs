@@ -17,5 +17,10 @@ namespace QuanLyMuaBanXe.myFroms
         {
             InitializeComponent();
         }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

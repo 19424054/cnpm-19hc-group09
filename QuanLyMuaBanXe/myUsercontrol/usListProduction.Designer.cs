@@ -50,6 +50,15 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -133,7 +142,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(636, 56);
+            this.barDockControlTop.Size = new System.Drawing.Size(715, 56);
             // 
             // barDockControlBottom
             // 
@@ -141,7 +150,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 404);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(636, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(715, 0);
             // 
             // barDockControlLeft
             // 
@@ -155,7 +164,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(636, 56);
+            this.barDockControlRight.Location = new System.Drawing.Point(715, 56);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 348);
             // 
@@ -169,7 +178,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gcMain);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(636, 348);
+            this.splitContainerControl1.Size = new System.Drawing.Size(715, 348);
             this.splitContainerControl1.SplitterPosition = 159;
             this.splitContainerControl1.TabIndex = 4;
             // 
@@ -229,14 +238,14 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "gridColumn1";
+            this.gridColumn1.Caption = "Năm";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "gridColumn2";
+            this.gridColumn2.Caption = "Tháng";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
@@ -248,17 +257,93 @@
             this.gcMain.MainView = this.gvMain;
             this.gcMain.MenuManager = this.barManager1;
             this.gcMain.Name = "gcMain";
-            this.gcMain.Size = new System.Drawing.Size(467, 348);
+            this.gcMain.Size = new System.Drawing.Size(546, 348);
             this.gcMain.TabIndex = 0;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
             // 
             // gvMain
             // 
+            this.gvMain.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7,
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11});
             this.gvMain.GridControl = this.gcMain;
             this.gvMain.Name = "gvMain";
             this.gvMain.OptionsFind.AlwaysVisible = true;
+            this.gvMain.OptionsView.ColumnAutoWidth = false;
             this.gvMain.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Mã số xe";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 0;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Biển số xe";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 1;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Khách hàng bán";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 2;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "SĐT";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 3;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Địa chỉ";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 4;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Giá mua thấp nhất";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 5;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Giá mua cao nhất";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 6;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Giá giao dịch";
+            this.gridColumn10.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 7;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Trạng thái";
+            this.gridColumn11.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 8;
             // 
             // usListProduction
             // 
@@ -270,7 +355,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "usListProduction";
-            this.Size = new System.Drawing.Size(636, 404);
+            this.Size = new System.Drawing.Size(715, 404);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
@@ -308,5 +393,14 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.GridControl gcMain;
         private DevExpress.XtraGrid.Views.Grid.GridView gvMain;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
     }
 }

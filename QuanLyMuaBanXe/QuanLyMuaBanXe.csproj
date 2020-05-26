@@ -33,15 +33,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -102,6 +114,12 @@
     <Compile Include="myFroms\frmBoPhanTiepNhan.Designer.cs">
       <DependentUpon>frmBoPhanTiepNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="myFroms\frmDinhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmDinhGia.Designer.cs">
+      <DependentUpon>frmDinhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="myFroms\frmKiemTraTinhTrangXeBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,11 +132,35 @@
     <Compile Include="myFroms\frmManagementMain.Designer.cs">
       <DependentUpon>frmManagementMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="myFroms\frmThongTinGiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmThongTinGiaoDich.Designer.cs">
+      <DependentUpon>frmThongTinGiaoDich.cs</DependentUpon>
+    </Compile>
     <Compile Include="myFroms\frmThongTinSuaChua.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="myFroms\frmThongTinSuaChua.Designer.cs">
       <DependentUpon>frmThongTinSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myReport\rptThuChiDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="myReport\rptThuChiDetail.Designer.cs">
+      <DependentUpon>rptThuChiDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myReport\rptThuChi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="myReport\rptThuChi.Designer.cs">
+      <DependentUpon>rptThuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myUsercontrol\usListCustomerInfoSell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myUsercontrol\usListCustomerInfoSell.Designer.cs">
+      <DependentUpon>usListCustomerInfoSell.cs</DependentUpon>
     </Compile>
     <Compile Include="myUsercontrol\usListCustomerInfo.cs">
       <SubType>UserControl</SubType>
@@ -126,11 +168,41 @@
     <Compile Include="myUsercontrol\usListCustomerInfo.Designer.cs">
       <DependentUpon>usListCustomerInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="myUsercontrol\usListProductionQuanLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myUsercontrol\usListProductionQuanLy.Designer.cs">
+      <DependentUpon>usListProductionQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myUsercontrol\usListProductionKyThuatSuaChua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myUsercontrol\usListProductionKyThuatSuaChua.Designer.cs">
+      <DependentUpon>usListProductionKyThuatSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myUsercontrol\usListProductionKyThuatDinhGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myUsercontrol\usListProductionKyThuatDinhGia.Designer.cs">
+      <DependentUpon>usListProductionKyThuatDinhGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="myUsercontrol\usListProduction.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="myUsercontrol\usListProduction.Designer.cs">
       <DependentUpon>usListProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myUsercontrol\usReportBuySellManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myUsercontrol\usReportBuySellManagement.Designer.cs">
+      <DependentUpon>usReportBuySellManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myUsercontrol\usReportBuySell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myUsercontrol\usReportBuySell.Designer.cs">
+      <DependentUpon>usReportBuySell.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -152,20 +224,50 @@
     <EmbeddedResource Include="myFroms\frmBoPhanTiepNhan.resx">
       <DependentUpon>frmBoPhanTiepNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmDinhGia.resx">
+      <DependentUpon>frmDinhGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="myFroms\frmKiemTraTinhTrangXeBan.resx">
       <DependentUpon>frmKiemTraTinhTrangXeBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="myFroms\frmManagementMain.resx">
       <DependentUpon>frmManagementMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmThongTinGiaoDich.resx">
+      <DependentUpon>frmThongTinGiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="myFroms\frmThongTinSuaChua.resx">
       <DependentUpon>frmThongTinSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myReport\rptThuChiDetail.resx">
+      <DependentUpon>rptThuChiDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myReport\rptThuChi.resx">
+      <DependentUpon>rptThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myUsercontrol\usListCustomerInfoSell.resx">
+      <DependentUpon>usListCustomerInfoSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="myUsercontrol\usListCustomerInfo.resx">
       <DependentUpon>usListCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="myUsercontrol\usListProductionQuanLy.resx">
+      <DependentUpon>usListProductionQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myUsercontrol\usListProductionKyThuatSuaChua.resx">
+      <DependentUpon>usListProductionKyThuatSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myUsercontrol\usListProductionKyThuatDinhGia.resx">
+      <DependentUpon>usListProductionKyThuatDinhGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="myUsercontrol\usListProduction.resx">
       <DependentUpon>usListProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myUsercontrol\usReportBuySellManagement.resx">
+      <DependentUpon>usReportBuySellManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myUsercontrol\usReportBuySell.resx">
+      <DependentUpon>usReportBuySell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
