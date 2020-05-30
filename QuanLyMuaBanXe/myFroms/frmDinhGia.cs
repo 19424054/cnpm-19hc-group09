@@ -17,5 +17,17 @@ namespace QuanLyMuaBanXe.myFroms
         {
             InitializeComponent();
         }
+
+        private void labelControl5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmDinhGia_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsSystem.BM_DinhGia_Ban' table. You can move, or remove it, as needed.
+            this.bM_DinhGia_BanTableAdapter.Fill(this.dsSystem.BM_DinhGia_Ban);
+
+        }
     }
 }

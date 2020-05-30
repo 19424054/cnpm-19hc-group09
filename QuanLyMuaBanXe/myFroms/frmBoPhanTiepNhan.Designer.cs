@@ -65,6 +65,7 @@
             this.btnCustombuycar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnCustombuycar.ItemAppearance.Normal.Options.UseFont = true;
             this.btnCustombuycar.Name = "btnCustombuycar";
+            this.btnCustombuycar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCustombuycar_ItemClick);
             // 
             // btnListCarBuy
             // 
@@ -75,6 +76,7 @@
             this.btnListCarBuy.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnListCarBuy.ItemAppearance.Normal.Options.UseFont = true;
             this.btnListCarBuy.Name = "btnListCarBuy";
+            this.btnListCarBuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListCarBuy_ItemClick);
             // 
             // ribbonPage1
             // 

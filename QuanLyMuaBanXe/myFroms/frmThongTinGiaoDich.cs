@@ -13,9 +13,41 @@ namespace QuanLyMuaBanXe.myFroms
 {
     public partial class frmThongTinGiaoDich : DevExpress.XtraEditors.XtraForm
     {
-        public frmThongTinGiaoDich()
+        private int m_id = -1;
+        public frmThongTinGiaoDich(int id)
         {
             InitializeComponent();
+            m_id = id;
+        }
+
+        private void labelControl9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmThongTinGiaoDich_Load(object sender, EventArgs e)
+        {
+            loadData();
+
+        }
+        private void loadData()
+        {
+            if (m_id == -1)
+            {
+
+            }
+            else { 
+                    }
+        }
+        private void saveData()
+        {
+            if (m_id == -1)
+            {
+
+            }
+            else
+            {
+            }
         }
     }
 }

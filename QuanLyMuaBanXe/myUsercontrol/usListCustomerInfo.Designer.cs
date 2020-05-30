@@ -114,6 +114,7 @@
             this.btnAddNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.Image")));
             this.btnAddNew.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.LargeImage")));
             this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddNew_ItemClick);
             // 
             // btnEdit
             // 

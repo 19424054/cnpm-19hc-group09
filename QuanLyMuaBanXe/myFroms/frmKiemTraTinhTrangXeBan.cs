@@ -17,5 +17,17 @@ namespace QuanLyMuaBanXe.myFroms
         {
             InitializeComponent();
         }
+
+        private void labelControl5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmKiemTraTinhTrangXeBan_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsSystem.BM_DinhGia_MuaXe' table. You can move, or remove it, as needed.
+            this.bM_DinhGia_MuaXeTableAdapter.Fill(this.dsSystem.BM_DinhGia_MuaXe);
+
+        }
     }
 }

@@ -25,14 +25,14 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void btnAddNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            myFroms.frmThongTinGiaoDich frm = new myFroms.frmThongTinGiaoDich();
+            myFroms.frmThongTinGiaoDich frm = new myFroms.frmThongTinGiaoDich(-1);
             frm.ShowDialog();
         }
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            myFroms.frmThongTinGiaoDich frm = new myFroms.frmThongTinGiaoDich();
-            frm.ShowDialog();
+         //   myFroms.frmThongTinGiaoDich frm = new myFroms.frmThongTinGiaoDich();
+           // frm.ShowDialog();
         }
     }
 }

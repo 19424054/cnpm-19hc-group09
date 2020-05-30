@@ -22,5 +22,10 @@ namespace QuanLyMuaBanXe.myUsercontrol
         {
 
         }
+
+        private void btnAddNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

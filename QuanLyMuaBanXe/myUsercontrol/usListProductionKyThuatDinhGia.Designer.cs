@@ -114,6 +114,7 @@
             this.btnAddNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.Image")));
             this.btnAddNew.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.LargeImage")));
             this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddNew_ItemClick);
             // 
             // btnEdit
             // 
@@ -138,7 +139,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(636, 56);
+            this.barDockControlTop.Size = new System.Drawing.Size(790, 56);
             // 
             // barDockControlBottom
             // 
@@ -146,7 +147,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 404);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(636, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(790, 0);
             // 
             // barDockControlLeft
             // 
@@ -160,7 +161,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(636, 56);
+            this.barDockControlRight.Location = new System.Drawing.Point(790, 56);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 348);
             // 
@@ -174,7 +175,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gcMain);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(636, 348);
+            this.splitContainerControl1.Size = new System.Drawing.Size(790, 348);
             this.splitContainerControl1.SplitterPosition = 159;
             this.splitContainerControl1.TabIndex = 4;
             // 
@@ -253,7 +254,7 @@
             this.gcMain.MainView = this.gvMain;
             this.gcMain.MenuManager = this.barManager1;
             this.gcMain.Name = "gcMain";
-            this.gcMain.Size = new System.Drawing.Size(467, 348);
+            this.gcMain.Size = new System.Drawing.Size(621, 348);
             this.gcMain.TabIndex = 0;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
@@ -322,7 +323,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "usListProductionKyThuatDinhGia";
-            this.Size = new System.Drawing.Size(636, 404);
+            this.Size = new System.Drawing.Size(790, 404);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);

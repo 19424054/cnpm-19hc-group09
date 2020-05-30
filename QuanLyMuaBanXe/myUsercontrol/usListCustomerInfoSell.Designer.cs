@@ -309,14 +309,14 @@
             this.gridColumn7.Caption = "Mã số xe";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 4;
+            this.gridColumn7.VisibleIndex = 3;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Giá trị";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 5;
+            this.gridColumn8.VisibleIndex = 4;
             // 
             // usListCustomerInfoSell
             // 
