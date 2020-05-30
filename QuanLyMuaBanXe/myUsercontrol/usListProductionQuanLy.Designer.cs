@@ -35,6 +35,7 @@
             this.btnLamMoi = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnAddNew = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -54,7 +55,6 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -95,6 +95,7 @@
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnLamMoi),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnAddNew),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnAddNew),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEdit),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1)});
@@ -108,6 +109,8 @@
             this.btnLamMoi.Id = 0;
             this.btnLamMoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.Image")));
             this.btnLamMoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.LargeImage")));
+            this.btnLamMoi.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnLamMoi.ItemAppearance.Normal.Options.UseFont = true;
             this.btnLamMoi.Name = "btnLamMoi";
             // 
             // btnAddNew
@@ -116,7 +119,10 @@
             this.btnAddNew.Id = 1;
             this.btnAddNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.Image")));
             this.btnAddNew.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.LargeImage")));
+            this.btnAddNew.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnAddNew.ItemAppearance.Normal.Options.UseFont = true;
             this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddNew_ItemClick);
             // 
             // btnEdit
             // 
@@ -124,14 +130,29 @@
             this.btnEdit.Id = 2;
             this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
             this.btnEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.LargeImage")));
+            this.btnEdit.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ItemAppearance.Normal.Options.UseFont = true;
             this.btnEdit.Name = "btnEdit";
+            // 
+            // barLargeButtonItem2
+            // 
+            this.barLargeButtonItem2.Caption = "Định giá";
+            this.barLargeButtonItem2.Id = 4;
+            this.barLargeButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.Image")));
+            this.barLargeButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.LargeImage")));
+            this.barLargeButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barLargeButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
+            this.barLargeButtonItem2.Name = "barLargeButtonItem2";
+            this.barLargeButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem2_ItemClick);
             // 
             // barLargeButtonItem1
             // 
-            this.barLargeButtonItem1.Caption = "Xóa dữ liệu";
+            this.barLargeButtonItem1.Caption = "Hủy định giá";
             this.barLargeButtonItem1.Id = 3;
             this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
             this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
+            this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barLargeButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem1.Name = "barLargeButtonItem1";
             this.barLargeButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem1_ItemClick);
             // 
@@ -232,8 +253,13 @@
             this.gridColumn1,
             this.gridColumn2});
             this.gvMenu.GridControl = this.gcMenu;
+            this.gvMenu.GroupCount = 2;
             this.gvMenu.Name = "gvMenu";
             this.gvMenu.OptionsView.ShowGroupPanel = false;
+            this.gvMenu.OptionsView.ShowIndicator = false;
+            this.gvMenu.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn2, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // gridColumn1
             // 
@@ -247,7 +273,7 @@
             this.gridColumn2.Caption = "Tháng";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 0;
             // 
             // gcMain
             // 
@@ -276,6 +302,8 @@
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.Caption = "Mã số xe";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
@@ -283,6 +311,8 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "Giá khi mua";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -290,6 +320,8 @@
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "Chi phí sửa chữa";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -297,21 +329,17 @@
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.Caption = "Định giá bán";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 3;
             // 
-            // barLargeButtonItem2
-            // 
-            this.barLargeButtonItem2.Caption = "Định giá";
-            this.barLargeButtonItem2.Id = 4;
-            this.barLargeButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.Image")));
-            this.barLargeButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.LargeImage")));
-            this.barLargeButtonItem2.Name = "barLargeButtonItem2";
-            // 
             // gridColumn7
             // 
+            this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn7.AppearanceHeader.Options.UseFont = true;
             this.gridColumn7.Caption = "Trạng thái";
             this.gridColumn7.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.gridColumn7.Name = "gridColumn7";

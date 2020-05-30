@@ -33,9 +33,8 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnLamMoi = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.btnAddNew = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.btnEdit = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.btnEdit = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -77,11 +76,10 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnLamMoi,
-            this.btnAddNew,
             this.btnEdit,
             this.barLargeButtonItem1});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 4;
+            this.barManager1.MaxItemId = 5;
             // 
             // bar2
             // 
@@ -91,9 +89,8 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnLamMoi),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnAddNew),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEdit),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEdit)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -104,15 +101,20 @@
             this.btnLamMoi.Id = 0;
             this.btnLamMoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.Image")));
             this.btnLamMoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.LargeImage")));
+            this.btnLamMoi.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnLamMoi.ItemAppearance.Normal.Options.UseFont = true;
             this.btnLamMoi.Name = "btnLamMoi";
             // 
-            // btnAddNew
+            // barLargeButtonItem1
             // 
-            this.btnAddNew.Caption = "Thêm mới";
-            this.btnAddNew.Id = 1;
-            this.btnAddNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.Image")));
-            this.btnAddNew.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.LargeImage")));
-            this.btnAddNew.Name = "btnAddNew";
+            this.barLargeButtonItem1.Caption = "Thêm mới";
+            this.barLargeButtonItem1.Id = 4;
+            this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
+            this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
+            this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barLargeButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
+            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
+            this.barLargeButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem1_ItemClick_1);
             // 
             // btnEdit
             // 
@@ -120,16 +122,9 @@
             this.btnEdit.Id = 2;
             this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
             this.btnEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.LargeImage")));
+            this.btnEdit.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ItemAppearance.Normal.Options.UseFont = true;
             this.btnEdit.Name = "btnEdit";
-            // 
-            // barLargeButtonItem1
-            // 
-            this.barLargeButtonItem1.Caption = "Xóa dữ liệu";
-            this.barLargeButtonItem1.Id = 3;
-            this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
-            this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
-            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
-            this.barLargeButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem1_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -228,8 +223,13 @@
             this.gridColumn1,
             this.gridColumn2});
             this.gvMenu.GridControl = this.gcMenu;
+            this.gvMenu.GroupCount = 2;
             this.gvMenu.Name = "gvMenu";
             this.gvMenu.OptionsView.ShowGroupPanel = false;
+            this.gvMenu.OptionsView.ShowIndicator = false;
+            this.gvMenu.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn2, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // gridColumn1
             // 
@@ -243,7 +243,7 @@
             this.gridColumn2.Caption = "Tháng";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 0;
             // 
             // gcMain
             // 
@@ -332,9 +332,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarLargeButtonItem btnLamMoi;
-        private DevExpress.XtraBars.BarLargeButtonItem btnAddNew;
         private DevExpress.XtraBars.BarLargeButtonItem btnEdit;
-        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
@@ -349,5 +347,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem1;
     }
 }

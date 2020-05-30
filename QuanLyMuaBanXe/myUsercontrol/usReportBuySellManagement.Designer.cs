@@ -31,17 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usReportBuySellManagement));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar2 = new DevExpress.XtraBars.Bar();
+            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.bar2 = new DevExpress.XtraBars.Bar();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
-            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -49,9 +52,6 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -59,9 +59,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.navBarControl1.SuspendLayout();
             this.navBarGroupControlContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,44 @@
             this.barLargeButtonItem3});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 3;
+            // 
+            // bar2
+            // 
+            this.bar2.BarName = "Main menu";
+            this.bar2.DockCol = 0;
+            this.bar2.DockRow = 0;
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem3, true)});
+            this.bar2.OptionsBar.MultiLine = true;
+            this.bar2.OptionsBar.UseWholeRow = true;
+            this.bar2.Text = "Main menu";
+            // 
+            // barLargeButtonItem1
+            // 
+            this.barLargeButtonItem1.Caption = "Làm mới";
+            this.barLargeButtonItem1.Id = 0;
+            this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
+            this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
+            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
+            // 
+            // barLargeButtonItem2
+            // 
+            this.barLargeButtonItem2.Caption = "Xuất báo cáo";
+            this.barLargeButtonItem2.Id = 1;
+            this.barLargeButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.Image")));
+            this.barLargeButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.LargeImage")));
+            this.barLargeButtonItem2.Name = "barLargeButtonItem2";
+            // 
+            // barLargeButtonItem3
+            // 
+            this.barLargeButtonItem3.Caption = "Xuất báo cáo chi tiêt";
+            this.barLargeButtonItem3.Id = 2;
+            this.barLargeButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.Image")));
+            this.barLargeButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.LargeImage")));
+            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
             // 
             // barDockControlTop
             // 
@@ -114,19 +152,6 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 260);
             // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem3, true)});
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
-            // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Collapsed = true;
@@ -150,6 +175,7 @@
             this.navBarGroup1});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Name = "navBarControl1";
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 170;
             this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
             this.navBarControl1.Size = new System.Drawing.Size(170, 260);
             this.navBarControl1.TabIndex = 0;
@@ -174,18 +200,6 @@
             this.navBarGroupControlContainer1.Size = new System.Drawing.Size(170, 175);
             this.navBarGroupControlContainer1.TabIndex = 0;
             // 
-            // radioGroup1
-            // 
-            this.radioGroup1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radioGroup1.Location = new System.Drawing.Point(0, 0);
-            this.radioGroup1.MenuManager = this.barManager1;
-            this.radioGroup1.Name = "radioGroup1";
-            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "Theo ngày"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Theo tháng")});
-            this.radioGroup1.Size = new System.Drawing.Size(170, 96);
-            this.radioGroup1.TabIndex = 0;
-            // 
             // dateEdit1
             // 
             this.dateEdit1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -199,6 +213,19 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Size = new System.Drawing.Size(170, 20);
             this.dateEdit1.TabIndex = 1;
+            // 
+            // radioGroup1
+            // 
+            this.radioGroup1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radioGroup1.EditValue = 0;
+            this.radioGroup1.Location = new System.Drawing.Point(0, 0);
+            this.radioGroup1.MenuManager = this.barManager1;
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "Theo ngày"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Theo tháng")});
+            this.radioGroup1.Size = new System.Drawing.Size(170, 96);
+            this.radioGroup1.TabIndex = 0;
             // 
             // gcMain
             // 
@@ -261,30 +288,6 @@
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             // 
-            // barLargeButtonItem1
-            // 
-            this.barLargeButtonItem1.Caption = "Làm mới";
-            this.barLargeButtonItem1.Id = 0;
-            this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
-            this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
-            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
-            // 
-            // barLargeButtonItem2
-            // 
-            this.barLargeButtonItem2.Caption = "Xuất báo cáo";
-            this.barLargeButtonItem2.Id = 1;
-            this.barLargeButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.Image")));
-            this.barLargeButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.LargeImage")));
-            this.barLargeButtonItem2.Name = "barLargeButtonItem2";
-            // 
-            // barLargeButtonItem3
-            // 
-            this.barLargeButtonItem3.Caption = "Xuất báo cáo chi tiêt";
-            this.barLargeButtonItem3.Id = 2;
-            this.barLargeButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.Image")));
-            this.barLargeButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.LargeImage")));
-            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
-            // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Trạng thái";
@@ -309,9 +312,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.navBarControl1.ResumeLayout(false);
             this.navBarGroupControlContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
             this.ResumeLayout(false);

@@ -230,8 +230,13 @@
             this.gridColumn1,
             this.gridColumn2});
             this.gvMenu.GridControl = this.gcMenu;
+            this.gvMenu.GroupCount = 2;
             this.gvMenu.Name = "gvMenu";
             this.gvMenu.OptionsView.ShowGroupPanel = false;
+            this.gvMenu.OptionsView.ShowIndicator = false;
+            this.gvMenu.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn2, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // gridColumn1
             // 
@@ -245,7 +250,7 @@
             this.gridColumn2.Caption = "Tháng";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 0;
             // 
             // gcMain
             // 

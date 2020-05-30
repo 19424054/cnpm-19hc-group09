@@ -117,8 +117,10 @@
             this.Controls.Add(this.ribbon);
             this.Name = "frmBoPhanKyThuat";
             this.Ribbon = this.ribbon;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "BỘ PHẬN KỸ THUẬT";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabMain)).EndInit();
             this.ResumeLayout(false);

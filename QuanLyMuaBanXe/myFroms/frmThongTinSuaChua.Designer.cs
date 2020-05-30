@@ -43,6 +43,8 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
+            this.bMThongTinSuaChuaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,6 +52,8 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId_sua = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId_xe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.searchLookUpEdit1 = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -61,16 +65,15 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
-            this.bMThongTinSuaChuaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bM_ThongTin_SuaChuaTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTin_SuaChuaTableAdapter();
-            this.colId_sua = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colId_xe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.barLargeButtonItem4 = new DevExpress.XtraBars.BarLargeButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinSuaChuaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
@@ -82,8 +85,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinSuaChuaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -125,9 +126,10 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barLargeButtonItem1,
             this.barLargeButtonItem2,
-            this.barLargeButtonItem3});
+            this.barLargeButtonItem3,
+            this.barLargeButtonItem4});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 3;
+            this.barManager1.MaxItemId = 4;
             // 
             // bar2
             // 
@@ -138,7 +140,7 @@
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem3)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem4)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -149,7 +151,7 @@
             this.barLargeButtonItem1.Id = 0;
             this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
             this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
-            this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barLargeButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem1.Name = "barLargeButtonItem1";
             // 
@@ -159,7 +161,7 @@
             this.barLargeButtonItem2.Id = 1;
             this.barLargeButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.Image")));
             this.barLargeButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.LargeImage")));
-            this.barLargeButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barLargeButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barLargeButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
             // 
@@ -226,6 +228,16 @@
             this.gcMain.TabIndex = 6;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
+            // 
+            // bMThongTinSuaChuaBindingSource
+            // 
+            this.bMThongTinSuaChuaBindingSource.DataMember = "BM_ThongTin_SuaChua";
+            this.bMThongTinSuaChuaBindingSource.DataSource = this.dsSystem;
+            // 
+            // dsSystem
+            // 
+            this.dsSystem.DataSetName = "dsSystem";
+            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gvMain
             // 
@@ -309,6 +321,16 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
+            // 
+            // colId_sua
+            // 
+            this.colId_sua.FieldName = "Id_sua";
+            this.colId_sua.Name = "colId_sua";
+            // 
+            // colId_xe
+            // 
+            this.colId_xe.FieldName = "Id_xe";
+            this.colId_xe.Name = "colId_xe";
             // 
             // searchLookUpEdit1
             // 
@@ -421,29 +443,19 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(560, 24);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // dsSystem
-            // 
-            this.dsSystem.DataSetName = "dsSystem";
-            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bMThongTinSuaChuaBindingSource
-            // 
-            this.bMThongTinSuaChuaBindingSource.DataMember = "BM_ThongTin_SuaChua";
-            this.bMThongTinSuaChuaBindingSource.DataSource = this.dsSystem;
-            // 
             // bM_ThongTin_SuaChuaTableAdapter
             // 
             this.bM_ThongTin_SuaChuaTableAdapter.ClearBeforeFill = true;
             // 
-            // colId_sua
+            // barLargeButtonItem4
             // 
-            this.colId_sua.FieldName = "Id_sua";
-            this.colId_sua.Name = "colId_sua";
-            // 
-            // colId_xe
-            // 
-            this.colId_xe.FieldName = "Id_xe";
-            this.colId_xe.Name = "colId_xe";
+            this.barLargeButtonItem4.Caption = "Xóa chi tiết";
+            this.barLargeButtonItem4.Id = 3;
+            this.barLargeButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem4.ImageOptions.Image")));
+            this.barLargeButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem4.ImageOptions.LargeImage")));
+            this.barLargeButtonItem4.ItemAppearance.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barLargeButtonItem4.ItemAppearance.Normal.Options.UseFont = true;
+            this.barLargeButtonItem4.Name = "barLargeButtonItem4";
             // 
             // frmThongTinSuaChua
             // 
@@ -465,6 +477,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinSuaChuaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
@@ -476,8 +490,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinSuaChuaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,5 +533,6 @@
         private myDataSet.dsSystemTableAdapters.BM_ThongTin_SuaChuaTableAdapter bM_ThongTin_SuaChuaTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colId_sua;
         private DevExpress.XtraGrid.Columns.GridColumn colId_xe;
+        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem4;
     }
 }

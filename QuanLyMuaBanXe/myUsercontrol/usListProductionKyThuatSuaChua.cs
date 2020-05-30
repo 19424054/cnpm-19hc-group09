@@ -22,5 +22,17 @@ namespace QuanLyMuaBanXe.myUsercontrol
         {
 
         }
+
+        private void btnAddNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua();
+            frm.ShowDialog();
+        }
+
+        private void barLargeButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua();
+            frm.ShowDialog();
+        }
     }
 }

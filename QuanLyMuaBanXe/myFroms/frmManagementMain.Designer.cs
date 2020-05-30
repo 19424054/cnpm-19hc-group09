@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManagementMain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.tabMain = new DevExpress.XtraTab.XtraTabControl();
             this.btnStatusBuy = new DevExpress.XtraBars.BarButtonItem();
             this.btnPlanRepair = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.btnListBuySell = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.tabMain = new DevExpress.XtraTab.XtraTabControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabMain)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,49 @@
             this.ribbon.Size = new System.Drawing.Size(671, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
+            // btnStatusBuy
+            // 
+            this.btnStatusBuy.Caption = "Tình trạng mua xe";
+            this.btnStatusBuy.Id = 1;
+            this.btnStatusBuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatusBuy.ImageOptions.Image")));
+            this.btnStatusBuy.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnStatusBuy.ImageOptions.LargeImage")));
+            this.btnStatusBuy.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnStatusBuy.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnStatusBuy.Name = "btnStatusBuy";
+            // 
+            // btnPlanRepair
+            // 
+            this.btnPlanRepair.Caption = "Kế hoạch thay thế -sửa chữa";
+            this.btnPlanRepair.Id = 2;
+            this.btnPlanRepair.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPlanRepair.ImageOptions.Image")));
+            this.btnPlanRepair.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPlanRepair.ImageOptions.LargeImage")));
+            this.btnPlanRepair.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnPlanRepair.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnPlanRepair.Name = "btnPlanRepair";
+            this.btnPlanRepair.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPlanRepair_ItemClick);
+            // 
+            // btnListBuySell
+            // 
+            this.btnListBuySell.Caption = "Danh sách mua bán xe";
+            this.btnListBuySell.Id = 3;
+            this.btnListBuySell.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListBuySell.ImageOptions.Image")));
+            this.btnListBuySell.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnListBuySell.ImageOptions.LargeImage")));
+            this.btnListBuySell.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnListBuySell.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnListBuySell.Name = "btnListBuySell";
+            this.btnListBuySell.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnListBuySell_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Báo cáo thu chi mua bán xe";
+            this.barButtonItem1.Id = 4;
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -76,6 +119,13 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Theo dõi tình trạng";
             // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnListBuySell);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Báo cáo - thống kê";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 425);
@@ -90,53 +140,6 @@
             this.tabMain.Name = "tabMain";
             this.tabMain.Size = new System.Drawing.Size(671, 267);
             this.tabMain.TabIndex = 2;
-            // 
-            // btnStatusBuy
-            // 
-            this.btnStatusBuy.Caption = "Tình trạng mua xe";
-            this.btnStatusBuy.Id = 1;
-            this.btnStatusBuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnStatusBuy.ImageOptions.Image")));
-            this.btnStatusBuy.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnStatusBuy.ImageOptions.LargeImage")));
-            this.btnStatusBuy.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnStatusBuy.ItemAppearance.Normal.Options.UseFont = true;
-            this.btnStatusBuy.Name = "btnStatusBuy";
-            // 
-            // btnPlanRepair
-            // 
-            this.btnPlanRepair.Caption = "Kế hoạch thay thế -sửa chữa";
-            this.btnPlanRepair.Id = 2;
-            this.btnPlanRepair.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btnPlanRepair.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.btnPlanRepair.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnPlanRepair.ItemAppearance.Normal.Options.UseFont = true;
-            this.btnPlanRepair.Name = "btnPlanRepair";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnListBuySell);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Báo cáo - thống kê";
-            // 
-            // btnListBuySell
-            // 
-            this.btnListBuySell.Caption = "Danh sách mua bán xe";
-            this.btnListBuySell.Id = 3;
-            this.btnListBuySell.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListBuySell.ImageOptions.Image")));
-            this.btnListBuySell.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnListBuySell.ImageOptions.LargeImage")));
-            this.btnListBuySell.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnListBuySell.ItemAppearance.Normal.Options.UseFont = true;
-            this.btnListBuySell.Name = "btnListBuySell";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Báo cáo thu chi mua bán xe";
-            this.barButtonItem1.Id = 4;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image1")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage1")));
-            this.barButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.barButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
-            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // frmManagementMain
             // 
