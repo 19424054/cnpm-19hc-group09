@@ -33,9 +33,8 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnLamMoi = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.btnAddNew = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.btnEdit = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.btnEdit = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -79,7 +78,6 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnLamMoi,
-            this.btnAddNew,
             this.btnEdit,
             this.barLargeButtonItem1,
             this.barLargeButtonItem2});
@@ -94,10 +92,8 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnLamMoi),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnAddNew),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnAddNew),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnEdit),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnEdit),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -112,27 +108,7 @@
             this.btnLamMoi.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnLamMoi.ItemAppearance.Normal.Options.UseFont = true;
             this.btnLamMoi.Name = "btnLamMoi";
-            // 
-            // btnAddNew
-            // 
-            this.btnAddNew.Caption = "Thêm mới";
-            this.btnAddNew.Id = 1;
-            this.btnAddNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.Image")));
-            this.btnAddNew.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.LargeImage")));
-            this.btnAddNew.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnAddNew.ItemAppearance.Normal.Options.UseFont = true;
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAddNew_ItemClick);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Caption = "Cập nhật";
-            this.btnEdit.Id = 2;
-            this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
-            this.btnEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.LargeImage")));
-            this.btnEdit.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.ItemAppearance.Normal.Options.UseFont = true;
-            this.btnEdit.Name = "btnEdit";
+            this.btnLamMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLamMoi_ItemClick);
             // 
             // barLargeButtonItem2
             // 
@@ -144,6 +120,17 @@
             this.barLargeButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
             this.barLargeButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem2_ItemClick);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Caption = "Cập nhật";
+            this.btnEdit.Id = 2;
+            this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
+            this.btnEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.LargeImage")));
+            this.btnEdit.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEdit_ItemClick);
             // 
             // barLargeButtonItem1
             // 
@@ -162,7 +149,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(636, 56);
+            this.barDockControlTop.Size = new System.Drawing.Size(801, 56);
             // 
             // barDockControlBottom
             // 
@@ -170,7 +157,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 404);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(636, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(801, 0);
             // 
             // barDockControlLeft
             // 
@@ -184,7 +171,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(636, 56);
+            this.barDockControlRight.Location = new System.Drawing.Point(801, 56);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 348);
             // 
@@ -198,7 +185,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gcMain);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(636, 348);
+            this.splitContainerControl1.Size = new System.Drawing.Size(801, 348);
             this.splitContainerControl1.SplitterPosition = 159;
             this.splitContainerControl1.TabIndex = 4;
             // 
@@ -282,7 +269,7 @@
             this.gcMain.MainView = this.gvMain;
             this.gcMain.MenuManager = this.barManager1;
             this.gcMain.Name = "gcMain";
-            this.gcMain.Size = new System.Drawing.Size(467, 348);
+            this.gcMain.Size = new System.Drawing.Size(632, 348);
             this.gcMain.TabIndex = 0;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
@@ -356,7 +343,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "usListProductionQuanLy";
-            this.Size = new System.Drawing.Size(636, 404);
+            this.Size = new System.Drawing.Size(801, 404);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
@@ -381,7 +368,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarLargeButtonItem btnLamMoi;
-        private DevExpress.XtraBars.BarLargeButtonItem btnAddNew;
         private DevExpress.XtraBars.BarLargeButtonItem btnEdit;
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;

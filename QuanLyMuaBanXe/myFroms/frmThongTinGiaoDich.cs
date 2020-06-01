@@ -27,6 +27,10 @@ namespace QuanLyMuaBanXe.myFroms
 
         private void frmThongTinGiaoDich_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dsSystem.BM_ThongTinXeBan' table. You can move, or remove it, as needed.
+            this.bM_ThongTinXeBanTableAdapter.Fill(this.dsSystem.BM_ThongTinXeBan);
+            // TODO: This line of code loads data into the 'dsSystem.BM_ThongTinKhachHang' table. You can move, or remove it, as needed.
+            this.bM_ThongTinKhachHangTableAdapter.Fill(this.dsSystem.BM_ThongTinKhachHang);
             loadData();
 
         }

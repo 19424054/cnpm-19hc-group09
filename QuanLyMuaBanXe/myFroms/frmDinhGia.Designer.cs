@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDinhGia));
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -42,13 +44,20 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.bMDinhGiaBanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.searchLookUpEdit1 = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.bMThongTinXeBanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId_xe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMa_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLoai_xe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBien_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -66,17 +75,20 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
-            this.bMDinhGiaBanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bM_DinhGia_BanTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_DinhGia_BanTableAdapter();
+            this.bM_ThongTinXeBanTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter();
+            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMDinhGiaBanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinXeBanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -94,8 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMDinhGiaBanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -170,6 +181,7 @@
             this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barLargeButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem1.Name = "barLargeButtonItem1";
+            this.barLargeButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem1_ItemClick);
             // 
             // barLargeButtonItem2
             // 
@@ -181,6 +193,7 @@
             this.barLargeButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barLargeButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
+            this.barLargeButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem2_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -223,7 +236,7 @@
             this.labelControl5.Size = new System.Drawing.Size(110, 20);
             this.labelControl5.StyleController = this.layoutControl1;
             this.labelControl5.TabIndex = 12;
-            this.labelControl5.Text = "Biển số xe:";
+            this.labelControl5.Text = "Loại xe:";
             this.labelControl5.Click += new System.EventHandler(this.labelControl5_Click);
             // 
             // textEdit3
@@ -231,15 +244,41 @@
             this.textEdit3.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMDinhGiaBanBindingSource, "Dinh_gia", true));
             this.textEdit3.Location = new System.Drawing.Point(126, 108);
             this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Properties.EditFormat.FormatString = "n0";
+            this.textEdit3.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit3.Properties.Mask.EditMask = "n0";
+            this.textEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEdit3.Size = new System.Drawing.Size(145, 20);
             this.textEdit3.StyleController = this.layoutControl1;
             this.textEdit3.TabIndex = 11;
+            conditionValidationRule1.CaseSensitive = true;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Vui lòng định giá bán";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.textEdit3, conditionValidationRule1);
+            // 
+            // bMDinhGiaBanBindingSource
+            // 
+            this.bMDinhGiaBanBindingSource.DataMember = "BM_DinhGia_Ban";
+            this.bMDinhGiaBanBindingSource.DataSource = this.dsSystem;
+            // 
+            // dsSystem
+            // 
+            this.dsSystem.DataSetName = "dsSystem";
+            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textEdit2
             // 
             this.textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMDinhGiaBanBindingSource, "Chi_phi", true));
             this.textEdit2.Location = new System.Drawing.Point(126, 84);
             this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textEdit2.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textEdit2.Properties.EditFormat.FormatString = "n0";
+            this.textEdit2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit2.Properties.Mask.EditMask = "n0";
+            this.textEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEdit2.Properties.ReadOnly = true;
             this.textEdit2.Size = new System.Drawing.Size(145, 20);
             this.textEdit2.StyleController = this.layoutControl1;
             this.textEdit2.TabIndex = 10;
@@ -249,6 +288,13 @@
             this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMDinhGiaBanBindingSource, "Gia_mua", true));
             this.textEdit1.Location = new System.Drawing.Point(126, 60);
             this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textEdit1.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textEdit1.Properties.EditFormat.FormatString = "n0";
+            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.Mask.EditMask = "n0";
+            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.textEdit1.Properties.ReadOnly = true;
             this.textEdit1.Size = new System.Drawing.Size(145, 20);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 9;
@@ -293,18 +339,65 @@
             this.searchLookUpEdit1.Name = "searchLookUpEdit1";
             this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.searchLookUpEdit1.Properties.DataSource = this.bMThongTinXeBanBindingSource;
+            this.searchLookUpEdit1.Properties.DisplayMember = "Ma_so_xe";
             this.searchLookUpEdit1.Properties.NullText = "[Chọn mã số xe]";
             this.searchLookUpEdit1.Properties.PopupView = this.searchLookUpEdit1View;
+            this.searchLookUpEdit1.Properties.ValueMember = "Id_xe";
             this.searchLookUpEdit1.Size = new System.Drawing.Size(274, 20);
             this.searchLookUpEdit1.StyleController = this.layoutControl1;
             this.searchLookUpEdit1.TabIndex = 5;
+            conditionValidationRule2.CaseSensitive = true;
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "Vui lòng chọn mã xe";
+            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.searchLookUpEdit1, conditionValidationRule2);
+            // 
+            // bMThongTinXeBanBindingSource
+            // 
+            this.bMThongTinXeBanBindingSource.DataMember = "BM_ThongTinXeBan";
+            this.bMThongTinXeBanBindingSource.DataSource = this.dsSystem;
             // 
             // searchLookUpEdit1View
             // 
+            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId_xe,
+            this.colMa_so_xe,
+            this.colLoai_xe,
+            this.colBien_so_xe});
             this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colId_xe
+            // 
+            this.colId_xe.FieldName = "Id_xe";
+            this.colId_xe.Name = "colId_xe";
+            // 
+            // colMa_so_xe
+            // 
+            this.colMa_so_xe.Caption = "Mã số xe";
+            this.colMa_so_xe.FieldName = "Ma_so_xe";
+            this.colMa_so_xe.Name = "colMa_so_xe";
+            this.colMa_so_xe.Visible = true;
+            this.colMa_so_xe.VisibleIndex = 0;
+            // 
+            // colLoai_xe
+            // 
+            this.colLoai_xe.Caption = "Loại xe";
+            this.colLoai_xe.FieldName = "Loai_xe";
+            this.colLoai_xe.Name = "colLoai_xe";
+            this.colLoai_xe.Visible = true;
+            this.colLoai_xe.VisibleIndex = 1;
+            // 
+            // colBien_so_xe
+            // 
+            this.colBien_so_xe.Caption = "Biển số xe";
+            this.colBien_so_xe.FieldName = "Bien_so_xe";
+            this.colBien_so_xe.Name = "colBien_so_xe";
+            this.colBien_so_xe.Visible = true;
+            this.colBien_so_xe.VisibleIndex = 2;
             // 
             // labelControl1
             // 
@@ -481,19 +574,13 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(129, 24);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // dsSystem
-            // 
-            this.dsSystem.DataSetName = "dsSystem";
-            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bMDinhGiaBanBindingSource
-            // 
-            this.bMDinhGiaBanBindingSource.DataMember = "BM_DinhGia_Ban";
-            this.bMDinhGiaBanBindingSource.DataSource = this.dsSystem;
-            // 
             // bM_DinhGia_BanTableAdapter
             // 
             this.bM_DinhGia_BanTableAdapter.ClearBeforeFill = true;
+            // 
+            // bM_ThongTinXeBanTableAdapter
+            // 
+            this.bM_ThongTinXeBanTableAdapter.ClearBeforeFill = true;
             // 
             // frmDinhGia
             // 
@@ -513,9 +600,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMDinhGiaBanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinXeBanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -533,8 +623,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMDinhGiaBanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -581,5 +670,12 @@
         private myDataSet.dsSystem dsSystem;
         private System.Windows.Forms.BindingSource bMDinhGiaBanBindingSource;
         private myDataSet.dsSystemTableAdapters.BM_DinhGia_BanTableAdapter bM_DinhGia_BanTableAdapter;
+        private System.Windows.Forms.BindingSource bMThongTinXeBanBindingSource;
+        private myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter bM_ThongTinXeBanTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colId_xe;
+        private DevExpress.XtraGrid.Columns.GridColumn colMa_so_xe;
+        private DevExpress.XtraGrid.Columns.GridColumn colLoai_xe;
+        private DevExpress.XtraGrid.Columns.GridColumn colBien_so_xe;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
     }
 }

@@ -31,7 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongTinGiaoDich));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar3 = new DevExpress.XtraBars.Bar();
+            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
+            this.bMGiaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.cbbHinhThuc = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -74,24 +86,26 @@
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar3 = new DevExpress.XtraBars.Bar();
-            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
-            this.bMGiaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bM_GiaoDichTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_GiaoDichTableAdapter();
+            this.bMThongTinKhachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bM_ThongTinKhachHangTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTinKhachHangTableAdapter();
+            this.colHo_ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMa_KH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId_KH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bMThongTinXeBanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bM_ThongTinXeBanTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter();
+            this.colId_xe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMa_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBien_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMGiaoDichBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbHinhThuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
@@ -126,12 +140,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMGiaoDichBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinKhachHangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinXeBanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -162,6 +174,110 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // textEdit4
+            // 
+            this.textEdit4.Location = new System.Drawing.Point(116, 36);
+            this.textEdit4.MenuManager = this.barManager1;
+            this.textEdit4.Name = "textEdit4";
+            this.textEdit4.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textEdit4.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textEdit4.Properties.ReadOnly = true;
+            this.textEdit4.Size = new System.Drawing.Size(413, 20);
+            this.textEdit4.StyleController = this.layoutControl1;
+            this.textEdit4.TabIndex = 21;
+            // 
+            // barManager1
+            // 
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.bar3});
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barLargeButtonItem1,
+            this.barLargeButtonItem2});
+            this.barManager1.MaxItemId = 2;
+            this.barManager1.StatusBar = this.bar3;
+            // 
+            // bar3
+            // 
+            this.bar3.BarName = "Status bar";
+            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
+            this.bar3.DockCol = 0;
+            this.bar3.DockRow = 0;
+            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+            this.bar3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2)});
+            this.bar3.OptionsBar.AllowQuickCustomization = false;
+            this.bar3.OptionsBar.DrawDragBorder = false;
+            this.bar3.OptionsBar.UseWholeRow = true;
+            this.bar3.Text = "Status bar";
+            // 
+            // barLargeButtonItem1
+            // 
+            this.barLargeButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barLargeButtonItem1.Caption = "Xác nhận";
+            this.barLargeButtonItem1.Id = 0;
+            this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
+            this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
+            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
+            // 
+            // barLargeButtonItem2
+            // 
+            this.barLargeButtonItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barLargeButtonItem2.Caption = "Đóng";
+            this.barLargeButtonItem2.Id = 1;
+            this.barLargeButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.Image")));
+            this.barLargeButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.LargeImage")));
+            this.barLargeButtonItem2.Name = "barLargeButtonItem2";
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(541, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 363);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(541, 58);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 363);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(541, 0);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 363);
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(12, 36);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(100, 20);
+            this.labelControl9.StyleController = this.layoutControl1;
+            this.labelControl9.TabIndex = 20;
+            this.labelControl9.Text = "Họ và tên:";
+            this.labelControl9.Click += new System.EventHandler(this.labelControl9_Click);
+            // 
             // memoEdit2
             // 
             this.memoEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMGiaoDichBindingSource, "Ghi_chu", true));
@@ -170,6 +286,16 @@
             this.memoEdit2.Size = new System.Drawing.Size(401, 79);
             this.memoEdit2.StyleController = this.layoutControl1;
             this.memoEdit2.TabIndex = 19;
+            // 
+            // bMGiaoDichBindingSource
+            // 
+            this.bMGiaoDichBindingSource.DataMember = "BM_GiaoDich";
+            this.bMGiaoDichBindingSource.DataSource = this.dsSystem;
+            // 
+            // dsSystem
+            // 
+            this.dsSystem.DataSetName = "dsSystem";
+            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // labelControl8
             // 
@@ -248,7 +374,7 @@
             this.labelControl5.Size = new System.Drawing.Size(88, 20);
             this.labelControl5.StyleController = this.layoutControl1;
             this.labelControl5.TabIndex = 12;
-            this.labelControl5.Text = "Biển số xe:";
+            this.labelControl5.Text = "Loại xe:";
             // 
             // searchLookUpEdit2
             // 
@@ -257,14 +383,21 @@
             this.searchLookUpEdit2.Name = "searchLookUpEdit2";
             this.searchLookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.searchLookUpEdit2.Properties.DataSource = this.bMThongTinXeBanBindingSource;
+            this.searchLookUpEdit2.Properties.DisplayMember = "Ma_so_xe";
             this.searchLookUpEdit2.Properties.NullText = "[Chọn mã xe]";
             this.searchLookUpEdit2.Properties.PopupView = this.searchLookUpEdit2View;
+            this.searchLookUpEdit2.Properties.ValueMember = "Id_xe";
             this.searchLookUpEdit2.Size = new System.Drawing.Size(207, 20);
             this.searchLookUpEdit2.StyleController = this.layoutControl1;
             this.searchLookUpEdit2.TabIndex = 11;
             // 
             // searchLookUpEdit2View
             // 
+            this.searchLookUpEdit2View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId_xe,
+            this.colMa_so_xe,
+            this.colBien_so_xe});
             this.searchLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit2View.Name = "searchLookUpEdit2View";
             this.searchLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -332,14 +465,21 @@
             this.searchLookUpEdit1.Name = "searchLookUpEdit1";
             this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.searchLookUpEdit1.Properties.DataSource = this.bMThongTinKhachHangBindingSource;
+            this.searchLookUpEdit1.Properties.DisplayMember = "Ma_KH";
             this.searchLookUpEdit1.Properties.NullText = "[Chọn mã khách hàng]";
             this.searchLookUpEdit1.Properties.PopupView = this.searchLookUpEdit1View;
+            this.searchLookUpEdit1.Properties.ValueMember = "Id_KH";
             this.searchLookUpEdit1.Size = new System.Drawing.Size(214, 20);
             this.searchLookUpEdit1.StyleController = this.layoutControl1;
             this.searchLookUpEdit1.TabIndex = 5;
             // 
             // searchLookUpEdit1View
             // 
+            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colHo_ten,
+            this.colMa_KH,
+            this.colId_KH});
             this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -616,98 +756,6 @@
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextVisible = false;
             // 
-            // barManager1
-            // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar3});
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barLargeButtonItem1,
-            this.barLargeButtonItem2});
-            this.barManager1.MaxItemId = 2;
-            this.barManager1.StatusBar = this.bar3;
-            // 
-            // bar3
-            // 
-            this.bar3.BarName = "Status bar";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockRow = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2)});
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Status bar";
-            // 
-            // barLargeButtonItem1
-            // 
-            this.barLargeButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barLargeButtonItem1.Caption = "Xác nhận";
-            this.barLargeButtonItem1.Id = 0;
-            this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
-            this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
-            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
-            // 
-            // barLargeButtonItem2
-            // 
-            this.barLargeButtonItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barLargeButtonItem2.Caption = "Đóng";
-            this.barLargeButtonItem2.Id = 1;
-            this.barLargeButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.Image")));
-            this.barLargeButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.LargeImage")));
-            this.barLargeButtonItem2.Name = "barLargeButtonItem2";
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(541, 0);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 363);
-            this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(541, 58);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 363);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(541, 0);
-            this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 363);
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(12, 36);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(100, 20);
-            this.labelControl9.StyleController = this.layoutControl1;
-            this.labelControl9.TabIndex = 20;
-            this.labelControl9.Text = "Họ và tên:";
-            this.labelControl9.Click += new System.EventHandler(this.labelControl9_Click);
-            // 
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.labelControl9;
@@ -719,18 +767,6 @@
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextVisible = false;
             // 
-            // textEdit4
-            // 
-            this.textEdit4.Location = new System.Drawing.Point(116, 36);
-            this.textEdit4.MenuManager = this.barManager1;
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textEdit4.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.textEdit4.Properties.ReadOnly = true;
-            this.textEdit4.Size = new System.Drawing.Size(413, 20);
-            this.textEdit4.StyleController = this.layoutControl1;
-            this.textEdit4.TabIndex = 21;
-            // 
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.textEdit4;
@@ -740,19 +776,73 @@
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
             // 
-            // dsSystem
-            // 
-            this.dsSystem.DataSetName = "dsSystem";
-            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bMGiaoDichBindingSource
-            // 
-            this.bMGiaoDichBindingSource.DataMember = "BM_GiaoDich";
-            this.bMGiaoDichBindingSource.DataSource = this.dsSystem;
-            // 
             // bM_GiaoDichTableAdapter
             // 
             this.bM_GiaoDichTableAdapter.ClearBeforeFill = true;
+            // 
+            // bMThongTinKhachHangBindingSource
+            // 
+            this.bMThongTinKhachHangBindingSource.DataMember = "BM_ThongTinKhachHang";
+            this.bMThongTinKhachHangBindingSource.DataSource = this.dsSystem;
+            // 
+            // bM_ThongTinKhachHangTableAdapter
+            // 
+            this.bM_ThongTinKhachHangTableAdapter.ClearBeforeFill = true;
+            // 
+            // colHo_ten
+            // 
+            this.colHo_ten.Caption = "Họ tên khách hàng";
+            this.colHo_ten.FieldName = "Ho_ten";
+            this.colHo_ten.Name = "colHo_ten";
+            this.colHo_ten.Visible = true;
+            this.colHo_ten.VisibleIndex = 1;
+            this.colHo_ten.Width = 440;
+            // 
+            // colMa_KH
+            // 
+            this.colMa_KH.Caption = "Mã khách hàng";
+            this.colMa_KH.FieldName = "Ma_KH";
+            this.colMa_KH.Name = "colMa_KH";
+            this.colMa_KH.Visible = true;
+            this.colMa_KH.VisibleIndex = 0;
+            this.colMa_KH.Width = 245;
+            // 
+            // colId_KH
+            // 
+            this.colId_KH.FieldName = "Id_KH";
+            this.colId_KH.Name = "colId_KH";
+            // 
+            // bMThongTinXeBanBindingSource
+            // 
+            this.bMThongTinXeBanBindingSource.DataMember = "BM_ThongTinXeBan";
+            this.bMThongTinXeBanBindingSource.DataSource = this.dsSystem;
+            // 
+            // bM_ThongTinXeBanTableAdapter
+            // 
+            this.bM_ThongTinXeBanTableAdapter.ClearBeforeFill = true;
+            // 
+            // colId_xe
+            // 
+            this.colId_xe.FieldName = "Id_xe";
+            this.colId_xe.Name = "colId_xe";
+            // 
+            // colMa_so_xe
+            // 
+            this.colMa_so_xe.Caption = "Mã số xe";
+            this.colMa_so_xe.FieldName = "Ma_so_xe";
+            this.colMa_so_xe.Name = "colMa_so_xe";
+            this.colMa_so_xe.Visible = true;
+            this.colMa_so_xe.VisibleIndex = 0;
+            this.colMa_so_xe.Width = 173;
+            // 
+            // colBien_so_xe
+            // 
+            this.colBien_so_xe.Caption = "Biển số xe";
+            this.colBien_so_xe.FieldName = "Bien_so_xe";
+            this.colBien_so_xe.Name = "colBien_so_xe";
+            this.colBien_so_xe.Visible = true;
+            this.colBien_so_xe.VisibleIndex = 1;
+            this.colBien_so_xe.Width = 512;
             // 
             // frmThongTinGiaoDich
             // 
@@ -772,7 +862,11 @@
             this.Load += new System.EventHandler(this.frmThongTinGiaoDich_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMGiaoDichBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbHinhThuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
@@ -807,12 +901,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMGiaoDichBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinKhachHangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinXeBanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -879,5 +971,15 @@
         private myDataSet.dsSystem dsSystem;
         private System.Windows.Forms.BindingSource bMGiaoDichBindingSource;
         private myDataSet.dsSystemTableAdapters.BM_GiaoDichTableAdapter bM_GiaoDichTableAdapter;
+        private System.Windows.Forms.BindingSource bMThongTinKhachHangBindingSource;
+        private myDataSet.dsSystemTableAdapters.BM_ThongTinKhachHangTableAdapter bM_ThongTinKhachHangTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colHo_ten;
+        private DevExpress.XtraGrid.Columns.GridColumn colMa_KH;
+        private DevExpress.XtraGrid.Columns.GridColumn colId_KH;
+        private System.Windows.Forms.BindingSource bMThongTinXeBanBindingSource;
+        private myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter bM_ThongTinXeBanTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colId_xe;
+        private DevExpress.XtraGrid.Columns.GridColumn colMa_so_xe;
+        private DevExpress.XtraGrid.Columns.GridColumn colBien_so_xe;
     }
 }

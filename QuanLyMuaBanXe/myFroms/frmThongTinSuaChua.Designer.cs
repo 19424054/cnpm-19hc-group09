@@ -36,11 +36,12 @@
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem4 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
             this.bMThongTinSuaChuaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -66,7 +67,11 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.bM_ThongTin_SuaChuaTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTin_SuaChuaTableAdapter();
-            this.barLargeButtonItem4 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.bMThongTinXeBanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bM_ThongTinXeBanTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter();
+            this.colId_xe1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMa_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBien_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
@@ -85,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinXeBanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -154,6 +160,7 @@
             this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barLargeButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem1.Name = "barLargeButtonItem1";
+            this.barLargeButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem1_ItemClick);
             // 
             // barLargeButtonItem2
             // 
@@ -164,16 +171,18 @@
             this.barLargeButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barLargeButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
+            this.barLargeButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem2_ItemClick);
             // 
-            // barLargeButtonItem3
+            // barLargeButtonItem4
             // 
-            this.barLargeButtonItem3.Caption = "Đóng";
-            this.barLargeButtonItem3.Id = 2;
-            this.barLargeButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.Image")));
-            this.barLargeButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.LargeImage")));
-            this.barLargeButtonItem3.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.barLargeButtonItem3.ItemAppearance.Normal.Options.UseFont = true;
-            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
+            this.barLargeButtonItem4.Caption = "Xóa chi tiết";
+            this.barLargeButtonItem4.Id = 3;
+            this.barLargeButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem4.ImageOptions.Image")));
+            this.barLargeButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem4.ImageOptions.LargeImage")));
+            this.barLargeButtonItem4.ItemAppearance.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barLargeButtonItem4.ItemAppearance.Normal.Options.UseFont = true;
+            this.barLargeButtonItem4.Name = "barLargeButtonItem4";
+            this.barLargeButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem4_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -206,6 +215,16 @@
             this.barDockControlRight.Location = new System.Drawing.Point(852, 56);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 330);
+            // 
+            // barLargeButtonItem3
+            // 
+            this.barLargeButtonItem3.Caption = "Đóng";
+            this.barLargeButtonItem3.Id = 2;
+            this.barLargeButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.Image")));
+            this.barLargeButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.LargeImage")));
+            this.barLargeButtonItem3.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barLargeButtonItem3.ItemAppearance.Normal.Options.UseFont = true;
+            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
             // 
             // labelControl3
             // 
@@ -338,14 +357,22 @@
             this.searchLookUpEdit1.Name = "searchLookUpEdit1";
             this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.searchLookUpEdit1.Properties.DataSource = this.bMThongTinXeBanBindingSource;
+            this.searchLookUpEdit1.Properties.DisplayMember = "Ma_so_xe";
             this.searchLookUpEdit1.Properties.NullText = "[Chọn mã xe]";
             this.searchLookUpEdit1.Properties.PopupView = this.searchLookUpEdit1View;
+            this.searchLookUpEdit1.Properties.ValueMember = "Id_xe";
             this.searchLookUpEdit1.Size = new System.Drawing.Size(201, 20);
             this.searchLookUpEdit1.StyleController = this.layoutControl1;
             this.searchLookUpEdit1.TabIndex = 5;
+            this.searchLookUpEdit1.EditValueChanged += new System.EventHandler(this.searchLookUpEdit1_EditValueChanged);
             // 
             // searchLookUpEdit1View
             // 
+            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colId_xe1,
+            this.colMa_so_xe,
+            this.colBien_so_xe});
             this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -447,15 +474,35 @@
             // 
             this.bM_ThongTin_SuaChuaTableAdapter.ClearBeforeFill = true;
             // 
-            // barLargeButtonItem4
+            // bMThongTinXeBanBindingSource
             // 
-            this.barLargeButtonItem4.Caption = "Xóa chi tiết";
-            this.barLargeButtonItem4.Id = 3;
-            this.barLargeButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem4.ImageOptions.Image")));
-            this.barLargeButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem4.ImageOptions.LargeImage")));
-            this.barLargeButtonItem4.ItemAppearance.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.barLargeButtonItem4.ItemAppearance.Normal.Options.UseFont = true;
-            this.barLargeButtonItem4.Name = "barLargeButtonItem4";
+            this.bMThongTinXeBanBindingSource.DataMember = "BM_ThongTinXeBan";
+            this.bMThongTinXeBanBindingSource.DataSource = this.dsSystem;
+            // 
+            // bM_ThongTinXeBanTableAdapter
+            // 
+            this.bM_ThongTinXeBanTableAdapter.ClearBeforeFill = true;
+            // 
+            // colId_xe1
+            // 
+            this.colId_xe1.FieldName = "Id_xe";
+            this.colId_xe1.Name = "colId_xe1";
+            // 
+            // colMa_so_xe
+            // 
+            this.colMa_so_xe.Caption = "Mã số xe";
+            this.colMa_so_xe.FieldName = "Ma_so_xe";
+            this.colMa_so_xe.Name = "colMa_so_xe";
+            this.colMa_so_xe.Visible = true;
+            this.colMa_so_xe.VisibleIndex = 0;
+            // 
+            // colBien_so_xe
+            // 
+            this.colBien_so_xe.Caption = "Biển số xe";
+            this.colBien_so_xe.FieldName = "Bien_so_xe";
+            this.colBien_so_xe.Name = "colBien_so_xe";
+            this.colBien_so_xe.Visible = true;
+            this.colBien_so_xe.VisibleIndex = 1;
             // 
             // frmThongTinSuaChua
             // 
@@ -490,6 +537,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinXeBanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,5 +582,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn colId_sua;
         private DevExpress.XtraGrid.Columns.GridColumn colId_xe;
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem4;
+        private System.Windows.Forms.BindingSource bMThongTinXeBanBindingSource;
+        private myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter bM_ThongTinXeBanTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colId_xe1;
+        private DevExpress.XtraGrid.Columns.GridColumn colMa_so_xe;
+        private DevExpress.XtraGrid.Columns.GridColumn colBien_so_xe;
     }
 }

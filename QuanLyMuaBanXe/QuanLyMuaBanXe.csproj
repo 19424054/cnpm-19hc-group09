@@ -126,6 +126,12 @@
     <Compile Include="myFroms\frmKiemTraTinhTrangXeBan.Designer.cs">
       <DependentUpon>frmKiemTraTinhTrangXeBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="myFroms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="myFroms\frmManagementMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     <EmbeddedResource Include="myFroms\frmKiemTraTinhTrangXeBan.resx">
       <DependentUpon>frmKiemTraTinhTrangXeBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="myFroms\frmManagementMain.resx">
       <DependentUpon>frmManagementMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +287,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="myDataSet\dsSystem.xsc">
       <DependentUpon>dsSystem.xsd</DependentUpon>
@@ -303,6 +313,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\allowuserstoeditranges_16x16.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

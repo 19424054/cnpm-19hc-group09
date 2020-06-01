@@ -1600,6 +1600,8 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             private global::System.Data.DataColumn columnGia_cao_nhat;
             
+            private global::System.Data.DataColumn columnBien_so_xe;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BM_DinhGia_MuaXeDataTable() {
@@ -1675,6 +1677,14 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Bien_so_xeColumn {
+                get {
+                    return this.columnBien_so_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1710,14 +1720,15 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public BM_DinhGia_MuaXeRow AddBM_DinhGia_MuaXeRow(BM_ThongTinXeBanRow parentBM_ThongTinXeBanRowByFK_BM_DinhGia_MuaXe_BM_ThongTinXeBan, string Trang_thai, double Gia_thap_nhat, double Gia_cao_nhat) {
+            public BM_DinhGia_MuaXeRow AddBM_DinhGia_MuaXeRow(BM_ThongTinXeBanRow parentBM_ThongTinXeBanRowByFK_BM_DinhGia_MuaXe_BM_ThongTinXeBan, string Trang_thai, double Gia_thap_nhat, double Gia_cao_nhat, string Bien_so_xe) {
                 BM_DinhGia_MuaXeRow rowBM_DinhGia_MuaXeRow = ((BM_DinhGia_MuaXeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         Trang_thai,
                         Gia_thap_nhat,
-                        Gia_cao_nhat};
+                        Gia_cao_nhat,
+                        Bien_so_xe};
                 if ((parentBM_ThongTinXeBanRowByFK_BM_DinhGia_MuaXe_BM_ThongTinXeBan != null)) {
                     columnValuesArray[1] = parentBM_ThongTinXeBanRowByFK_BM_DinhGia_MuaXe_BM_ThongTinXeBan[0];
                 }
@@ -1755,6 +1766,7 @@ namespace QuanLyMuaBanXe.myDataSet {
                 this.columnTrang_thai = base.Columns["Trang_thai"];
                 this.columnGia_thap_nhat = base.Columns["Gia_thap_nhat"];
                 this.columnGia_cao_nhat = base.Columns["Gia_cao_nhat"];
+                this.columnBien_so_xe = base.Columns["Bien_so_xe"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1770,6 +1782,8 @@ namespace QuanLyMuaBanXe.myDataSet {
                 base.Columns.Add(this.columnGia_thap_nhat);
                 this.columnGia_cao_nhat = new global::System.Data.DataColumn("Gia_cao_nhat", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGia_cao_nhat);
+                this.columnBien_so_xe = new global::System.Data.DataColumn("Bien_so_xe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBien_so_xe);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId_kiemTra}, true));
                 this.columnId_kiemTra.AutoIncrement = true;
@@ -1779,6 +1793,7 @@ namespace QuanLyMuaBanXe.myDataSet {
                 this.columnId_kiemTra.ReadOnly = true;
                 this.columnId_kiemTra.Unique = true;
                 this.columnTrang_thai.MaxLength = 250;
+                this.columnBien_so_xe.MaxLength = 250;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1924,6 +1939,8 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             private global::System.Data.DataColumn columnDinh_gia;
             
+            private global::System.Data.DataColumn columnBien_so_xe;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BM_DinhGia_BanDataTable() {
@@ -2007,6 +2024,14 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Bien_so_xeColumn {
+                get {
+                    return this.columnBien_so_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2042,7 +2067,7 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public BM_DinhGia_BanRow AddBM_DinhGia_BanRow(BM_ThongTinXeBanRow parentBM_ThongTinXeBanRowByFK_BM_DinhGia_Ban_BM_ThongTinXeBan, double Loi_nhuan, double Chi_phi, double Gia_mua, double Dinh_gia) {
+            public BM_DinhGia_BanRow AddBM_DinhGia_BanRow(BM_ThongTinXeBanRow parentBM_ThongTinXeBanRowByFK_BM_DinhGia_Ban_BM_ThongTinXeBan, double Loi_nhuan, double Chi_phi, double Gia_mua, double Dinh_gia, string Bien_so_xe) {
                 BM_DinhGia_BanRow rowBM_DinhGia_BanRow = ((BM_DinhGia_BanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2050,7 +2075,8 @@ namespace QuanLyMuaBanXe.myDataSet {
                         Loi_nhuan,
                         Chi_phi,
                         Gia_mua,
-                        Dinh_gia};
+                        Dinh_gia,
+                        Bien_so_xe};
                 if ((parentBM_ThongTinXeBanRowByFK_BM_DinhGia_Ban_BM_ThongTinXeBan != null)) {
                     columnValuesArray[1] = parentBM_ThongTinXeBanRowByFK_BM_DinhGia_Ban_BM_ThongTinXeBan[0];
                 }
@@ -2089,6 +2115,7 @@ namespace QuanLyMuaBanXe.myDataSet {
                 this.columnChi_phi = base.Columns["Chi_phi"];
                 this.columnGia_mua = base.Columns["Gia_mua"];
                 this.columnDinh_gia = base.Columns["Dinh_gia"];
+                this.columnBien_so_xe = base.Columns["Bien_so_xe"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2106,6 +2133,8 @@ namespace QuanLyMuaBanXe.myDataSet {
                 base.Columns.Add(this.columnGia_mua);
                 this.columnDinh_gia = new global::System.Data.DataColumn("Dinh_gia", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDinh_gia);
+                this.columnBien_so_xe = new global::System.Data.DataColumn("Bien_so_xe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBien_so_xe);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId_gia_ban}, true));
                 this.columnId_gia_ban.AutoIncrement = true;
@@ -2114,6 +2143,7 @@ namespace QuanLyMuaBanXe.myDataSet {
                 this.columnId_gia_ban.AllowDBNull = false;
                 this.columnId_gia_ban.ReadOnly = true;
                 this.columnId_gia_ban.Unique = true;
+                this.columnBien_so_xe.MaxLength = 250;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3440,6 +3470,22 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Bien_so_xe {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_DinhGia_MuaXe.Bien_so_xeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Bien_so_xe\' in table \'BM_DinhGia_MuaXe\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_DinhGia_MuaXe.Bien_so_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BM_ThongTinXeBanRow BM_ThongTinXeBanRow {
                 get {
                     return ((BM_ThongTinXeBanRow)(this.GetParentRow(this.Table.ParentRelations["FK_BM_DinhGia_MuaXe_BM_ThongTinXeBan"])));
@@ -3495,6 +3541,18 @@ namespace QuanLyMuaBanXe.myDataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetGia_cao_nhatNull() {
                 this[this.tableBM_DinhGia_MuaXe.Gia_cao_nhatColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBien_so_xeNull() {
+                return this.IsNull(this.tableBM_DinhGia_MuaXe.Bien_so_xeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBien_so_xeNull() {
+                this[this.tableBM_DinhGia_MuaXe.Bien_so_xeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3605,6 +3663,22 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Bien_so_xe {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_DinhGia_Ban.Bien_so_xeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Bien_so_xe\' in table \'BM_DinhGia_Ban\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_DinhGia_Ban.Bien_so_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BM_ThongTinXeBanRow BM_ThongTinXeBanRow {
                 get {
                     return ((BM_ThongTinXeBanRow)(this.GetParentRow(this.Table.ParentRelations["FK_BM_DinhGia_Ban_BM_ThongTinXeBan"])));
@@ -3672,6 +3746,18 @@ namespace QuanLyMuaBanXe.myDataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDinh_giaNull() {
                 this[this.tableBM_DinhGia_Ban.Dinh_giaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBien_so_xeNull() {
+                return this.IsNull(this.tableBM_DinhGia_Ban.Bien_so_xeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBien_so_xeNull() {
+                this[this.tableBM_DinhGia_Ban.Bien_so_xeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4331,7 +4417,7 @@ SELECT Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, Gia_ba
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, " +
@@ -4350,6 +4436,12 @@ SELECT Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, Gia_ba
                 "ke @MaSoXe+\'%\'";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaSoXe", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_so_xe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "UPDATE [BM_ThongTinXeBan] SET  Trang_Thai=@trang_Thai\r\nWHERE Id_xe=@Id_xe";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trang_Thai", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Trang_Thai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_xe", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4828,6 +4920,36 @@ SELECT Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, Gia_ba
             else {
                 return ((string)(returnValue));
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateQueryTrangThai(string trang_Thai, int Id_xe) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            if ((trang_Thai == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(trang_Thai));
+            }
+            command.Parameters[1].Value = ((int)(Id_xe));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
@@ -6069,10 +6191,11 @@ SELECT Id_kiemTra, Id_xe, Trang_thai, Gia_thap_nhat, Gia_cao_nhat FROM BM_DinhGi
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        Id_kiemTra, Id_xe, Trang_thai, Gia_thap_nhat, Gia_cao_nhat\r\nFROM   " +
-                "         BM_DinhGia_MuaXe\r\nWhere Id_xe=@Id_xe";
+            this._commandCollection[1].CommandText = "SELECT        A.Id_kiemTra, A.Id_xe, A.Trang_thai, A.Gia_thap_nhat, A.Gia_cao_nha" +
+                "t, B.Bien_so_xe\r\nFROM            BM_DinhGia_MuaXe A \r\nINNER JOIN BM_ThongTinXeBa" +
+                "n B ON A.Id_xe=B.Id_xe\r\nWhere A.Id_kiemTra=@Id_kiemtra";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_xe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_kiemtra", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_kiemTra", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6103,14 +6226,9 @@ SELECT Id_kiemTra, Id_xe, Trang_thai, Gia_thap_nhat, Gia_cao_nhat FROM BM_DinhGi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(dsSystem.BM_DinhGia_MuaXeDataTable dataTable, global::System.Nullable<int> Id_xe) {
+        public virtual int FillBy(dsSystem.BM_DinhGia_MuaXeDataTable dataTable, int Id_kiemtra) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Id_xe.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_xe.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_kiemtra));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6122,14 +6240,9 @@ SELECT Id_kiemTra, Id_xe, Trang_thai, Gia_thap_nhat, Gia_cao_nhat FROM BM_DinhGi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual dsSystem.BM_DinhGia_MuaXeDataTable GetDataBy(global::System.Nullable<int> Id_xe) {
+        public virtual dsSystem.BM_DinhGia_MuaXeDataTable GetDataBy(int Id_kiemtra) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Id_xe.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_xe.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_kiemtra));
             dsSystem.BM_DinhGia_MuaXeDataTable dataTable = new dsSystem.BM_DinhGia_MuaXeDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6538,12 +6651,19 @@ SELECT Id_gia_ban, Id_xe, Loi_nhuan, Chi_phi, Gia_mua, Dinh_gia FROM BM_DinhGia_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id_gia_ban, Id_xe, Loi_nhuan, Chi_phi, Gia_mua, Dinh_gia\r\nFROM     " +
                 "       BM_DinhGia_Ban";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "  select A.Chi_phi,A.Dinh_gia,A.Id_gia_ban, A.Gia_mua,B.Bien_so_xe from BM_DinhGi" +
+                "a_Ban A\r\n  INNER JOIN BM_ThongTinXeBan B ON A.Id_xe=B.Id_xe\r\n  AND A.Id_gia_ban=" +
+                "@Id_gia_ban";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_gia_ban", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_gia_ban", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6565,6 +6685,32 @@ SELECT Id_gia_ban, Id_xe, Loi_nhuan, Chi_phi, Gia_mua, Dinh_gia FROM BM_DinhGia_
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual dsSystem.BM_DinhGia_BanDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsSystem.BM_DinhGia_BanDataTable dataTable = new dsSystem.BM_DinhGia_BanDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(dsSystem.BM_DinhGia_BanDataTable dataTable, int Id_gia_ban) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_gia_ban));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsSystem.BM_DinhGia_BanDataTable GetDataBy(int Id_gia_ban) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_gia_ban));
             dsSystem.BM_DinhGia_BanDataTable dataTable = new dsSystem.BM_DinhGia_BanDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7015,7 +7161,7 @@ SELECT Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian, Bo_ph
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian," +
@@ -7023,10 +7169,15 @@ SELECT Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian, Bo_ph
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian," +
-                " Bo_phan\r\nFROM            BM_ThongTin_SuaChua\r\nwhere Id_xe=@Id_xe";
+            this._commandCollection[1].CommandText = "DELETE FROM [BM_ThongTin_SuaChua] WHERE Id_Sua=@Id_Sua";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_xe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Sua", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_sua", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian," +
+                " Bo_phan\r\nFROM            BM_ThongTin_SuaChua\r\nwhere Id_xe=@Id_xe";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_xe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7058,7 +7209,7 @@ SELECT Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian, Bo_ph
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillBy(dsSystem.BM_ThongTin_SuaChuaDataTable dataTable, global::System.Nullable<int> Id_xe) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((Id_xe.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_xe.Value));
             }
@@ -7077,7 +7228,7 @@ SELECT Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian, Bo_ph
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual dsSystem.BM_ThongTin_SuaChuaDataTable GetDataBy(global::System.Nullable<int> Id_xe) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((Id_xe.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_xe.Value));
             }
@@ -7402,6 +7553,30 @@ SELECT Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian, Bo_ph
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(global::System.Nullable<int> Id_xe, string Dien_giai, string Phu_tung, global::System.Nullable<double> Chi_phi, global::System.Nullable<bool> Hoan_thanh, global::System.Nullable<global::System.DateTime> Thoi_gian, string Bo_phan, int Original_Id_sua, global::System.Nullable<int> Original_Id_xe, string Original_Dien_giai, string Original_Phu_tung, global::System.Nullable<double> Original_Chi_phi, global::System.Nullable<bool> Original_Hoan_thanh, global::System.Nullable<global::System.DateTime> Original_Thoi_gian, string Original_Bo_phan) {
             return this.Update(Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian, Bo_phan, Original_Id_sua, Original_Id_xe, Original_Dien_giai, Original_Phu_tung, Original_Chi_phi, Original_Hoan_thanh, Original_Thoi_gian, Original_Bo_phan, Original_Id_sua);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQuery(int Id_Sua) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(Id_Sua));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

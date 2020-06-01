@@ -13,9 +13,11 @@ namespace QuanLyMuaBanXe.myFroms
 {
     public partial class frmDinhGia : DevExpress.XtraEditors.XtraForm
     {
-        public frmDinhGia()
+        private int m_id;
+        public frmDinhGia(int id)
         {
             InitializeComponent();
+            m_id = id;
         }
 
         private void labelControl5_Click(object sender, EventArgs e)
@@ -25,9 +27,55 @@ namespace QuanLyMuaBanXe.myFroms
 
         private void frmDinhGia_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dsSystem.BM_ThongTinXeBan' table. You can move, or remove it, as needed.
+         
             // TODO: This line of code loads data into the 'dsSystem.BM_DinhGia_Ban' table. You can move, or remove it, as needed.
-            this.bM_DinhGia_BanTableAdapter.Fill(this.dsSystem.BM_DinhGia_Ban);
+            loadData();
 
+        }
+
+        private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            saveData();
+        }
+        private void loadData()
+        {
+            this.bM_ThongTinXeBanTableAdapter.Fill(this.dsSystem.BM_ThongTinXeBan);
+            if (m_id == -1)
+            {
+                bMDinhGiaBanBindingSource.EndEdit();
+                bMDinhGiaBanBindingSource.AddNew();
+
+            }
+            else
+            {
+                bM_DinhGia_BanTableAdapter.FillBy(dsSystem.BM_DinhGia_Ban, m_id);
+            }
+        }
+        private void saveData()
+        {
+            if (dxValidationProvider1.Validate())
+            {
+                if (m_id == -1)
+                {
+                    bMDinhGiaBanBindingSource.EndEdit();
+                    bM_DinhGia_BanTableAdapter.Update(dsSystem.BM_DinhGia_Ban);
+                    dsSystem.BM_DinhGia_Ban.AcceptChanges();
+                    int id_xeBan = Convert.ToInt32(dsSystem.BM_ThongTinXeBan[0]["Id_xe"]);
+                    bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã định giá bán", id_xeBan);
+                }
+                else
+                {
+                    bMDinhGiaBanBindingSource.EndEdit();
+                    bM_DinhGia_BanTableAdapter.Update(dsSystem.BM_DinhGia_Ban);
+                    dsSystem.BM_DinhGia_Ban.AcceptChanges();
+                }
+            }
+          
+        }
+        private void barLargeButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
         }
     }
 }
