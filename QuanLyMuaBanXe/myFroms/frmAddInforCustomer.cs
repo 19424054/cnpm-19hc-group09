@@ -22,8 +22,8 @@ namespace QuanLyMuaBanXe.myFroms
 
         private void frmAddInforCustomer_Load(object sender, EventArgs e)
         {
-       
 
+            loadData();
         }
 
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

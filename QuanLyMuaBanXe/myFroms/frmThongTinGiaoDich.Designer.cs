@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongTinGiaoDich));
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -52,14 +56,22 @@
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.searchLookUpEdit2 = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.bMThongTinXeBanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colId_xe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMa_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBien_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.searchLookUpEdit1 = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.bMThongTinKhachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colHo_ten = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMa_KH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId_KH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -89,16 +101,10 @@
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bM_GiaoDichTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_GiaoDichTableAdapter();
-            this.bMThongTinKhachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bM_ThongTinKhachHangTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTinKhachHangTableAdapter();
-            this.colHo_ten = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMa_KH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colId_KH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bMThongTinXeBanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bM_ThongTinXeBanTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter();
-            this.colId_xe = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMa_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colBien_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
@@ -110,10 +116,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinXeBanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinKhachHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -142,8 +150,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinKhachHangBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinXeBanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -223,7 +230,10 @@
             this.barLargeButtonItem1.Id = 0;
             this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
             this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
+            this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barLargeButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem1.Name = "barLargeButtonItem1";
+            this.barLargeButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem1_ItemClick);
             // 
             // barLargeButtonItem2
             // 
@@ -232,6 +242,8 @@
             this.barLargeButtonItem2.Id = 1;
             this.barLargeButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.Image")));
             this.barLargeButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.LargeImage")));
+            this.barLargeButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barLargeButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
             // 
             // barDockControlTop
@@ -322,6 +334,11 @@
             this.cbbHinhThuc.Size = new System.Drawing.Size(205, 20);
             this.cbbHinhThuc.StyleController = this.layoutControl1;
             this.cbbHinhThuc.TabIndex = 17;
+            conditionValidationRule1.CaseSensitive = true;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Vui lòng chọn hình thức";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.cbbHinhThuc, conditionValidationRule1);
             // 
             // labelControl7
             // 
@@ -339,9 +356,18 @@
             this.textEdit3.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMGiaoDichBindingSource, "Gia_ban", true));
             this.textEdit3.Location = new System.Drawing.Point(116, 212);
             this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Properties.DisplayFormat.FormatString = "n0";
+            this.textEdit3.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit3.Properties.Mask.EditMask = "n0";
+            this.textEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEdit3.Size = new System.Drawing.Size(207, 20);
             this.textEdit3.StyleController = this.layoutControl1;
             this.textEdit3.TabIndex = 15;
+            conditionValidationRule2.CaseSensitive = true;
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "Vui lòng nhập giá tiền";
+            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.textEdit3, conditionValidationRule2);
             // 
             // labelControl6
             // 
@@ -391,17 +417,52 @@
             this.searchLookUpEdit2.Size = new System.Drawing.Size(207, 20);
             this.searchLookUpEdit2.StyleController = this.layoutControl1;
             this.searchLookUpEdit2.TabIndex = 11;
+            conditionValidationRule3.CaseSensitive = true;
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "Vui lòng chọn xe giao dịch";
+            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.searchLookUpEdit2, conditionValidationRule3);
+            this.searchLookUpEdit2.EditValueChanged += new System.EventHandler(this.searchLookUpEdit2_EditValueChanged);
+            // 
+            // bMThongTinXeBanBindingSource
+            // 
+            this.bMThongTinXeBanBindingSource.DataMember = "BM_ThongTinXeBan";
+            this.bMThongTinXeBanBindingSource.DataSource = this.dsSystem;
             // 
             // searchLookUpEdit2View
             // 
             this.searchLookUpEdit2View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId_xe,
             this.colMa_so_xe,
-            this.colBien_so_xe});
+            this.colBien_so_xe,
+            this.gridColumn1});
             this.searchLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit2View.Name = "searchLookUpEdit2View";
             this.searchLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit2View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colId_xe
+            // 
+            this.colId_xe.FieldName = "Id_xe";
+            this.colId_xe.Name = "colId_xe";
+            // 
+            // colMa_so_xe
+            // 
+            this.colMa_so_xe.Caption = "Mã số xe";
+            this.colMa_so_xe.FieldName = "Ma_so_xe";
+            this.colMa_so_xe.Name = "colMa_so_xe";
+            this.colMa_so_xe.Visible = true;
+            this.colMa_so_xe.VisibleIndex = 0;
+            this.colMa_so_xe.Width = 173;
+            // 
+            // colBien_so_xe
+            // 
+            this.colBien_so_xe.Caption = "Biển số xe";
+            this.colBien_so_xe.FieldName = "Bien_so_xe";
+            this.colBien_so_xe.Name = "colBien_so_xe";
+            this.colBien_so_xe.Visible = true;
+            this.colBien_so_xe.VisibleIndex = 1;
+            this.colBien_so_xe.Width = 512;
             // 
             // labelControl4
             // 
@@ -473,6 +534,17 @@
             this.searchLookUpEdit1.Size = new System.Drawing.Size(214, 20);
             this.searchLookUpEdit1.StyleController = this.layoutControl1;
             this.searchLookUpEdit1.TabIndex = 5;
+            conditionValidationRule4.CaseSensitive = true;
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "Vui lòng chọn khách hàng";
+            conditionValidationRule4.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.searchLookUpEdit1, conditionValidationRule4);
+            this.searchLookUpEdit1.EditValueChanged += new System.EventHandler(this.searchLookUpEdit1_EditValueChanged);
+            // 
+            // bMThongTinKhachHangBindingSource
+            // 
+            this.bMThongTinKhachHangBindingSource.DataMember = "BM_ThongTinKhachHang";
+            this.bMThongTinKhachHangBindingSource.DataSource = this.dsSystem;
             // 
             // searchLookUpEdit1View
             // 
@@ -484,6 +556,29 @@
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colHo_ten
+            // 
+            this.colHo_ten.Caption = "Họ tên khách hàng";
+            this.colHo_ten.FieldName = "Ho_ten";
+            this.colHo_ten.Name = "colHo_ten";
+            this.colHo_ten.Visible = true;
+            this.colHo_ten.VisibleIndex = 1;
+            this.colHo_ten.Width = 440;
+            // 
+            // colMa_KH
+            // 
+            this.colMa_KH.Caption = "Mã khách hàng";
+            this.colMa_KH.FieldName = "Ma_KH";
+            this.colMa_KH.Name = "colMa_KH";
+            this.colMa_KH.Visible = true;
+            this.colMa_KH.VisibleIndex = 0;
+            this.colMa_KH.Width = 245;
+            // 
+            // colId_KH
+            // 
+            this.colId_KH.FieldName = "Id_KH";
+            this.colId_KH.Name = "colId_KH";
             // 
             // labelControl1
             // 
@@ -780,69 +875,20 @@
             // 
             this.bM_GiaoDichTableAdapter.ClearBeforeFill = true;
             // 
-            // bMThongTinKhachHangBindingSource
-            // 
-            this.bMThongTinKhachHangBindingSource.DataMember = "BM_ThongTinKhachHang";
-            this.bMThongTinKhachHangBindingSource.DataSource = this.dsSystem;
-            // 
             // bM_ThongTinKhachHangTableAdapter
             // 
             this.bM_ThongTinKhachHangTableAdapter.ClearBeforeFill = true;
-            // 
-            // colHo_ten
-            // 
-            this.colHo_ten.Caption = "Họ tên khách hàng";
-            this.colHo_ten.FieldName = "Ho_ten";
-            this.colHo_ten.Name = "colHo_ten";
-            this.colHo_ten.Visible = true;
-            this.colHo_ten.VisibleIndex = 1;
-            this.colHo_ten.Width = 440;
-            // 
-            // colMa_KH
-            // 
-            this.colMa_KH.Caption = "Mã khách hàng";
-            this.colMa_KH.FieldName = "Ma_KH";
-            this.colMa_KH.Name = "colMa_KH";
-            this.colMa_KH.Visible = true;
-            this.colMa_KH.VisibleIndex = 0;
-            this.colMa_KH.Width = 245;
-            // 
-            // colId_KH
-            // 
-            this.colId_KH.FieldName = "Id_KH";
-            this.colId_KH.Name = "colId_KH";
-            // 
-            // bMThongTinXeBanBindingSource
-            // 
-            this.bMThongTinXeBanBindingSource.DataMember = "BM_ThongTinXeBan";
-            this.bMThongTinXeBanBindingSource.DataSource = this.dsSystem;
             // 
             // bM_ThongTinXeBanTableAdapter
             // 
             this.bM_ThongTinXeBanTableAdapter.ClearBeforeFill = true;
             // 
-            // colId_xe
+            // gridColumn1
             // 
-            this.colId_xe.FieldName = "Id_xe";
-            this.colId_xe.Name = "colId_xe";
-            // 
-            // colMa_so_xe
-            // 
-            this.colMa_so_xe.Caption = "Mã số xe";
-            this.colMa_so_xe.FieldName = "Ma_so_xe";
-            this.colMa_so_xe.Name = "colMa_so_xe";
-            this.colMa_so_xe.Visible = true;
-            this.colMa_so_xe.VisibleIndex = 0;
-            this.colMa_so_xe.Width = 173;
-            // 
-            // colBien_so_xe
-            // 
-            this.colBien_so_xe.Caption = "Biển số xe";
-            this.colBien_so_xe.FieldName = "Bien_so_xe";
-            this.colBien_so_xe.Name = "colBien_so_xe";
-            this.colBien_so_xe.Visible = true;
-            this.colBien_so_xe.VisibleIndex = 1;
-            this.colBien_so_xe.Width = 512;
+            this.gridColumn1.Caption = "Giá bán";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 2;
             // 
             // frmThongTinGiaoDich
             // 
@@ -871,10 +917,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinXeBanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinKhachHangBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -903,8 +951,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinKhachHangBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMThongTinXeBanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -981,5 +1028,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colId_xe;
         private DevExpress.XtraGrid.Columns.GridColumn colMa_so_xe;
         private DevExpress.XtraGrid.Columns.GridColumn colBien_so_xe;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

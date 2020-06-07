@@ -14,10 +14,11 @@ namespace QuanLyMuaBanXe.myFroms
 {
     public partial class frmThongTinSuaChua : DevExpress.XtraEditors.XtraForm
     {
-        private int m_id = 2;
-        public frmThongTinSuaChua()
+        private int m_id=-1;
+        public frmThongTinSuaChua(int id)
         {
             InitializeComponent();
+            m_id = id;
         }
 
         private void frmThongTinSuaChua_Load(object sender, EventArgs e)

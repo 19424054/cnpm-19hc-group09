@@ -352,6 +352,7 @@
             conditionValidationRule2.ErrorText = "Vui lòng chọn mã xe";
             conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
             this.dxValidationProvider1.SetValidationRule(this.searchLookUpEdit1, conditionValidationRule2);
+            this.searchLookUpEdit1.EditValueChanged += new System.EventHandler(this.searchLookUpEdit1_EditValueChanged);
             // 
             // bMThongTinXeBanBindingSource
             // 

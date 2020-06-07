@@ -77,5 +77,10 @@ namespace QuanLyMuaBanXe.myFroms
         {
             this.Close();
         }
+
+        private void searchLookUpEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
