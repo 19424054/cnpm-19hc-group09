@@ -17,7 +17,7 @@ namespace QuanLyMuaBanXe.myClasses
             {
 
 
-                DataRow[] tmp = dataTable.Select(string.Format("month = {0} and year = {1}", rowMonth, rowYear));
+                DataRow[] tmp = dataTable.Select(string.Format("Pmonth = {0} and Pyear = {1}", rowMonth, rowYear));
                 if (tmp.Length > 0)
                 {
                     int handle = view.GetRowHandle(dataTable.Rows.IndexOf(tmp[0]));

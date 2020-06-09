@@ -45,10 +45,13 @@
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.gcMenu = new DevExpress.XtraGrid.GridControl();
+            this.bMLISTPRODUCTMENUBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
             this.gvMenu = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colyear = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmonth = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
+            this.bMLISTPRODUCTDETAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,6 +62,10 @@
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dsSystem1 = new QuanLyMuaBanXe.myDataSet.dsSystem();
+            this.bM_LISTPRODUCT_MENUTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_MENUTableAdapter();
+            this.bM_LISTPRODUCT_DETAILSTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_DETAILSTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -66,9 +73,13 @@
             this.navBarControl1.SuspendLayout();
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMLISTPRODUCTMENUBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMLISTPRODUCTDETAILSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -112,6 +123,7 @@
             this.btnLamMoi.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnLamMoi.ItemAppearance.Normal.Options.UseFont = true;
             this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLamMoi_ItemClick);
             // 
             // btnAddNew
             // 
@@ -152,7 +164,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(715, 56);
+            this.barDockControlTop.Size = new System.Drawing.Size(897, 56);
             // 
             // barDockControlBottom
             // 
@@ -160,7 +172,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 404);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(715, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(897, 0);
             // 
             // barDockControlLeft
             // 
@@ -174,7 +186,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(715, 56);
+            this.barDockControlRight.Location = new System.Drawing.Point(897, 56);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 348);
             // 
@@ -188,7 +200,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gcMain);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(715, 348);
+            this.splitContainerControl1.Size = new System.Drawing.Size(897, 348);
             this.splitContainerControl1.SplitterPosition = 159;
             this.splitContainerControl1.TabIndex = 4;
             // 
@@ -227,6 +239,7 @@
             // 
             // gcMenu
             // 
+            this.gcMenu.DataSource = this.bMLISTPRODUCTMENUBindingSource;
             this.gcMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMenu.Location = new System.Drawing.Point(0, 0);
             this.gcMenu.MainView = this.gvMenu;
@@ -237,6 +250,16 @@
             this.gcMenu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMenu});
             // 
+            // bMLISTPRODUCTMENUBindingSource
+            // 
+            this.bMLISTPRODUCTMENUBindingSource.DataMember = "BM_LISTPRODUCT_MENU";
+            this.bMLISTPRODUCTMENUBindingSource.DataSource = this.dsSystem;
+            // 
+            // dsSystem
+            // 
+            this.dsSystem.DataSetName = "dsSystem";
+            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gvMenu
             // 
             this.gvMenu.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -245,6 +268,7 @@
             this.gvMenu.GridControl = this.gcMenu;
             this.gvMenu.GroupCount = 2;
             this.gvMenu.Name = "gvMenu";
+            this.gvMenu.OptionsBehavior.ReadOnly = true;
             this.gvMenu.OptionsView.ShowGroupPanel = false;
             this.gvMenu.OptionsView.ShowIndicator = false;
             this.gvMenu.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
@@ -255,6 +279,7 @@
             // colyear
             // 
             this.colyear.Caption = "Năm";
+            this.colyear.FieldName = "PYear";
             this.colyear.Name = "colyear";
             this.colyear.Visible = true;
             this.colyear.VisibleIndex = 0;
@@ -262,21 +287,28 @@
             // colmonth
             // 
             this.colmonth.Caption = "Tháng";
+            this.colmonth.FieldName = "Pmonth";
             this.colmonth.Name = "colmonth";
             this.colmonth.Visible = true;
             this.colmonth.VisibleIndex = 0;
             // 
             // gcMain
             // 
+            this.gcMain.DataSource = this.bMLISTPRODUCTDETAILSBindingSource;
             this.gcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
             this.gcMain.MenuManager = this.barManager1;
             this.gcMain.Name = "gcMain";
-            this.gcMain.Size = new System.Drawing.Size(546, 348);
+            this.gcMain.Size = new System.Drawing.Size(728, 348);
             this.gcMain.TabIndex = 0;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
+            // 
+            // bMLISTPRODUCTDETAILSBindingSource
+            // 
+            this.bMLISTPRODUCTDETAILSBindingSource.DataMember = "BM_LISTPRODUCT_DETAILS";
+            this.bMLISTPRODUCTDETAILSBindingSource.DataSource = this.dsSystem;
             // 
             // gvMain
             // 
@@ -289,77 +321,149 @@
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn10,
-            this.gridColumn11});
+            this.gridColumn11,
+            this.gridColumn1});
             this.gvMain.GridControl = this.gcMain;
+            this.gvMain.IndicatorWidth = 30;
             this.gvMain.Name = "gvMain";
+            this.gvMain.OptionsBehavior.ReadOnly = true;
             this.gvMain.OptionsFind.AlwaysVisible = true;
             this.gvMain.OptionsView.ColumnAutoWidth = false;
             this.gvMain.OptionsView.ShowGroupPanel = false;
+            this.gvMain.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvMain_CustomDrawRowIndicator);
             // 
             // gridColumn3
             // 
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.Caption = "Mã số xe";
+            this.gridColumn3.FieldName = "Ma_so_xe";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
+            this.gridColumn3.Width = 124;
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "Biển số xe";
+            this.gridColumn4.FieldName = "Bien_so_xe";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 1;
+            this.gridColumn4.VisibleIndex = 2;
+            this.gridColumn4.Width = 103;
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "Khách hàng bán";
+            this.gridColumn5.FieldName = "Ten_KH_Ban";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 2;
+            this.gridColumn5.VisibleIndex = 3;
+            this.gridColumn5.Width = 140;
             // 
             // gridColumn6
             // 
+            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.Caption = "SĐT";
+            this.gridColumn6.FieldName = "SDT";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 3;
+            this.gridColumn6.VisibleIndex = 4;
+            this.gridColumn6.Width = 131;
             // 
             // gridColumn7
             // 
+            this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn7.AppearanceHeader.Options.UseFont = true;
             this.gridColumn7.Caption = "Địa chỉ";
+            this.gridColumn7.FieldName = "Dia_chi";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 4;
+            this.gridColumn7.VisibleIndex = 5;
+            this.gridColumn7.Width = 382;
             // 
             // gridColumn8
             // 
+            this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn8.AppearanceHeader.Options.UseFont = true;
             this.gridColumn8.Caption = "Giá mua thấp nhất";
+            this.gridColumn8.DisplayFormat.FormatString = "n0";
+            this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn8.FieldName = "Gia_thap_nhat";
+            this.gridColumn8.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 5;
+            this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.Width = 130;
             // 
             // gridColumn9
             // 
+            this.gridColumn9.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn9.AppearanceHeader.Options.UseFont = true;
             this.gridColumn9.Caption = "Giá mua cao nhất";
+            this.gridColumn9.DisplayFormat.FormatString = "n0";
+            this.gridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn9.FieldName = "Gia_cao_nhat";
+            this.gridColumn9.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 6;
+            this.gridColumn9.Width = 118;
             // 
             // gridColumn10
             // 
+            this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn10.AppearanceHeader.Options.UseFont = true;
             this.gridColumn10.Caption = "Giá giao dịch";
+            this.gridColumn10.DisplayFormat.FormatString = "n0";
+            this.gridColumn10.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn10.FieldName = "Gia_ban";
             this.gridColumn10.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 7;
+            this.gridColumn10.VisibleIndex = 8;
+            this.gridColumn10.Width = 113;
             // 
             // gridColumn11
             // 
+            this.gridColumn11.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn11.AppearanceHeader.Options.UseFont = true;
             this.gridColumn11.Caption = "Trạng thái";
+            this.gridColumn11.FieldName = "Trang_Thai";
             this.gridColumn11.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 8;
+            this.gridColumn11.VisibleIndex = 9;
+            this.gridColumn11.Width = 106;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn1.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn1.Caption = "Loại xe";
+            this.gridColumn1.FieldName = "Loai_xe";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.Width = 122;
+            // 
+            // dsSystem1
+            // 
+            this.dsSystem1.DataSetName = "dsSystem";
+            this.dsSystem1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bM_LISTPRODUCT_MENUTableAdapter
+            // 
+            this.bM_LISTPRODUCT_MENUTableAdapter.ClearBeforeFill = true;
+            // 
+            // bM_LISTPRODUCT_DETAILSTableAdapter
+            // 
+            this.bM_LISTPRODUCT_DETAILSTableAdapter.ClearBeforeFill = true;
             // 
             // usListProduction
             // 
@@ -371,7 +475,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "usListProduction";
-            this.Size = new System.Drawing.Size(715, 404);
+            this.Size = new System.Drawing.Size(897, 404);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
@@ -379,9 +483,13 @@
             this.navBarControl1.ResumeLayout(false);
             this.navBarGroupControlContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMLISTPRODUCTMENUBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMLISTPRODUCTDETAILSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,5 +526,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private System.Windows.Forms.BindingSource bMLISTPRODUCTMENUBindingSource;
+        private myDataSet.dsSystem dsSystem;
+        private myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_MENUTableAdapter bM_LISTPRODUCT_MENUTableAdapter;
+        private System.Windows.Forms.BindingSource bMLISTPRODUCTDETAILSBindingSource;
+        private myDataSet.dsSystem dsSystem1;
+        private myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_DETAILSTableAdapter bM_LISTPRODUCT_DETAILSTableAdapter;
     }
 }

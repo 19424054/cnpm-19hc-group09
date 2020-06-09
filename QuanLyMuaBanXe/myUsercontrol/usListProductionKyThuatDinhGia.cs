@@ -91,5 +91,18 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 loadData(mYear, mMonth);
             }
         }
+
+        private void gvMain_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.Info.IsRowIndicator && e.RowHandle >= 0)
+            {
+                e.Info.DisplayText = (e.RowHandle + 1).ToString();
+                e.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                e.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+                e.Appearance.ForeColor = Color.Blue;
+                e.Appearance.Font = new Font("Times New Roman", 9, FontStyle.Bold);
+            }
+        }
     }
 }

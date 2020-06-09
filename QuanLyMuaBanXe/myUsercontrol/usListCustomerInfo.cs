@@ -28,7 +28,17 @@ namespace QuanLyMuaBanXe.myUsercontrol
             {
                 if(XtraMessageBox.Show("Bạn có muốn xóa khách hàng này không","Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    view.DeleteSelectedRows();
+                    if(Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai"))== "Mới tạo")
+                    {
+                        view.DeleteSelectedRows();
+                        int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
+                        bM_CUSTOMER_DETAILSTableAdapter.DeleteQuery(id_kh);
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Bạn không thể xóa khóa hàng đã thực hiện giao dịch");
+                    }
+                   
                 }
             }
         }
@@ -37,14 +47,14 @@ namespace QuanLyMuaBanXe.myUsercontrol
         {
             myFroms.frmAddInfor frm = new myFroms.frmAddInfor(-1);
             frm.ShowDialog();
-            loadData();
+            loadDataBasic();
         }
 
         private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            loadData();
+            loadData(mYear, mMonth);
         }
-        private void loadData()
+        private void loadData(int year, int month)
         {
 
         }
@@ -58,7 +68,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
                 myFroms.frmAddInfor frm = new myFroms.frmAddInfor(id_kh);
                 frm.ShowDialog();
-                loadData();
+                loadData(mYear, mMonth);
 
             }
         }
@@ -102,6 +112,20 @@ namespace QuanLyMuaBanXe.myUsercontrol
             {
                 mMonth = Convert.ToInt32(gvMenu.GetFocusedRowCellValue("month"));
                 mYear = Convert.ToInt32(gvMenu.GetFocusedRowCellValue("year"));
+            }
+            loadData(mYear, mMonth);
+        }
+
+        private void gvMain_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.Info.IsRowIndicator && e.RowHandle >= 0)
+            {
+                e.Info.DisplayText = (e.RowHandle + 1).ToString();
+                e.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                e.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+                e.Appearance.ForeColor = Color.Blue;
+                e.Appearance.Font = new Font("Times New Roman", 9, FontStyle.Bold);
             }
         }
     }

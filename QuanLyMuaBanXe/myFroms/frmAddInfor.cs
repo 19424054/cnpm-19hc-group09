@@ -50,22 +50,26 @@ namespace QuanLyMuaBanXe.myFroms
         }
         private void saveData()
         {
-            if (id_xe == -1)
+            if(XtraMessageBox.Show("Bạn có xác nhận cập nhật vào hệ thống?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
             {
-                bMThongTinXeBanBindingSource.EndEdit();
-                dsSystem.BM_ThongTinXeBan[0]["Ngay_tao"] = DateTime.Now;
-                dsSystem.BM_ThongTinXeBan[0]["Trang_thai"] = "Mới tạo";
-                dsSystem.BM_ThongTinXeBan[0]["Gia_ban"] = 0;
-                bM_ThongTinXeBanTableAdapter.Update(dsSystem.BM_ThongTinXeBan);
-                dsSystem.BM_ThongTinXeBan.AcceptChanges();
+                if (id_xe == -1)
+                {
+                    bMThongTinXeBanBindingSource.EndEdit();
+                    dsSystem.BM_ThongTinXeBan[0]["Ngay_tao"] = DateTime.Now;
+                    dsSystem.BM_ThongTinXeBan[0]["Trang_thai"] = "Mới tạo";
+                    dsSystem.BM_ThongTinXeBan[0]["Gia_ban"] = 0;
+                    bM_ThongTinXeBanTableAdapter.Update(dsSystem.BM_ThongTinXeBan);
+                    dsSystem.BM_ThongTinXeBan.AcceptChanges();
+                }
+                else
+                {
+                    bMThongTinXeBanBindingSource.EndEdit();
+                    bM_ThongTinXeBanTableAdapter.Update(dsSystem.BM_ThongTinXeBan);
+                    dsSystem.BM_ThongTinXeBan.AcceptChanges();
+                }
+                this.Close();
             }
-            else
-            {
-                bMThongTinXeBanBindingSource.EndEdit();
-                bM_ThongTinXeBanTableAdapter.Update(dsSystem.BM_ThongTinXeBan);
-                dsSystem.BM_ThongTinXeBan.AcceptChanges();
-            }
-            this.Close();
+           
         }
         private void loadData()
         {
