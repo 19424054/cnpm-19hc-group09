@@ -16,6 +16,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
     {
         private int mYear = DateTime.Now.Year;
         private int mMonth = -1;
+        myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter taXeBan = new myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter();
         public usListProductionKyThuatDinhGia()
         {
             InitializeComponent();
@@ -23,7 +24,18 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            GridView view = gvMain;
+            if (view.FocusedRowHandle > -1)
+            {
+                int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                if(Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai"))=="Đã định giá")
+                {
+                    if(XtraMessageBox.Show("Bạn có xác nhận hủy định giá của xe này không?","Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        taXeBan.UpdateQueryTrangThai("Mới tạo", m_id);
+                    }
+                }
+            }
         }
 
         private void btnAddNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -103,6 +115,11 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 e.Appearance.ForeColor = Color.Blue;
                 e.Appearance.Font = new Font("Times New Roman", 9, FontStyle.Bold);
             }
+        }
+
+        private void gcMain_DoubleClick(object sender, EventArgs e)
+        {
+
         }
     }
 }

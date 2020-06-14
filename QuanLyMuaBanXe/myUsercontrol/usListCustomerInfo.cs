@@ -75,15 +75,16 @@ namespace QuanLyMuaBanXe.myUsercontrol
         public void loadDataBasic()
         {
             //loadKeyPress();
-            DataTable dtMenu= new DataTable();// = Classes.Tools.laydata("api/purchasereceives/laydanhsachmenubywarehouseid/-1/-1/null/null/" + m_id);
-            if (dtMenu != null && dtMenu.Rows.Count > 0)
+            bM_LISTPRODUCT_MENUTableAdapter.FillBy(dsSystem.BM_LISTPRODUCT_MENU, "KhachHang");
+           // DataTable dtMenu= new DataTable();// = Classes.Tools.laydata("api/purchasereceives/laydanhsachmenubywarehouseid/-1/-1/null/null/" + m_id);
+            if (dsSystem.BM_LISTPRODUCT_MENU != null && dsSystem.BM_LISTPRODUCT_MENU.Rows.Count > 0)
             {
-                gcMenu.DataSource = dtMenu;
+                gcMenu.DataSource = dsSystem.BM_LISTPRODUCT_MENU;
                 DateTime m_now = DateTime.Now;
                 int m_Year = m_now.Year;
                 int m_Month = m_now.Month;
                 gvMenu.ExpandGroupLevel(0, false);
-                int rowHandle = myClasses.Tools.FindRowHandleByRowObject(dtMenu, gvMenu, m_now.Month, m_now.Year);
+                int rowHandle = myClasses.Tools.FindRowHandleByRowObject(dsSystem.BM_LISTPRODUCT_MENU, gvMenu, m_now.Month, m_now.Year);
                 if (rowHandle >= 0)
                 {
                     gvMenu.FocusedRowHandle = gvMenu.GetParentRowHandle(rowHandle);

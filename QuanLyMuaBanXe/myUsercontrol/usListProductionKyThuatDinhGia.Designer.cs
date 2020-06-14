@@ -276,6 +276,7 @@
             this.gcMain.TabIndex = 0;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
+            this.gcMain.DoubleClick += new System.EventHandler(this.gcMain_DoubleClick);
             // 
             // gvMain
             // 

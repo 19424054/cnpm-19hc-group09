@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.btnExsit = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.chkRemember = new DevExpress.XtraEditors.CheckEdit();
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.txtUser = new DevExpress.XtraEditors.TextEdit();
@@ -48,10 +46,12 @@
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
+            this.btnExsit = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkRemember.Properties)).BeginInit();
@@ -65,10 +65,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -90,40 +90,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(554, 150);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // btnExsit
-            // 
-            this.btnExsit.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnExsit.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnExsit.Appearance.Options.UseFont = true;
-            this.btnExsit.Appearance.Options.UseForeColor = true;
-            this.btnExsit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExsit.ImageOptions.Image")));
-            this.btnExsit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftTop;
-            this.btnExsit.Location = new System.Drawing.Point(452, 93);
-            this.btnExsit.Name = "btnExsit";
-            this.btnExsit.Size = new System.Drawing.Size(90, 45);
-            this.btnExsit.StyleController = this.layoutControl1;
-            this.btnExsit.TabIndex = 6;
-            this.btnExsit.Text = "Thoát";
-            this.btnExsit.Click += new System.EventHandler(this.btnExsit_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.Appearance.ForeColor = System.Drawing.Color.Navy;
-            this.btnLogin.Appearance.Options.UseBackColor = true;
-            this.btnLogin.Appearance.Options.UseFont = true;
-            this.btnLogin.Appearance.Options.UseForeColor = true;
-            this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
-            this.btnLogin.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnLogin.Location = new System.Drawing.Point(452, 12);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(90, 77);
-            this.btnLogin.StyleController = this.layoutControl1;
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "ĐĂNG NHẬP";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // chkRemember
             // 
@@ -304,6 +270,51 @@
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(266, 81);
+            this.emptySpaceItem1.MaxSize = new System.Drawing.Size(174, 49);
+            this.emptySpaceItem1.MinSize = new System.Drawing.Size(174, 49);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(174, 49);
+            this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // btnExsit
+            // 
+            this.btnExsit.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnExsit.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnExsit.Appearance.Options.UseFont = true;
+            this.btnExsit.Appearance.Options.UseForeColor = true;
+            this.btnExsit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExsit.ImageOptions.Image")));
+            this.btnExsit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftTop;
+            this.btnExsit.Location = new System.Drawing.Point(452, 93);
+            this.btnExsit.Name = "btnExsit";
+            this.btnExsit.Size = new System.Drawing.Size(90, 45);
+            this.btnExsit.StyleController = this.layoutControl1;
+            this.btnExsit.TabIndex = 6;
+            this.btnExsit.Text = "Thoát";
+            this.btnExsit.Click += new System.EventHandler(this.btnExsit_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.Appearance.ForeColor = System.Drawing.Color.Navy;
+            this.btnLogin.Appearance.Options.UseBackColor = true;
+            this.btnLogin.Appearance.Options.UseFont = true;
+            this.btnLogin.Appearance.Options.UseForeColor = true;
+            this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
+            this.btnLogin.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnLogin.Location = new System.Drawing.Point(452, 12);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(90, 77);
+            this.btnLogin.StyleController = this.layoutControl1;
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "ĐĂNG NHẬP";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnLogin;
@@ -325,17 +336,6 @@
             this.layoutControlItem9.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(266, 81);
-            this.emptySpaceItem1.MaxSize = new System.Drawing.Size(174, 49);
-            this.emptySpaceItem1.MinSize = new System.Drawing.Size(174, 49);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(174, 49);
-            this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frmLogin
             // 
@@ -362,10 +362,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
         }

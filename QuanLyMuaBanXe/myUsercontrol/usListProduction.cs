@@ -16,6 +16,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
     {
         private int mYear = DateTime.Now.Year;
         private int mMonth = -1;
+        myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter taXeBan = new myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter();
         public usListProduction()
         {
             InitializeComponent();
@@ -130,6 +131,28 @@ namespace QuanLyMuaBanXe.myUsercontrol
         private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             loadData(mYear, mMonth);
+        }
+
+        private void btnXacNhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            GridView view = gvMain;
+            if (view.FocusedRowHandle > -1)
+            {
+                int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                if(Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai"))=="Đã định giá")
+                {
+                    if(XtraMessageBox.Show("Bạn xác nhận đã hoàn thành thủ tục mua xe này?","Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        myFroms.frmXacNhanMuaXe frm = new myFroms.frmXacNhanMuaXe(m_id);
+                        frm.ShowDialog();
+                        loadData(mYear, mMonth);
+                    }
+                }
+                else
+                {
+                    XtraMessageBox.Show("Xe hiện tại chưa định giá. VUi lòng liên hệ phòng kỹ thuật.");
+                }
+            }
         }
     }
 }
