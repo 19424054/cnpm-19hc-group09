@@ -38,9 +38,7 @@
             this.txtUser = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.pickCompany = new DevExpress.XtraEditors.PictureEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -50,6 +48,8 @@
             this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.btnExsit = new DevExpress.XtraEditors.SimpleButton();
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
+            this.pickCompany = new DevExpress.XtraEditors.PictureEdit();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -57,9 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkRemember.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pickCompany.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -67,6 +65,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pickCompany.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
@@ -101,14 +101,14 @@
             this.chkRemember.Properties.Appearance.Options.UseForeColor = true;
             this.chkRemember.Properties.AutoHeight = false;
             this.chkRemember.Properties.Caption = "Ghi nhớ";
-            this.chkRemember.Size = new System.Drawing.Size(108, 45);
+            this.chkRemember.Size = new System.Drawing.Size(121, 45);
             this.chkRemember.StyleController = this.layoutControl1;
             this.chkRemember.TabIndex = 4;
             // 
             // txtPassword
             // 
             this.txtPassword.EditValue = "";
-            this.txtPassword.Location = new System.Drawing.Point(278, 54);
+            this.txtPassword.Location = new System.Drawing.Point(291, 54);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.AutoHeight = false;
             this.txtPassword.Properties.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
@@ -126,7 +126,7 @@
             // txtUser
             // 
             this.txtUser.EditValue = "";
-            this.txtUser.Location = new System.Drawing.Point(278, 12);
+            this.txtUser.Location = new System.Drawing.Point(291, 12);
             this.txtUser.Name = "txtUser";
             this.txtUser.Properties.AutoHeight = false;
             this.txtUser.Properties.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
@@ -149,10 +149,12 @@
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl2.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.labelControl2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("labelControl2.ImageOptions.Image")));
             this.labelControl2.Location = new System.Drawing.Point(166, 54);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.labelControl2.Size = new System.Drawing.Size(108, 35);
+            this.labelControl2.Size = new System.Drawing.Size(121, 35);
             this.labelControl2.StyleController = this.layoutControl1;
             this.labelControl2.TabIndex = 6;
             this.labelControl2.Text = "Mật khẩu:";
@@ -166,25 +168,15 @@
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.labelControl1.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.labelControl1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("labelControl1.ImageOptions.Image")));
             this.labelControl1.Location = new System.Drawing.Point(166, 12);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.labelControl1.Size = new System.Drawing.Size(108, 38);
+            this.labelControl1.Size = new System.Drawing.Size(121, 38);
             this.labelControl1.StyleController = this.layoutControl1;
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "Tên đăng nhập:";
-            // 
-            // pickCompany
-            // 
-            this.pickCompany.Location = new System.Drawing.Point(12, 12);
-            this.pickCompany.Name = "pickCompany";
-            this.pickCompany.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pickCompany.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pickCompany.Size = new System.Drawing.Size(150, 126);
-            this.pickCompany.StyleController = this.layoutControl1;
-            this.pickCompany.TabIndex = 4;
-            this.pickCompany.DoubleClick += new System.EventHandler(this.pickCompany_DoubleClick);
-            this.pickCompany.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pickCompany_MouseClick);
             // 
             // Root
             // 
@@ -204,24 +196,13 @@
             this.Root.Size = new System.Drawing.Size(554, 150);
             this.Root.TextVisible = false;
             // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.pickCompany;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.MinSize = new System.Drawing.Size(6, 3);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(154, 130);
-            this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.labelControl1;
             this.layoutControlItem2.Location = new System.Drawing.Point(154, 0);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(99, 19);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(112, 42);
+            this.layoutControlItem2.Size = new System.Drawing.Size(125, 42);
             this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
@@ -232,7 +213,7 @@
             this.layoutControlItem3.Location = new System.Drawing.Point(154, 42);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(64, 19);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(112, 39);
+            this.layoutControlItem3.Size = new System.Drawing.Size(125, 39);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
@@ -240,7 +221,7 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txtUser;
-            this.layoutControlItem4.Location = new System.Drawing.Point(266, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(279, 0);
             this.layoutControlItem4.MinSize = new System.Drawing.Size(57, 21);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(174, 42);
@@ -251,7 +232,7 @@
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.txtPassword;
-            this.layoutControlItem5.Location = new System.Drawing.Point(266, 42);
+            this.layoutControlItem5.Location = new System.Drawing.Point(279, 42);
             this.layoutControlItem5.MinSize = new System.Drawing.Size(57, 21);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(174, 39);
@@ -265,7 +246,7 @@
             this.layoutControlItem7.Location = new System.Drawing.Point(154, 81);
             this.layoutControlItem7.MinSize = new System.Drawing.Size(72, 23);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(112, 49);
+            this.layoutControlItem7.Size = new System.Drawing.Size(125, 49);
             this.layoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
@@ -273,7 +254,7 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(266, 81);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(279, 81);
             this.emptySpaceItem1.MaxSize = new System.Drawing.Size(174, 49);
             this.emptySpaceItem1.MinSize = new System.Drawing.Size(174, 49);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
@@ -289,9 +270,9 @@
             this.btnExsit.Appearance.Options.UseForeColor = true;
             this.btnExsit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExsit.ImageOptions.Image")));
             this.btnExsit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftTop;
-            this.btnExsit.Location = new System.Drawing.Point(452, 93);
+            this.btnExsit.Location = new System.Drawing.Point(465, 93);
             this.btnExsit.Name = "btnExsit";
-            this.btnExsit.Size = new System.Drawing.Size(90, 45);
+            this.btnExsit.Size = new System.Drawing.Size(77, 45);
             this.btnExsit.StyleController = this.layoutControl1;
             this.btnExsit.TabIndex = 6;
             this.btnExsit.Text = "Thoát";
@@ -307,21 +288,45 @@
             this.btnLogin.Appearance.Options.UseForeColor = true;
             this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
             this.btnLogin.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnLogin.Location = new System.Drawing.Point(452, 12);
+            this.btnLogin.Location = new System.Drawing.Point(465, 12);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(90, 77);
+            this.btnLogin.Size = new System.Drawing.Size(77, 77);
             this.btnLogin.StyleController = this.layoutControl1;
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "ĐĂNG NHẬP";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // pickCompany
+            // 
+            this.pickCompany.EditValue = global::QuanLyMuaBanXe.Properties.Resources.external_content_duckduckgo_com;
+            this.pickCompany.Location = new System.Drawing.Point(12, 12);
+            this.pickCompany.Name = "pickCompany";
+            this.pickCompany.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pickCompany.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pickCompany.Size = new System.Drawing.Size(150, 126);
+            this.pickCompany.StyleController = this.layoutControl1;
+            this.pickCompany.TabIndex = 4;
+            this.pickCompany.DoubleClick += new System.EventHandler(this.pickCompany_DoubleClick);
+            this.pickCompany.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pickCompany_MouseClick);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.pickCompany;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.MinSize = new System.Drawing.Size(6, 3);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(154, 130);
+            this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnLogin;
-            this.layoutControlItem6.Location = new System.Drawing.Point(440, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(453, 0);
             this.layoutControlItem6.MinSize = new System.Drawing.Size(13, 10);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(94, 81);
+            this.layoutControlItem6.Size = new System.Drawing.Size(81, 81);
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
@@ -329,10 +334,10 @@
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnExsit;
-            this.layoutControlItem9.Location = new System.Drawing.Point(440, 81);
+            this.layoutControlItem9.Location = new System.Drawing.Point(453, 81);
             this.layoutControlItem9.MinSize = new System.Drawing.Size(18, 5);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(94, 49);
+            this.layoutControlItem9.Size = new System.Drawing.Size(81, 49);
             this.layoutControlItem9.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
@@ -354,9 +359,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkRemember.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pickCompany.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
@@ -364,6 +367,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pickCompany.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);

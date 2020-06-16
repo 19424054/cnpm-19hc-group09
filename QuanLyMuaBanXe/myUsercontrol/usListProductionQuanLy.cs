@@ -23,7 +23,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(XtraMessageBox.Show("Bạn có muốn bản định giá này không?","Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if(XtraMessageBox.Show("Bạn có muốn hủy bản định giá này không?","Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
             }

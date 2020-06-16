@@ -28,14 +28,22 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void btnAddNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(-1);
-            frm.ShowDialog();
+            GridView view = gvMain;
+            if (view.FocusedRowHandle > -1)
+            {
+                myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
+                frm.ShowDialog();
+            }
         }
 
         private void barLargeButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(-1);
-            frm.ShowDialog();
+            GridView view = gvMain;
+            if (view.FocusedRowHandle > -1)
+            {
+                myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
+                frm.ShowDialog();
+            }
         }
         public void loadDataBasic()
         {
@@ -111,6 +119,18 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 e.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
                 e.Appearance.ForeColor = Color.Blue;
                 e.Appearance.Font = new Font("Times New Roman", 9, FontStyle.Bold);
+            }
+        }
+
+        private void gvMain_DoubleClick(object sender, EventArgs e)
+        {
+            GridView view = gvMain;
+            if (view.FocusedRowHandle > -1)
+            {
+                myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
+               
+                frm.ShowDialog();
+                loadData(mYear, mMonth);
             }
         }
     }

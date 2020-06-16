@@ -34,7 +34,6 @@
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -77,8 +76,7 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barLargeButtonItem1,
-            this.barLargeButtonItem2,
-            this.barLargeButtonItem3});
+            this.barLargeButtonItem2});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 3;
             // 
@@ -90,8 +88,7 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem3)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -116,16 +113,7 @@
             this.barLargeButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barLargeButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
-            // 
-            // barLargeButtonItem3
-            // 
-            this.barLargeButtonItem3.Caption = "Xuất báo cáo";
-            this.barLargeButtonItem3.Id = 2;
-            this.barLargeButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.Image")));
-            this.barLargeButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.LargeImage")));
-            this.barLargeButtonItem3.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.barLargeButtonItem3.ItemAppearance.Normal.Options.UseFont = true;
-            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
+            this.barLargeButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem2_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -220,6 +208,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Size = new System.Drawing.Size(182, 20);
             this.dateEdit1.TabIndex = 1;
+            this.dateEdit1.EditValueChanged += new System.EventHandler(this.dateEdit1_EditValueChanged);
             // 
             // radioGroup1
             // 
@@ -233,6 +222,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Theo tháng")});
             this.radioGroup1.Size = new System.Drawing.Size(182, 77);
             this.radioGroup1.TabIndex = 0;
+            this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
             // 
             // gcMain
             // 
@@ -334,7 +324,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem2;
-        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem3;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;

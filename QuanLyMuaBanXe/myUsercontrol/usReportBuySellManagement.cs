@@ -50,5 +50,15 @@ namespace QuanLyMuaBanXe.myUsercontrol
         {
 
         }
+
+        private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

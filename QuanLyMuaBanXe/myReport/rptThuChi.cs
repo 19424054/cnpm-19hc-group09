@@ -8,9 +8,15 @@ namespace QuanLyMuaBanXe.myReport
 {
     public partial class rptThuChi : DevExpress.XtraReports.UI.XtraReport
     {
-        public rptThuChi()
+        private int id_xe = -1;
+        public rptThuChi(int id)
         {
             InitializeComponent();
+            id_xe = id;
+        }
+        private void loadData()
+        {
+
         }
 
     }

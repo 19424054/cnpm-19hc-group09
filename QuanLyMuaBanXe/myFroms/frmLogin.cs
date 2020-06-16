@@ -3,6 +3,8 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace QuanLyMuaBanXe.myFroms
@@ -219,6 +221,25 @@ namespace QuanLyMuaBanXe.myFroms
         {
            // ftuvProject.frmConfigUpdateSoftware frm = new frmConfigUpdateSoftware();
           //  frm.Show();
+        }
+        private String decodeMD5(String password)
+        {
+          
+                byte[] keyArray;
+                var toEncryptArray = UTF8Encoding.UTF8.GetBytes(password);
+                var hashmd5 = new MD5CryptoServiceProvider();
+                keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes("***Lean-ERP----Approval-Module+TeamPro*** + 3/9/2013"));
+                var tdes = new TripleDESCryptoServiceProvider();
+                tdes.Key = keyArray;
+                tdes.Mode = CipherMode.ECB;
+                tdes.Padding = PaddingMode.PKCS7;
+
+                var cTransform = tdes.CreateEncryptor();
+                var resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+
+                return Convert.ToBase64String(resultArray, 0, resultArray.Length);
+            
+           
         }
     }
 }

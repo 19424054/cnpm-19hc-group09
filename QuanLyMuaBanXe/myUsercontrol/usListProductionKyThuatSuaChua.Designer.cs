@@ -53,6 +53,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -266,13 +267,15 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
-            this.gridColumn6});
+            this.gridColumn6,
+            this.gridColumn1});
             this.gvMain.GridControl = this.gcMain;
             this.gvMain.IndicatorWidth = 30;
             this.gvMain.Name = "gvMain";
             this.gvMain.OptionsFind.AlwaysVisible = true;
             this.gvMain.OptionsView.ShowGroupPanel = false;
             this.gvMain.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvMain_CustomDrawRowIndicator);
+            this.gvMain.DoubleClick += new System.EventHandler(this.gvMain_DoubleClick);
             // 
             // gridColumn3
             // 
@@ -309,6 +312,11 @@
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 3;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Id_xe";
+            this.gridColumn1.Name = "gridColumn1";
             // 
             // usListProductionKyThuatSuaChua
             // 
@@ -361,5 +369,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

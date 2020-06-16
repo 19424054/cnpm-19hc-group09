@@ -222,6 +222,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Size = new System.Drawing.Size(170, 20);
             this.dateEdit1.TabIndex = 1;
+            this.dateEdit1.EditValueChanged += new System.EventHandler(this.dateEdit1_EditValueChanged);
             // 
             // radioGroup1
             // 
@@ -235,6 +236,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Theo tháng")});
             this.radioGroup1.Size = new System.Drawing.Size(170, 96);
             this.radioGroup1.TabIndex = 0;
+            this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
             // 
             // gcMain
             // 

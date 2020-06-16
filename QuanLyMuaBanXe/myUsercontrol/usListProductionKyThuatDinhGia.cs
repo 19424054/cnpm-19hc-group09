@@ -40,9 +40,14 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void btnAddNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            myFroms.frmKiemTraTinhTrangXeBan frm = new myFroms.frmKiemTraTinhTrangXeBan(-1);
-            frm.ShowDialog();
-            loadData(mYear, mMonth);
+            GridView view = gvMain;
+            if(Convert.IsDBNull(view.GetFocusedRowCellValue("Id_kiemtra")))
+            {
+                myFroms.frmKiemTraTinhTrangXeBan frm = new myFroms.frmKiemTraTinhTrangXeBan(-1);
+                frm.ShowDialog();
+                loadData(mYear, mMonth);
+            }
+         
         }
 
         private void gvMenu_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -119,6 +124,20 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void gcMain_DoubleClick(object sender, EventArgs e)
         {
+            GridView view = gvMain;
+            if (Convert.IsDBNull(view.GetFocusedRowCellValue("Id_kiemtra")))
+            {
+                myFroms.frmKiemTraTinhTrangXeBan frm = new myFroms.frmKiemTraTinhTrangXeBan(-1);
+                frm.ShowDialog();
+                loadData(mYear, mMonth);
+            }
+            else
+            {
+                int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                myFroms.frmKiemTraTinhTrangXeBan frm = new myFroms.frmKiemTraTinhTrangXeBan(m_id);
+                frm.ShowDialog();
+                loadData(mYear, mMonth);
+            }
 
         }
     }

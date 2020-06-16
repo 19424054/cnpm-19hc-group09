@@ -133,6 +133,12 @@
     <Compile Include="myFroms\frmLogin.designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="myFroms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myFroms\frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="myFroms\frmManagementMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     <EmbeddedResource Include="myFroms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="myFroms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="myFroms\frmManagementMain.resx">
       <DependentUpon>frmManagementMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,6 +334,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\allowuserstoeditranges_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mailmerge_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\external-content.duckduckgo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\external-content.duckduckgo.com.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\omm_manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mrp_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r&amp;d_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logistic-5-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img-inventory-control.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

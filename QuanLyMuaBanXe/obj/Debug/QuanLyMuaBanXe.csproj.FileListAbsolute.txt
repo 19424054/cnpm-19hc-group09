@@ -205,3 +205,5 @@ G:\Project\KHTN\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.myUser
 G:\Project\KHTN\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.myUsercontrol.usReportBuySellManagement.resources
 G:\Project\KHTN\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.myUsercontrol.usReportBuySell.resources
 G:\Project\KHTN\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.myFroms.frmLogin.resources
+G:\Project\KHTN\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.myFroms.frmMain.resources
+G:\Project\KHTN\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.myFroms.frmXacNhanMuaXe.resources
