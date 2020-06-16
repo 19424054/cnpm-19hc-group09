@@ -178,9 +178,9 @@ namespace QuanLyMuaBanXe.myFroms
         {
             try
             {
-                this.Hide();
+               // this.Hide();
                 myFroms.frmBoPhanBanXe frm = new myFroms.frmBoPhanBanXe();
-                frm.ShowDialog();
+                frm.Show();
                 //ME_LeanERP.MyDataSets.dsUsersTableAdapters.NhanVienTableAdapter nhanVienTableAdapter = new MyDataSets.dsUsersTableAdapters.NhanVienTableAdapter();
                 //ME_LeanERP.MyDataSets.dsUsers.NhanVienDataTable dt = new MyDataSets.dsUsers.NhanVienDataTable();
                 //this.Hide();
@@ -268,9 +268,9 @@ namespace QuanLyMuaBanXe.myFroms
         {
             try
             {
-                this.Hide();
+               // this.Hide();
                 myFroms.frmBoPhanKyThuat frm = new myFroms.frmBoPhanKyThuat();
-                frm.ShowDialog();
+                frm.Show();
                 //OMM.frmOmmSystem frm = new OMM.frmOmmSystem();
                 //frm.Show();
             }
@@ -285,9 +285,9 @@ namespace QuanLyMuaBanXe.myFroms
         {
             try
             {
-                this.Hide();
+              //  this.Hide();
                 myFroms.frmBoPhanTiepNhan frm = new myFroms.frmBoPhanTiepNhan();
-                frm.ShowDialog();
+                frm.Show();
                 // System.Diagnostics.Process.Start("http://www.ishisei.vn");
             }
             catch (Exception ex)
@@ -410,7 +410,7 @@ namespace QuanLyMuaBanXe.myFroms
             {
                 try
                 {
-                    this.Hide();
+                   // this.Hide();
                     //PurchasingModule.frmMain frm = new PurchasingModule.frmMain();
                     //PurchasingModule.Utils.EID = ME_Utils.LoginInfo.EID;
                     //PurchasingModule.Utils.Account = ME_Utils.LoginInfo.Account;
@@ -423,7 +423,7 @@ namespace QuanLyMuaBanXe.myFroms
                 {
                     XtraMessageBox.Show(ex.Message);
                 }
-                this.Show();
+             //   this.Show();
 
                 // Inventory.
                 // inve
@@ -462,10 +462,10 @@ namespace QuanLyMuaBanXe.myFroms
         {
             try
             {
-                this.Hide();
+               // this.Hide();
                 myFroms.frmManagementMain frm = new myFroms.frmManagementMain();
-                frm.ShowDialog();
-               
+                frm.Show();
+
                 //ME_Utils.LoginInfo.IsFac = true;
                 ////PLANNING.FORMS.frmSapMayNhuom frm = new PLANNING.FORMS.frmSapMayNhuom();
                 ////frm.ShowDialog();

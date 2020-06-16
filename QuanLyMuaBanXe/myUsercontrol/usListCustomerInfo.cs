@@ -28,7 +28,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
             {
                 if(XtraMessageBox.Show("Bạn có muốn xóa khách hàng này không","Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if(Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai"))== "Mới tạo")
+                    if(Convert.ToString(view.GetFocusedRowCellValue("Trang_thai"))== "Mới tạo")
                     {
                         view.DeleteSelectedRows();
                         int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
@@ -36,7 +36,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
                     }
                     else
                     {
-                        XtraMessageBox.Show("Bạn không thể xóa khóa hàng đã thực hiện giao dịch");
+                        XtraMessageBox.Show("Bạn không thể xóa khách hàng đã thực hiện giao dịch");
                     }
                    
                 }
@@ -45,7 +45,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void btnAddNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            myFroms.frmAddInfor frm = new myFroms.frmAddInfor(-1);
+            myFroms.frmAddInforCustomer frm = new myFroms.frmAddInforCustomer(-1);
             frm.ShowDialog();
             loadDataBasic();
         }
@@ -56,7 +56,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
         }
         private void loadData(int year, int month)
         {
-
+            bM_CUSTOMER_DETAILSTableAdapter.Fill(dsSystem.BM_CUSTOMER_DETAILS, year, month);
         }
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -66,7 +66,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
             {
 
                 int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
-                myFroms.frmAddInfor frm = new myFroms.frmAddInfor(id_kh);
+                myFroms.frmAddInforCustomer frm = new myFroms.frmAddInforCustomer(id_kh);
                 frm.ShowDialog();
                 loadData(mYear, mMonth);
 

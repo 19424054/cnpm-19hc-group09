@@ -53,6 +53,7 @@ namespace QuanLyMuaBanXe.myFroms
                 dsSystem.BM_ThongTinKhachHang[0]["Trang_thai"] = "Mới tạo";
                 bM_ThongTinKhachHangTableAdapter.Update(dsSystem.BM_ThongTinKhachHang);
                 dsSystem.BM_ThongTinKhachHang.AcceptChanges();
+                this.Close();
 
             }
             else
@@ -60,13 +61,18 @@ namespace QuanLyMuaBanXe.myFroms
                 bMThongTinKhachHangBindingSource.EndEdit();
                 bM_ThongTinKhachHangTableAdapter.Update(dsSystem.BM_ThongTinKhachHang);
                 dsSystem.BM_ThongTinKhachHang.AcceptChanges();
+                this.Close();
             }
         }
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
             {
-                saveData();
+                if(XtraMessageBox.Show("Bạn có xác nhân lưu khách hàng vào hệ thống?","Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    saveData();
+                }
+              
             }
             catch (Exception)
             {

@@ -37,6 +37,7 @@ namespace QuanLyMuaBanXe.myFroms
                     Name = "usListProductionKyThuatDinhGia"
                 };
                 uc.Dock = DockStyle.Fill;
+                uc.loadDataBasic();
                 newPage.Controls.Add(uc);
                 tabMain.TabPages.Add(newPage);
                 tabMain.SelectedTabPage = newPage;
@@ -61,6 +62,7 @@ namespace QuanLyMuaBanXe.myFroms
                     Name = "usListProductionKyThuatSuaChua"
                 };
                 uc.Dock = DockStyle.Fill;
+                uc.loadDataBasic();
                 newPage.Controls.Add(uc);
                 tabMain.TabPages.Add(newPage);
                 tabMain.SelectedTabPage = newPage;

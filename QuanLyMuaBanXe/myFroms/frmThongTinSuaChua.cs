@@ -43,11 +43,16 @@ namespace QuanLyMuaBanXe.myFroms
             {
                 if (XtraMessageBox.Show("Bạn có muốn xóa hiện trạng sữa chữa này không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if(Convert.ToInt32(view.GetFocusedRowCellValue("Id_Sua"))!=-1)
+                    if(Convert.ToInt32(view.GetFocusedRowCellValue("Id_sua"))!=-1)
                     {
-                        bM_ThongTin_SuaChuaTableAdapter.DeleteQuery(Convert.ToInt32(view.GetFocusedRowCellValue("Id_Sua")));
+                        bM_ThongTin_SuaChuaTableAdapter.DeleteQuery(Convert.ToInt32(view.GetFocusedRowCellValue("Id_sua")));
+                        loadDetail(m_id);
                     }
-                    view.DeleteSelectedRows();
+                    else
+                    {
+                        view.DeleteSelectedRows();
+                    }
+                 
                 }
             }
           
@@ -61,13 +66,18 @@ namespace QuanLyMuaBanXe.myFroms
         {
             this.bM_ThongTinXeBanTableAdapter.Fill(this.dsSystem.BM_ThongTinXeBan);
             searchLookUpEdit1.EditValue = m_id;
+            textEdit1.EditValue = dsSystem.BM_ThongTinXeBan[0]["Loai_xe"];
         }
         private void saveData()
         {
             bMThongTinSuaChuaBindingSource.EndEdit();
             foreach (DataRow dr in dsSystem.BM_ThongTin_SuaChua)
             {
-                dr["Id_xe"] = m_id;
+                if(Convert.IsDBNull(dr["Id_xe"]))
+                {
+                    dr["Id_xe"] = m_id;
+                }
+                
             }
             bM_ThongTin_SuaChuaTableAdapter.Update(dsSystem.BM_ThongTin_SuaChua);
            

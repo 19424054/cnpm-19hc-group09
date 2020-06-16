@@ -13,7 +13,8 @@ namespace QuanLyMuaBanXe.myFroms
     {
         private QuanLyMuaBanXe.Properties.Settings setting;
         private string _idusername = "";
-
+        myDataSet.dsSystem.BM_TaiKhoanDataTable dtTaiKhoan = new myDataSet.dsSystem.BM_TaiKhoanDataTable();
+        myDataSet.dsSystemTableAdapters.BM_TaiKhoanTableAdapter taTaiKhoan = new myDataSet.dsSystemTableAdapters.BM_TaiKhoanTableAdapter();
         public frmLogin()
         {
             setting = new Properties.Settings();
@@ -26,77 +27,26 @@ namespace QuanLyMuaBanXe.myFroms
 
         private void checkLogin(string _username, string _password)
         {
-            //try
-            //{
-            //    Classes.Tools.showWating("Đang kiểm tra thông tin đăng nhập ...");
-            //    var result = Classes.Tools.Api.call("api/resusers/dangnhap/" + _username + "/" + _password + "/" + m_idcompany, "get", "", false, false, false);
-            //    if (result.IsSuccessStatusCode)
-            //    {
-            //        Classes.LoginInfo.user_name = _username;
-            //        Classes.LoginInfo.password = _password;
-            //        Classes.Tools.setWating("Nạp dữ liệu đăng nhập ...");
-            //        Classes.Json json = new Classes.Json(result.Content.ReadAsStringAsync().Result);
-            //        DataTable dt = json.toDataTable();
-            //        if (dt.Rows.Count > 0)
-            //        {
-            //            _idusername = dt.Rows[0]["user_id"].ToString();
-            //            Classes.LoginInfo.access_token = dt.Rows[0]["access_token"].ToString();
-            //            Classes.LoginInfo.expiry_token = Convert.ToDateTime(dt.Rows[0]["expiry_token"]);
-            //            Classes.LoginInfo.user_id = Convert.ToString(dt.Rows[0]["user_id"]);
-            //            Classes.LoginInfo.employee_id = Convert.ToString(dt.Rows[0]["employee_id"]);
-            //            Classes.LoginInfo.employee_name = Convert.ToString(dt.Rows[0]["employee_name"]);
-            //            Classes.LoginInfo.employee_code = Convert.ToString(dt.Rows[0]["employee_code"]);
-            //            Classes.LoginInfo.company_id = Convert.ToString(dt.Rows[0]["company_id"]);
-            //            Classes.LoginInfo.currency_id = Convert.ToString(dt.Rows[0]["currency_id"]);
-            //            Classes.LoginInfo.currency_name = Convert.ToString(dt.Rows[0]["currency_name"]);
-            //            Classes.LoginInfo.avatar = Convert.ToString(dt.Rows[0]["avatar"]);
-            //            Classes.LoginInfo.mobileCompany = Convert.ToString(dt.Rows[0]["mobileCompany"]);
-            //            Classes.LoginInfo.faxCompany = Convert.ToString(dt.Rows[0]["faxCompany"]);
-            //            Classes.LoginInfo.taxCompany = Convert.ToString(dt.Rows[0]["taxCompany"]);
-            //            Classes.LoginInfo.isAdmin =Classes.Tools.toBool(dt.Rows[0]["is_admin"]);
-            //            Classes.ProjectConfig.isEncrypt = Classes.Tools.toBool(dt.Rows[0]["isEncrypt"]);
-            //            if (!string.IsNullOrEmpty(Classes.LoginInfo.avatar))
-            //            {
-            //                Stream stream = Classes.Tools.download(Classes.LoginInfo.avatar);
-            //                if (stream != null)
-            //                {
-            //                    Classes.LoginInfo.imgAvatar = Image.FromStream(stream);
-            //                }
-            //            }
-            //            string logoCompany = Convert.ToString(Convert.ToString(dt.Rows[0]["logoCompany"]));
-            //            if (!string.IsNullOrEmpty(logoCompany))
-            //            {
-            //                Stream stream = Classes.Tools.download(logoCompany);
-            //                if (stream != null)
-            //                {
-            //                    Classes.LoginInfo.logoCompany = Image.FromStream(stream);
-            //                }
-            //            }
-            //        }
-            //        Classes.ControlPermission.loadPermissionModule();
-            //        Classes.Notifycation.ConnectAsync();
+            try
+            {
+                String md5Code = decodeMD5(_password);
+                taTaiKhoan.FillBy(dtTaiKhoan, _password, md5Code, _username);
+                if (dtTaiKhoan.Rows.Count > 0)
+                {
+                    this.Hide();
+                    frmMain frm = new frmMain();               
+                    frm.Show();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Tài khoản hoặc mật khẩu không đúng.");
+                }
+            }
+            catch (Exception)
+            {
 
-            //        //getUserInformation(_idusername);
-            //        this.Hide();
-            //        frmMain frm = new frmMain();
-            //        Classes.Tools.closeWating();
-            //        frm.Show();
-            //    }
-            //    else if (result.StatusCode == System.Net.HttpStatusCode.BadRequest)
-            //    {
-            //        Classes.clsBasic.RequestError(result);
-
-            //        txtPassword.ResetText();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    Classes.Tools.MesErr(ex.Message);
-            //}
-            //finally
-            //{
-            //    Classes.Tools.closeWating();
-            //}
+              
+            }
            
         }
 
@@ -228,7 +178,7 @@ namespace QuanLyMuaBanXe.myFroms
                 byte[] keyArray;
                 var toEncryptArray = UTF8Encoding.UTF8.GetBytes(password);
                 var hashmd5 = new MD5CryptoServiceProvider();
-                keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes("***Lean-ERP----Approval-Module+TeamPro*** + 3/9/2013"));
+                keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes("19HCBTeam"));
                 var tdes = new TripleDESCryptoServiceProvider();
                 tdes.Key = keyArray;
                 tdes.Mode = CipherMode.ECB;

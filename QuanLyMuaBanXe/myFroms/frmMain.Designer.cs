@@ -31,13 +31,6 @@
             DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame1 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement13 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
@@ -47,22 +40,29 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame1 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement13 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
             this.pnlThongTinNhanVien = new DevExpress.XtraEditors.PanelControl();
             this.UIButtonMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.lblTen = new DevExpress.XtraEditors.LabelControl();
             this.tileControl = new DevExpress.XtraEditors.TileControl();
             this.tileGroupMain = new DevExpress.XtraEditors.TileGroup();
-            this.tileItemOMM = new DevExpress.XtraEditors.TileItem();
             this.tileItemProduction = new DevExpress.XtraEditors.TileItem();
             this.tileItemOffice = new DevExpress.XtraEditors.TileItem();
             this.tileItemCRM = new DevExpress.XtraEditors.TileItem();
+            this.tileItemOMM = new DevExpress.XtraEditors.TileItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlThongTinNhanVien)).BeginInit();
             this.pnlThongTinNhanVien.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlThongTinNhanVien
             // 
-            this.pnlThongTinNhanVien.Appearance.BackColor = System.Drawing.Color.Azure;
+            this.pnlThongTinNhanVien.Appearance.BackColor = System.Drawing.Color.PaleGreen;
             this.pnlThongTinNhanVien.Appearance.Options.UseBackColor = true;
             this.pnlThongTinNhanVien.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnlThongTinNhanVien.Controls.Add(this.UIButtonMain);
@@ -112,7 +112,7 @@
             this.tileControl.AllowDrag = false;
             this.tileControl.AllowDragTilesBetweenGroups = false;
             this.tileControl.AllowItemHover = true;
-            this.tileControl.BackColor = System.Drawing.Color.Azure;
+            this.tileControl.BackColor = System.Drawing.Color.PaleGreen;
             this.tileControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tileControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tileControl.Groups.Add(this.tileGroupMain);
@@ -135,6 +135,101 @@
             this.tileGroupMain.Items.Add(this.tileItemCRM);
             this.tileGroupMain.Items.Add(this.tileItemOMM);
             this.tileGroupMain.Name = "tileGroupMain";
+            // 
+            // tileItemProduction
+            // 
+            this.tileItemProduction.AppearanceItem.Normal.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.tileItemProduction.AppearanceItem.Normal.Options.UseBackColor = true;
+            tileItemElement1.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            tileItemElement1.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
+            tileItemElement1.Appearance.Normal.Options.UseFont = true;
+            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.NoScale;
+            tileItemElement1.ImageOptions.ImageSize = new System.Drawing.Size(200, 100);
+            tileItemElement1.Text = "MANAGEMENT";
+            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement1.TextLocation = new System.Drawing.Point(0, -5);
+            tileItemElement2.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement2.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement2.Appearance.Normal.Options.UseFont = true;
+            tileItemElement2.Text = "Bộ phận quản lý";
+            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
+            tileItemElement3.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.omm_manager;
+            tileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement3.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
+            tileItemElement3.Text = "";
+            this.tileItemProduction.Elements.Add(tileItemElement1);
+            this.tileItemProduction.Elements.Add(tileItemElement2);
+            this.tileItemProduction.Elements.Add(tileItemElement3);
+            this.tileItemProduction.Id = 22;
+            this.tileItemProduction.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItemProduction.Name = "tileItemProduction";
+            this.tileItemProduction.Tag = "pcm";
+            this.tileItemProduction.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItemProduction_ItemClick_1);
+            // 
+            // tileItemOffice
+            // 
+            this.tileItemOffice.AppearanceItem.Normal.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.tileItemOffice.AppearanceItem.Normal.Options.UseBackColor = true;
+            tileItemElement4.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.mrp_logo;
+            tileItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement4.ImageOptions.ImageLocation = new System.Drawing.Point(0, -10);
+            tileItemElement4.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
+            tileItemElement4.ImageOptions.ImageSize = new System.Drawing.Size(90, 120);
+            tileItemElement4.Text = "<image>";
+            tileItemElement5.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            tileItemElement5.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement5.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            tileItemElement5.Appearance.Normal.Options.UseFont = true;
+            tileItemElement5.Text = "SALES";
+            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement6.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement6.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement6.Appearance.Normal.Options.UseFont = true;
+            tileItemElement6.Text = "Bộ phận bán hàng";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
+            this.tileItemOffice.Elements.Add(tileItemElement4);
+            this.tileItemOffice.Elements.Add(tileItemElement5);
+            this.tileItemOffice.Elements.Add(tileItemElement6);
+            this.tileItemOffice.Id = 15;
+            this.tileItemOffice.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItemOffice.Name = "tileItemOffice";
+            this.tileItemOffice.Tag = "eoffice";
+            this.tileItemOffice.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItemOffice_ItemClick);
+            // 
+            // tileItemCRM
+            // 
+            this.tileItemCRM.AppearanceItem.Normal.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.tileItemCRM.AppearanceItem.Normal.Options.UseBackColor = true;
+            tileItemElement7.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.img_inventory_control;
+            tileItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement7.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
+            tileItemElement7.ImageOptions.ImageSize = new System.Drawing.Size(120, 120);
+            tileItemElement8.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement8.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement8.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
+            tileItemElement8.Appearance.Normal.Options.UseFont = true;
+            tileItemElement8.Text = "RECEPTION";
+            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileItemElement8.TextLocation = new System.Drawing.Point(-6, -5);
+            tileItemElement9.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement9.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement9.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileItemElement9.Appearance.Normal.Options.UseFont = true;
+            tileItemElement9.Text = "Bộ phận tiếp nhận";
+            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
+            tileItemElement9.TextLocation = new System.Drawing.Point(0, 5);
+            this.tileItemCRM.Elements.Add(tileItemElement7);
+            this.tileItemCRM.Elements.Add(tileItemElement8);
+            this.tileItemCRM.Elements.Add(tileItemElement9);
+            this.tileItemCRM.Id = 0;
+            this.tileItemCRM.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
+            this.tileItemCRM.Name = "tileItemCRM";
+            this.tileItemCRM.Tag = "crm";
+            this.tileItemCRM.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItemUsers_ItemClick);
             // 
             // tileItemOMM
             // 
@@ -232,104 +327,9 @@
             this.tileItemOMM.Tag = "omm";
             this.tileItemOMM.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItemOMM_ItemClick);
             // 
-            // tileItemProduction
-            // 
-            this.tileItemProduction.AppearanceItem.Normal.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.tileItemProduction.AppearanceItem.Normal.Options.UseBackColor = true;
-            tileItemElement1.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            tileItemElement1.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
-            tileItemElement1.Appearance.Normal.Options.UseFont = true;
-            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.NoScale;
-            tileItemElement1.ImageOptions.ImageSize = new System.Drawing.Size(200, 100);
-            tileItemElement1.Text = "MANAGEMENT";
-            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement1.TextLocation = new System.Drawing.Point(0, -5);
-            tileItemElement2.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tileItemElement2.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tileItemElement2.Appearance.Normal.Options.UseFont = true;
-            tileItemElement2.Text = "Bộ phận quản lý";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
-            tileItemElement3.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.omm_manager;
-            tileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement3.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
-            tileItemElement3.Text = "";
-            this.tileItemProduction.Elements.Add(tileItemElement1);
-            this.tileItemProduction.Elements.Add(tileItemElement2);
-            this.tileItemProduction.Elements.Add(tileItemElement3);
-            this.tileItemProduction.Id = 22;
-            this.tileItemProduction.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
-            this.tileItemProduction.Name = "tileItemProduction";
-            this.tileItemProduction.Tag = "pcm";
-            this.tileItemProduction.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItemProduction_ItemClick_1);
-            // 
-            // tileItemOffice
-            // 
-            this.tileItemOffice.AppearanceItem.Normal.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.tileItemOffice.AppearanceItem.Normal.Options.UseBackColor = true;
-            tileItemElement4.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.mrp_logo;
-            tileItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement4.ImageOptions.ImageLocation = new System.Drawing.Point(0, -10);
-            tileItemElement4.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
-            tileItemElement4.ImageOptions.ImageSize = new System.Drawing.Size(90, 120);
-            tileItemElement4.Text = "<image>";
-            tileItemElement5.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            tileItemElement5.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement5.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            tileItemElement5.Appearance.Normal.Options.UseFont = true;
-            tileItemElement5.Text = "SALES";
-            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement6.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tileItemElement6.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tileItemElement6.Appearance.Normal.Options.UseFont = true;
-            tileItemElement6.Text = "Bộ phận bán hàng";
-            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
-            this.tileItemOffice.Elements.Add(tileItemElement4);
-            this.tileItemOffice.Elements.Add(tileItemElement5);
-            this.tileItemOffice.Elements.Add(tileItemElement6);
-            this.tileItemOffice.Id = 15;
-            this.tileItemOffice.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
-            this.tileItemOffice.Name = "tileItemOffice";
-            this.tileItemOffice.Tag = "eoffice";
-            this.tileItemOffice.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItemOffice_ItemClick);
-            // 
-            // tileItemCRM
-            // 
-            this.tileItemCRM.AppearanceItem.Normal.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.tileItemCRM.AppearanceItem.Normal.Options.UseBackColor = true;
-            tileItemElement7.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.img_inventory_control;
-            tileItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement7.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
-            tileItemElement7.ImageOptions.ImageSize = new System.Drawing.Size(120, 120);
-            tileItemElement8.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tileItemElement8.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement8.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
-            tileItemElement8.Appearance.Normal.Options.UseFont = true;
-            tileItemElement8.Text = "RECEPTION";
-            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            tileItemElement8.TextLocation = new System.Drawing.Point(-6, -5);
-            tileItemElement9.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tileItemElement9.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement9.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tileItemElement9.Appearance.Normal.Options.UseFont = true;
-            tileItemElement9.Text = "Bộ phận tiếp nhận";
-            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomRight;
-            tileItemElement9.TextLocation = new System.Drawing.Point(0, 5);
-            this.tileItemCRM.Elements.Add(tileItemElement7);
-            this.tileItemCRM.Elements.Add(tileItemElement8);
-            this.tileItemCRM.Elements.Add(tileItemElement9);
-            this.tileItemCRM.Id = 0;
-            this.tileItemCRM.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
-            this.tileItemCRM.Name = "tileItemCRM";
-            this.tileItemCRM.Tag = "crm";
-            this.tileItemCRM.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.tileItemUsers_ItemClick);
-            // 
             // frmMain
             // 
-            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;

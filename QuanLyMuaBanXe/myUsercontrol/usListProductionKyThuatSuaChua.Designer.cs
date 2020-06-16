@@ -44,16 +44,22 @@
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.gcMenu = new DevExpress.XtraGrid.GridControl();
+            this.bMLISTPRODUCTMENUBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
             this.gvMenu = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colyear = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmonth = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
+            this.bMINFORTECHNICALMAINBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bM_LISTPRODUCT_MENUTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_MENUTableAdapter();
+            this.bM_INFORTECHNICAL_MAINTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_INFORTECHNICAL_MAINTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -61,8 +67,11 @@
             this.navBarControl1.SuspendLayout();
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMLISTPRODUCTMENUBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMINFORTECHNICALMAINBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,6 +219,7 @@
             // 
             // gcMenu
             // 
+            this.gcMenu.DataSource = this.bMLISTPRODUCTMENUBindingSource;
             this.gcMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMenu.Location = new System.Drawing.Point(0, 0);
             this.gcMenu.MainView = this.gvMenu;
@@ -219,6 +229,16 @@
             this.gcMenu.TabIndex = 0;
             this.gcMenu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMenu});
+            // 
+            // bMLISTPRODUCTMENUBindingSource
+            // 
+            this.bMLISTPRODUCTMENUBindingSource.DataMember = "BM_LISTPRODUCT_MENU";
+            this.bMLISTPRODUCTMENUBindingSource.DataSource = this.dsSystem;
+            // 
+            // dsSystem
+            // 
+            this.dsSystem.DataSetName = "dsSystem";
+            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gvMenu
             // 
@@ -238,6 +258,7 @@
             // colyear
             // 
             this.colyear.Caption = "Năm";
+            this.colyear.FieldName = "PYear";
             this.colyear.Name = "colyear";
             this.colyear.Visible = true;
             this.colyear.VisibleIndex = 0;
@@ -245,12 +266,14 @@
             // colmonth
             // 
             this.colmonth.Caption = "Tháng";
+            this.colmonth.FieldName = "Pmonth";
             this.colmonth.Name = "colmonth";
             this.colmonth.Visible = true;
             this.colmonth.VisibleIndex = 0;
             // 
             // gcMain
             // 
+            this.gcMain.DataSource = this.bMINFORTECHNICALMAINBindingSource;
             this.gcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
@@ -261,18 +284,32 @@
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
             // 
+            // bMINFORTECHNICALMAINBindingSource
+            // 
+            this.bMINFORTECHNICALMAINBindingSource.DataMember = "BM_INFORTECHNICAL_MAIN";
+            this.bMINFORTECHNICALMAINBindingSource.DataSource = this.dsSystem;
+            // 
             // gvMain
             // 
+            this.gvMain.Appearance.FooterPanel.BackColor = System.Drawing.Color.Transparent;
+            this.gvMain.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gvMain.Appearance.FooterPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gvMain.Appearance.FooterPanel.Options.UseBackColor = true;
+            this.gvMain.Appearance.FooterPanel.Options.UseFont = true;
+            this.gvMain.Appearance.FooterPanel.Options.UseForeColor = true;
             this.gvMain.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.gridColumn2});
             this.gvMain.GridControl = this.gcMain;
             this.gvMain.IndicatorWidth = 30;
             this.gvMain.Name = "gvMain";
+            this.gvMain.OptionsBehavior.ReadOnly = true;
             this.gvMain.OptionsFind.AlwaysVisible = true;
+            this.gvMain.OptionsView.ShowFooter = true;
             this.gvMain.OptionsView.ShowGroupPanel = false;
             this.gvMain.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvMain_CustomDrawRowIndicator);
             this.gvMain.DoubleClick += new System.EventHandler(this.gvMain_DoubleClick);
@@ -282,41 +319,77 @@
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.Caption = "Mã số xe";
+            this.gridColumn3.FieldName = "Ma_so_xe";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 1;
+            this.gridColumn3.VisibleIndex = 0;
+            this.gridColumn3.Width = 128;
             // 
             // gridColumn4
             // 
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "Trạng thái";
+            this.gridColumn4.FieldName = "Trang_Thai";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 0;
+            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.Width = 130;
             // 
             // gridColumn5
             // 
+            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "Tổng chi phí";
+            this.gridColumn5.DisplayFormat.FormatString = "n0";
+            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn5.FieldName = "TongChiPhi";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TongChiPhi", "{0:n0}")});
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 2;
+            this.gridColumn5.Width = 149;
             // 
             // gridColumn6
             // 
             this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.Caption = "Thời gian hoàn thành";
+            this.gridColumn6.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn6.FieldName = "ThoiGian";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 3;
+            this.gridColumn6.Width = 139;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Id_xe";
+            this.gridColumn1.FieldName = "Id_xe";
             this.gridColumn1.Name = "gridColumn1";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn2.Caption = "Loại xe";
+            this.gridColumn2.FieldName = "Loai_xe";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 132;
+            // 
+            // bM_LISTPRODUCT_MENUTableAdapter
+            // 
+            this.bM_LISTPRODUCT_MENUTableAdapter.ClearBeforeFill = true;
+            // 
+            // bM_INFORTECHNICAL_MAINTableAdapter
+            // 
+            this.bM_INFORTECHNICAL_MAINTableAdapter.ClearBeforeFill = true;
             // 
             // usListProductionKyThuatSuaChua
             // 
@@ -336,8 +409,11 @@
             this.navBarControl1.ResumeLayout(false);
             this.navBarGroupControlContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMLISTPRODUCTMENUBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMINFORTECHNICALMAINBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -370,5 +446,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private System.Windows.Forms.BindingSource bMLISTPRODUCTMENUBindingSource;
+        private myDataSet.dsSystem dsSystem;
+        private myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_MENUTableAdapter bM_LISTPRODUCT_MENUTableAdapter;
+        private System.Windows.Forms.BindingSource bMINFORTECHNICALMAINBindingSource;
+        private myDataSet.dsSystemTableAdapters.BM_INFORTECHNICAL_MAINTableAdapter bM_INFORTECHNICAL_MAINTableAdapter;
     }
 }
