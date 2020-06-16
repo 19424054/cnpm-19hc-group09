@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddInfor));
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
@@ -204,8 +203,8 @@
             this.btnSave.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.btnSave.Caption = "Cập nhật";
             this.btnSave.Id = 0;
-            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.LargeImage")));
+            this.btnSave.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.icons8_save_32;
+            this.btnSave.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.icons8_save_32;
             this.btnSave.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnSave.ItemAppearance.Normal.Options.UseFont = true;
             this.btnSave.Name = "btnSave";
@@ -216,8 +215,8 @@
             this.btnClose.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.btnClose.Caption = "Đóng";
             this.btnClose.Id = 1;
-            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
-            this.btnClose.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.LargeImage")));
+            this.btnClose.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.icons8_close_window_32;
+            this.btnClose.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.icons8_close_window_32;
             this.btnClose.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnClose.ItemAppearance.Normal.Options.UseFont = true;
             this.btnClose.Name = "btnClose";
@@ -586,6 +585,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.shop_icon;
             this.MaximizeBox = false;
             this.Name = "frmAddInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

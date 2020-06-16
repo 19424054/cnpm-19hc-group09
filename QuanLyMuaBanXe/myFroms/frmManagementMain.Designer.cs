@@ -86,8 +86,8 @@
             // 
             this.btnListBuySell.Caption = "Danh sách mua bán xe";
             this.btnListBuySell.Id = 3;
-            this.btnListBuySell.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListBuySell.ImageOptions.Image")));
-            this.btnListBuySell.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnListBuySell.ImageOptions.LargeImage")));
+            this.btnListBuySell.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.Report;
+            this.btnListBuySell.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.Report;
             this.btnListBuySell.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnListBuySell.ItemAppearance.Normal.Options.UseFont = true;
             this.btnListBuySell.Name = "btnListBuySell";
@@ -97,8 +97,8 @@
             // 
             this.barButtonItem1.Caption = "Báo cáo thu chi mua bán xe";
             this.barButtonItem1.Id = 4;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.Sales;
+            this.barButtonItem1.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.Sales;
             this.barButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barButtonItem1.Name = "barButtonItem1";
@@ -149,6 +149,7 @@
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IconOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.shop_icon;
             this.Name = "frmManagementMain";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -268,8 +268,8 @@
             this.btnExsit.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnExsit.Appearance.Options.UseFont = true;
             this.btnExsit.Appearance.Options.UseForeColor = true;
-            this.btnExsit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExsit.ImageOptions.Image")));
-            this.btnExsit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftTop;
+            this.btnExsit.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.icons8_close_window_32;
+            this.btnExsit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnExsit.Location = new System.Drawing.Point(465, 93);
             this.btnExsit.Name = "btnExsit";
             this.btnExsit.Size = new System.Drawing.Size(77, 45);
@@ -286,7 +286,7 @@
             this.btnLogin.Appearance.Options.UseBackColor = true;
             this.btnLogin.Appearance.Options.UseFont = true;
             this.btnLogin.Appearance.Options.UseForeColor = true;
-            this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
+            this.btnLogin.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.login_32;
             this.btnLogin.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnLogin.Location = new System.Drawing.Point(465, 12);
             this.btnLogin.Name = "btnLogin";
@@ -298,7 +298,7 @@
             // 
             // pickCompany
             // 
-            this.pickCompany.EditValue = global::QuanLyMuaBanXe.Properties.Resources.external_content_duckduckgo_com;
+            this.pickCompany.EditValue = global::QuanLyMuaBanXe.Properties.Resources.Motorcycle_icon;
             this.pickCompany.Location = new System.Drawing.Point(12, 12);
             this.pickCompany.Name = "pickCompany";
             this.pickCompany.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -349,6 +349,7 @@
             this.ClientSize = new System.Drawing.Size(554, 150);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.shop_icon;
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

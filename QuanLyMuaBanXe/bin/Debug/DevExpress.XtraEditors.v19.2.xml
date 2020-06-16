@@ -4,11 +4,6 @@
     <name>DevExpress.XtraEditors.v19.2</name>
   </assembly>
   <members>
-    <member name="N:DevExpress.Utils.Menu">
-      <summary>
-        <para>Contains classes that are used to implement context menus in DevExpress controls.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.Utils.Menu.DXEditMenuItem">
       <summary>
         <para>A menu item that allows you to embed an editor in a <see cref="T:DevExpress.Utils.Menu.DXPopupMenu"/>.</para>
@@ -99,11 +94,6 @@
         <para>Gets or sets the editor&#39;s width.</para>
       </summary>
       <value>An integer value that is the editor&#39;s widhth.</value>
-    </member>
-    <member name="N:DevExpress.XtraBars.Alerter">
-      <summary>
-        <para>Contains the classes that maintain the AlertControl&#39;s infrastructure.</para>
-      </summary>
     </member>
     <member name="T:DevExpress.XtraBars.Alerter.AlertButton">
       <summary>
@@ -538,11 +528,6 @@
       </summary>
       <value>A string that specifies the text of an alert window.</value>
     </member>
-    <member name="N:DevExpress.XtraBars.Docking">
-      <summary>
-        <para>Contains classes that implement docking functionality.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraBars.Docking.TabsPosition">
       <summary>
         <para>Lists values specifying the position of the tabs in a tab container.</para>
@@ -566,11 +551,6 @@
     <member name="F:DevExpress.XtraBars.Docking.TabsPosition.Top">
       <summary>
         <para>The tabs are located across the top of the tab container.</para>
-      </summary>
-    </member>
-    <member name="N:DevExpress.XtraEditors">
-      <summary>
-        <para>Contains editor classes. They provide the functionality for corresponding controls. Editor specific information is stored within the Persistent classes that are implemented in the <see cref="N:DevExpress.XtraEditors.Persistent"/> namespace.</para>
       </summary>
     </member>
     <member name="T:DevExpress.XtraEditors.AreaChartRangeControlClientView">
@@ -986,7 +966,7 @@
     </member>
     <member name="P:DevExpress.XtraEditors.BaseCheckedListBoxControl.CheckMember">
       <summary>
-        <para>Gets or sets the name of the data source field that provides check states for listbox items.</para>
+        <para>Gets or sets the name of the data source field that provides check states for listbox items. This property is not supported when listbox items are rendered based on Item Templates</para>
       </summary>
       <value>A string value specifying a field name in the data source.</value>
     </member>
@@ -3093,7 +3073,7 @@ This member is supported by individual descendant of the <see cref="T:DevExpress
     </member>
     <member name="M:DevExpress.XtraEditors.BreadCrumbNodeCollection.BeginUpdate">
       <summary>
-        <para>Locks the <see cref="T:DevExpress.XtraEditors.BreadCrumbNodeCollection"/> by preventing visual updates of the collection and its elements until the BreadCrumbNodeCollection.EndUpdate method is called.</para>
+        <para>Locks the <see cref="T:DevExpress.XtraEditors.BreadCrumbNodeCollection"/> by preventing visual updates of the collection and its elements until the  method is called.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraEditors.BreadCrumbNodeCollection.CollectionChanged">
@@ -5077,11 +5057,6 @@ This member is supported by individual descendant of the <see cref="T:DevExpress
       </summary>
       <value>A <see cref="T:DevExpress.XtraEditors.NavigatorButton"/> object representing the navigator&#39;s Remove button.</value>
     </member>
-    <member name="N:DevExpress.XtraEditors.Controls">
-      <summary>
-        <para>Contains classes that provide editor functionality and specify editor appearance.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraEditors.Controls.AddingMRUItemEventArgs">
       <summary>
         <para>Provides data for the <see cref="E:DevExpress.XtraEditors.Repository.RepositoryItemMRUEdit.AddingMRUItem"/> event.</para>
@@ -6018,12 +5993,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.False.</value>
       <param name="cancel">true if the event should be canceled; otherwise, false.</param>
     </member>
     <member name="P:DevExpress.XtraEditors.Controls.ChangingEventArgs.IsBoundUpdatingEditValue">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Controls.ChangingEventArgs.IsTextChanging">
       <summary>
         <para></para>
       </summary>
@@ -7813,7 +7782,7 @@ A specific version of the addressed image is automatically chosen based on the a
       <summary>
         <para>Gets or sets the item&#39;s display text.</para>
       </summary>
-      <value>The string that specifies the item&#39;s display text.</value>
+      <value>The string identifying the item&#39;s display text.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Controls.ImageComboBoxItem.ImageIndex">
       <summary>
@@ -9564,22 +9533,6 @@ A specific version of the addressed image is automatically chosen based on the a
       <param name="description">A value that specifies the item&#39;s display text.  This value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.RadioGroupItem.Description"/> property.</param>
       <param name="enabled">A Boolean value that specifies whether the item is enabled. This value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.RadioGroupItem.Enabled"/> property.</param>
       <param name="tag">An Object that contains custom data. This value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.RadioGroupItem.Tag"/> property.</param>
-    </member>
-    <member name="M:DevExpress.XtraEditors.Controls.RadioGroupItem.#ctor(System.Object,System.String,System.Boolean,System.Object,System.String)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.Controls.RadioGroupItem"/> class with specified settings.</para>
-      </summary>
-      <param name="value"></param>
-      <param name="description"></param>
-      <param name="enabled"></param>
-      <param name="tag"></param>
-      <param name="accessibleName"></param>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Controls.RadioGroupItem.AccessibleName">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="E:DevExpress.XtraEditors.Controls.RadioGroupItem.Changed">
       <summary>
@@ -14432,7 +14385,7 @@ A specific version of the addressed image is automatically chosen based on the a
     </member>
     <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.ValidateHiddenControls">
       <summary>
-        <para>Gets or sets whether hidden editors are validated when calling the DXValidationProvider.Validate method.</para>
+        <para>Gets or sets whether hidden editors are validated when calling the  method.</para>
       </summary>
       <value>true if validation of hidden editors is enabled; otherwise, false</value>
     </member>
@@ -17345,14 +17298,6 @@ In <see cref="F:DevExpress.XtraEditors.HotTrackSelectMode.SelectItemOnHotTrack"/
         <para>Creates an instance of the <see cref="T:DevExpress.XtraEditors.LookUpEdit"/> class.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraEditors.LookUpEdit.AccessibleNotifyClients(System.Windows.Forms.AccessibleEvents,System.Int32,System.Int32)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="accEvent"></param>
-      <param name="objectID"></param>
-      <param name="childID"></param>
-    </member>
     <member name="E:DevExpress.XtraEditors.LookUpEdit.AutoSearch">
       <summary>
         <para>Fires when the editor SearchMode property is set to . In this mode, the editor filters out data source records that do not match the currently entered text, and displays remaining records in the drop-down panel. The AutoSearch event is optional, it allows you to fine-tune the search. See the <see cref="T:DevExpress.XtraEditors.LookUpEdit"/> class description to learn more.</para>
@@ -18743,12 +18688,6 @@ In <see cref="F:DevExpress.XtraEditors.HotTrackSelectMode.SelectItemOnHotTrack"/
       </summary>
       <value>A DevExpress.Utils.Svg.SvgImage object representing the vector image displayed by the picture editor.</value>
     </member>
-    <member name="P:DevExpress.XtraEditors.PictureEdit.SvgImageColorizationMode">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraEditors.PictureEdit.SvgImageSize">
       <summary>
         <para>Gets or sets the required size of the vector image.</para>
@@ -19665,11 +19604,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets the text label for this <see cref="T:DevExpress.XtraEditors.RatingControl"/>.</para>
       </summary>
       <value>A String value that is the text label for this <see cref="T:DevExpress.XtraEditors.RatingControl"/>.</value>
-    </member>
-    <member name="N:DevExpress.XtraEditors.Repository">
-      <summary>
-        <para>Contains classes representing repository items that store editor-specific settings.</para>
-      </summary>
     </member>
     <member name="T:DevExpress.XtraEditors.Repository.BaseRepositoryItemCheckEdit">
       <summary>
@@ -23352,7 +23286,7 @@ In bound mode, this method populates the item collection before returning it.</p
       <summary>
         <para>Gets or sets the alignment of item images.</para>
       </summary>
-      <value>The <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the alignment of item images.</value>
+      <value>The <see cref="T:DevExpress.Utils.HorzAlignment"/> value specifying the alignment of item images.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox.IsFilterLookUp">
       <summary>
@@ -23690,7 +23624,7 @@ In bound mode, this method populates the item collection before returning it.</p
       <summary>
         <para>Gets the index of a specific row in the underlying data source.</para>
       </summary>
-      <param name="index">A row&#39;s visual position in the dropdown window. This index can be obtained via the RepositoryItemLookUpEdit.GetDataSourceRowIndex method.</param>
+      <param name="index">A row&#39;s visual position in the dropdown window. This index can be obtained via the  method.</param>
       <returns>The index of a specific row in the underlying data source.</returns>
     </member>
     <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit.GetNotInListValue">
@@ -24096,9 +24030,9 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit.ScrollBars">
       <summary>
-        <para>Gets or sets whether the control displays the horizontal and/or vertical scroll bar.</para>
+        <para>Gets or sets a value indicating which scrollbars are displayed.</para>
       </summary>
-      <value>A <see cref="T:System.Windows.Forms.ScrollBars"/> enumeration value that specifies whether the control displays the horizontal scroll bar, the vertical scroll bar, both, or has no scroll bars.</value>
+      <value>A <see cref="T:System.Windows.Forms.ScrollBars"/> enumeration value indicating whether 0, 1 or 2 are displayed.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit.UseSystemPasswordChar">
       <summary>
@@ -24108,9 +24042,9 @@ In bound mode, this method populates the item collection before returning it.</p
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit.WordWrap">
       <summary>
-        <para>Gets or sets whether the editor automatically wraps words to the beginning of the next line when necessary.</para>
+        <para>Gets or sets a value specifying whether text is automatically wrapped at an editor&#39;s right margin.</para>
       </summary>
-      <value>true, if the editor automatically wraps words to the beginning of the next line; otherwise, false.</value>
+      <value>true if an editor always wraps text at the right margin, false if it displays a separate line only following a carriage return character.</value>
     </member>
     <member name="T:DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit">
       <summary>
@@ -24565,12 +24499,6 @@ In bound mode, this method populates the item collection before returning it.</p
       <value>The displayed image&#39;s size mode.</value>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.SvgImageBinaryStoreMode">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit.SvgImageColorizationMode">
       <summary>
         <para></para>
       </summary>
@@ -30900,7 +30828,7 @@ Always equal to true.</para>
     </member>
     <member name="P:DevExpress.XtraEditors.XtraDialog.AllowCustomLookAndFeel">
       <summary>
-        <para>Gets or sets whether a dialog is painted using its own look and feel settings, which are specified by the lookAndFeel parameter of specific XtraDialog.Show method overloads. This property is ignored if the lookAndFeel parameter is set to use a skinning paint scheme.</para>
+        <para>Gets or sets whether a dialog is painted using its own look and feel settings, which are specified by the lookAndFeel parameter of specific  method overloads. This property is ignored if the lookAndFeel parameter is set to use a skinning paint scheme.</para>
       </summary>
       <value>true, if the dialog is painted using its own look and feel settings; false, if the default look and feel settings are used.</value>
     </member>
@@ -31507,7 +31435,7 @@ Always equal to true.</para>
     </member>
     <member name="P:DevExpress.XtraEditors.XtraMessageBox.AllowHtmlText">
       <summary>
-        <para>Gets or sets whether the HTML text formatting feature is enabled by default in message boxes, displayed using the XtraMessageBox.Show method.</para>
+        <para>Gets or sets whether the HTML text formatting feature is enabled by default in message boxes, displayed using the  method.</para>
       </summary>
       <value>true, if the HTML text formatting feature is enabled by default in message boxes; otherwise, false.</value>
     </member>
@@ -32805,13 +32733,13 @@ Allows you to select a form that should be subsequently activated.</para>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm">
       <summary>
-        <para>Closes the currently displayed <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>, that has been displayed using the SplashScreenManager.ShowForm method.
+        <para>Closes the currently displayed <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>, that has been displayed using the  method.
 The method throws an exception if no splash form is currently open.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.CloseForm(System.Boolean)">
       <summary>
-        <para>Closes the currently displayed <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>, that has been displayed using the SplashScreenManager.ShowForm method.
+        <para>Closes the currently displayed <see cref="T:DevExpress.XtraSplashScreen.SplashScreen"/> or <see cref="T:DevExpress.XtraWaitForm.WaitForm"/>, that has been displayed using the  method.
 The method&#39;s parameter allows you to suppress an exception that is raised when no splash form is currently opened.</para>
       </summary>
       <param name="throwExceptionIfAlreadyClosed">true to raise an exception if no splash form is currently open; otherwise, false.</param>
@@ -32883,7 +32811,7 @@ Allows you to select a form that should be subsequently activated, and suppress 
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.HideImage">
       <summary>
-        <para>Hides the splash image that has been displayed via the SplashScreenManager.ShowImage method.</para>
+        <para>Hides the splash image that has been displayed via the  method.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.HideImage(System.Int32,System.Windows.Forms.Form)">
@@ -33291,7 +33219,7 @@ The method&#39;s parameter allows you to disable the parent form while the splas
       </summary>
       <param name="svgImage">An SvgImage to be drawn.</param>
       <param name="useFadeIn">true, to use the fade-in effect when the image appears on-screen; otherwise, false.</param>
-      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the SplashScreenManager.HideImage method to hide a splash form image.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the  method to hide a splash form image.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowImage(DevExpress.Utils.Svg.SvgImage,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.ICustomImagePainter)">
       <summary>
@@ -33299,7 +33227,7 @@ The method&#39;s parameter allows you to disable the parent form while the splas
       </summary>
       <param name="svgImage">An SvgImage to be drawn.</param>
       <param name="useFadeIn">true, to use the fade-in effect when the image appears on-screen; otherwise, false.</param>
-      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the SplashScreenManager.HideImage method to hide a splash form image.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the  method to hide a splash form image.</param>
       <param name="painter">An ICustomImagePainter object that implements a custom drawing procedure.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowImage(DevExpress.Utils.Svg.SvgImage,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point)">
@@ -33308,7 +33236,7 @@ The method&#39;s parameter allows you to disable the parent form while the splas
       </summary>
       <param name="svgImage">An SvgImage to be drawn.</param>
       <param name="useFadeIn">true, to use the fade-in effect when the image appears on-screen; otherwise, false.</param>
-      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the SplashScreenManager.HideImage method to hide a splash form image.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the  method to hide a splash form image.</param>
       <param name="startPos">The splash form&#39;s arrangement.</param>
       <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
     </member>
@@ -33318,7 +33246,7 @@ The method&#39;s parameter allows you to disable the parent form while the splas
       </summary>
       <param name="svgImage">An SvgImage to be drawn.</param>
       <param name="useFadeIn">true, to use the fade-in effect when the image appears on-screen; otherwise, false.</param>
-      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the SplashScreenManager.HideImage method to hide a splash form image.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the  method to hide a splash form image.</param>
       <param name="startPos">The splash form&#39;s arrangement.</param>
       <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
       <param name="painter">An ICustomImagePainter object that implements a custom drawing procedure.</param>
@@ -33329,7 +33257,7 @@ The method&#39;s parameter allows you to disable the parent form while the splas
       </summary>
       <param name="svgImage">An SvgImage to be drawn.</param>
       <param name="useFadeIn">true, to use the fade-in effect when the image appears on-screen; otherwise, false.</param>
-      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the SplashScreenManager.HideImage method to hide a splash form image.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the  method to hide a splash form image.</param>
       <param name="startPos">The splash form&#39;s arrangement.</param>
       <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
       <param name="painter">An ICustomImagePainter object that implements a custom drawing procedure.</param>
@@ -33357,7 +33285,7 @@ The method&#39;s parameter allows you to disable the parent form while the splas
       <param name="svgImage">An SvgImage to be drawn.</param>
       <param name="imageSize">A Size structure that is the image size.</param>
       <param name="useFadeIn">true, to use the fade-in effect when the image appears on-screen; otherwise, false.</param>
-      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the SplashScreenManager.HideImage method to hide a splash form image.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the  method to hide a splash form image.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowImage(DevExpress.Utils.Svg.SvgImage,System.Drawing.Size,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.ICustomImagePainter)">
       <summary>
@@ -33366,7 +33294,7 @@ The method&#39;s parameter allows you to disable the parent form while the splas
       <param name="svgImage">An SvgImage to be drawn.</param>
       <param name="imageSize">A Size structure that is the image size.</param>
       <param name="useFadeIn">true, to use the fade-in effect when the image appears on-screen; otherwise, false.</param>
-      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the SplashScreenManager.HideImage method to hide a splash form image.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the  method to hide a splash form image.</param>
       <param name="painter">An ICustomImagePainter object that implements a custom drawing procedure.</param>
     </member>
     <member name="M:DevExpress.XtraSplashScreen.SplashScreenManager.ShowImage(DevExpress.Utils.Svg.SvgImage,System.Drawing.Size,System.Boolean,System.Boolean,DevExpress.XtraSplashScreen.SplashFormStartPosition,System.Drawing.Point)">
@@ -33376,7 +33304,7 @@ The method&#39;s parameter allows you to disable the parent form while the splas
       <param name="svgImage">An SvgImage to be drawn.</param>
       <param name="imageSize">A Size structure that is the image size.</param>
       <param name="useFadeIn">true, to use the fade-in effect when the image appears on-screen; otherwise, false.</param>
-      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the SplashScreenManager.HideImage method to hide a splash form image.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the  method to hide a splash form image.</param>
       <param name="startPos">The splash form&#39;s arrangement.</param>
       <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
     </member>
@@ -33387,7 +33315,7 @@ The method&#39;s parameter allows you to disable the parent form while the splas
       <param name="svgImage">An SvgImage to be drawn.</param>
       <param name="imageSize">A Size structure that is the image size.</param>
       <param name="useFadeIn">true, to use the fade-in effect when the image appears on-screen; otherwise, false.</param>
-      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the SplashScreenManager.HideImage method to hide a splash form image.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the  method to hide a splash form image.</param>
       <param name="startPos">The splash form&#39;s arrangement.</param>
       <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
       <param name="painter">An ICustomImagePainter object that implements a custom drawing procedure.</param>
@@ -33399,7 +33327,7 @@ The method&#39;s parameter allows you to disable the parent form while the splas
       <param name="svgImage">An SvgImage to be drawn.</param>
       <param name="imageSize">A Size structure that is the image size.</param>
       <param name="useFadeIn">true, to use the fade-in effect when the image appears on-screen; otherwise, false.</param>
-      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the SplashScreenManager.HideImage method to hide a splash form image.</param>
+      <param name="useFadeOut">true, to use the fade-out effect when the image hides; otherwise, false. Use the  method to hide a splash form image.</param>
       <param name="startPos">The splash form&#39;s arrangement.</param>
       <param name="location">Coordinates at which the splash form is shown (if the startPos parameter is set to Manual).</param>
       <param name="painter">An ICustomImagePainter object that implements a custom drawing procedure.</param>

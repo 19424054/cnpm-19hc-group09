@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBoPhanTiepNhan));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnCustombuycar = new DevExpress.XtraBars.BarButtonItem();
             this.btnListCarBuy = new DevExpress.XtraBars.BarButtonItem();
@@ -60,8 +59,8 @@
             // 
             this.btnCustombuycar.Caption = "Khách hàng bán xe";
             this.btnCustombuycar.Id = 1;
-            this.btnCustombuycar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCustombuycar.ImageOptions.Image")));
-            this.btnCustombuycar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCustombuycar.ImageOptions.LargeImage")));
+            this.btnCustombuycar.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.Beetle;
+            this.btnCustombuycar.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.Beetle;
             this.btnCustombuycar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnCustombuycar.ItemAppearance.Normal.Options.UseFont = true;
             this.btnCustombuycar.Name = "btnCustombuycar";
@@ -71,8 +70,8 @@
             // 
             this.btnListCarBuy.Caption = "Khách hàng mua xe";
             this.btnListCarBuy.Id = 2;
-            this.btnListCarBuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnListCarBuy.ImageOptions.Image")));
-            this.btnListCarBuy.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnListCarBuy.ImageOptions.LargeImage")));
+            this.btnListCarBuy.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.User_Preppy_Red_icon;
+            this.btnListCarBuy.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.User_Preppy_Red_icon;
             this.btnListCarBuy.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnListCarBuy.ItemAppearance.Normal.Options.UseFont = true;
             this.btnListCarBuy.Name = "btnListCarBuy";
@@ -115,6 +114,7 @@
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IconOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.shop_icon;
             this.Name = "frmBoPhanTiepNhan";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

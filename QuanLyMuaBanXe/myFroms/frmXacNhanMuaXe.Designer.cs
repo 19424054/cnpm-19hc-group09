@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXacNhanMuaXe));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -43,6 +42,8 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.bMXACNHANMUAXEDETAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -60,8 +61,6 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
-            this.bMXACNHANMUAXEDETAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bM_XACNHANMUAXE_DETAILSTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_XACNHANMUAXE_DETAILSTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -69,6 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMXACNHANMUAXEDETAILSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -82,8 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMXACNHANMUAXEDETAILSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -159,8 +158,8 @@
             this.barLargeButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.barLargeButtonItem1.Caption = "Xác nhận";
             this.barLargeButtonItem1.Id = 1;
-            this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
-            this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
+            this.barLargeButtonItem1.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.icons8_save_32;
+            this.barLargeButtonItem1.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.icons8_save_32;
             this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barLargeButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem1.Name = "barLargeButtonItem1";
@@ -171,8 +170,8 @@
             this.barLargeButtonItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.barLargeButtonItem2.Caption = "Thoát";
             this.barLargeButtonItem2.Id = 2;
-            this.barLargeButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.Image")));
-            this.barLargeButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.LargeImage")));
+            this.barLargeButtonItem2.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.icons8_close_window_32;
+            this.barLargeButtonItem2.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.icons8_close_window_32;
             this.barLargeButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barLargeButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
@@ -231,6 +230,16 @@
             this.textEdit3.Size = new System.Drawing.Size(174, 20);
             this.textEdit3.StyleController = this.layoutControl1;
             this.textEdit3.TabIndex = 11;
+            // 
+            // bMXACNHANMUAXEDETAILSBindingSource
+            // 
+            this.bMXACNHANMUAXEDETAILSBindingSource.DataMember = "BM_XACNHANMUAXE_DETAILS";
+            this.bMXACNHANMUAXEDETAILSBindingSource.DataSource = this.dsSystem;
+            // 
+            // dsSystem
+            // 
+            this.dsSystem.DataSetName = "dsSystem";
+            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textEdit2
             // 
@@ -412,16 +421,6 @@
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
-            // dsSystem
-            // 
-            this.dsSystem.DataSetName = "dsSystem";
-            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bMXACNHANMUAXEDETAILSBindingSource
-            // 
-            this.bMXACNHANMUAXEDETAILSBindingSource.DataMember = "BM_XACNHANMUAXE_DETAILS";
-            this.bMXACNHANMUAXEDETAILSBindingSource.DataSource = this.dsSystem;
-            // 
             // bM_XACNHANMUAXE_DETAILSTableAdapter
             // 
             this.bM_XACNHANMUAXE_DETAILSTableAdapter.ClearBeforeFill = true;
@@ -436,6 +435,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.IconOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.shop_icon;
             this.Name = "frmXacNhanMuaXe";
             this.Text = "XÁC NHẬN MUA XE";
             this.Load += new System.EventHandler(this.frmXacNhanMuaXe_Load);
@@ -445,6 +445,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMXACNHANMUAXEDETAILSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -458,8 +460,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bMXACNHANMUAXEDETAILSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

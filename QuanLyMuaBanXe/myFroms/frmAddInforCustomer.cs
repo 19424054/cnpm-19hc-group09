@@ -68,7 +68,7 @@ namespace QuanLyMuaBanXe.myFroms
         {
             try
             {
-                if(XtraMessageBox.Show("Bạn có xác nhân lưu khách hàng vào hệ thống?","Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if(XtraMessageBox.Show("Bạn có xác nhận lưu khách hàng vào hệ thống?","Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     saveData();
                 }

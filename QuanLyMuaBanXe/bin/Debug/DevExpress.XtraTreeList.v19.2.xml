@@ -4,16 +4,6 @@
     <name>DevExpress.XtraTreeList.v19.2</name>
   </assembly>
   <members>
-    <member name="N:DevExpress.XtraEditors">
-      <summary>
-        <para>Contains editor classes. They provide the functionality for corresponding controls. Editor specific information is stored within the Persistent classes that are implemented in the <see cref="N:DevExpress.XtraEditors.Persistent"/> namespace.</para>
-      </summary>
-    </member>
-    <member name="N:DevExpress.XtraEditors.Repository">
-      <summary>
-        <para>Contains classes representing repository items that store editor-specific settings.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraEditors.Repository.RepositoryItemTreeListLookUpEdit">
       <summary>
         <para>A repository item which stores settings specific to a <see cref="T:DevExpress.XtraEditors.TreeListLookUpEdit"/> control.</para>
@@ -1111,12 +1101,6 @@ This constant is used to initialize the <see cref="P:DevExpress.XtraEditors.Repo
         <para>Gets this <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/>&#39;s description, assigned by a related data attribute.</para>
       </summary>
       <returns>A String value that is this <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/>&#39;s description, assigned by a related data attribute.</returns>
-    </member>
-    <member name="M:DevExpress.XtraTreeList.Columns.TreeListColumn.GetHeaderBestWidth">
-      <summary>
-        <para></para>
-      </summary>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.XtraTreeList.Columns.TreeListColumn.GetTextCaption">
       <summary>
@@ -3612,7 +3596,7 @@ When handling the <see cref="E:DevExpress.XtraTreeList.TreeList.GetSelectImage"/
     </member>
     <member name="F:DevExpress.XtraTreeList.NodeChangeTypeEnum.Add">
       <summary>
-        <para>A new node has been added to the Tree List&#39;s <see cref="P:DevExpress.XtraTreeList.TreeList.Nodes"/> collection. This can be performed by calling the TreeListNodes.Add method.</para>
+        <para>A new node has been added to the Tree List&#39;s <see cref="P:DevExpress.XtraTreeList.TreeList.Nodes"/> collection. This can be performed by calling the  method.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraTreeList.NodeChangeTypeEnum.CheckBoxStyle">
@@ -5313,12 +5297,6 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
         <para>Clears all the sorting that has been applied to an Tree List control.</para>
       </summary>
     </member>
-    <member name="P:DevExpress.XtraTreeList.TreeList.ClipboardDataProvider">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.ClipboardNodeCopying">
       <summary>
         <para>Fires before a data row, group row, column headers, or band headers are copied to the clipboard. Allows you to apply a format, change the copied data,  or skip a data row or header.</para>
@@ -6292,13 +6270,6 @@ This property is obsolete. Use the <see cref="P:DevExpress.XtraTreeList.TreeList
       </summary>
       <param name="column">A <see cref="T:DevExpress.XtraTreeList.Columns.TreeListColumn"/> object identifying the cell within the focused row.</param>
       <returns>An <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that specifies the type of error.</returns>
-    </member>
-    <member name="M:DevExpress.XtraTreeList.TreeList.GetColumnHeaderBestWidth(DevExpress.XtraTreeList.Columns.TreeListColumn)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="column"></param>
-      <returns></returns>
     </member>
     <member name="E:DevExpress.XtraTreeList.TreeList.GetCustomNodeCellEdit">
       <summary>

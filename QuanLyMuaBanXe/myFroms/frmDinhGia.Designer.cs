@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDinhGia));
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
@@ -176,8 +175,8 @@
             this.barLargeButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.barLargeButtonItem1.Caption = "Xác nhận";
             this.barLargeButtonItem1.Id = 0;
-            this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
-            this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
+            this.barLargeButtonItem1.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.icons8_save_32;
+            this.barLargeButtonItem1.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.icons8_save_32;
             this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barLargeButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem1.Name = "barLargeButtonItem1";
@@ -188,8 +187,8 @@
             this.barLargeButtonItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.barLargeButtonItem2.Caption = "Đóng";
             this.barLargeButtonItem2.Id = 1;
-            this.barLargeButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.Image")));
-            this.barLargeButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.LargeImage")));
+            this.barLargeButtonItem2.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.icons8_close_window_32;
+            this.barLargeButtonItem2.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.icons8_close_window_32;
             this.barLargeButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barLargeButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
@@ -593,6 +592,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.IconOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.shop_icon;
             this.Name = "frmDinhGia";
             this.Text = "ĐỊNH GIÁ SẢN PHẨM";
             this.Load += new System.EventHandler(this.frmDinhGia_Load);

@@ -117,33 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnExsit.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAASdEVYdFRpdGxlAEZvcndhcmQ7TmV4dOtv9uEAAAEC
-        SURBVDhPpZMhDsJAEEXrQVUgICEYBDcgmKLquAIG7kGCBo9HcgEsqkFxAxwkGFIJqvxHts10KSQN4iXT
-        /X9+d2fbYLLc+8RiLRKROqhZQyv57UNPrMRBLEQkQgc1a2h48JYCWNiKjehnWRZUgeY8eN8heQCpCI2q
-        Rgse56XnHcC52FrxZtUz8RCZOIqWF8JO6Il5YDgLa3CmobgIQs5i4OnMZE3BhCMrGlPb6YTcxdhoDDah
-        4JpCI2D+xlNMnY/bSesGMJePgF9H6AiGSPNNjIxWHOHbEEfiKmg+ia6nF0Osusa5yK9xJ5pec+ka4a8P
-        Cf7+lPMQUtla7Z/JUuN33gcvikpCVBUd29sAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnLogin.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAVdEVYdFRpdGxlAENoZWNrO01hcms7VGljawsAxyQA
-        AAFCSURBVFhH7ZbNTsJAFIV5agkb9C2EBWg0UUhw4QYh7sCwc6dbMUJCAPUJwMs5Jm1K505/p3TTk3xN
-        2pnmfJlp2tZEpFT+D2f3l1IGlUAlcDKBeq+lXj+JwNVkKJ/blZw/dI2xwgVYvtvvWSSLn40hwe7CBILl
-        XrgS9cAcpBgBrZzn15Ono3mIewGWh6OVE8StQJpygkQLBPcrDm3ZGVs5QewCj69TeVt8SKPfNsbCZCkn
-        iC7A8j8OI+/LeaRE0gdOAzEF7mbPfrkXm0SecoKYAs1BBy+NNQePEpbIW04QfQviJFyUE8T+ENok5nib
-        uSgniF2A2CSCyVpOkGgBEiWRp5wg8QKEEsvfLW/ww/Kb6UidnxQkmQC5wKfUk2D57ctYnZcGdicWIJT4
-        +l47KSepBYjt9yoLmQRcUglUAr5AeUjtAGXQhnM9c0S8AAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="dxValidationProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelControl2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBoPhanBanXe));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -58,8 +57,8 @@
             // 
             this.barButtonItem1.Caption = "Khách hàng mua xe";
             this.barButtonItem1.Id = 1;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.User_Preppy_Red_icon;
+            this.barButtonItem1.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.User_Preppy_Red_icon;
             this.barButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barButtonItem1.Name = "barButtonItem1";
@@ -101,6 +100,7 @@
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IconOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.shop_icon;
             this.Name = "frmBoPhanBanXe";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

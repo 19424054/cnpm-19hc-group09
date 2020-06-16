@@ -1959,7 +1959,7 @@ The DefaultLevelIndent field is set to -1.</para>
     </member>
     <member name="F:DevExpress.XtraVerticalGrid.RowChangeTypeEnum.Move">
       <summary>
-        <para>A row has been moved within the control. This can be performed using drag and drop or via the VGridControlBase.MoveRow method.</para>
+        <para>A row has been moved within the control. This can be performed using drag and drop or via the  method.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraVerticalGrid.RowChangeTypeEnum.Name">
@@ -1979,7 +1979,7 @@ The DefaultLevelIndent field is set to -1.</para>
     </member>
     <member name="F:DevExpress.XtraVerticalGrid.RowChangeTypeEnum.PropertiesAdded">
       <summary>
-        <para>A new <see cref="T:DevExpress.XtraVerticalGrid.Rows.MultiEditorRowProperties"/> object or its descendant has been added to the multi-editor row&#39;s properties collection. This can be performed by calling the MultiEditorRowPropertiesCollection.Add method.</para>
+        <para>A new <see cref="T:DevExpress.XtraVerticalGrid.Rows.MultiEditorRowProperties"/> object or its descendant has been added to the multi-editor row&#39;s properties collection. This can be performed by calling the  method.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraVerticalGrid.RowChangeTypeEnum.PropertiesAssigned">
@@ -4927,7 +4927,7 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
       <summary>
         <para>Indicates whether the focused record or at least a single cell within the focused record has an error assigned.</para>
       </summary>
-      <value>true if the focused record contains errors set via the VGridControlBase.SetRowError method; otherwise, false.</value>
+      <value>true if the focused record contains errors set via the  method; otherwise, false.</value>
     </member>
     <member name="E:DevExpress.XtraVerticalGrid.VGridControlBase.HiddenEditor">
       <summary>

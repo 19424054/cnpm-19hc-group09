@@ -4,11 +4,6 @@
     <name>DevExpress.XtraReports.v19.2.Extensions</name>
   </assembly>
   <members>
-    <member name="N:DevExpress.XtraReports.Configuration">
-      <summary>
-        <para>Contains classes that enable additional customization of the End-User Report Designer for WinForms.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraReports.Configuration.ChartDesignOptions">
       <summary>
         <para>Enables you to specify the default behavior of an <see cref="T:DevExpress.XtraReports.UI.XRChart"/> on adding it to a report.</para>
@@ -87,11 +82,6 @@
       </summary>
       <value>true, to show the Load Data from XML tab; otherwise, false.</value>
     </member>
-    <member name="N:DevExpress.XtraReports.Design">
-      <summary>
-        <para>Provides the functionality that is necessary for deep customization of the End-User Report Designer.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraReports.Design.ComponentVisibility">
       <summary>
         <para>Lists the available modes of component visibility in a Report Designer.</para>
@@ -145,11 +135,6 @@
         <para>For internal use.</para>
       </summary>
       <value></value>
-    </member>
-    <member name="N:DevExpress.XtraReports.Extensions">
-      <summary>
-        <para>Contains design-time extensions to provide advanced customization of the XtraReports End-User Designer.</para>
-      </summary>
     </member>
     <member name="T:DevExpress.XtraReports.Extensions.GetTemplatesHandler">
       <summary>
@@ -481,11 +466,6 @@
       <param name="useExpressionBindings">true, to use expression bindings; false, to use the legacy binding mode.</param>
       <returns>An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object.</returns>
     </member>
-    <member name="N:DevExpress.XtraReports.UI">
-      <summary>
-        <para>Contains classes that implement the basic functionality of XtraReports.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraReports.UI.IReportDesignTool">
       <summary>
         <para>Provides methods for showing both the standard and ribbon-based End-User Report Designer forms.</para>
@@ -763,11 +743,6 @@
       <param name="report">A report to open in the End-User Report Designer.</param>
       <param name="lookAndFeel">A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object which specifies the look and feel settings applied to the End-User Report Designer.</param>
       <param name="hiddenPanels">One or more <see cref="T:DevExpress.XtraReports.UserDesigner.DesignDockPanelType"/> enumeration values identifying the Report Designer dock panels to be hidden.</param>
-    </member>
-    <member name="N:DevExpress.XtraReports.UserDesigner">
-      <summary>
-        <para>Contains classes that implement the functionality of the End-User Designer for XtraReports.</para>
-      </summary>
     </member>
     <member name="T:DevExpress.XtraReports.UserDesigner.CommandVisibility">
       <summary>
@@ -1138,21 +1113,6 @@
     <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.BackColor">
       <summary>
         <para>Sets the background color of the selected control(s). This command is represented both via the menu item and toolbar button.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.BandCollapseAll">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.BandCollapseAllButSelected">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.BandExpandAll">
-      <summary>
-        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.BandMoveDown">
@@ -1790,11 +1750,6 @@
         <para>Enables/disables the selected control(s) to decrease their height to fit their content. This command is available in the ribbon&#39;s Text contextual tab.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.LabelsConvertToTable">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.LabelWordWrap">
       <summary>
         <para>Enables/disables the selected control(s) to wrap their text if it does not fit a line. This command is available in the ribbon&#39;s Text contextual tab.</para>
@@ -1826,11 +1781,6 @@
       </summary>
     </member>
     <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.MoveGalleryItem">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraReports.UserDesigner.ReportCommand.NavigateToControl">
       <summary>
         <para></para>
       </summary>
@@ -3559,9 +3509,9 @@
     </member>
     <member name="M:DevExpress.XtraReports.UserDesigner.XRDesignPanel.RemoveCommandHandler(DevExpress.XtraReports.UserDesigner.ICommandHandler)">
       <summary>
-        <para>Removes the specified command handler.</para>
+        <para>Removes the specified command handler for one or several of the report commands.</para>
       </summary>
-      <param name="handler">The command handler to be removed.</param>
+      <param name="handler">An object which implements the <see cref="T:DevExpress.XtraReports.UserDesigner.ICommandHandler"/> interface, representing the command handler to be removed.</param>
     </member>
     <member name="M:DevExpress.XtraReports.UserDesigner.XRDesignPanel.RemoveService(System.Type)">
       <summary>
@@ -4015,11 +3965,6 @@
         <para>Occurs after any of the documents contained in the <see cref="T:DevExpress.XtraReports.UserDesigner.XRTabbedMdiManager"/> is activated.</para>
       </summary>
     </member>
-    <member name="N:DevExpress.XtraReports.Wizards">
-      <summary>
-        <para>Contains classes and interfaces that enable Report Wizard customization.</para>
-      </summary>
-    </member>
     <member name="N:DevExpress.XtraReports.Wizards.Builder">
       <summary>
         <para>Contains the <see cref="T:DevExpress.XtraReports.Wizards.Builder.XtraWizardReportBuilder"/> class that is used to generate a report based on the report model settings accumulated while running the Report Wizard.</para>
@@ -4080,11 +4025,6 @@
       <param name="dataSource">A <see cref="T:System.Object"/> value, specifying the data source.</param>
       <param name="dataMember">A <see cref="T:System.String"/> value, specifying the data member.</param>
       <returns>true, if the report has been created; otherwise, false.</returns>
-    </member>
-    <member name="N:DevExpress.XtraReports.Wizards.Views">
-      <summary>
-        <para>Contains classes and interfaces that provide functionality to the Report Wizard page views.</para>
-      </summary>
     </member>
     <member name="T:DevExpress.XtraReports.Wizards.Views.AddGroupingLevelPageView">
       <summary>

@@ -1447,7 +1447,7 @@
     </member>
     <member name="E:DevExpress.XtraCharts.Designer.ChartDesigner.ChartStructureUpdating">
       <summary>
-        <para>Used to customize the Chart Designer Elements&#39; Tree.</para>
+        <para>Occurs when chart structure changes begin.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.ChartDesigner.EnableLargeDataSetWarning">
@@ -1474,10 +1474,10 @@
     </member>
     <member name="M:DevExpress.XtraCharts.Designer.ChartDesigner.RegisterCustomModelType(System.Type,System.Type)">
       <summary>
-        <para>Associates a model type with a chart element type.</para>
+        <para>Registers the model of the specified type for use in the Designer for a chart element with the specified type.</para>
       </summary>
-      <param name="chartElementType">The chart element type.</param>
-      <param name="customModelType">The model type.</param>
+      <param name="chartElementType">The type of a chart element.</param>
+      <param name="customModelType">The type of a model.</param>
     </member>
     <member name="P:DevExpress.XtraCharts.Designer.ChartDesigner.ShowActualData">
       <summary>

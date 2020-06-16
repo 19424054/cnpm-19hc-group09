@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBoPhanKyThuat));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -60,8 +59,8 @@
             // 
             this.barButtonItem1.Caption = "Kiểm đinh xe";
             this.barButtonItem1.Id = 1;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.Tests;
+            this.barButtonItem1.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.Tests;
             this.barButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barButtonItem1.Name = "barButtonItem1";
@@ -71,8 +70,8 @@
             // 
             this.barButtonItem2.Caption = "Sửa chữa - bảo hành";
             this.barButtonItem2.Id = 2;
-            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.barButtonItem2.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.Settings;
+            this.barButtonItem2.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.Settings;
             this.barButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
             this.barButtonItem2.Name = "barButtonItem2";
@@ -115,6 +114,7 @@
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.IconOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.shop_icon;
             this.Name = "frmBoPhanKyThuat";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -671,7 +671,7 @@
     </member>
     <member name="T:DevExpress.XtraRichEdit.API.Layout.InitialState">
       <summary>
-        <para>Used by the LayoutIterator.Reset method to specify the initial position of the iterator.</para>
+        <para>Used by the  method to specify the initial position of the iterator.</para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraRichEdit.API.Layout.InitialState.End">
@@ -1056,7 +1056,7 @@
       <summary>
         <para>Finalizes editing of the footer content in the document.</para>
       </summary>
-      <param name="document">A <see cref="T:DevExpress.XtraRichEdit.API.Native.SubDocument"/> object which is the footer content obtained by the LayoutFooter.BeginUpdate method.</param>
+      <param name="document">A <see cref="T:DevExpress.XtraRichEdit.API.Native.SubDocument"/> object which is the footer content obtained by the  method.</param>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutFooter.Type">
       <summary>
@@ -1132,7 +1132,7 @@
       <summary>
         <para>Finalizes editing of the header content in the document.</para>
       </summary>
-      <param name="document">A <see cref="T:DevExpress.XtraRichEdit.API.Native.SubDocument"/> object which is the header content obtained by the LayoutHeader.BeginUpdate method.</param>
+      <param name="document">A <see cref="T:DevExpress.XtraRichEdit.API.Native.SubDocument"/> object which is the header content obtained by the  method.</param>
     </member>
     <member name="P:DevExpress.XtraRichEdit.API.Layout.LayoutHeader.Type">
       <summary>
@@ -1904,11 +1904,6 @@
         <para>The type of layout element of the <see cref="T:DevExpress.XtraRichEdit.API.Layout.UnderlineBox"/> class.</para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraRichEdit.API.Layout.LayoutType.ZeroWidthSpaceBox">
-      <summary>
-        <para>The type of layout element of the <see cref="T:DevExpress.XtraRichEdit.API.Layout.ZeroWidthSpaceBox"/> class.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraRichEdit.API.Layout.LayoutVisitor">
       <summary>
         <para>Defines the basic functionality that should be implemented by visitors that traverse the document layout tree.</para>
@@ -2611,12 +2606,6 @@
       </summary>
       <param name="underlineBox">A layout element to draw.</param>
     </member>
-    <member name="M:DevExpress.XtraRichEdit.API.Layout.PagePainter.DrawZeroWidthSpaceBox(DevExpress.XtraRichEdit.API.Layout.ZeroWidthSpaceBox)">
-      <summary>
-        <para>Draws the <see cref="T:DevExpress.XtraRichEdit.API.Layout.ZeroWidthSpaceBox"/> element. Override it in a class descendant to customize the element appearance.</para>
-      </summary>
-      <param name="zeroWidthSpaceBox">A layout element to draw.</param>
-    </member>
     <member name="P:DevExpress.XtraRichEdit.API.Layout.PagePainter.Page">
       <summary>
         <para>Provides access to the page containing the layout element currently being drawn.</para>
@@ -2848,17 +2837,6 @@
       <summary>
         <para>A collection of <see cref="T:DevExpress.XtraRichEdit.API.Layout.UnderlineBox"/> elements.</para>
       </summary>
-    </member>
-    <member name="T:DevExpress.XtraRichEdit.API.Layout.ZeroWidthSpaceBox">
-      <summary>
-        <para>Layout element that relates to the zero-width space (used in languages without visible space between words).</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraRichEdit.API.Layout.ZeroWidthSpaceBox.Accept(DevExpress.XtraRichEdit.API.Layout.LayoutVisitor)">
-      <summary>
-        <para>Dispatches to the Visit method that is specific to the current <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutType"/>.</para>
-      </summary>
-      <param name="visitor">A <see cref="T:DevExpress.XtraRichEdit.API.Layout.LayoutVisitor"/> implementation that is the instance of the visitor class defined in the Visitor pattern.</param>
     </member>
     <member name="N:DevExpress.XtraRichEdit.API.Native">
       <summary>
@@ -10465,7 +10443,7 @@ Example: I, II, III</para>
     </member>
     <member name="M:DevExpress.XtraRichEdit.API.Native.SubDocument.EndUpdateCharacters(DevExpress.XtraRichEdit.API.Native.CharacterProperties)">
       <summary>
-        <para>Finalizes the modification of character formatting after calling the SubDocument.BeginUpdateCharacters method.</para>
+        <para>Finalizes the modification of character formatting after calling the  method.</para>
       </summary>
       <param name="properties">A <see cref="T:DevExpress.XtraRichEdit.API.Native.CharacterProperties"/> object containing character properties.</param>
     </member>
@@ -29813,12 +29791,6 @@ Example: I, II, III</para>
         <para>Gets or sets whether to export hidden text as plain text.</para>
       </summary>
       <value>true to include text marked as hidden to the exported plain text; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.XtraRichEdit.Export.PlainTextDocumentExporterOptions.ExportListLevelSeparator">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraRichEdit.Export.PlainTextDocumentExporterOptions.FieldCodeEndMarker">
       <summary>

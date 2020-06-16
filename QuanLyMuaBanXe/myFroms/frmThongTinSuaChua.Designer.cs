@@ -521,6 +521,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.IconOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.shop_icon;
             this.Name = "frmThongTinSuaChua";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "THÔNG TIN SỬA CHỬA";

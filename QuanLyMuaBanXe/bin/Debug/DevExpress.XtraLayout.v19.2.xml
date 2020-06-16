@@ -225,7 +225,7 @@
     </member>
     <member name="T:DevExpress.XtraDataLayout.RetrieveFieldsParameters">
       <summary>
-        <para>Contains parameters for the DataLayoutControl.RetrieveFields method.</para>
+        <para>Contains parameters for the  method.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraDataLayout.RetrieveFieldsParameters.#ctor">

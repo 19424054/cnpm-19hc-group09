@@ -4001,11 +4001,6 @@
         <para></para>
       </summary>
     </member>
-    <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.ExpressionValidationInvalidExpression">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.ExpressionValidationInvalidFunctionArgument">
       <summary>
         <para></para>
@@ -4014,11 +4009,6 @@
     <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.ExpressionValidationInvalidProperty">
       <summary>
         <para>Default value: The {0} not found.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.ExpressionValidationInvalidWindowExpressionUsage">
-      <summary>
-        <para></para>
       </summary>
     </member>
     <member name="F:DevExpress.XtraPivotGrid.Localization.PivotGridStringId.ExpressionValidationNotSummaryExpressionExpected">

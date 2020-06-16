@@ -1151,645 +1151,6 @@ The following screenshot shows the UltraFlat style applied to a button edit cont
         <para>Contains controls supporting animation effects.</para>
       </summary>
     </member>
-    <member name="T:DevExpress.Utils.Animation.AnimationParameters">
-      <summary>
-        <para>Represents parameters that specify a transition.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.AnimationParameters.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.AnimationParameters"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.AnimationParameters.#ctor(System.Int32,System.Int32)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.AnimationParameters"/> class with specified settings.</para>
-      </summary>
-      <param name="interval">An integer value that specifies the time interval between frames in the transition.</param>
-      <param name="count">An integer value that specifies the frame count in the transition.</param>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.AnimationParameters.Combine(DevExpress.Utils.Animation.IAnimationParameters)">
-      <summary>
-        <para>Assigns the specified parameter values to parameters not set in this object.</para>
-      </summary>
-      <param name="defaultParameters">An <see cref="T:DevExpress.Utils.Animation.IAnimationParameters"/> object that specifies transition parameters.</param>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.AnimationParameters.FrameCount">
-      <summary>
-        <para>Gets or sets the frame count in the transition.</para>
-      </summary>
-      <value>An integer value that specifies the frame count in the transition.</value>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.AnimationParameters.FrameInterval">
-      <summary>
-        <para>Gets the time interval between frames in the transition.</para>
-      </summary>
-      <value>An integer value that specifies time interval between frames in the transition.</value>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.AnimationParameters.ToString">
-      <summary>
-        <para>Returns a string that represents the current object.</para>
-      </summary>
-      <returns>A string that represents the current object.</returns>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.BaseTransition">
-      <summary>
-        <para>A base class for transitions.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.BaseTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.BaseTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.BaseTransition.#ctor(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.IAnimationParameters)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.BaseTransition"/> class with specified settings.</para>
-      </summary>
-      <param name="from">An <see cref="T:System.Drawing.Image"/> object that specifies the first frame in the transition.</param>
-      <param name="to">An <see cref="T:System.Drawing.Image"/> object that specifies the last frame in the transition.</param>
-      <param name="parameters">An <see cref="T:DevExpress.Utils.Animation.IAnimationParameters"/> object that specifies the transition parameters.</param>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.BaseTransition.AnimationInProgress">
-      <summary>
-        <para>Gets whether the transition is in progress.</para>
-      </summary>
-      <value>true, if the transition is in progress; otherwise, false.</value>
-    </member>
-    <member name="E:DevExpress.Utils.Animation.BaseTransition.Complete">
-      <summary>
-        <para>Fires when the transition completes.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.BaseTransition.Dispose">
-      <summary>
-        <para>Disposes unmanaged resources.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.BaseTransition.From">
-      <summary>
-        <para>Gets the first frame in the transition.</para>
-      </summary>
-      <value>An <see cref="T:System.Drawing.Image"/> object that specifies the first frame in the transition.</value>
-    </member>
-    <member name="E:DevExpress.Utils.Animation.BaseTransition.Invalidate">
-      <summary>
-        <para>Fires after a frame is displayed.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.BaseTransition.Parameters">
-      <summary>
-        <para>Provides access to transition parameters such as the frame count, time interval between frames, etc.</para>
-      </summary>
-      <value>An <see cref="T:DevExpress.Utils.Animation.IAnimationParameters"/> object that specifies transition parameters.</value>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.BaseTransition.Restart(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.IAnimationParameters)">
-      <summary>
-        <para>Runs the transition between the specified frames with the specified parameters.</para>
-      </summary>
-      <param name="from">An <see cref="T:System.Drawing.Image"/> object that specifies the first frame in the transition.</param>
-      <param name="to">An <see cref="T:System.Drawing.Image"/> object that specifies the last frame in the transition.</param>
-      <param name="parameters">An <see cref="T:DevExpress.Utils.Animation.IAnimationParameters"/> object that specifies transition parameters.</param>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.BaseTransition.StartAnimation">
-      <summary>
-        <para>Starts the transition.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.BaseTransition.StopAnimation">
-      <summary>
-        <para>Stops the transition.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.BaseTransition.To">
-      <summary>
-        <para>Gets the last frame in the transition.</para>
-      </summary>
-      <value>An <see cref="T:System.Drawing.Image"/> object that specifies the last frame in the transition.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.ClockAnimationParameters">
-      <summary>
-        <para>Provides access to parameters that specify the transition that changes one screen to another with the clock effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.ClockAnimationParameters.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.ClockAnimationParameters"/> class.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.ClockAnimationParameters.EffectOptions">
-      <summary>
-        <para>Gets or sets whether the transition goes clockwise or counterclockwise.</para>
-      </summary>
-      <value>A value that specifies the transition direction.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.ClockEffectOptions">
-      <summary>
-        <para>Enumerates values that specify the transition direction.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.ClockEffectOptions.Clockwise">
-      <summary>
-        <para>The transition goes clockwise.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.ClockEffectOptions.Counterclockwise">
-      <summary>
-        <para>The transition goes counterclockwise.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.ClockEffectOptions.Wedge">
-      <summary>
-        <para>The transition goes in both directions: clockwise and counterclockwise.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.ClockTransition">
-      <summary>
-        <para>Represents a transition from one screen to another with the clock effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.ClockTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.ClockTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.ClockTransition.#ctor(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.IClockAnimationParameters)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.ClockTransition"/> class with specified settings.</para>
-      </summary>
-      <param name="from">An object that specifies the first image in the transition.</param>
-      <param name="to">An object that specifies the last image in the transition.</param>
-      <param name="parameters">An object that specifies transition parameters.</param>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.ClockTransition.Parameters">
-      <summary>
-        <para>Provides access to transition properties.</para>
-      </summary>
-      <value>An <see cref="T:DevExpress.Utils.Animation.IClockAnimationParameters"/> object that contains transition properties.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.CombAnimationParameters">
-      <summary>
-        <para>Provides access to parameters that specify the transition that changes one screen to another with the comb effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.CombAnimationParameters.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.CombAnimationParameters"/> class.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.CombAnimationParameters.Inward">
-      <summary>
-        <para>Gets or sets whether the transition goes towards the inside coming in from the outside.</para>
-      </summary>
-      <value>true, if the transition goes towards the inside coming in from the outside; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.CombAnimationParameters.StripeCount">
-      <summary>
-        <para>Gets or sets the number of stripes in the transition.</para>
-      </summary>
-      <value>An integer value that specifies the number of stripes in the transition.</value>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.CombAnimationParameters.Vertical">
-      <summary>
-        <para>Gets or sets whether the transition goes vertically.</para>
-      </summary>
-      <value>true, if the transition goes vertically; otherwise, false</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.CombTransition">
-      <summary>
-        <para>Represents a transition from one screen to another with the comb effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.CombTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.CombTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.CombTransition.#ctor(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.ICombAnimationParameters)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.CombTransition"/> class with specified settings.</para>
-      </summary>
-      <param name="from">An object that specifies the first image in the transition.</param>
-      <param name="to">An object that specifies the last image in the transition.</param>
-      <param name="parameters">An object that specifies transition parameters.</param>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.CombTransition.Parameters">
-      <summary>
-        <para>Provides access to parameters that specify the transition.</para>
-      </summary>
-      <value>An object that contains transition parameters.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.CoverEffectOptions">
-      <summary>
-        <para>Enumerates values that specify the cover effect.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.CoverEffectOptions.FromBottom">
-      <summary>
-        <para>The animation goes from the bottom edge to the top edge.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.CoverEffectOptions.FromBottomLeft">
-      <summary>
-        <para>The animation goes from the bottom-left corner to the top-right corner.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.CoverEffectOptions.FromBottomRight">
-      <summary>
-        <para>The animation goes from the bottom-right corner to the top-left corner.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.CoverEffectOptions.FromLeft">
-      <summary>
-        <para>The animation goes from the left edge to the right edge.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.CoverEffectOptions.FromRight">
-      <summary>
-        <para>The animation goes from the right edge to the left edge.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.CoverEffectOptions.FromTop">
-      <summary>
-        <para>The animation goes from the top edge to the bottom edge.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.CoverEffectOptions.FromTopLeft">
-      <summary>
-        <para>The animation goes from the top-left corner to the bottom-right corner.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.CoverEffectOptions.FromTopRight">
-      <summary>
-        <para>The animation goes from the top-right corner to the bottom-left corner.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.CoverTransition">
-      <summary>
-        <para>Represents a transition from one screen to another with the cover effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.CoverTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.CoverTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.CoverTransition.#ctor(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.ICoverAnimationParameters)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.CoverTransition"/> class with specified settings.</para>
-      </summary>
-      <param name="from">An object that specifies the first image in the transition.</param>
-      <param name="to">An object that specifies the last image in the transition.</param>
-      <param name="parameters">An object that contains cover transition parameters.</param>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.CoverTransition.Parameters">
-      <summary>
-        <para>Provides access to parameters that specify the cover transition.</para>
-      </summary>
-      <value>An object that specifies cover transition parameters.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.DissolveTransition">
-      <summary>
-        <para>Represents a transition from one screen to another with the dissolve effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.DissolveTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.DissolveTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.DissolveTransition.#ctor(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.IAnimationParameters)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.DissolveTransition"/> class with specified settings.</para>
-      </summary>
-      <param name="from">An object that specifies the first image in the transition.</param>
-      <param name="to">An object that specifies the last image in the transition.</param>
-      <param name="parameters">An object that contains transition parameters.</param>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.FadeTransition">
-      <summary>
-        <para>Represents a transition from one screen to another with the fade effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.FadeTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.FadeTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.FadeTransition.#ctor(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.IAnimationParameters)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.FadeTransition"/> class with specified settings.</para>
-      </summary>
-      <param name="from">An object that specifies the first image in the transition.</param>
-      <param name="to">An object that specifies the last image in the transition.</param>
-      <param name="parameters">An object that specifies animation parameters.</param>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.IAnimationParameters">
-      <summary>
-        <para>Contains parameters applied to the associated animation.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.IAnimationParameters.Combine(DevExpress.Utils.Animation.IAnimationParameters)">
-      <summary>
-        <para>Assigns the specified object&#39;s values to the corresponding values that are not set in this object.</para>
-      </summary>
-      <param name="defaultParameters">An <see cref="T:DevExpress.Utils.Animation.IAnimationParameters"/> object that specifies transition parameters.</param>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.IAnimationParameters.FrameCount">
-      <summary>
-        <para>Gets or sets the frame count in the transition.</para>
-      </summary>
-      <value>An integer value that specifies the frame count in the transition.</value>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.IAnimationParameters.FrameInterval">
-      <summary>
-        <para>Gets or sets the time interval between frames in the associated transition.</para>
-      </summary>
-      <value>An integer value that specifies time interval between frames in the associated transition.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.IClockAnimationParameters">
-      <summary>
-        <para>Provides access to parameters that specify the transition that changes one screen to another with the clock effect.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.IClockAnimationParameters.EffectOptions">
-      <summary>
-        <para>Gets or sets whether the transition goes clockwise or counterclockwise</para>
-      </summary>
-      <value>A <see cref="T:DevExpress.Utils.Animation.ClockEffectOptions"/> enumeration value that specifies the transition direction.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.ICombAnimationParameters">
-      <summary>
-        <para>Provides access to parameters that specify the transition that changes one screen to another with the comb effect.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.ICombAnimationParameters.Inward">
-      <summary>
-        <para>Gets or sets whether the animation goes towards the inside coming in from the outside.</para>
-      </summary>
-      <value>true, if the animation goes towards the inside coming in from the outside; otherwise, false.</value>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.ICombAnimationParameters.StripeCount">
-      <summary>
-        <para>Gets or sets the number of stripes in the transition.</para>
-      </summary>
-      <value>An integer value that specifies the number of stripes in the transition.</value>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.ICombAnimationParameters.Vertical">
-      <summary>
-        <para>Gets or sets whether the transition goes vertically.</para>
-      </summary>
-      <value>true, if the transition goes vertically; otherwise, false.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.IPushAnimationParameters">
-      <summary>
-        <para>Provides access to parameters that specify the transition that changes one screen to another with the push effect.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.IPushAnimationParameters.EffectOptions">
-      <summary>
-        <para>Gets or sets the animation direction.</para>
-      </summary>
-      <value>A value that specifies the animation direction.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.IShapeAnimationParameters">
-      <summary>
-        <para>Provides access to parameters that specify the transition that changes one screen to another with the shape effect.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.IShapeAnimationParameters.EffectOptions">
-      <summary>
-        <para>Gets or sets the transition direction and shape.</para>
-      </summary>
-      <value>A value that specifies the transition direction and shape.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.ISlideFadeAnimationParameters">
-      <summary>
-        <para>Provides access to parameters that specify the transition that changes one screen to another with the slide and fade effects.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.ISlideFadeAnimationParameters.Background">
-      <summary>
-        <para>Gets or sets the background visible during the transition.</para>
-      </summary>
-      <value>A value that specifies the background visible during the transition.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.PushAnimationParameters">
-      <summary>
-        <para>Provides access to parameters that specify the transition that changes one screen to another with the push effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.PushAnimationParameters.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.PushAnimationParameters"/> class.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.PushAnimationParameters.EffectOptions">
-      <summary>
-        <para>Gets or sets the transition direction.</para>
-      </summary>
-      <value>A value that specifies the transition direction.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.PushEffectOptions">
-      <summary>
-        <para>Enumerates values that specify the transition direction.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.PushEffectOptions.FromBottom">
-      <summary>
-        <para>The transition goes from the bottom edge.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.PushEffectOptions.FromLeft">
-      <summary>
-        <para>The transition goes from the left edge.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.PushEffectOptions.FromRight">
-      <summary>
-        <para>The transition goes from the right edge.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.PushEffectOptions.FromTop">
-      <summary>
-        <para>The transition goes from the top edge.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.PushFadeTransition">
-      <summary>
-        <para>Represents a transition from one screen to another with the push and fade effects.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.PushFadeTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.PushFadeTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.PushTransition">
-      <summary>
-        <para>Represents a transition from one screen to another with the push effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.PushTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.PushTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.PushTransition.#ctor(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.IPushAnimationParameters)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.PushTransition"/> class with specified settings.</para>
-      </summary>
-      <param name="from">An object that specifies the first image in the transition.</param>
-      <param name="to">An object that specifies the last image in the transition.</param>
-      <param name="parameters">An object that specifies animation parameters.</param>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.PushTransition.Parameters">
-      <summary>
-        <para>Provides access to transition parameters.</para>
-      </summary>
-      <value>An object that specifies transition parameters.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.SegmentedFadeTransition">
-      <summary>
-        <para>Represents a transition from one screen to another with the segmented fade effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.SegmentedFadeTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.SegmentedFadeTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.SegmentedFadeTransition.#ctor(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.IAnimationParameters)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.SegmentedFadeTransition"/> class with specified settings.</para>
-      </summary>
-      <param name="from">An object that specifies the first image in the transition.</param>
-      <param name="to">An object that specifies the last image in the transition.</param>
-      <param name="parameters">An object that specifies animation parameters.</param>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.ShapeAnimationParameters">
-      <summary>
-        <para>Provides access to parameters that specify the transition that changes one screen to another with the shape effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.ShapeAnimationParameters.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.ShapeAnimationParameters"/> class.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.ShapeAnimationParameters.EffectOptions">
-      <summary>
-        <para>Gets or sets the transition direction and shape.</para>
-      </summary>
-      <value>A value that specifies the transition direction and shape.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.ShapeEffectOptions">
-      <summary>
-        <para>Enumerates values that specify the transition direction and shape.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.ShapeEffectOptions.CircleIn">
-      <summary>
-        <para>The transition goes inside-out as a circle.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.ShapeEffectOptions.CircleOut">
-      <summary>
-        <para>The transition goes outside-in as a circle.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.ShapeEffectOptions.In">
-      <summary>
-        <para>The transition goes inside-out as a rectangle.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.ShapeEffectOptions.Out">
-      <summary>
-        <para>The transition goes outside-in as a rectangle.</para>
-      </summary>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.ShapeTransition">
-      <summary>
-        <para>Represents a transition from one screen to another with the shape effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.ShapeTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.ShapeTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.ShapeTransition.#ctor(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.IShapeAnimationParameters)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.ShapeTransition"/> class with specified settings.</para>
-      </summary>
-      <param name="from">An object that specifies the first image in the transition.</param>
-      <param name="to">An object that specifies the last image in the transition.</param>
-      <param name="parameters">An object that contains transition parameters.</param>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.ShapeTransition.Parameters">
-      <summary>
-        <para>Provides access to transition parameters.</para>
-      </summary>
-      <value>An object that specifies transition parameters.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.SlideFadeAnimationParameters">
-      <summary>
-        <para>Provides access to parameters that specify the transition that changes one screen to another with the slide and fade effects.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.SlideFadeAnimationParameters.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.SlideFadeAnimationParameters"/> class.</para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.SlideFadeAnimationParameters.Background">
-      <summary>
-        <para>Gets or sets the background visible during the transition.</para>
-      </summary>
-      <value>A value that specifies the background visible during the transition.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.SlideFadeTransition">
-      <summary>
-        <para>Represents a transition from one screen to another with the slide and fade effects.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.SlideFadeTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.SlideFadeTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.SlideFadeTransition.#ctor(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.IPushAnimationParameters)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.SlideFadeTransition"/> class with specified settings.</para>
-      </summary>
-      <param name="from"></param>
-      <param name="to"></param>
-      <param name="parameters"></param>
-    </member>
-    <member name="P:DevExpress.Utils.Animation.SlideFadeTransition.Parameters">
-      <summary>
-        <para>Provides access to transition parameters.</para>
-      </summary>
-      <value>An object that specifies transition parameters.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.SlideTransition">
-      <summary>
-        <para>Represents a transition from one screen to another with the slide effect.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.SlideTransition.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.SlideTransition"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.Utils.Animation.SlideTransition.#ctor(System.Drawing.Image,System.Drawing.Image,DevExpress.Utils.Animation.IAnimationParameters)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.Utils.Animation.SlideTransition"/> class with specified settings.</para>
-      </summary>
-      <param name="from">An object that specifies the first image in the transition.</param>
-      <param name="to">An object that specifies the last image in the transition.</param>
-      <param name="parameters">An object that contains transition parameters.</param>
-    </member>
     <member name="T:DevExpress.Utils.Animation.Transition">
       <summary>
         <para>An object that animates the target control.</para>
@@ -1838,7 +1199,7 @@ The following screenshot shows the UltraFlat style applied to a button edit cont
     </member>
     <member name="P:DevExpress.Utils.Animation.Transition.TransitionType">
       <summary>
-        <para>Gets or sets the type of animation effect applied by this Transition. This property accepts &quot;...Transition&quot; objects from the <see cref="N:DevExpress.Utils.Animation"/> namespace.</para>
+        <para>Gets or sets the type of animation effect applied by this Transition. This property accepts &quot;...Transition&quot; objects from the DevExpress.Utils.Animation namespace.</para>
       </summary>
       <value>An object that specifies the animation effect applied by this Transition.</value>
     </member>
@@ -1980,21 +1341,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets an object that stores core ZoomTransition settings: the animation direction (&quot;in&quot; or &quot;out&quot;), initial and final animation bounds.</para>
       </summary>
       <value>An object that stores core ZoomTransition settings.</value>
-    </member>
-    <member name="T:DevExpress.Utils.Animation.ZoomTransitionDirection">
-      <summary>
-        <para>Enumerates values that specify the transition direction.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.ZoomTransitionDirection.ZoomIn">
-      <summary>
-        <para>The transition goes with the zoom-in effect.</para>
-      </summary>
-    </member>
-    <member name="F:DevExpress.Utils.Animation.ZoomTransitionDirection.ZoomOut">
-      <summary>
-        <para>The transition goes with the zoom-out effect.</para>
-      </summary>
     </member>
     <member name="T:DevExpress.Utils.Animation.ZoomTransitionSettings">
       <summary>
@@ -6439,7 +5785,7 @@ Use the <see cref="P:DevExpress.Utils.FlyoutPanelOptions.AnchorType"/> property 
     </member>
     <member name="M:DevExpress.Utils.FlyoutPanel.Hide">
       <summary>
-        <para>This method is not supported by the <see cref="T:DevExpress.Utils.FlyoutPanel"/> class. Use the FlyoutPanel.HidePopup method instead.</para>
+        <para>This method is not supported by the <see cref="T:DevExpress.Utils.FlyoutPanel"/> class. Use the  method instead.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Utils.FlyoutPanel.HideBeakForm">
@@ -6513,7 +5859,7 @@ Use the <see cref="P:DevExpress.Utils.FlyoutPanelOptions.AnchorType"/> property 
     </member>
     <member name="M:DevExpress.Utils.FlyoutPanel.Show">
       <summary>
-        <para>This method is not supported by the <see cref="T:DevExpress.Utils.FlyoutPanel"/> class. Use the FlyoutPanel.ShowPopup method instead.</para>
+        <para>This method is not supported by the <see cref="T:DevExpress.Utils.FlyoutPanel"/> class. Use the  method instead.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Utils.FlyoutPanel.ShowBeakForm">
@@ -6620,7 +5966,7 @@ Use the <see cref="P:DevExpress.Utils.FlyoutPanelOptions.AnchorType"/> property 
     </member>
     <member name="P:DevExpress.Utils.FlyoutPanel.Visible">
       <summary>
-        <para>This property is not supported by the <see cref="T:DevExpress.Utils.FlyoutPanel"/> class. Use the FlyoutPanel.ShowPopup and FlyoutPanel.HidePopup methods to control the panel visibility.</para>
+        <para>This property is not supported by the <see cref="T:DevExpress.Utils.FlyoutPanel"/> class. Use the  and  methods to control the panel visibility.</para>
       </summary>
       <value></value>
     </member>
@@ -9887,9 +9233,9 @@ For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property sp
     </member>
     <member name="P:DevExpress.Utils.ThumbnailImageEventArgs.DesiredThumbnailSize">
       <summary>
-        <para>Stores the desired size of thumbnail images, generated using the ThumbnailImageEventArgs.CreateThumbnailImage method.</para>
+        <para>Stores the desired size of thumbnail images, generated using the  method.</para>
       </summary>
-      <value>A Size structure that is the desired size of thumbnail images, generated using the ThumbnailImageEventArgs.CreateThumbnailImage method.</value>
+      <value>A Size structure that is the desired size of thumbnail images, generated using the  method.</value>
     </member>
     <member name="M:DevExpress.Utils.ThumbnailImageEventArgs.ResetImageCache">
       <summary>
@@ -9988,7 +9334,7 @@ For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property sp
     </member>
     <member name="P:DevExpress.Utils.ToolTipControlInfo.ForcedShow">
       <summary>
-        <para>Gets or sets whether the tooltip should be forcibly shown for the same visual element via the ToolTipController.ShowHint method.</para>
+        <para>Gets or sets whether the tooltip should be forcibly shown for the same visual element via the  method.</para>
       </summary>
       <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value that specifies whether the tooptip should be forcibly shown for the same visual element.</value>
     </member>
@@ -13104,7 +12450,7 @@ Use the <see cref="P:DevExpress.Utils.FlyoutPanelOptions.HorzIndent"/> and <see 
     </member>
     <member name="E:DevExpress.Utils.WorkspaceManager.WorkspaceSaved">
       <summary>
-        <para>Occurs after the WorkspaceManager.SaveWorkspace method was called.</para>
+        <para>Occurs after the  method was called.</para>
       </summary>
     </member>
     <member name="T:DevExpress.Utils.XPThemeSupport">
@@ -15379,12 +14725,6 @@ A specific version of the addressed image is automatically chosen based on the a
       </summary>
       <value>The displayed SVG image.</value>
     </member>
-    <member name="P:DevExpress.XtraEditors.SvgImageBox.SvgImageColorizationMode">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
     <member name="M:DevExpress.XtraEditors.SvgImageBox.Unselect(DevExpress.XtraEditors.SvgImageItem)">
       <summary>
         <para>Deselects the specified item.</para>
@@ -16528,7 +15868,7 @@ This is a static property.</para>
     </member>
     <member name="P:DevExpress.XtraEditors.XtraForm.FormBorderEffect">
       <summary>
-        <para>Gets or sets the form&#39;s border effect.</para>
+        <para>Gets or sets the form&#39;s border adornment effect.</para>
       </summary>
       <value>The form&#39;s border adornment effect.</value>
     </member>

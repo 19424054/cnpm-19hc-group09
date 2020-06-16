@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongTinGiaoDich));
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
@@ -61,6 +60,7 @@
             this.colId_xe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMa_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBien_so_xe = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -104,7 +104,6 @@
             this.bM_ThongTinKhachHangTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTinKhachHangTableAdapter();
             this.bM_ThongTinXeBanTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter();
             this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
@@ -228,8 +227,8 @@
             this.barLargeButtonItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.barLargeButtonItem1.Caption = "Xác nhận";
             this.barLargeButtonItem1.Id = 0;
-            this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
-            this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
+            this.barLargeButtonItem1.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.icons8_save_32;
+            this.barLargeButtonItem1.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.icons8_save_32;
             this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barLargeButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem1.Name = "barLargeButtonItem1";
@@ -240,8 +239,8 @@
             this.barLargeButtonItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.barLargeButtonItem2.Caption = "Đóng";
             this.barLargeButtonItem2.Id = 1;
-            this.barLargeButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.Image")));
-            this.barLargeButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem2.ImageOptions.LargeImage")));
+            this.barLargeButtonItem2.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.icons8_close_window_32;
+            this.barLargeButtonItem2.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.icons8_close_window_32;
             this.barLargeButtonItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.barLargeButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
@@ -463,6 +462,13 @@
             this.colBien_so_xe.Visible = true;
             this.colBien_so_xe.VisibleIndex = 1;
             this.colBien_so_xe.Width = 512;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Giá bán";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 2;
             // 
             // labelControl4
             // 
@@ -883,13 +889,6 @@
             // 
             this.bM_ThongTinXeBanTableAdapter.ClearBeforeFill = true;
             // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Giá bán";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 2;
-            // 
             // frmThongTinGiaoDich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -901,6 +900,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IconOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.shop_icon;
             this.MaximizeBox = false;
             this.Name = "frmThongTinGiaoDich";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

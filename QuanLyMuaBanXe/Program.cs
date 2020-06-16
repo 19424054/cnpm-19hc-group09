@@ -16,7 +16,8 @@ namespace QuanLyMuaBanXe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new myFroms.frmLogin());
+            //Application.Run(new myFroms.frmLogin());
+            Application.Run(new myFroms.frmAddInforCustomer(5));
         }
     }
 }
