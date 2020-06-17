@@ -133,6 +133,16 @@ namespace QuanLyMuaBanXe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Idea_setting_ {
+            get {
+                object obj = ResourceManager.GetObject("Idea-setting_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_inventory_control {
             get {
                 object obj = ResourceManager.GetObject("img-inventory-control", resourceCulture);
@@ -203,6 +213,16 @@ namespace QuanLyMuaBanXe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap process {
+            get {
+                object obj = ResourceManager.GetObject("process", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap r_d_logo {
             get {
                 object obj = ResourceManager.GetObject("r&d_logo", resourceCulture);
@@ -256,6 +276,16 @@ namespace QuanLyMuaBanXe.Properties {
         internal static System.Drawing.Bitmap Tests {
             get {
                 object obj = ResourceManager.GetObject("Tests", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unnamed {
+            get {
+                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
