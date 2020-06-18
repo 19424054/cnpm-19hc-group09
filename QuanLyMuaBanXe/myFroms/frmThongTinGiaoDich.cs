@@ -56,7 +56,7 @@ namespace QuanLyMuaBanXe.myFroms
                 dsSystem.BM_GiaoDich.AcceptChanges();
                 mIdXe = Convert.ToInt32(searchLookUpEdit2.EditValue);
                 mIdXeKH= Convert.ToInt32(searchLookUpEdit1.EditValue);
-                bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã bán", mIdXe);
+                bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã giao dịch", mIdXe);
             }
             else
             {

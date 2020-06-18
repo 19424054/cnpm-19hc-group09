@@ -9,10 +9,12 @@ namespace QuanLyMuaBanXe.myFroms
     {
         // private ME_UserAccount.MyDataSets.dsLibraryTableAdapters.ADMIN_MODULE_LISTTableAdapter taMO;
         // private bool _isLogoff;
+        
         private int phan_quyen;
-        public frmMain()
+        public frmMain(int pd)
         {
             InitializeComponent();
+            phan_quyen = pd;
             // taMO = new ME_UserAccount.MyDataSets.dsLibraryTableAdapters.ADMIN_MODULE_LISTTableAdapter();
         }
         void phanquyenhethong()
@@ -68,7 +70,7 @@ namespace QuanLyMuaBanXe.myFroms
             try
             {
                 phanquyenhethong();
-              
+                LoadPermission();
                 LoadModule();
         
             }

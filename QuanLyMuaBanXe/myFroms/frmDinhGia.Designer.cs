@@ -336,12 +336,15 @@
             this.searchLookUpEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMDinhGiaBanBindingSource, "Id_xe", true));
             this.searchLookUpEdit1.Location = new System.Drawing.Point(126, 12);
             this.searchLookUpEdit1.Name = "searchLookUpEdit1";
+            this.searchLookUpEdit1.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.searchLookUpEdit1.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.searchLookUpEdit1.Properties.DataSource = this.bMThongTinXeBanBindingSource;
             this.searchLookUpEdit1.Properties.DisplayMember = "Ma_so_xe";
             this.searchLookUpEdit1.Properties.NullText = "[Chọn mã số xe]";
             this.searchLookUpEdit1.Properties.PopupView = this.searchLookUpEdit1View;
+            this.searchLookUpEdit1.Properties.ReadOnly = true;
             this.searchLookUpEdit1.Properties.ValueMember = "Id_xe";
             this.searchLookUpEdit1.Size = new System.Drawing.Size(274, 20);
             this.searchLookUpEdit1.StyleController = this.layoutControl1;

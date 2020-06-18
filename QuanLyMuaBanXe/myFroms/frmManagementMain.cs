@@ -90,5 +90,10 @@ namespace QuanLyMuaBanXe.myFroms
                 tabMain.SelectedTabPage = newPage;
             }
         }
+
+        private void btnStatusBuy_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

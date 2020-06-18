@@ -72,6 +72,7 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.bM_ThongTin_SuaChuaTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTin_SuaChuaTableAdapter();
             this.bM_ThongTinXeBanTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
@@ -91,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -243,6 +245,8 @@
             this.gcMain.Location = new System.Drawing.Point(12, 60);
             this.gcMain.MainView = this.gvMain;
             this.gcMain.Name = "gcMain";
+            this.gcMain.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1});
             this.gcMain.Size = new System.Drawing.Size(828, 258);
             this.gcMain.TabIndex = 6;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -285,7 +289,7 @@
             // 
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn1.Caption = "Sự cố";
+            this.gridColumn1.Caption = "Trạng thái";
             this.gridColumn1.FieldName = "Dien_giai";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
@@ -319,6 +323,7 @@
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "Chi phí";
+            this.gridColumn4.ColumnEdit = this.repositoryItemTextEdit1;
             this.gridColumn4.DisplayFormat.FormatString = "n0";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "Chi_phi";
@@ -511,6 +516,15 @@
             // 
             this.bM_ThongTinXeBanTableAdapter.ClearBeforeFill = true;
             // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.DisplayFormat.FormatString = "n0";
+            this.repositoryItemTextEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryItemTextEdit1.Mask.EditMask = "n0";
+            this.repositoryItemTextEdit1.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
             // frmThongTinSuaChua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -546,6 +560,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -595,5 +610,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colId_xe1;
         private DevExpress.XtraGrid.Columns.GridColumn colMa_so_xe;
         private DevExpress.XtraGrid.Columns.GridColumn colBien_so_xe;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
     }
 }

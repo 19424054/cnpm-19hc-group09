@@ -36,8 +36,8 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 GridView view = gvMain;
                 if (view.FocusedRowHandle > -1)
                 {
-                    myFroms.frmDinhGia frm = new myFroms.frmDinhGia(-1);
-                    frm.ShowDialog();
+                  //  myFroms.frmDinhGia frm = new myFroms.frmDinhGia(-1);
+                 //   frm.ShowDialog();
                 }
             }
             catch (Exception ex)

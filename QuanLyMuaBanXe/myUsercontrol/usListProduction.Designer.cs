@@ -35,8 +35,8 @@
             this.btnLamMoi = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnAddNew = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnXacNhan = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -150,17 +150,6 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEdit_ItemClick);
             // 
-            // barLargeButtonItem1
-            // 
-            this.barLargeButtonItem1.Caption = "Xóa dữ liệu";
-            this.barLargeButtonItem1.Id = 3;
-            this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
-            this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
-            this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.barLargeButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
-            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
-            this.barLargeButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem1_ItemClick);
-            // 
             // btnXacNhan
             // 
             this.btnXacNhan.Caption = "Xác nhân đã mua";
@@ -171,6 +160,17 @@
             this.btnXacNhan.ItemAppearance.Normal.Options.UseFont = true;
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXacNhan_ItemClick);
+            // 
+            // barLargeButtonItem1
+            // 
+            this.barLargeButtonItem1.Caption = "Xóa dữ liệu";
+            this.barLargeButtonItem1.Id = 3;
+            this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
+            this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
+            this.barLargeButtonItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barLargeButtonItem1.ItemAppearance.Normal.Options.UseFont = true;
+            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
+            this.barLargeButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem1_ItemClick);
             // 
             // barDockControlTop
             // 

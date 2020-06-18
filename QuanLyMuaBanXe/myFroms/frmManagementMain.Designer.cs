@@ -70,6 +70,7 @@
             this.btnStatusBuy.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnStatusBuy.ItemAppearance.Normal.Options.UseFont = true;
             this.btnStatusBuy.Name = "btnStatusBuy";
+            this.btnStatusBuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnStatusBuy_ItemClick);
             // 
             // btnPlanRepair
             // 

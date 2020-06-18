@@ -34,7 +34,7 @@ namespace QuanLyMuaBanXe.myFroms
                 if (dtTaiKhoan.Rows.Count > 0)
                 {
                     this.Hide();
-                    frmMain frm = new frmMain();               
+                    frmMain frm = new frmMain(Convert.ToInt32( dtTaiKhoan.Rows[0]["phan_quyen"]));               
                     frm.Show();
                 }
                 else

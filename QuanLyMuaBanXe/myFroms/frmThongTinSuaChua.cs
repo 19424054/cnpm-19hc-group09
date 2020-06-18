@@ -70,18 +70,31 @@ namespace QuanLyMuaBanXe.myFroms
         }
         private void saveData()
         {
-            bMThongTinSuaChuaBindingSource.EndEdit();
-            foreach (DataRow dr in dsSystem.BM_ThongTin_SuaChua)
+            if(gvMain.RowCount>0)
             {
-                if(Convert.IsDBNull(dr["Id_xe"]))
+                if(XtraMessageBox.Show("Bạn có xác nhận tình trạng sửa chửa hiện tại không?","Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    dr["Id_xe"] = m_id;
+                    bMThongTinSuaChuaBindingSource.EndEdit();
+                    foreach (DataRow dr in dsSystem.BM_ThongTin_SuaChua)
+                    {
+                        if (Convert.IsDBNull(dr["Id_xe"]))
+                        {
+                            dr["Id_xe"] = m_id;
+                        }
+
+                    }
+                    bM_ThongTin_SuaChuaTableAdapter.Update(dsSystem.BM_ThongTin_SuaChua);
+
+                    dsSystem.BM_ThongTin_SuaChua.AcceptChanges();
+                    bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Sữa chữa", m_id);
                 }
-                
+              
             }
-            bM_ThongTin_SuaChuaTableAdapter.Update(dsSystem.BM_ThongTin_SuaChua);
-           
-            dsSystem.BM_ThongTin_SuaChua.AcceptChanges();
+            else
+            {
+                bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã mua", m_id);
+            }
+          
         }
         private void loadDetail(int id)
         {
