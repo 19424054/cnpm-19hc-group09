@@ -52,6 +52,7 @@
             this.colyear = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmonth = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
+            this.bMSELLPRODUCTDETAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -66,7 +67,6 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bM_LISTPRODUCT_MENUTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_MENUTableAdapter();
-            this.bMSELLPRODUCTDETAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bM_SELLPRODUCT_DETAILSTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_SELLPRODUCT_DETAILSTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -79,8 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bMSELLPRODUCTDETAILSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -130,7 +130,7 @@
             // 
             // btnAddNew
             // 
-            this.btnAddNew.Caption = "Tạo giao dịch";
+            this.btnAddNew.Caption = "Giao dịch";
             this.btnAddNew.Id = 1;
             this.btnAddNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.Image")));
             this.btnAddNew.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAddNew.ImageOptions.LargeImage")));
@@ -318,6 +318,11 @@
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
             // 
+            // bMSELLPRODUCTDETAILSBindingSource
+            // 
+            this.bMSELLPRODUCTDETAILSBindingSource.DataMember = "BM_SELLPRODUCT_DETAILS";
+            this.bMSELLPRODUCTDETAILSBindingSource.DataSource = this.dsSystem;
+            // 
             // gvMain
             // 
             this.gvMain.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -464,11 +469,6 @@
             // 
             this.bM_LISTPRODUCT_MENUTableAdapter.ClearBeforeFill = true;
             // 
-            // bMSELLPRODUCTDETAILSBindingSource
-            // 
-            this.bMSELLPRODUCTDETAILSBindingSource.DataMember = "BM_SELLPRODUCT_DETAILS";
-            this.bMSELLPRODUCTDETAILSBindingSource.DataSource = this.dsSystem;
-            // 
             // bM_SELLPRODUCT_DETAILSTableAdapter
             // 
             this.bM_SELLPRODUCT_DETAILSTableAdapter.ClearBeforeFill = true;
@@ -495,8 +495,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bMSELLPRODUCTDETAILSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

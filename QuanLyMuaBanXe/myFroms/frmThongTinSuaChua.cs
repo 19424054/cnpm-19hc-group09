@@ -86,7 +86,7 @@ namespace QuanLyMuaBanXe.myFroms
                     bM_ThongTin_SuaChuaTableAdapter.Update(dsSystem.BM_ThongTin_SuaChua);
 
                     dsSystem.BM_ThongTin_SuaChua.AcceptChanges();
-                    bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Sữa chữa", m_id);
+                    bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Sửa chữa", m_id);
                 }
               
             }

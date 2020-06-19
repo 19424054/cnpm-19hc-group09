@@ -34,10 +34,16 @@ namespace QuanLyMuaBanXe.myUsercontrol
             try
             {
                 GridView view = gvMain;
+               
                 if (view.FocusedRowHandle > -1)
                 {
-                  //  myFroms.frmDinhGia frm = new myFroms.frmDinhGia(-1);
-                 //   frm.ShowDialog();
+                    if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) != "Đã định giá bán")
+                    {
+                        int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                       // int id_dinhgia = Convert.ToInt32(view.GetFocusedRowCellValue("Id_gia_ban"));
+                          myFroms.frmDinhGia frm = new myFroms.frmDinhGia(-1, id_xe);
+                          frm.ShowDialog();
+                    }
                 }
             }
             catch (Exception ex)
@@ -50,20 +56,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void btnAddNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            try
-            {
-                GridView view = gvMain;
-                if (view.FocusedRowHandle > -1)
-                {
-                    myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(-1);
-                    frm.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-
-
-            }
+            
          
         }
 
@@ -72,15 +65,26 @@ namespace QuanLyMuaBanXe.myUsercontrol
             try
             {
                 GridView view = gvMain;
+
                 if (view.FocusedRowHandle > -1)
                 {
-
+                    if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) == "Đã định giá bán")
+                    {
+                        if(!Convert.IsDBNull(view.GetFocusedRowCellValue("Id_gia_ban")))
+                        {
+                            int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                            int id_dinhgia = Convert.ToInt32(view.GetFocusedRowCellValue("Id_gia_ban"));
+                            myFroms.frmDinhGia frm = new myFroms.frmDinhGia(id_dinhgia, id_xe);
+                            frm.ShowDialog();
+                        }
+                      
+                    }
                 }
             }
             catch (Exception ex)
             {
 
-               
+
             }
         }
         private void reloadData()
@@ -95,15 +99,16 @@ namespace QuanLyMuaBanXe.myUsercontrol
         public void loadDataBasic()
         {
             //loadKeyPress();
-            DataTable dtMenu = new DataTable();// = Classes.Tools.laydata("api/purchasereceives/laydanhsachmenubywarehouseid/-1/-1/null/null/" + m_id);
-            if (dtMenu != null && dtMenu.Rows.Count > 0)
+            //DataTable dtMenu = new DataTable();// = Classes.Tools.laydata("api/purchasereceives/laydanhsachmenubywarehouseid/-1/-1/null/null/" + m_id);
+            bM_LISTPRODUCT_MENUTableAdapter.FillByDinhGiaBan(dsSystem.BM_LISTPRODUCT_MENU, "DinhGiaBan");
+            if (dsSystem.BM_LISTPRODUCT_MENU != null && dsSystem.BM_LISTPRODUCT_MENU.Rows.Count > 0)
             {
-                gcMenu.DataSource = dtMenu;
+                gcMenu.DataSource = dsSystem.BM_LISTPRODUCT_MENU;
                 DateTime m_now = DateTime.Now;
                 int m_Year = m_now.Year;
                 int m_Month = m_now.Month;
                 gvMenu.ExpandGroupLevel(0, false);
-                int rowHandle = myClasses.Tools.FindRowHandleByRowObject(dtMenu, gvMenu, m_now.Month, m_now.Year);
+                int rowHandle = myClasses.Tools.FindRowHandleByRowObject(dsSystem.BM_LISTPRODUCT_MENU, gvMenu, m_now.Month, m_now.Year);
                 if (rowHandle >= 0)
                 {
                     gvMenu.FocusedRowHandle = gvMenu.GetParentRowHandle(rowHandle);
@@ -137,7 +142,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
         }
         private void loadData(int mYear, int mMonth)
         {
-
+            bM_THONGTINXE_DINHGIA_DETAILSTableAdapter.Fill(dsSystem.BM_THONGTINXE_DINHGIA_DETAILS, mYear, mMonth);
         }
 
         private void gvMain_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
@@ -150,6 +155,34 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 e.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
                 e.Appearance.ForeColor = Color.Blue;
                 e.Appearance.Font = new Font("Times New Roman", 9, FontStyle.Bold);
+            }
+        }
+
+        private void barLargeButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                GridView view = gvMain;
+                if (view.FocusedRowHandle > -1)
+                {
+                    if(Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai"))!="Đã định giá bán")
+                    {
+                        int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                        myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(id_xe);
+                        frm.ShowDialog();
+                        loadData(mYear, mMonth);
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Bạn không thể cập nhật xe đã định giá");
+                    }
+                  
+                }
+            }
+            catch (Exception ex)
+            {
+
+
             }
         }
     }

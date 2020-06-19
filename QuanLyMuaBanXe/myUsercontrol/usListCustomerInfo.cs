@@ -30,9 +30,10 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 {
                     if(Convert.ToString(view.GetFocusedRowCellValue("Trang_thai"))== "Mới tạo")
                     {
-                        view.DeleteSelectedRows();
+                       
                         int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
                         bM_CUSTOMER_DETAILSTableAdapter.DeleteQuery(id_kh);
+                        view.DeleteSelectedRows();
                     }
                     else
                     {

@@ -14,10 +14,12 @@ namespace QuanLyMuaBanXe.myFroms
     public partial class frmKiemTraTinhTrangXeBan : DevExpress.XtraEditors.XtraForm
     {
         private int m_id = -1;
-        public frmKiemTraTinhTrangXeBan(int id)
+        private int id_xe;
+        public frmKiemTraTinhTrangXeBan(int id, int xe)
         {
             InitializeComponent();
             m_id = id;
+            id_xe = xe;
         }
 
         private void labelControl5_Click(object sender, EventArgs e)
@@ -47,6 +49,12 @@ namespace QuanLyMuaBanXe.myFroms
 
                 bMDinhGiaMuaXeBindingSource.EndEdit();
                 bMDinhGiaMuaXeBindingSource.AddNew();
+                slkFind.EditValue = id_xe;
+                foreach (DataRow dr in dsSystem.BM_ThongTinXeBan.Rows)
+                {
+                    if(id_xe==Convert.ToInt32(dr["Id_xe"]))
+                    textEdit3.EditValue = dr["Loai_xe"];
+                }
             }
             else
             {
@@ -64,6 +72,8 @@ namespace QuanLyMuaBanXe.myFroms
                 bMDinhGiaMuaXeBindingSource.EndEdit();
                 bM_DinhGia_MuaXeTableAdapter.Update(dsSystem.BM_DinhGia_MuaXe);
                 dsSystem.BM_DinhGia_MuaXe.AcceptChanges();
+
+                bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã định giá mua", id_xe);
              
             }
             else
@@ -82,7 +92,8 @@ namespace QuanLyMuaBanXe.myFroms
 
         private void slkFind_EditValueChanged(object sender, EventArgs e)
         {
-            textEdit3.EditValue = this.slkFind.Properties.View.GetFocusedRowCellValue("Loai_xe").ToString() != null ? this.slkFind.Properties.View.GetFocusedRowCellValue("Loai_xe").ToString() : "";
+           // if(!Convert.IsDBNull(slkFind.EditValue))
+            //textEdit3.EditValue = this.slkFind.Properties.View.GetFocusedRowCellValue("Loai_xe").ToString() != null ? this.slkFind.Properties.View.GetFocusedRowCellValue("Loai_xe").ToString() : "";
         }
     }
 }

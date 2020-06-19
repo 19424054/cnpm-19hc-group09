@@ -38,7 +38,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
         }
         public void loadData()
         {
-
+            dateEdit1.EditValue = DateTime.Now;
         }
 
         private void barLargeButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

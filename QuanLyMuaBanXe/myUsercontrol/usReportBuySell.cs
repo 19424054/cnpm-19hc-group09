@@ -14,6 +14,8 @@ namespace QuanLyMuaBanXe.myUsercontrol
 {
     public partial class usReportBuySell : DevExpress.XtraEditors.XtraUserControl
     {
+        int m_Ngay = DateTime.Now.Day;
+        int m_thang = DateTime.Now.Month;
         public usReportBuySell()
         {
             InitializeComponent();

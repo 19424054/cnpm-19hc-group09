@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.memoEdit2 = new DevExpress.XtraEditors.MemoEdit();
             this.bMThongTinKhachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -113,9 +117,18 @@
             this.memoEdit2.Location = new System.Drawing.Point(148, 84);
             this.memoEdit2.MenuManager = this.barManager1;
             this.memoEdit2.Name = "memoEdit2";
+            this.memoEdit2.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.memoEdit2.Properties.Appearance.Options.UseBackColor = true;
+            this.memoEdit2.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.memoEdit2.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.memoEdit2.Size = new System.Drawing.Size(335, 50);
             this.memoEdit2.StyleController = this.layoutControl1;
             this.memoEdit2.TabIndex = 14;
+            conditionValidationRule1.CaseSensitive = true;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "Vui lòng nhập địa chỉ";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.memoEdit2, conditionValidationRule1);
             // 
             // bMThongTinKhachHangBindingSource
             // 
@@ -275,28 +288,49 @@
             this.memoEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMThongTinKhachHangBindingSource, "Yeu_cau", true));
             this.memoEdit1.Location = new System.Drawing.Point(148, 138);
             this.memoEdit1.Name = "memoEdit1";
+            this.memoEdit1.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.memoEdit1.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.memoEdit1.Size = new System.Drawing.Size(335, 51);
             this.memoEdit1.StyleController = this.layoutControl1;
             this.memoEdit1.TabIndex = 8;
+            conditionValidationRule2.CaseSensitive = true;
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "Vui lòng nhập yêu cầu";
+            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.memoEdit1, conditionValidationRule2);
             // 
             // txtPhone
             // 
             this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMThongTinKhachHangBindingSource, "SDT", true));
             this.txtPhone.Location = new System.Drawing.Point(148, 60);
             this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtPhone.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtPhone.Size = new System.Drawing.Size(335, 20);
             this.txtPhone.StyleController = this.layoutControl1;
             this.txtPhone.TabIndex = 6;
+            conditionValidationRule3.CaseSensitive = true;
+            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule3.ErrorText = "Vui lòng nhập SĐT";
+            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.txtPhone, conditionValidationRule3);
             // 
             // txtName
             // 
             this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMThongTinKhachHangBindingSource, "Ho_ten", true));
             this.txtName.Location = new System.Drawing.Point(148, 36);
             this.txtName.Name = "txtName";
+            this.txtName.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtName.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtName.Size = new System.Drawing.Size(335, 20);
             this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 5;
+            conditionValidationRule4.CaseSensitive = true;
+            conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule4.ErrorText = "Vui lòng nhập họ tên khách hàng";
+            conditionValidationRule4.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.dxValidationProvider1.SetValidationRule(this.txtName, conditionValidationRule4);
             // 
             // labelControl1
             // 

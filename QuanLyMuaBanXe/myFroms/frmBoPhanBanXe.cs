@@ -38,6 +38,7 @@ namespace QuanLyMuaBanXe.myFroms
                 };
                 uc.Dock = DockStyle.Fill;
                 newPage.Controls.Add(uc);
+                uc.loadDataBasic();
                 tabMain.TabPages.Add(newPage);
                 tabMain.SelectedTabPage = newPage;
             }

@@ -23,26 +23,79 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            GridView view = gvMain;
+            if (view.FocusedRowHandle > -1)
+            {
+                if (!Convert.IsDBNull(view.GetFocusedRowCellValue("Id_ban")))
+                {
+                    int id_ban = Convert.ToInt32(view.GetFocusedRowCellValue("Id_ban"));
+                    int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
+                    int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                    if (XtraMessageBox.Show("Bạn có muốn hủy giao dịch này không?","Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+                    {
+                        bM_SELLPRODUCT_DETAILSTableAdapter.DeleteQueryId_Ban(id_ban);
+                        bM_SELLPRODUCT_DETAILSTableAdapter.UpdateQuery("Mới tạo", id_kh);
+                        bM_SELLPRODUCT_DETAILSTableAdapter.UpdateQueryTrangThaiXe("Đã định giá bán", id_xe);
+                        loadData(mYear, mMonth);
+                    }
+                }
+            }
         }
-
         private void btnAddNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            myFroms.frmThongTinGiaoDich frm = new myFroms.frmThongTinGiaoDich(-1);
-            frm.ShowDialog();
-            loadDataBasic();
+            GridView view = gvMain;
+            if(view.FocusedRowHandle>-1)
+            {
+                if (Convert.IsDBNull(view.GetFocusedRowCellValue("Id_ban")))
+                {
+                    int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
+                    myFroms.frmThongTinGiaoDich frm = new myFroms.frmThongTinGiaoDich(-1, id_kh);
+                    frm.ShowDialog();
+                    loadDataBasic();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Khách hàng hiện tại đã thực hiện giao dịch. Vui lòng kiểm tra lại");
+                }
+            }
+         
         }
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            GridView view = gvMain;
+            if (view.FocusedRowHandle > -1)
+            {
+                if (!Convert.IsDBNull(view.GetFocusedRowCellValue("Id_ban")))
+                {
+                    int id_ban= Convert.ToInt32(view.GetFocusedRowCellValue("Id_ban"));
+                    int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
+                    myFroms.frmThongTinGiaoDich frm = new myFroms.frmThongTinGiaoDich(id_ban, id_kh);
+                    frm.ShowDialog();
+                    loadData(mYear, mMonth);
+                }
+                else
+                {
+                    XtraMessageBox.Show("Khách hàng hiện tại đã thực hiện giao dịch. Vui lòng kiểm tra lại");
+                }
+            }
             //   myFroms.frmThongTinGiaoDich frm = new myFroms.frmThongTinGiaoDich();
             // frm.ShowDialog();
-            loadData(mYear, mMonth);
+            
         }
 
         private void barLargeButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            GridView view = gvMain;
+            if (view.FocusedRowHandle > -1)
+            {
+                if (Convert.IsDBNull(view.GetFocusedRowCellValue("Id_ban")))
+                {
+                    int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
+                    myFroms.frmAddInforCustomer frm = new myFroms.frmAddInforCustomer(id_kh,2);
+                    frm.ShowDialog();
+                }
+            }
         }
         public void loadDataBasic()
         {

@@ -242,6 +242,12 @@
             this.textEdit2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMDinhGiaMuaXeBindingSource, "Gia_cao_nhat", true));
             this.textEdit2.Location = new System.Drawing.Point(130, 131);
             this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.DisplayFormat.FormatString = "n0";
+            this.textEdit2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit2.Properties.EditFormat.FormatString = "n0";
+            this.textEdit2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit2.Properties.Mask.EditMask = "n0";
+            this.textEdit2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEdit2.Size = new System.Drawing.Size(175, 20);
             this.textEdit2.StyleController = this.layoutControl1;
             this.textEdit2.TabIndex = 11;
@@ -277,6 +283,12 @@
             this.textEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMDinhGiaMuaXeBindingSource, "Gia_thap_nhat", true));
             this.textEdit1.Location = new System.Drawing.Point(130, 107);
             this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.DisplayFormat.FormatString = "n0";
+            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.EditFormat.FormatString = "n0";
+            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.Mask.EditMask = "n0";
+            this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEdit1.Size = new System.Drawing.Size(175, 20);
             this.textEdit1.StyleController = this.layoutControl1;
             this.textEdit1.TabIndex = 9;
@@ -327,12 +339,15 @@
             this.slkFind.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMDinhGiaMuaXeBindingSource, "Id_xe", true));
             this.slkFind.Location = new System.Drawing.Point(130, 12);
             this.slkFind.Name = "slkFind";
+            this.slkFind.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.slkFind.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.slkFind.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.slkFind.Properties.DataSource = this.bMThongTinXeBanBindingSource;
             this.slkFind.Properties.DisplayMember = "Ma_so_xe";
             this.slkFind.Properties.NullText = "[Chọn]";
             this.slkFind.Properties.PopupView = this.searchLookUpEdit1View;
+            this.slkFind.Properties.ReadOnly = true;
             this.slkFind.Properties.ValueMember = "Id_xe";
             this.slkFind.Size = new System.Drawing.Size(175, 20);
             this.slkFind.StyleController = this.layoutControl1;

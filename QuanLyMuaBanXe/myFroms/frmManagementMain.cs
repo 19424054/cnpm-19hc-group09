@@ -93,7 +93,27 @@ namespace QuanLyMuaBanXe.myFroms
 
         private void btnStatusBuy_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            myUsercontrol.usListProductionQuanLy uc = new myUsercontrol.usListProductionQuanLy();
+            var page = (from p in tabMain.TabPages
+                        where p.Name == "usListProductionQuanLy"
+                        select p).FirstOrDefault();
+            if (page != null)
+            {
+                tabMain.SelectedTabPage = (XtraTabPage)page;
+            }
+            else
+            {
+                XtraTabPage newPage = new XtraTabPage()
+                {
+                    Text = "Danh sách mua xe",
+                    Name = "usListProductionQuanLy"
+                };
+                uc.Dock = DockStyle.Fill;
+                newPage.Controls.Add(uc);
+                uc.loadDataBasic();
+                tabMain.TabPages.Add(newPage);
+                tabMain.SelectedTabPage = newPage;
+            }
         }
     }
 }

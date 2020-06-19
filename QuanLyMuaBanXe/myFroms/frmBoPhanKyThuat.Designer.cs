@@ -57,7 +57,7 @@
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "Kiểm đinh xe";
+            this.barButtonItem1.Caption = "Kiểm định xe";
             this.barButtonItem1.Id = 1;
             this.barButtonItem1.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.Tests;
             this.barButtonItem1.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.Tests;
@@ -68,7 +68,7 @@
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "Sửa chữa - bảo hành";
+            this.barButtonItem2.Caption = "Sửa chữa xe đã mua";
             this.barButtonItem2.Id = 2;
             this.barButtonItem2.ImageOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.Settings;
             this.barButtonItem2.ImageOptions.LargeImage = global::QuanLyMuaBanXe.Properties.Resources.Settings;

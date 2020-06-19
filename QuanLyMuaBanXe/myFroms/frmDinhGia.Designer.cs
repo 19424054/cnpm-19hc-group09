@@ -243,6 +243,8 @@
             this.textEdit3.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bMDinhGiaBanBindingSource, "Dinh_gia", true));
             this.textEdit3.Location = new System.Drawing.Point(126, 108);
             this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Properties.DisplayFormat.FormatString = "n0";
+            this.textEdit3.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.textEdit3.Properties.EditFormat.FormatString = "n0";
             this.textEdit3.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.textEdit3.Properties.Mask.EditMask = "n0";
@@ -273,6 +275,8 @@
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit2.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textEdit2.Properties.DisplayFormat.FormatString = "n0";
+            this.textEdit2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.textEdit2.Properties.EditFormat.FormatString = "n0";
             this.textEdit2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.textEdit2.Properties.Mask.EditMask = "n0";
@@ -289,6 +293,8 @@
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textEdit1.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textEdit1.Properties.DisplayFormat.FormatString = "n0";
+            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.textEdit1.Properties.EditFormat.FormatString = "n0";
             this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.textEdit1.Properties.Mask.EditMask = "n0";
@@ -597,6 +603,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.IconOptions.Image = global::QuanLyMuaBanXe.Properties.Resources.shop_icon;
             this.Name = "frmDinhGia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐỊNH GIÁ SẢN PHẨM";
             this.Load += new System.EventHandler(this.frmDinhGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

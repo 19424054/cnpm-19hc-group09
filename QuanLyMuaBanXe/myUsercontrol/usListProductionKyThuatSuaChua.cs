@@ -33,6 +33,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
             {
                 myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
                 frm.ShowDialog();
+                loadData(mYear, mMonth);
             }
         }
 
@@ -43,6 +44,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
             {
                 myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
                 frm.ShowDialog();
+                loadData(mYear, mMonth);
             }
         }
         public void loadDataBasic()

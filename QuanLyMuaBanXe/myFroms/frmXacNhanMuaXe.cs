@@ -31,7 +31,7 @@ namespace QuanLyMuaBanXe.myFroms
             {
                 if(Convert.ToDouble(textEdit4.EditValue)>= Convert.ToDouble(textEdit2.EditValue) && Convert.ToDouble(textEdit4.EditValue) <= Convert.ToDouble(textEdit3.EditValue))
                 {
-                    bM_XACNHANMUAXE_DETAILSTableAdapter.UpdateQuery(Convert.ToDouble(textEdit4.EditValue), "Đã mua", m_id);
+                    bM_XACNHANMUAXE_DETAILSTableAdapter.UpdateQuery(Convert.ToDouble(textEdit4.EditValue), "Đã mua",Convert.ToDateTime(dateEdit1.EditValue), m_id);
                     XtraMessageBox.Show("Cập nhật thành công");
                     this.Close();
                 }
@@ -43,9 +43,14 @@ namespace QuanLyMuaBanXe.myFroms
         }
         private void loadData()
         {
+            
             if (m_id != -1)
             {
                 bM_XACNHANMUAXE_DETAILSTableAdapter.Fill(dsSystem.BM_XACNHANMUAXE_DETAILS, m_id);
+                if(Convert.IsDBNull( dsSystem.BM_XACNHANMUAXE_DETAILS.Rows[0]["Ngay_mua"]))
+                {
+                    dateEdit1.EditValue = DateTime.Now;
+                }
             }
         }
 

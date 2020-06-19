@@ -35,6 +35,7 @@
             this.btnLamMoi = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.btnEdit = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -45,10 +46,13 @@
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.gcMenu = new DevExpress.XtraGrid.GridControl();
+            this.bMLISTPRODUCTMENUBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
             this.gvMenu = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colyear = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colmonth = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
+            this.bMTHONGTINXEDINHGIADETAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,6 +61,9 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bM_LISTPRODUCT_MENUTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_MENUTableAdapter();
+            this.bM_THONGTINXE_DINHGIA_DETAILSTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_THONGTINXE_DINHGIA_DETAILSTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -64,8 +71,11 @@
             this.navBarControl1.SuspendLayout();
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMLISTPRODUCTMENUBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMTHONGTINXEDINHGIADETAILSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,9 +92,10 @@
             this.btnLamMoi,
             this.btnEdit,
             this.barLargeButtonItem1,
-            this.barLargeButtonItem2});
+            this.barLargeButtonItem2,
+            this.barLargeButtonItem3});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 5;
+            this.barManager1.MaxItemId = 6;
             // 
             // bar2
             // 
@@ -96,6 +107,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnLamMoi),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnEdit),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem3),
             new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem1)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -133,6 +145,17 @@
             this.btnEdit.ItemAppearance.Normal.Options.UseFont = true;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEdit_ItemClick);
+            // 
+            // barLargeButtonItem3
+            // 
+            this.barLargeButtonItem3.Caption = "Kế hoạch sửa chữa";
+            this.barLargeButtonItem3.Id = 5;
+            this.barLargeButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.Image")));
+            this.barLargeButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.LargeImage")));
+            this.barLargeButtonItem3.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barLargeButtonItem3.ItemAppearance.Normal.Options.UseFont = true;
+            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
+            this.barLargeButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem3_ItemClick);
             // 
             // barLargeButtonItem1
             // 
@@ -226,6 +249,7 @@
             // 
             // gcMenu
             // 
+            this.gcMenu.DataSource = this.bMLISTPRODUCTMENUBindingSource;
             this.gcMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMenu.Location = new System.Drawing.Point(0, 0);
             this.gcMenu.MainView = this.gvMenu;
@@ -235,6 +259,16 @@
             this.gcMenu.TabIndex = 0;
             this.gcMenu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMenu});
+            // 
+            // bMLISTPRODUCTMENUBindingSource
+            // 
+            this.bMLISTPRODUCTMENUBindingSource.DataMember = "BM_LISTPRODUCT_MENU";
+            this.bMLISTPRODUCTMENUBindingSource.DataSource = this.dsSystem;
+            // 
+            // dsSystem
+            // 
+            this.dsSystem.DataSetName = "dsSystem";
+            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gvMenu
             // 
@@ -254,6 +288,7 @@
             // colyear
             // 
             this.colyear.Caption = "Năm";
+            this.colyear.FieldName = "PYear";
             this.colyear.Name = "colyear";
             this.colyear.Visible = true;
             this.colyear.VisibleIndex = 0;
@@ -261,12 +296,14 @@
             // colmonth
             // 
             this.colmonth.Caption = "Tháng";
+            this.colmonth.FieldName = "Pmonth";
             this.colmonth.Name = "colmonth";
             this.colmonth.Visible = true;
             this.colmonth.VisibleIndex = 0;
             // 
             // gcMain
             // 
+            this.gcMain.DataSource = this.bMTHONGTINXEDINHGIADETAILSBindingSource;
             this.gcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
@@ -276,6 +313,11 @@
             this.gcMain.TabIndex = 0;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
+            // 
+            // bMTHONGTINXEDINHGIADETAILSBindingSource
+            // 
+            this.bMTHONGTINXEDINHGIADETAILSBindingSource.DataMember = "BM_THONGTINXE_DINHGIA_DETAILS";
+            this.bMTHONGTINXEDINHGIADETAILSBindingSource.DataSource = this.dsSystem;
             // 
             // gvMain
             // 
@@ -290,7 +332,8 @@
             this.gridColumn6,
             this.gridColumn7,
             this.gridColumn1,
-            this.gridColumn2});
+            this.gridColumn2,
+            this.gridColumn8});
             this.gvMain.GridControl = this.gcMain;
             this.gvMain.IndicatorWidth = 30;
             this.gvMain.Name = "gvMain";
@@ -305,6 +348,7 @@
             this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.Caption = "Mã số xe";
+            this.gridColumn3.FieldName = "Ma_so_xe";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
@@ -317,9 +361,10 @@
             this.gridColumn4.Caption = "Giá khi mua";
             this.gridColumn4.DisplayFormat.FormatString = "n0";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn4.FieldName = "Gia_ban";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "", "{0:n0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Gia_ban", "{0:n0}")});
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
             this.gridColumn4.Width = 128;
@@ -331,9 +376,10 @@
             this.gridColumn5.Caption = "Chi phí sửa chữa";
             this.gridColumn5.DisplayFormat.FormatString = "n0";
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn5.FieldName = "ChiPhi";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "", "{0:n0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ChiPhi", "{0:n0}")});
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
             this.gridColumn5.Width = 132;
@@ -345,10 +391,11 @@
             this.gridColumn6.Caption = "Định giá bán";
             this.gridColumn6.DisplayFormat.FormatString = "n0";
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn6.FieldName = "Dinh_gia";
             this.gridColumn6.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "", "{0:n0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Dinh_gia", "{0:n0}")});
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
             this.gridColumn6.Width = 139;
@@ -358,6 +405,7 @@
             this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn7.AppearanceHeader.Options.UseFont = true;
             this.gridColumn7.Caption = "Trạng thái";
+            this.gridColumn7.FieldName = "Trang_Thai";
             this.gridColumn7.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
@@ -369,6 +417,7 @@
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.Caption = "Loại xe";
+            this.gridColumn1.FieldName = "Loai_xe";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
@@ -377,7 +426,22 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Id_xe";
+            this.gridColumn2.FieldName = "Id_xe";
             this.gridColumn2.Name = "gridColumn2";
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Id_gia_ban";
+            this.gridColumn8.FieldName = "Id_gia_ban";
+            this.gridColumn8.Name = "gridColumn8";
+            // 
+            // bM_LISTPRODUCT_MENUTableAdapter
+            // 
+            this.bM_LISTPRODUCT_MENUTableAdapter.ClearBeforeFill = true;
+            // 
+            // bM_THONGTINXE_DINHGIA_DETAILSTableAdapter
+            // 
+            this.bM_THONGTINXE_DINHGIA_DETAILSTableAdapter.ClearBeforeFill = true;
             // 
             // usListProductionQuanLy
             // 
@@ -397,8 +461,11 @@
             this.navBarControl1.ResumeLayout(false);
             this.navBarGroupControlContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMLISTPRODUCTMENUBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMTHONGTINXEDINHGIADETAILSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -434,5 +501,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private System.Windows.Forms.BindingSource bMLISTPRODUCTMENUBindingSource;
+        private myDataSet.dsSystem dsSystem;
+        private myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_MENUTableAdapter bM_LISTPRODUCT_MENUTableAdapter;
+        private System.Windows.Forms.BindingSource bMTHONGTINXEDINHGIADETAILSBindingSource;
+        private myDataSet.dsSystemTableAdapters.BM_THONGTINXE_DINHGIA_DETAILSTableAdapter bM_THONGTINXE_DINHGIA_DETAILSTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem3;
     }
 }

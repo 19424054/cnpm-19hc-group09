@@ -53,7 +53,7 @@ namespace QuanLyMuaBanXe.myFroms
                 taDinhGia.Fill(dtDinhGia, id_xe);
                 if (dtDinhGia.Rows.Count > 0)
                 {
-                    searchLookUpEdit1.EditValue = dtDinhGia[0]["Id_xe"];
+                    searchLookUpEdit1.EditValue = id_xe;
                     textEdit4.EditValue = dtDinhGia.Rows[0]["Loai_xe"];
                     textEdit1.EditValue = dtDinhGia.Rows[0]["Gia_ban"];
                     textEdit2.EditValue = dtDinhGia.Rows[0]["ChiPhi"];
@@ -81,14 +81,16 @@ namespace QuanLyMuaBanXe.myFroms
                         bMDinhGiaBanBindingSource.EndEdit();
                         bM_DinhGia_BanTableAdapter.Update(dsSystem.BM_DinhGia_Ban);
                         dsSystem.BM_DinhGia_Ban.AcceptChanges();
-                        int id_xeBan = Convert.ToInt32(dsSystem.BM_ThongTinXeBan[0]["Id_xe"]);
-                        bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã định giá bán", id_xeBan);
+                       // int id_xeBan = Convert.ToInt32(dsSystem.BM_ThongTinXeBan[0]["Id_xe"]);
+                        bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã định giá bán", id_xe);
+                        this.Close();
                     }
                     else
                     {
                         bMDinhGiaBanBindingSource.EndEdit();
                         bM_DinhGia_BanTableAdapter.Update(dsSystem.BM_DinhGia_Ban);
                         dsSystem.BM_DinhGia_Ban.AcceptChanges();
+                        this.Close();
                     }
                 }
               

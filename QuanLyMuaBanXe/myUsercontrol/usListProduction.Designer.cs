@@ -64,6 +64,8 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dsSystem1 = new QuanLyMuaBanXe.myDataSet.dsSystem();
             this.bM_LISTPRODUCT_MENUTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_MENUTableAdapter();
             this.bM_LISTPRODUCT_DETAILSTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_DETAILSTableAdapter();
@@ -336,7 +338,9 @@
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11,
-            this.gridColumn1});
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn12});
             this.gvMain.GridControl = this.gcMain;
             this.gvMain.IndicatorWidth = 30;
             this.gvMain.Name = "gvMain";
@@ -466,6 +470,18 @@
             this.gridColumn1.VisibleIndex = 1;
             this.gridColumn1.Width = 122;
             // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "gridColumn2";
+            this.gridColumn2.FieldName = "Id_xe";
+            this.gridColumn2.Name = "gridColumn2";
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "gridColumn12";
+            this.gridColumn12.FieldName = "Id_kiemTra";
+            this.gridColumn12.Name = "gridColumn12";
+            // 
             // dsSystem1
             // 
             this.dsSystem1.DataSetName = "dsSystem";
@@ -548,5 +564,7 @@
         private myDataSet.dsSystem dsSystem1;
         private myDataSet.dsSystemTableAdapters.BM_LISTPRODUCT_DETAILSTableAdapter bM_LISTPRODUCT_DETAILSTableAdapter;
         private DevExpress.XtraBars.BarLargeButtonItem btnXacNhan;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
     }
 }

@@ -16,12 +16,21 @@ namespace QuanLyMuaBanXe.myFroms
         private int m_id = -1;
         private int mIdXe = -1;
         private int mIdXeKH = -1;
-        public frmThongTinGiaoDich(int id)
+        private int m_idKD = -1;
+        private int m_edit = -1;
+        public frmThongTinGiaoDich(int id, int khKH)
         {
             InitializeComponent();
             m_id = id;
+            m_idKD = khKH;
         }
-
+        public frmThongTinGiaoDich(int id, int khKH, int edit)
+        {
+            InitializeComponent();
+            m_id = id;
+            m_idKD = khKH;
+            m_edit = edit;
+        }
         private void labelControl9_Click(object sender, EventArgs e)
         {
 
@@ -42,6 +51,16 @@ namespace QuanLyMuaBanXe.myFroms
             {
                 bMGiaoDichBindingSource.EndEdit();
                 bMGiaoDichBindingSource.AddNew();
+                searchLookUpEdit1.EditValue = m_idKD;
+                foreach(DataRow dr in this.dsSystem.BM_ThongTinKhachHang.Rows)
+                {
+                    if(m_idKD==Convert.ToInt32(dr["Id_KH"]))
+                    {
+                        textEdit4.EditValue = dr["Ho_ten"].ToString() != null ? dr["Ho_ten"].ToString() : "";
+                        memoEdit1.EditValue = dr["Dia_chi"].ToString() != null ? dr["Dia_chi"].ToString() : "";
+                        textEdit1.EditValue = dr["SDT"].ToString() != null ? dr["SDT"].ToString() : "";
+                    }
+                }
             }
             else { 
 
@@ -84,13 +103,14 @@ namespace QuanLyMuaBanXe.myFroms
         {
             //object b = searchLookUpEdit1.EditValue;
            
-                textEdit4.EditValue= this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Ho_ten").ToString()!=null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Ho_ten").ToString(): "";
-                memoEdit1.EditValue = this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Dia_chi").ToString() != null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Dia_chi").ToString() : "";
-                textEdit1.EditValue = this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("SDT").ToString() != null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("SDT").ToString() : "";
+             //   textEdit4.EditValue= this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Ho_ten").ToString()!=null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Ho_ten").ToString(): "";
+              //  memoEdit1.EditValue = this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Dia_chi").ToString() != null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Dia_chi").ToString() : "";
+              //  textEdit1.EditValue = this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("SDT").ToString() != null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("SDT").ToString() : "";
         }
 
         private void searchLookUpEdit2_EditValueChanged(object sender, EventArgs e)
         {
+            if(!Convert.IsDBNull(searchLookUpEdit2.EditValue))
             textEdit2.EditValue = this.searchLookUpEdit2.Properties.View.GetFocusedRowCellValue("Loai_xe").ToString() != null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Loai_xe").ToString() : "";
         }
     }

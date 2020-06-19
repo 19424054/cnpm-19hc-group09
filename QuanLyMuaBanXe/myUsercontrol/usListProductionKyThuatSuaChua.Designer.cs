@@ -118,7 +118,7 @@
             // 
             // barLargeButtonItem1
             // 
-            this.barLargeButtonItem1.Caption = "Thêm mới";
+            this.barLargeButtonItem1.Caption = "Sửa chữa";
             this.barLargeButtonItem1.Id = 4;
             this.barLargeButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.Image")));
             this.barLargeButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem1.ImageOptions.LargeImage")));
@@ -129,7 +129,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Caption = "Cập nhật";
+            this.btnEdit.Caption = "Cập nhật sửa chữa";
             this.btnEdit.Id = 2;
             this.btnEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.Image")));
             this.btnEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEdit.ImageOptions.LargeImage")));
@@ -309,6 +309,7 @@
             this.gvMain.Name = "gvMain";
             this.gvMain.OptionsBehavior.ReadOnly = true;
             this.gvMain.OptionsFind.AlwaysVisible = true;
+            this.gvMain.OptionsView.ColumnAutoWidth = false;
             this.gvMain.OptionsView.ShowFooter = true;
             this.gvMain.OptionsView.ShowGroupPanel = false;
             this.gvMain.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvMain_CustomDrawRowIndicator);
