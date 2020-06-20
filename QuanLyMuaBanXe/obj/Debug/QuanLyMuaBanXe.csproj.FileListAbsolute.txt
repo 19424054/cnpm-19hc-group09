@@ -1039,3 +1039,4 @@ G:\Project\KHTN\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.exe
 G:\Project\KHTN\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.pdb
 G:\Project\KHTN\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.csprojAssemblyReference.cache
 G:\Project\KHTN\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Debug\QuanLyMuaBanXe.pdb
+G:\Project\KHTN\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.myReport.rptMuaBan.resources

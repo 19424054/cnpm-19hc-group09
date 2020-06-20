@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
 
 namespace QuanLyMuaBanXe.myUsercontrol
 {
@@ -16,6 +17,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
     {
         int m_Ngay = DateTime.Now.Day;
         int m_thang = DateTime.Now.Month;
+        int m_nam = DateTime.Now.Month;
         public usReportBuySell()
         {
             InitializeComponent();
@@ -36,11 +38,31 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            loadData();
+            loadDetail();
+        }
+        private void loadDetail()
+        {
+
+            if (radioGroup1.SelectedIndex == 0)
+            {
+                m_Ngay = Convert.ToDateTime(dateEdit1.EditValue).Day;
+                m_thang = Convert.ToDateTime(dateEdit1.EditValue).Month;
+                m_nam = Convert.ToDateTime(dateEdit1.EditValue).Year;
+            }
+            else
+            {
+                m_Ngay = -1;
+                m_thang = Convert.ToDateTime(dateEdit1.EditValue).Month;
+                m_nam = Convert.ToDateTime(dateEdit1.EditValue).Year;
+            }
+            bM_REPORT_BUY_SELLTableAdapter.Fill(dsSystem.BM_REPORT_BUY_SELL, m_Ngay, m_nam, m_thang);
         }
         public void loadData()
         {
-
+            dateEdit1.EditValue = DateTime.Now;
+            radioGroup1.SelectedIndex = 0;
+            //loadDetail();
+           
         }
 
         private void barLargeButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -55,12 +77,19 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            loadDetail();
         }
 
         private void dateEdit1_EditValueChanged(object sender, EventArgs e)
         {
+            loadDetail();
+        }
 
+        private void barLargeButtonItem3_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            myReport.rptMuaBan rpt = new myReport.rptMuaBan(m_nam,m_thang,m_Ngay);
+            rpt.CreateDocument();
+            rpt.ShowPreview();
         }
     }
 }

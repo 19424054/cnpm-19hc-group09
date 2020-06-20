@@ -76,7 +76,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 }
                 else
                 {
-                    XtraMessageBox.Show("Khách hàng hiện tại đã thực hiện giao dịch. Vui lòng kiểm tra lại");
+                    XtraMessageBox.Show("Khách hàng hiện tại chưa thực hiện giao dịch. Vui lòng kiểm tra lại");
                 }
             }
             //   myFroms.frmThongTinGiaoDich frm = new myFroms.frmThongTinGiaoDich();
@@ -89,12 +89,11 @@ namespace QuanLyMuaBanXe.myUsercontrol
             GridView view = gvMain;
             if (view.FocusedRowHandle > -1)
             {
-                if (Convert.IsDBNull(view.GetFocusedRowCellValue("Id_ban")))
-                {
+               
                     int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
                     myFroms.frmAddInforCustomer frm = new myFroms.frmAddInforCustomer(id_kh,2);
                     frm.ShowDialog();
-                }
+               
             }
         }
         public void loadDataBasic()

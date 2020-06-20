@@ -56,6 +56,12 @@ namespace QuanLyMuaBanXe.myDataSet {
         
         private BM_DINHGIA_MUA_DETAILSDataTable tableBM_DINHGIA_MUA_DETAILS;
         
+        private BM_REPORT_BUY_SELLDataTable tableBM_REPORT_BUY_SELL;
+        
+        private BM_REPORT_BUY_SELL_DETAILSDataTable tableBM_REPORT_BUY_SELL_DETAILS;
+        
+        private BM_REPORT_BUY_SELL_DETAILS_EACHDataTable tableBM_REPORT_BUY_SELL_DETAILS_EACH;
+        
         private global::System.Data.DataRelation relationFK_BM_GiaoDich_BM_ThongTinKhachHang;
         
         private global::System.Data.DataRelation relationFK_BM_GiaoDich_BM_ThongTinXeBan;
@@ -141,6 +147,15 @@ namespace QuanLyMuaBanXe.myDataSet {
                 }
                 if ((ds.Tables["BM_DINHGIA_MUA_DETAILS"] != null)) {
                     base.Tables.Add(new BM_DINHGIA_MUA_DETAILSDataTable(ds.Tables["BM_DINHGIA_MUA_DETAILS"]));
+                }
+                if ((ds.Tables["BM_REPORT_BUY_SELL"] != null)) {
+                    base.Tables.Add(new BM_REPORT_BUY_SELLDataTable(ds.Tables["BM_REPORT_BUY_SELL"]));
+                }
+                if ((ds.Tables["BM_REPORT_BUY_SELL_DETAILS"] != null)) {
+                    base.Tables.Add(new BM_REPORT_BUY_SELL_DETAILSDataTable(ds.Tables["BM_REPORT_BUY_SELL_DETAILS"]));
+                }
+                if ((ds.Tables["BM_REPORT_BUY_SELL_DETAILS_EACH"] != null)) {
+                    base.Tables.Add(new BM_REPORT_BUY_SELL_DETAILS_EACHDataTable(ds.Tables["BM_REPORT_BUY_SELL_DETAILS_EACH"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -322,6 +337,36 @@ namespace QuanLyMuaBanXe.myDataSet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public BM_REPORT_BUY_SELLDataTable BM_REPORT_BUY_SELL {
+            get {
+                return this.tableBM_REPORT_BUY_SELL;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public BM_REPORT_BUY_SELL_DETAILSDataTable BM_REPORT_BUY_SELL_DETAILS {
+            get {
+                return this.tableBM_REPORT_BUY_SELL_DETAILS;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public BM_REPORT_BUY_SELL_DETAILS_EACHDataTable BM_REPORT_BUY_SELL_DETAILS_EACH {
+            get {
+                return this.tableBM_REPORT_BUY_SELL_DETAILS_EACH;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -434,6 +479,15 @@ namespace QuanLyMuaBanXe.myDataSet {
                 }
                 if ((ds.Tables["BM_DINHGIA_MUA_DETAILS"] != null)) {
                     base.Tables.Add(new BM_DINHGIA_MUA_DETAILSDataTable(ds.Tables["BM_DINHGIA_MUA_DETAILS"]));
+                }
+                if ((ds.Tables["BM_REPORT_BUY_SELL"] != null)) {
+                    base.Tables.Add(new BM_REPORT_BUY_SELLDataTable(ds.Tables["BM_REPORT_BUY_SELL"]));
+                }
+                if ((ds.Tables["BM_REPORT_BUY_SELL_DETAILS"] != null)) {
+                    base.Tables.Add(new BM_REPORT_BUY_SELL_DETAILSDataTable(ds.Tables["BM_REPORT_BUY_SELL_DETAILS"]));
+                }
+                if ((ds.Tables["BM_REPORT_BUY_SELL_DETAILS_EACH"] != null)) {
+                    base.Tables.Add(new BM_REPORT_BUY_SELL_DETAILS_EACHDataTable(ds.Tables["BM_REPORT_BUY_SELL_DETAILS_EACH"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -564,6 +618,24 @@ namespace QuanLyMuaBanXe.myDataSet {
                     this.tableBM_DINHGIA_MUA_DETAILS.InitVars();
                 }
             }
+            this.tableBM_REPORT_BUY_SELL = ((BM_REPORT_BUY_SELLDataTable)(base.Tables["BM_REPORT_BUY_SELL"]));
+            if ((initTable == true)) {
+                if ((this.tableBM_REPORT_BUY_SELL != null)) {
+                    this.tableBM_REPORT_BUY_SELL.InitVars();
+                }
+            }
+            this.tableBM_REPORT_BUY_SELL_DETAILS = ((BM_REPORT_BUY_SELL_DETAILSDataTable)(base.Tables["BM_REPORT_BUY_SELL_DETAILS"]));
+            if ((initTable == true)) {
+                if ((this.tableBM_REPORT_BUY_SELL_DETAILS != null)) {
+                    this.tableBM_REPORT_BUY_SELL_DETAILS.InitVars();
+                }
+            }
+            this.tableBM_REPORT_BUY_SELL_DETAILS_EACH = ((BM_REPORT_BUY_SELL_DETAILS_EACHDataTable)(base.Tables["BM_REPORT_BUY_SELL_DETAILS_EACH"]));
+            if ((initTable == true)) {
+                if ((this.tableBM_REPORT_BUY_SELL_DETAILS_EACH != null)) {
+                    this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.InitVars();
+                }
+            }
             this.relationFK_BM_GiaoDich_BM_ThongTinKhachHang = this.Relations["FK_BM_GiaoDich_BM_ThongTinKhachHang"];
             this.relationFK_BM_GiaoDich_BM_ThongTinXeBan = this.Relations["FK_BM_GiaoDich_BM_ThongTinXeBan"];
             this.relationFK_BM_DinhGia_MuaXe_BM_ThongTinXeBan = this.Relations["FK_BM_DinhGia_MuaXe_BM_ThongTinXeBan"];
@@ -611,6 +683,12 @@ namespace QuanLyMuaBanXe.myDataSet {
             base.Tables.Add(this.tableBM_THONGTINXE_DINHGIA_DETAILS);
             this.tableBM_DINHGIA_MUA_DETAILS = new BM_DINHGIA_MUA_DETAILSDataTable();
             base.Tables.Add(this.tableBM_DINHGIA_MUA_DETAILS);
+            this.tableBM_REPORT_BUY_SELL = new BM_REPORT_BUY_SELLDataTable();
+            base.Tables.Add(this.tableBM_REPORT_BUY_SELL);
+            this.tableBM_REPORT_BUY_SELL_DETAILS = new BM_REPORT_BUY_SELL_DETAILSDataTable();
+            base.Tables.Add(this.tableBM_REPORT_BUY_SELL_DETAILS);
+            this.tableBM_REPORT_BUY_SELL_DETAILS_EACH = new BM_REPORT_BUY_SELL_DETAILS_EACHDataTable();
+            base.Tables.Add(this.tableBM_REPORT_BUY_SELL_DETAILS_EACH);
             this.relationFK_BM_GiaoDich_BM_ThongTinKhachHang = new global::System.Data.DataRelation("FK_BM_GiaoDich_BM_ThongTinKhachHang", new global::System.Data.DataColumn[] {
                         this.tableBM_ThongTinKhachHang.Id_KHColumn}, new global::System.Data.DataColumn[] {
                         this.tableBM_GiaoDich.Id_KHColumn}, false);
@@ -731,6 +809,24 @@ namespace QuanLyMuaBanXe.myDataSet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeBM_REPORT_BUY_SELL() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeBM_REPORT_BUY_SELL_DETAILS() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeBM_REPORT_BUY_SELL_DETAILS_EACH() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -832,6 +928,15 @@ namespace QuanLyMuaBanXe.myDataSet {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void BM_DINHGIA_MUA_DETAILSRowChangeEventHandler(object sender, BM_DINHGIA_MUA_DETAILSRowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void BM_REPORT_BUY_SELLRowChangeEventHandler(object sender, BM_REPORT_BUY_SELLRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void BM_REPORT_BUY_SELL_DETAILSRowChangeEventHandler(object sender, BM_REPORT_BUY_SELL_DETAILSRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEventHandler(object sender, BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -860,6 +965,8 @@ namespace QuanLyMuaBanXe.myDataSet {
             private global::System.Data.DataColumn columnLoai_xe;
             
             private global::System.Data.DataColumn columnNgay_mua;
+            
+            private global::System.Data.DataColumn columnDinh_gia;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -984,6 +1091,14 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Dinh_giaColumn {
+                get {
+                    return this.columnDinh_gia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1019,7 +1134,7 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public BM_ThongTinXeBanRow AddBM_ThongTinXeBanRow(string Ma_so_xe, string Bien_so_xe, string Ten_KH_Ban, string SDT, string Dia_chi, string Trang_Thai, double Gia_ban, System.DateTime Ngay_tao, string Loai_xe, System.DateTime Ngay_mua) {
+            public BM_ThongTinXeBanRow AddBM_ThongTinXeBanRow(string Ma_so_xe, string Bien_so_xe, string Ten_KH_Ban, string SDT, string Dia_chi, string Trang_Thai, double Gia_ban, System.DateTime Ngay_tao, string Loai_xe, System.DateTime Ngay_mua, double Dinh_gia) {
                 BM_ThongTinXeBanRow rowBM_ThongTinXeBanRow = ((BM_ThongTinXeBanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1032,7 +1147,8 @@ namespace QuanLyMuaBanXe.myDataSet {
                         Gia_ban,
                         Ngay_tao,
                         Loai_xe,
-                        Ngay_mua};
+                        Ngay_mua,
+                        Dinh_gia};
                 rowBM_ThongTinXeBanRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBM_ThongTinXeBanRow);
                 return rowBM_ThongTinXeBanRow;
@@ -1073,6 +1189,7 @@ namespace QuanLyMuaBanXe.myDataSet {
                 this.columnNgay_tao = base.Columns["Ngay_tao"];
                 this.columnLoai_xe = base.Columns["Loai_xe"];
                 this.columnNgay_mua = base.Columns["Ngay_mua"];
+                this.columnDinh_gia = base.Columns["Dinh_gia"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1100,6 +1217,8 @@ namespace QuanLyMuaBanXe.myDataSet {
                 base.Columns.Add(this.columnLoai_xe);
                 this.columnNgay_mua = new global::System.Data.DataColumn("Ngay_mua", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNgay_mua);
+                this.columnDinh_gia = new global::System.Data.DataColumn("Dinh_gia", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDinh_gia);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId_xe}, true));
                 this.columnId_xe.AutoIncrement = true;
@@ -1626,6 +1745,16 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             private global::System.Data.DataColumn columnGhi_chu;
             
+            private global::System.Data.DataColumn columnLoai_xe;
+            
+            private global::System.Data.DataColumn columnHo_ten;
+            
+            private global::System.Data.DataColumn columnSDT;
+            
+            private global::System.Data.DataColumn columnDia_chi;
+            
+            private global::System.Data.DataColumn columnDinh_gia;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BM_GiaoDichDataTable() {
@@ -1709,6 +1838,46 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Loai_xeColumn {
+                get {
+                    return this.columnLoai_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ho_tenColumn {
+                get {
+                    return this.columnHo_ten;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SDTColumn {
+                get {
+                    return this.columnSDT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Dia_chiColumn {
+                get {
+                    return this.columnDia_chi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Dinh_giaColumn {
+                get {
+                    return this.columnDinh_gia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1744,7 +1913,7 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public BM_GiaoDichRow AddBM_GiaoDichRow(BM_ThongTinKhachHangRow parentBM_ThongTinKhachHangRowByFK_BM_GiaoDich_BM_ThongTinKhachHang, BM_ThongTinXeBanRow parentBM_ThongTinXeBanRowByFK_BM_GiaoDich_BM_ThongTinXeBan, double Gia_ban, string Hinh_thuc, string Ghi_chu) {
+            public BM_GiaoDichRow AddBM_GiaoDichRow(BM_ThongTinKhachHangRow parentBM_ThongTinKhachHangRowByFK_BM_GiaoDich_BM_ThongTinKhachHang, BM_ThongTinXeBanRow parentBM_ThongTinXeBanRowByFK_BM_GiaoDich_BM_ThongTinXeBan, double Gia_ban, string Hinh_thuc, string Ghi_chu, string Loai_xe, string Ho_ten, string SDT, string Dia_chi, double Dinh_gia) {
                 BM_GiaoDichRow rowBM_GiaoDichRow = ((BM_GiaoDichRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1752,7 +1921,12 @@ namespace QuanLyMuaBanXe.myDataSet {
                         null,
                         Gia_ban,
                         Hinh_thuc,
-                        Ghi_chu};
+                        Ghi_chu,
+                        Loai_xe,
+                        Ho_ten,
+                        SDT,
+                        Dia_chi,
+                        Dinh_gia};
                 if ((parentBM_ThongTinKhachHangRowByFK_BM_GiaoDich_BM_ThongTinKhachHang != null)) {
                     columnValuesArray[1] = parentBM_ThongTinKhachHangRowByFK_BM_GiaoDich_BM_ThongTinKhachHang[0];
                 }
@@ -1794,6 +1968,11 @@ namespace QuanLyMuaBanXe.myDataSet {
                 this.columnGia_ban = base.Columns["Gia_ban"];
                 this.columnHinh_thuc = base.Columns["Hinh_thuc"];
                 this.columnGhi_chu = base.Columns["Ghi_chu"];
+                this.columnLoai_xe = base.Columns["Loai_xe"];
+                this.columnHo_ten = base.Columns["Ho_ten"];
+                this.columnSDT = base.Columns["SDT"];
+                this.columnDia_chi = base.Columns["Dia_chi"];
+                this.columnDinh_gia = base.Columns["Dinh_gia"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1811,6 +1990,16 @@ namespace QuanLyMuaBanXe.myDataSet {
                 base.Columns.Add(this.columnHinh_thuc);
                 this.columnGhi_chu = new global::System.Data.DataColumn("Ghi_chu", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGhi_chu);
+                this.columnLoai_xe = new global::System.Data.DataColumn("Loai_xe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLoai_xe);
+                this.columnHo_ten = new global::System.Data.DataColumn("Ho_ten", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHo_ten);
+                this.columnSDT = new global::System.Data.DataColumn("SDT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSDT);
+                this.columnDia_chi = new global::System.Data.DataColumn("Dia_chi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDia_chi);
+                this.columnDinh_gia = new global::System.Data.DataColumn("Dinh_gia", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDinh_gia);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId_ban}, true));
                 this.columnId_ban.AutoIncrement = true;
@@ -6552,6 +6741,1053 @@ namespace QuanLyMuaBanXe.myDataSet {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class BM_REPORT_BUY_SELLDataTable : global::System.Data.TypedTableBase<BM_REPORT_BUY_SELLRow> {
+            
+            private global::System.Data.DataColumn columnId_xe;
+            
+            private global::System.Data.DataColumn columnLoai_xe;
+            
+            private global::System.Data.DataColumn columnTrang_Thai;
+            
+            private global::System.Data.DataColumn columnGiaMua;
+            
+            private global::System.Data.DataColumn columnGia_ban;
+            
+            private global::System.Data.DataColumn columnMa_so_xe;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELLDataTable() {
+                this.TableName = "BM_REPORT_BUY_SELL";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal BM_REPORT_BUY_SELLDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected BM_REPORT_BUY_SELLDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Id_xeColumn {
+                get {
+                    return this.columnId_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Loai_xeColumn {
+                get {
+                    return this.columnLoai_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Trang_ThaiColumn {
+                get {
+                    return this.columnTrang_Thai;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GiaMuaColumn {
+                get {
+                    return this.columnGiaMua;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Gia_banColumn {
+                get {
+                    return this.columnGia_ban;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ma_so_xeColumn {
+                get {
+                    return this.columnMa_so_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELLRow this[int index] {
+                get {
+                    return ((BM_REPORT_BUY_SELLRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELLRowChangeEventHandler BM_REPORT_BUY_SELLRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELLRowChangeEventHandler BM_REPORT_BUY_SELLRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELLRowChangeEventHandler BM_REPORT_BUY_SELLRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELLRowChangeEventHandler BM_REPORT_BUY_SELLRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddBM_REPORT_BUY_SELLRow(BM_REPORT_BUY_SELLRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELLRow AddBM_REPORT_BUY_SELLRow(int Id_xe, string Loai_xe, string Trang_Thai, double GiaMua, double Gia_ban, string Ma_so_xe) {
+                BM_REPORT_BUY_SELLRow rowBM_REPORT_BUY_SELLRow = ((BM_REPORT_BUY_SELLRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Id_xe,
+                        Loai_xe,
+                        Trang_Thai,
+                        GiaMua,
+                        Gia_ban,
+                        Ma_so_xe};
+                rowBM_REPORT_BUY_SELLRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBM_REPORT_BUY_SELLRow);
+                return rowBM_REPORT_BUY_SELLRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                BM_REPORT_BUY_SELLDataTable cln = ((BM_REPORT_BUY_SELLDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new BM_REPORT_BUY_SELLDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnId_xe = base.Columns["Id_xe"];
+                this.columnLoai_xe = base.Columns["Loai_xe"];
+                this.columnTrang_Thai = base.Columns["Trang_Thai"];
+                this.columnGiaMua = base.Columns["GiaMua"];
+                this.columnGia_ban = base.Columns["Gia_ban"];
+                this.columnMa_so_xe = base.Columns["Ma_so_xe"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnId_xe = new global::System.Data.DataColumn("Id_xe", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_xe);
+                this.columnLoai_xe = new global::System.Data.DataColumn("Loai_xe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLoai_xe);
+                this.columnTrang_Thai = new global::System.Data.DataColumn("Trang_Thai", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTrang_Thai);
+                this.columnGiaMua = new global::System.Data.DataColumn("GiaMua", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGiaMua);
+                this.columnGia_ban = new global::System.Data.DataColumn("Gia_ban", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGia_ban);
+                this.columnMa_so_xe = new global::System.Data.DataColumn("Ma_so_xe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMa_so_xe);
+                this.columnId_xe.ReadOnly = true;
+                this.columnLoai_xe.ReadOnly = true;
+                this.columnLoai_xe.MaxLength = 50;
+                this.columnTrang_Thai.ReadOnly = true;
+                this.columnTrang_Thai.MaxLength = 50;
+                this.columnGiaMua.ReadOnly = true;
+                this.columnGia_ban.ReadOnly = true;
+                this.columnMa_so_xe.ReadOnly = true;
+                this.columnMa_so_xe.MaxLength = 10;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELLRow NewBM_REPORT_BUY_SELLRow() {
+                return ((BM_REPORT_BUY_SELLRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new BM_REPORT_BUY_SELLRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(BM_REPORT_BUY_SELLRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.BM_REPORT_BUY_SELLRowChanged != null)) {
+                    this.BM_REPORT_BUY_SELLRowChanged(this, new BM_REPORT_BUY_SELLRowChangeEvent(((BM_REPORT_BUY_SELLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.BM_REPORT_BUY_SELLRowChanging != null)) {
+                    this.BM_REPORT_BUY_SELLRowChanging(this, new BM_REPORT_BUY_SELLRowChangeEvent(((BM_REPORT_BUY_SELLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.BM_REPORT_BUY_SELLRowDeleted != null)) {
+                    this.BM_REPORT_BUY_SELLRowDeleted(this, new BM_REPORT_BUY_SELLRowChangeEvent(((BM_REPORT_BUY_SELLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.BM_REPORT_BUY_SELLRowDeleting != null)) {
+                    this.BM_REPORT_BUY_SELLRowDeleting(this, new BM_REPORT_BUY_SELLRowChangeEvent(((BM_REPORT_BUY_SELLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveBM_REPORT_BUY_SELLRow(BM_REPORT_BUY_SELLRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsSystem ds = new dsSystem();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "BM_REPORT_BUY_SELLDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class BM_REPORT_BUY_SELL_DETAILSDataTable : global::System.Data.TypedTableBase<BM_REPORT_BUY_SELL_DETAILSRow> {
+            
+            private global::System.Data.DataColumn columnId_xe;
+            
+            private global::System.Data.DataColumn columnLoai_xe;
+            
+            private global::System.Data.DataColumn columnTrang_Thai;
+            
+            private global::System.Data.DataColumn columnGiaMua;
+            
+            private global::System.Data.DataColumn columnGia_ban;
+            
+            private global::System.Data.DataColumn columnMa_so_xe;
+            
+            private global::System.Data.DataColumn columnChiPhi;
+            
+            private global::System.Data.DataColumn columnLoiNhuan;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILSDataTable() {
+                this.TableName = "BM_REPORT_BUY_SELL_DETAILS";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal BM_REPORT_BUY_SELL_DETAILSDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected BM_REPORT_BUY_SELL_DETAILSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Id_xeColumn {
+                get {
+                    return this.columnId_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Loai_xeColumn {
+                get {
+                    return this.columnLoai_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Trang_ThaiColumn {
+                get {
+                    return this.columnTrang_Thai;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GiaMuaColumn {
+                get {
+                    return this.columnGiaMua;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Gia_banColumn {
+                get {
+                    return this.columnGia_ban;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ma_so_xeColumn {
+                get {
+                    return this.columnMa_so_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ChiPhiColumn {
+                get {
+                    return this.columnChiPhi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LoiNhuanColumn {
+                get {
+                    return this.columnLoiNhuan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILSRow this[int index] {
+                get {
+                    return ((BM_REPORT_BUY_SELL_DETAILSRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELL_DETAILSRowChangeEventHandler BM_REPORT_BUY_SELL_DETAILSRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELL_DETAILSRowChangeEventHandler BM_REPORT_BUY_SELL_DETAILSRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELL_DETAILSRowChangeEventHandler BM_REPORT_BUY_SELL_DETAILSRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELL_DETAILSRowChangeEventHandler BM_REPORT_BUY_SELL_DETAILSRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddBM_REPORT_BUY_SELL_DETAILSRow(BM_REPORT_BUY_SELL_DETAILSRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILSRow AddBM_REPORT_BUY_SELL_DETAILSRow(int Id_xe, string Loai_xe, string Trang_Thai, double GiaMua, double Gia_ban, string Ma_so_xe, double ChiPhi, double LoiNhuan) {
+                BM_REPORT_BUY_SELL_DETAILSRow rowBM_REPORT_BUY_SELL_DETAILSRow = ((BM_REPORT_BUY_SELL_DETAILSRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Id_xe,
+                        Loai_xe,
+                        Trang_Thai,
+                        GiaMua,
+                        Gia_ban,
+                        Ma_so_xe,
+                        ChiPhi,
+                        LoiNhuan};
+                rowBM_REPORT_BUY_SELL_DETAILSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBM_REPORT_BUY_SELL_DETAILSRow);
+                return rowBM_REPORT_BUY_SELL_DETAILSRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                BM_REPORT_BUY_SELL_DETAILSDataTable cln = ((BM_REPORT_BUY_SELL_DETAILSDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new BM_REPORT_BUY_SELL_DETAILSDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnId_xe = base.Columns["Id_xe"];
+                this.columnLoai_xe = base.Columns["Loai_xe"];
+                this.columnTrang_Thai = base.Columns["Trang_Thai"];
+                this.columnGiaMua = base.Columns["GiaMua"];
+                this.columnGia_ban = base.Columns["Gia_ban"];
+                this.columnMa_so_xe = base.Columns["Ma_so_xe"];
+                this.columnChiPhi = base.Columns["ChiPhi"];
+                this.columnLoiNhuan = base.Columns["LoiNhuan"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnId_xe = new global::System.Data.DataColumn("Id_xe", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_xe);
+                this.columnLoai_xe = new global::System.Data.DataColumn("Loai_xe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLoai_xe);
+                this.columnTrang_Thai = new global::System.Data.DataColumn("Trang_Thai", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTrang_Thai);
+                this.columnGiaMua = new global::System.Data.DataColumn("GiaMua", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGiaMua);
+                this.columnGia_ban = new global::System.Data.DataColumn("Gia_ban", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGia_ban);
+                this.columnMa_so_xe = new global::System.Data.DataColumn("Ma_so_xe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMa_so_xe);
+                this.columnChiPhi = new global::System.Data.DataColumn("ChiPhi", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnChiPhi);
+                this.columnLoiNhuan = new global::System.Data.DataColumn("LoiNhuan", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLoiNhuan);
+                this.columnId_xe.ReadOnly = true;
+                this.columnLoai_xe.ReadOnly = true;
+                this.columnLoai_xe.MaxLength = 50;
+                this.columnTrang_Thai.ReadOnly = true;
+                this.columnTrang_Thai.MaxLength = 50;
+                this.columnGiaMua.ReadOnly = true;
+                this.columnGia_ban.ReadOnly = true;
+                this.columnMa_so_xe.ReadOnly = true;
+                this.columnMa_so_xe.MaxLength = 10;
+                this.columnChiPhi.ReadOnly = true;
+                this.columnLoiNhuan.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILSRow NewBM_REPORT_BUY_SELL_DETAILSRow() {
+                return ((BM_REPORT_BUY_SELL_DETAILSRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new BM_REPORT_BUY_SELL_DETAILSRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(BM_REPORT_BUY_SELL_DETAILSRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.BM_REPORT_BUY_SELL_DETAILSRowChanged != null)) {
+                    this.BM_REPORT_BUY_SELL_DETAILSRowChanged(this, new BM_REPORT_BUY_SELL_DETAILSRowChangeEvent(((BM_REPORT_BUY_SELL_DETAILSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.BM_REPORT_BUY_SELL_DETAILSRowChanging != null)) {
+                    this.BM_REPORT_BUY_SELL_DETAILSRowChanging(this, new BM_REPORT_BUY_SELL_DETAILSRowChangeEvent(((BM_REPORT_BUY_SELL_DETAILSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.BM_REPORT_BUY_SELL_DETAILSRowDeleted != null)) {
+                    this.BM_REPORT_BUY_SELL_DETAILSRowDeleted(this, new BM_REPORT_BUY_SELL_DETAILSRowChangeEvent(((BM_REPORT_BUY_SELL_DETAILSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.BM_REPORT_BUY_SELL_DETAILSRowDeleting != null)) {
+                    this.BM_REPORT_BUY_SELL_DETAILSRowDeleting(this, new BM_REPORT_BUY_SELL_DETAILSRowChangeEvent(((BM_REPORT_BUY_SELL_DETAILSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveBM_REPORT_BUY_SELL_DETAILSRow(BM_REPORT_BUY_SELL_DETAILSRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsSystem ds = new dsSystem();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "BM_REPORT_BUY_SELL_DETAILSDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class BM_REPORT_BUY_SELL_DETAILS_EACHDataTable : global::System.Data.TypedTableBase<BM_REPORT_BUY_SELL_DETAILS_EACHRow> {
+            
+            private global::System.Data.DataColumn columnId_xe;
+            
+            private global::System.Data.DataColumn columnLoai_xe;
+            
+            private global::System.Data.DataColumn columnTrang_Thai;
+            
+            private global::System.Data.DataColumn columnGiaMua;
+            
+            private global::System.Data.DataColumn columnGia_ban;
+            
+            private global::System.Data.DataColumn columnMa_so_xe;
+            
+            private global::System.Data.DataColumn columnChiPhi;
+            
+            private global::System.Data.DataColumn columnLoiNhuan;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILS_EACHDataTable() {
+                this.TableName = "BM_REPORT_BUY_SELL_DETAILS_EACH";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal BM_REPORT_BUY_SELL_DETAILS_EACHDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected BM_REPORT_BUY_SELL_DETAILS_EACHDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Id_xeColumn {
+                get {
+                    return this.columnId_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Loai_xeColumn {
+                get {
+                    return this.columnLoai_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Trang_ThaiColumn {
+                get {
+                    return this.columnTrang_Thai;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GiaMuaColumn {
+                get {
+                    return this.columnGiaMua;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Gia_banColumn {
+                get {
+                    return this.columnGia_ban;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ma_so_xeColumn {
+                get {
+                    return this.columnMa_so_xe;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ChiPhiColumn {
+                get {
+                    return this.columnChiPhi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LoiNhuanColumn {
+                get {
+                    return this.columnLoiNhuan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILS_EACHRow this[int index] {
+                get {
+                    return ((BM_REPORT_BUY_SELL_DETAILS_EACHRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEventHandler BM_REPORT_BUY_SELL_DETAILS_EACHRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEventHandler BM_REPORT_BUY_SELL_DETAILS_EACHRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEventHandler BM_REPORT_BUY_SELL_DETAILS_EACHRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEventHandler BM_REPORT_BUY_SELL_DETAILS_EACHRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddBM_REPORT_BUY_SELL_DETAILS_EACHRow(BM_REPORT_BUY_SELL_DETAILS_EACHRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILS_EACHRow AddBM_REPORT_BUY_SELL_DETAILS_EACHRow(string Loai_xe, string Trang_Thai, double GiaMua, double Gia_ban, string Ma_so_xe, double ChiPhi, double LoiNhuan) {
+                BM_REPORT_BUY_SELL_DETAILS_EACHRow rowBM_REPORT_BUY_SELL_DETAILS_EACHRow = ((BM_REPORT_BUY_SELL_DETAILS_EACHRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Loai_xe,
+                        Trang_Thai,
+                        GiaMua,
+                        Gia_ban,
+                        Ma_so_xe,
+                        ChiPhi,
+                        LoiNhuan};
+                rowBM_REPORT_BUY_SELL_DETAILS_EACHRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBM_REPORT_BUY_SELL_DETAILS_EACHRow);
+                return rowBM_REPORT_BUY_SELL_DETAILS_EACHRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILS_EACHRow FindById_xe(int Id_xe) {
+                return ((BM_REPORT_BUY_SELL_DETAILS_EACHRow)(this.Rows.Find(new object[] {
+                            Id_xe})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                BM_REPORT_BUY_SELL_DETAILS_EACHDataTable cln = ((BM_REPORT_BUY_SELL_DETAILS_EACHDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new BM_REPORT_BUY_SELL_DETAILS_EACHDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnId_xe = base.Columns["Id_xe"];
+                this.columnLoai_xe = base.Columns["Loai_xe"];
+                this.columnTrang_Thai = base.Columns["Trang_Thai"];
+                this.columnGiaMua = base.Columns["GiaMua"];
+                this.columnGia_ban = base.Columns["Gia_ban"];
+                this.columnMa_so_xe = base.Columns["Ma_so_xe"];
+                this.columnChiPhi = base.Columns["ChiPhi"];
+                this.columnLoiNhuan = base.Columns["LoiNhuan"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnId_xe = new global::System.Data.DataColumn("Id_xe", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_xe);
+                this.columnLoai_xe = new global::System.Data.DataColumn("Loai_xe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLoai_xe);
+                this.columnTrang_Thai = new global::System.Data.DataColumn("Trang_Thai", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTrang_Thai);
+                this.columnGiaMua = new global::System.Data.DataColumn("GiaMua", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGiaMua);
+                this.columnGia_ban = new global::System.Data.DataColumn("Gia_ban", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGia_ban);
+                this.columnMa_so_xe = new global::System.Data.DataColumn("Ma_so_xe", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMa_so_xe);
+                this.columnChiPhi = new global::System.Data.DataColumn("ChiPhi", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnChiPhi);
+                this.columnLoiNhuan = new global::System.Data.DataColumn("LoiNhuan", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLoiNhuan);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId_xe}, true));
+                this.columnId_xe.AutoIncrement = true;
+                this.columnId_xe.AutoIncrementSeed = -1;
+                this.columnId_xe.AutoIncrementStep = -1;
+                this.columnId_xe.AllowDBNull = false;
+                this.columnId_xe.ReadOnly = true;
+                this.columnId_xe.Unique = true;
+                this.columnLoai_xe.MaxLength = 50;
+                this.columnTrang_Thai.MaxLength = 50;
+                this.columnMa_so_xe.MaxLength = 10;
+                this.columnChiPhi.ReadOnly = true;
+                this.columnLoiNhuan.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILS_EACHRow NewBM_REPORT_BUY_SELL_DETAILS_EACHRow() {
+                return ((BM_REPORT_BUY_SELL_DETAILS_EACHRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new BM_REPORT_BUY_SELL_DETAILS_EACHRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(BM_REPORT_BUY_SELL_DETAILS_EACHRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.BM_REPORT_BUY_SELL_DETAILS_EACHRowChanged != null)) {
+                    this.BM_REPORT_BUY_SELL_DETAILS_EACHRowChanged(this, new BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEvent(((BM_REPORT_BUY_SELL_DETAILS_EACHRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.BM_REPORT_BUY_SELL_DETAILS_EACHRowChanging != null)) {
+                    this.BM_REPORT_BUY_SELL_DETAILS_EACHRowChanging(this, new BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEvent(((BM_REPORT_BUY_SELL_DETAILS_EACHRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.BM_REPORT_BUY_SELL_DETAILS_EACHRowDeleted != null)) {
+                    this.BM_REPORT_BUY_SELL_DETAILS_EACHRowDeleted(this, new BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEvent(((BM_REPORT_BUY_SELL_DETAILS_EACHRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.BM_REPORT_BUY_SELL_DETAILS_EACHRowDeleting != null)) {
+                    this.BM_REPORT_BUY_SELL_DETAILS_EACHRowDeleting(this, new BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEvent(((BM_REPORT_BUY_SELL_DETAILS_EACHRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveBM_REPORT_BUY_SELL_DETAILS_EACHRow(BM_REPORT_BUY_SELL_DETAILS_EACHRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsSystem ds = new dsSystem();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "BM_REPORT_BUY_SELL_DETAILS_EACHDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class BM_ThongTinXeBanRow : global::System.Data.DataRow {
@@ -6738,6 +7974,22 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Dinh_gia {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_ThongTinXeBan.Dinh_giaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Dinh_gia\' in table \'BM_ThongTinXeBan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_ThongTinXeBan.Dinh_giaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsMa_so_xeNull() {
                 return this.IsNull(this.tableBM_ThongTinXeBan.Ma_so_xeColumn);
             }
@@ -6854,6 +8106,18 @@ namespace QuanLyMuaBanXe.myDataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNgay_muaNull() {
                 this[this.tableBM_ThongTinXeBan.Ngay_muaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDinh_giaNull() {
+                return this.IsNull(this.tableBM_ThongTinXeBan.Dinh_giaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDinh_giaNull() {
+                this[this.tableBM_ThongTinXeBan.Dinh_giaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7241,6 +8505,86 @@ namespace QuanLyMuaBanXe.myDataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Loai_xe {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_GiaoDich.Loai_xeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Loai_xe\' in table \'BM_GiaoDich\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_GiaoDich.Loai_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ho_ten {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_GiaoDich.Ho_tenColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Ho_ten\' in table \'BM_GiaoDich\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_GiaoDich.Ho_tenColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SDT {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_GiaoDich.SDTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SDT\' in table \'BM_GiaoDich\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_GiaoDich.SDTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Dia_chi {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_GiaoDich.Dia_chiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Dia_chi\' in table \'BM_GiaoDich\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_GiaoDich.Dia_chiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Dinh_gia {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_GiaoDich.Dinh_giaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Dinh_gia\' in table \'BM_GiaoDich\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_GiaoDich.Dinh_giaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public BM_ThongTinKhachHangRow BM_ThongTinKhachHangRow {
                 get {
                     return ((BM_ThongTinKhachHangRow)(this.GetParentRow(this.Table.ParentRelations["FK_BM_GiaoDich_BM_ThongTinKhachHang"])));
@@ -7319,6 +8663,66 @@ namespace QuanLyMuaBanXe.myDataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetGhi_chuNull() {
                 this[this.tableBM_GiaoDich.Ghi_chuColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLoai_xeNull() {
+                return this.IsNull(this.tableBM_GiaoDich.Loai_xeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLoai_xeNull() {
+                this[this.tableBM_GiaoDich.Loai_xeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHo_tenNull() {
+                return this.IsNull(this.tableBM_GiaoDich.Ho_tenColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHo_tenNull() {
+                this[this.tableBM_GiaoDich.Ho_tenColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSDTNull() {
+                return this.IsNull(this.tableBM_GiaoDich.SDTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSDTNull() {
+                this[this.tableBM_GiaoDich.SDTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDia_chiNull() {
+                return this.IsNull(this.tableBM_GiaoDich.Dia_chiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDia_chiNull() {
+                this[this.tableBM_GiaoDich.Dia_chiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDinh_giaNull() {
+                return this.IsNull(this.tableBM_GiaoDich.Dinh_giaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDinh_giaNull() {
+                this[this.tableBM_GiaoDich.Dinh_giaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10046,6 +11450,658 @@ namespace QuanLyMuaBanXe.myDataSet {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class BM_REPORT_BUY_SELLRow : global::System.Data.DataRow {
+            
+            private BM_REPORT_BUY_SELLDataTable tableBM_REPORT_BUY_SELL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal BM_REPORT_BUY_SELLRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableBM_REPORT_BUY_SELL = ((BM_REPORT_BUY_SELLDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id_xe {
+                get {
+                    try {
+                        return ((int)(this[this.tableBM_REPORT_BUY_SELL.Id_xeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Id_xe\' in table \'BM_REPORT_BUY_SELL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL.Id_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Loai_xe {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_REPORT_BUY_SELL.Loai_xeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Loai_xe\' in table \'BM_REPORT_BUY_SELL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL.Loai_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Trang_Thai {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_REPORT_BUY_SELL.Trang_ThaiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Trang_Thai\' in table \'BM_REPORT_BUY_SELL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL.Trang_ThaiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double GiaMua {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_REPORT_BUY_SELL.GiaMuaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GiaMua\' in table \'BM_REPORT_BUY_SELL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL.GiaMuaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Gia_ban {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_REPORT_BUY_SELL.Gia_banColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Gia_ban\' in table \'BM_REPORT_BUY_SELL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL.Gia_banColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ma_so_xe {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_REPORT_BUY_SELL.Ma_so_xeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Ma_so_xe\' in table \'BM_REPORT_BUY_SELL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL.Ma_so_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsId_xeNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL.Id_xeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetId_xeNull() {
+                this[this.tableBM_REPORT_BUY_SELL.Id_xeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLoai_xeNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL.Loai_xeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLoai_xeNull() {
+                this[this.tableBM_REPORT_BUY_SELL.Loai_xeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTrang_ThaiNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL.Trang_ThaiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTrang_ThaiNull() {
+                this[this.tableBM_REPORT_BUY_SELL.Trang_ThaiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGiaMuaNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL.GiaMuaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGiaMuaNull() {
+                this[this.tableBM_REPORT_BUY_SELL.GiaMuaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGia_banNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL.Gia_banColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGia_banNull() {
+                this[this.tableBM_REPORT_BUY_SELL.Gia_banColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMa_so_xeNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL.Ma_so_xeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMa_so_xeNull() {
+                this[this.tableBM_REPORT_BUY_SELL.Ma_so_xeColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class BM_REPORT_BUY_SELL_DETAILSRow : global::System.Data.DataRow {
+            
+            private BM_REPORT_BUY_SELL_DETAILSDataTable tableBM_REPORT_BUY_SELL_DETAILS;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal BM_REPORT_BUY_SELL_DETAILSRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableBM_REPORT_BUY_SELL_DETAILS = ((BM_REPORT_BUY_SELL_DETAILSDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id_xe {
+                get {
+                    try {
+                        return ((int)(this[this.tableBM_REPORT_BUY_SELL_DETAILS.Id_xeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Id_xe\' in table \'BM_REPORT_BUY_SELL_DETAILS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS.Id_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Loai_xe {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_REPORT_BUY_SELL_DETAILS.Loai_xeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Loai_xe\' in table \'BM_REPORT_BUY_SELL_DETAILS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS.Loai_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Trang_Thai {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_REPORT_BUY_SELL_DETAILS.Trang_ThaiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Trang_Thai\' in table \'BM_REPORT_BUY_SELL_DETAILS\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS.Trang_ThaiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double GiaMua {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_REPORT_BUY_SELL_DETAILS.GiaMuaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GiaMua\' in table \'BM_REPORT_BUY_SELL_DETAILS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS.GiaMuaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Gia_ban {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_REPORT_BUY_SELL_DETAILS.Gia_banColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Gia_ban\' in table \'BM_REPORT_BUY_SELL_DETAILS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS.Gia_banColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ma_so_xe {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_REPORT_BUY_SELL_DETAILS.Ma_so_xeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Ma_so_xe\' in table \'BM_REPORT_BUY_SELL_DETAILS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS.Ma_so_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double ChiPhi {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_REPORT_BUY_SELL_DETAILS.ChiPhiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ChiPhi\' in table \'BM_REPORT_BUY_SELL_DETAILS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS.ChiPhiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double LoiNhuan {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_REPORT_BUY_SELL_DETAILS.LoiNhuanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LoiNhuan\' in table \'BM_REPORT_BUY_SELL_DETAILS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS.LoiNhuanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsId_xeNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS.Id_xeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetId_xeNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS.Id_xeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLoai_xeNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS.Loai_xeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLoai_xeNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS.Loai_xeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTrang_ThaiNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS.Trang_ThaiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTrang_ThaiNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS.Trang_ThaiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGiaMuaNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS.GiaMuaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGiaMuaNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS.GiaMuaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGia_banNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS.Gia_banColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGia_banNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS.Gia_banColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMa_so_xeNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS.Ma_so_xeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMa_so_xeNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS.Ma_so_xeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsChiPhiNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS.ChiPhiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetChiPhiNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS.ChiPhiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLoiNhuanNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS.LoiNhuanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLoiNhuanNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS.LoiNhuanColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class BM_REPORT_BUY_SELL_DETAILS_EACHRow : global::System.Data.DataRow {
+            
+            private BM_REPORT_BUY_SELL_DETAILS_EACHDataTable tableBM_REPORT_BUY_SELL_DETAILS_EACH;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal BM_REPORT_BUY_SELL_DETAILS_EACHRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableBM_REPORT_BUY_SELL_DETAILS_EACH = ((BM_REPORT_BUY_SELL_DETAILS_EACHDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id_xe {
+                get {
+                    return ((int)(this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Id_xeColumn]));
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Id_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Loai_xe {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Loai_xeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Loai_xe\' in table \'BM_REPORT_BUY_SELL_DETAILS_EACH\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Loai_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Trang_Thai {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Trang_ThaiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Trang_Thai\' in table \'BM_REPORT_BUY_SELL_DETAILS_EACH\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Trang_ThaiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double GiaMua {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.GiaMuaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GiaMua\' in table \'BM_REPORT_BUY_SELL_DETAILS_EACH\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.GiaMuaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double Gia_ban {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Gia_banColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Gia_ban\' in table \'BM_REPORT_BUY_SELL_DETAILS_EACH\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Gia_banColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ma_so_xe {
+                get {
+                    try {
+                        return ((string)(this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Ma_so_xeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Ma_so_xe\' in table \'BM_REPORT_BUY_SELL_DETAILS_EACH\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Ma_so_xeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double ChiPhi {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.ChiPhiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ChiPhi\' in table \'BM_REPORT_BUY_SELL_DETAILS_EACH\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.ChiPhiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double LoiNhuan {
+                get {
+                    try {
+                        return ((double)(this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.LoiNhuanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LoiNhuan\' in table \'BM_REPORT_BUY_SELL_DETAILS_EACH\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.LoiNhuanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLoai_xeNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Loai_xeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLoai_xeNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Loai_xeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTrang_ThaiNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Trang_ThaiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTrang_ThaiNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Trang_ThaiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGiaMuaNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.GiaMuaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGiaMuaNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.GiaMuaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGia_banNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Gia_banColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGia_banNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Gia_banColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMa_so_xeNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Ma_so_xeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMa_so_xeNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.Ma_so_xeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsChiPhiNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.ChiPhiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetChiPhiNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.ChiPhiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLoiNhuanNull() {
+                return this.IsNull(this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.LoiNhuanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLoiNhuanNull() {
+                this[this.tableBM_REPORT_BUY_SELL_DETAILS_EACH.LoiNhuanColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -10588,6 +12644,108 @@ namespace QuanLyMuaBanXe.myDataSet {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class BM_REPORT_BUY_SELLRowChangeEvent : global::System.EventArgs {
+            
+            private BM_REPORT_BUY_SELLRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELLRowChangeEvent(BM_REPORT_BUY_SELLRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELLRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class BM_REPORT_BUY_SELL_DETAILSRowChangeEvent : global::System.EventArgs {
+            
+            private BM_REPORT_BUY_SELL_DETAILSRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILSRowChangeEvent(BM_REPORT_BUY_SELL_DETAILSRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILSRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEvent : global::System.EventArgs {
+            
+            private BM_REPORT_BUY_SELL_DETAILS_EACHRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILS_EACHRowChangeEvent(BM_REPORT_BUY_SELL_DETAILS_EACHRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public BM_REPORT_BUY_SELL_DETAILS_EACHRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
 namespace QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters {
@@ -10815,7 +12973,7 @@ SELECT Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, Gia_ba
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, " +
@@ -10829,16 +12987,22 @@ SELECT Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, Gia_ba
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_xe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "select MAX(ISNULL(SUBSTRING(Ma_so_xe,7,8),0)) from BM_ThongTinXeBan\r\nWHERE Ma_so_" +
-                "xe like @MaSoXe+\'%\'";
+            this._commandCollection[2].CommandText = "SELECT A.*, B.Dinh_gia FROM BM_ThongTinXeBan A\r\nINNER JOIN BM_DinhGia_Ban B ON A." +
+                "Id_xe=B.Id_xe\r\n--WHERE A.Trang_Thai=N\'Đã định giá bán\' OR A.Trang_Thai=N\'Đã giao" +
+                " dịch\'";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaSoXe", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_so_xe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE [BM_ThongTinXeBan] SET  Trang_Thai=@trang_Thai\r\nWHERE Id_xe=@Id_xe";
+            this._commandCollection[3].CommandText = "select MAX(ISNULL(SUBSTRING(Ma_so_xe,7,8),0)) from BM_ThongTinXeBan\r\nWHERE Ma_so_" +
+                "xe like @MaSoXe+\'%\'";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trang_Thai", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Trang_Thai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_xe", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaSoXe", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_so_xe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "UPDATE [BM_ThongTinXeBan] SET  Trang_Thai=@trang_Thai\r\nWHERE Id_xe=@Id_xe";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trang_Thai", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Trang_Thai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_xe", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10886,6 +13050,30 @@ SELECT Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, Gia_ba
         public virtual dsSystem.BM_ThongTinXeBanDataTable GetDataByIdXe(int Id_xe) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_xe));
+            dsSystem.BM_ThongTinXeBanDataTable dataTable = new dsSystem.BM_ThongTinXeBanDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByDadinhGia(dsSystem.BM_ThongTinXeBanDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsSystem.BM_ThongTinXeBanDataTable GetDataByDadinhGia() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             dsSystem.BM_ThongTinXeBanDataTable dataTable = new dsSystem.BM_ThongTinXeBanDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -11321,7 +13509,7 @@ SELECT Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, Gia_ba
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual object ScalarQueryGetMaxCode(string MaSoXe) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((MaSoXe == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -11356,7 +13544,7 @@ SELECT Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, Gia_ba
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateQueryTrangThai(string trang_Thai, int Id_xe) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((trang_Thai == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -11579,7 +13767,7 @@ SELECT Id_KH, Ho_ten, SDT, Dia_chi, Yeu_cau, Trang_thai, Ma_KH, Thoi_gian FROM B
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id_KH, Ho_ten, SDT, Dia_chi, Yeu_cau, Trang_thai, Ma_KH, Thoi_gian\r" +
@@ -11597,6 +13785,12 @@ SELECT Id_KH, Ho_ten, SDT, Dia_chi, Yeu_cau, Trang_thai, Ma_KH, Thoi_gian FROM B
                 " like @MaKH+\'%\'";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaKH", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_KH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "UPDATE [BM_ThongTinKhachHang] SET Trang_thai=@trangthai\r\nWHERE Id_KH=@Id_KH";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trangthai", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Trang_thai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_KH", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_KH", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11965,6 +14159,36 @@ SELECT Id_KH, Ho_ten, SDT, Dia_chi, Yeu_cau, Trang_thai, Ma_KH, Thoi_gian FROM B
                 return ((object)(returnValue));
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateQuery(string trangthai, int Id_KH) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            if ((trangthai == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(trangthai));
+            }
+            command.Parameters[1].Value = ((int)(Id_KH));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
     }
     
     /// <summary>
@@ -12156,12 +14380,20 @@ SELECT Id_ban, Id_KH, Id_xe, Gia_ban, Hinh_thuc, Ghi_chu FROM BM_GiaoDich WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Id_ban, Id_KH, Id_xe, Gia_ban, Hinh_thuc, Ghi_chu\r\nFROM            " +
-                "BM_GiaoDich";
+            this._commandCollection[0].CommandText = "SELECT Id_ban, Id_KH, Id_xe, Gia_ban, Hinh_thuc, Ghi_chu FROM BM_GiaoDich";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"select A.Id_xe, A.Id_KH, A.Hinh_thuc,A.Ghi_chu,A.Gia_ban,A.Id_ban,B.Loai_xe,C.Ho_ten,C.SDT,C.Dia_chi,D.Dinh_gia from BM_GiaoDich A
+INNER JOIN BM_ThongTinXeBan B ON A.Id_xe=B.Id_xe
+INNER JOIN BM_ThongTinKhachHang C ON C.Id_KH=A.Id_KH
+INNER JOIN BM_DinhGia_Ban D ON D.Id_xe=B.Id_xe
+WHERE A.Id_ban=@Id_xe";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_ban", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12183,6 +14415,32 @@ SELECT Id_ban, Id_KH, Id_xe, Gia_ban, Hinh_thuc, Ghi_chu FROM BM_GiaoDich WHERE 
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual dsSystem.BM_GiaoDichDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsSystem.BM_GiaoDichDataTable dataTable = new dsSystem.BM_GiaoDichDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(dsSystem.BM_GiaoDichDataTable dataTable, int Id_xe) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_xe));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsSystem.BM_GiaoDichDataTable GetDataBy(int Id_xe) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_xe));
             dsSystem.BM_GiaoDichDataTable dataTable = new dsSystem.BM_GiaoDichDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -16681,6 +18939,620 @@ SELECT Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code FROM BM_TaiKhoan WHERE (I
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class BM_REPORT_BUY_SELLTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public BM_REPORT_BUY_SELLTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "BM_REPORT_BUY_SELL";
+            tableMapping.ColumnMappings.Add("Id_xe", "Id_xe");
+            tableMapping.ColumnMappings.Add("Loai_xe", "Loai_xe");
+            tableMapping.ColumnMappings.Add("Trang_Thai", "Trang_Thai");
+            tableMapping.ColumnMappings.Add("GiaMua", "GiaMua");
+            tableMapping.ColumnMappings.Add("Gia_ban", "Gia_ban");
+            tableMapping.ColumnMappings.Add("Ma_so_xe", "Ma_so_xe");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::QuanLyMuaBanXe.Properties.Settings.Default.QuanLyMuaBanXeConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.BM_REPORT_BUY_SELL";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Day", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsSystem.BM_REPORT_BUY_SELLDataTable dataTable, global::System.Nullable<int> Day, global::System.Nullable<int> Year, global::System.Nullable<int> Month) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Day.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Day.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Year.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Year.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Month.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(Month.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsSystem.BM_REPORT_BUY_SELLDataTable GetData(global::System.Nullable<int> Day, global::System.Nullable<int> Year, global::System.Nullable<int> Month) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Day.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Day.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Year.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Year.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Month.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(Month.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            dsSystem.BM_REPORT_BUY_SELLDataTable dataTable = new dsSystem.BM_REPORT_BUY_SELLDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class BM_REPORT_BUY_SELL_DETAILSTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public BM_REPORT_BUY_SELL_DETAILSTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "BM_REPORT_BUY_SELL_DETAILS";
+            tableMapping.ColumnMappings.Add("Id_xe", "Id_xe");
+            tableMapping.ColumnMappings.Add("Loai_xe", "Loai_xe");
+            tableMapping.ColumnMappings.Add("Trang_Thai", "Trang_Thai");
+            tableMapping.ColumnMappings.Add("GiaMua", "GiaMua");
+            tableMapping.ColumnMappings.Add("Gia_ban", "Gia_ban");
+            tableMapping.ColumnMappings.Add("Ma_so_xe", "Ma_so_xe");
+            tableMapping.ColumnMappings.Add("ChiPhi", "ChiPhi");
+            tableMapping.ColumnMappings.Add("LoiNhuan", "LoiNhuan");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::QuanLyMuaBanXe.Properties.Settings.Default.QuanLyMuaBanXeConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.BM_REPORT_BUY_SELL_DETAILS";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Day", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsSystem.BM_REPORT_BUY_SELL_DETAILSDataTable dataTable, global::System.Nullable<int> Day, global::System.Nullable<int> Year, global::System.Nullable<int> Month) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Day.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Day.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Year.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Year.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Month.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(Month.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsSystem.BM_REPORT_BUY_SELL_DETAILSDataTable GetData(global::System.Nullable<int> Day, global::System.Nullable<int> Year, global::System.Nullable<int> Month) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Day.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(Day.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Year.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((int)(Year.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Month.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(Month.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            dsSystem.BM_REPORT_BUY_SELL_DETAILSDataTable dataTable = new dsSystem.BM_REPORT_BUY_SELL_DETAILSDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class BM_REPORT_BUY_SELL_DETAILS_EACHTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public BM_REPORT_BUY_SELL_DETAILS_EACHTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "BM_REPORT_BUY_SELL_DETAILS_EACH";
+            tableMapping.ColumnMappings.Add("Id_xe", "Id_xe");
+            tableMapping.ColumnMappings.Add("Loai_xe", "Loai_xe");
+            tableMapping.ColumnMappings.Add("Trang_Thai", "Trang_Thai");
+            tableMapping.ColumnMappings.Add("GiaMua", "GiaMua");
+            tableMapping.ColumnMappings.Add("Gia_ban", "Gia_ban");
+            tableMapping.ColumnMappings.Add("Ma_so_xe", "Ma_so_xe");
+            tableMapping.ColumnMappings.Add("ChiPhi", "ChiPhi");
+            tableMapping.ColumnMappings.Add("LoiNhuan", "LoiNhuan");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::QuanLyMuaBanXe.Properties.Settings.Default.QuanLyMuaBanXeConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.BM_REPORT_BUY_SELL_DETAILS_EACH";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdXe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsSystem.BM_REPORT_BUY_SELL_DETAILS_EACHDataTable dataTable, global::System.Nullable<int> IdXe) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((IdXe.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(IdXe.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsSystem.BM_REPORT_BUY_SELL_DETAILS_EACHDataTable GetData(global::System.Nullable<int> IdXe) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((IdXe.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(IdXe.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            dsSystem.BM_REPORT_BUY_SELL_DETAILS_EACHDataTable dataTable = new dsSystem.BM_REPORT_BUY_SELL_DETAILS_EACHDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -16929,30 +19801,12 @@ SELECT Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code FROM BM_TaiKhoan WHERE (I
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._bM_GiaoDichTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.BM_GiaoDich.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._bM_TaiKhoanTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BM_TaiKhoan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._bM_GiaoDichTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._bM_DinhGia_MuaXeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.BM_DinhGia_MuaXe.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._bM_DinhGia_MuaXeTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._bM_DinhGia_BanTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.BM_DinhGia_Ban.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._bM_DinhGia_BanTableAdapter.Update(updatedRows));
+                    result = (result + this._bM_TaiKhoanTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16965,12 +19819,30 @@ SELECT Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code FROM BM_TaiKhoan WHERE (I
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._bM_TaiKhoanTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.BM_TaiKhoan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._bM_DinhGia_BanTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BM_DinhGia_Ban.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._bM_TaiKhoanTableAdapter.Update(updatedRows));
+                    result = (result + this._bM_DinhGia_BanTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._bM_DinhGia_MuaXeTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BM_DinhGia_MuaXe.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._bM_DinhGia_MuaXeTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._bM_GiaoDichTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BM_GiaoDich.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._bM_GiaoDichTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -17000,27 +19872,11 @@ SELECT Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code FROM BM_TaiKhoan WHERE (I
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._bM_GiaoDichTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.BM_GiaoDich.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._bM_TaiKhoanTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BM_TaiKhoan.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._bM_GiaoDichTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._bM_DinhGia_MuaXeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.BM_DinhGia_MuaXe.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._bM_DinhGia_MuaXeTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._bM_DinhGia_BanTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.BM_DinhGia_Ban.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._bM_DinhGia_BanTableAdapter.Update(addedRows));
+                    result = (result + this._bM_TaiKhoanTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -17032,11 +19888,27 @@ SELECT Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code FROM BM_TaiKhoan WHERE (I
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._bM_TaiKhoanTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.BM_TaiKhoan.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._bM_DinhGia_BanTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BM_DinhGia_Ban.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._bM_TaiKhoanTableAdapter.Update(addedRows));
+                    result = (result + this._bM_DinhGia_BanTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._bM_DinhGia_MuaXeTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BM_DinhGia_MuaXe.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._bM_DinhGia_MuaXeTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._bM_GiaoDichTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BM_GiaoDich.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._bM_GiaoDichTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -17050,27 +19922,11 @@ SELECT Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code FROM BM_TaiKhoan WHERE (I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(dsSystem dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._bM_TaiKhoanTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.BM_TaiKhoan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._bM_GiaoDichTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BM_GiaoDich.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._bM_TaiKhoanTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._bM_ThongTin_SuaChuaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.BM_ThongTin_SuaChua.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._bM_ThongTin_SuaChuaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._bM_DinhGia_BanTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.BM_DinhGia_Ban.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._bM_DinhGia_BanTableAdapter.Update(deletedRows));
+                    result = (result + this._bM_GiaoDichTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -17082,11 +19938,27 @@ SELECT Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code FROM BM_TaiKhoan WHERE (I
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._bM_GiaoDichTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.BM_GiaoDich.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._bM_DinhGia_BanTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BM_DinhGia_Ban.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._bM_GiaoDichTableAdapter.Update(deletedRows));
+                    result = (result + this._bM_DinhGia_BanTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._bM_ThongTin_SuaChuaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BM_ThongTin_SuaChua.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._bM_ThongTin_SuaChuaTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._bM_TaiKhoanTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BM_TaiKhoan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._bM_TaiKhoanTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

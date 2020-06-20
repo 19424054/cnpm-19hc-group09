@@ -81,6 +81,7 @@
             this.btnPlanRepair.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnPlanRepair.ItemAppearance.Normal.Options.UseFont = true;
             this.btnPlanRepair.Name = "btnPlanRepair";
+            this.btnPlanRepair.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnPlanRepair.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPlanRepair_ItemClick);
             // 
             // btnListBuySell

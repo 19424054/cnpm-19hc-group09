@@ -34,6 +34,7 @@
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -45,6 +46,8 @@
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.gcMain = new DevExpress.XtraGrid.GridControl();
+            this.bMREPORTBUYSELLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
             this.gvMain = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,7 +57,7 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
-            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.bM_REPORT_BUY_SELLTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_REPORT_BUY_SELLTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -65,6 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMREPORTBUYSELLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
             this.SuspendLayout();
@@ -120,6 +125,17 @@
             this.barLargeButtonItem2.ItemAppearance.Normal.Options.UseFont = true;
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
             this.barLargeButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem2_ItemClick);
+            // 
+            // barLargeButtonItem3
+            // 
+            this.barLargeButtonItem3.Caption = "Xuất bản in";
+            this.barLargeButtonItem3.Id = 3;
+            this.barLargeButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.Image")));
+            this.barLargeButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.LargeImage")));
+            this.barLargeButtonItem3.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barLargeButtonItem3.ItemAppearance.Normal.Options.UseFont = true;
+            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
+            this.barLargeButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem3_ItemClick_1);
             // 
             // barDockControlTop
             // 
@@ -237,6 +253,7 @@
             // 
             // gcMain
             // 
+            this.gcMain.DataSource = this.bMREPORTBUYSELLBindingSource;
             this.gcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
@@ -246,6 +263,16 @@
             this.gcMain.TabIndex = 0;
             this.gcMain.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvMain});
+            // 
+            // bMREPORTBUYSELLBindingSource
+            // 
+            this.bMREPORTBUYSELLBindingSource.DataMember = "BM_REPORT_BUY_SELL";
+            this.bMREPORTBUYSELLBindingSource.DataSource = this.dsSystem;
+            // 
+            // dsSystem
+            // 
+            this.dsSystem.DataSetName = "dsSystem";
+            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gvMain
             // 
@@ -271,6 +298,7 @@
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.Caption = "Mã số xe";
+            this.gridColumn1.FieldName = "Ma_so_xe";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
@@ -283,6 +311,7 @@
             this.gridColumn2.Caption = "Giá mua";
             this.gridColumn2.DisplayFormat.FormatString = "n0";
             this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn2.FieldName = "GiaMua";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
@@ -295,6 +324,7 @@
             this.gridColumn3.Caption = "Giá bán";
             this.gridColumn3.DisplayFormat.FormatString = "n0";
             this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn3.FieldName = "Gia_ban";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
@@ -305,6 +335,7 @@
             this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "Trạng thái";
+            this.gridColumn4.FieldName = "Trang_Thai";
             this.gridColumn4.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -316,6 +347,7 @@
             this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.Caption = "Loại xe";
+            this.gridColumn5.FieldName = "Loai_xe";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 1;
@@ -324,6 +356,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Id_xe";
+            this.gridColumn6.FieldName = "Id_xe";
             this.gridColumn6.Name = "gridColumn6";
             // 
             // gridColumn7
@@ -331,15 +364,9 @@
             this.gridColumn7.Caption = "gridColumn7";
             this.gridColumn7.Name = "gridColumn7";
             // 
-            // barLargeButtonItem3
+            // bM_REPORT_BUY_SELLTableAdapter
             // 
-            this.barLargeButtonItem3.Caption = "Xuất bản in";
-            this.barLargeButtonItem3.Id = 3;
-            this.barLargeButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.Image")));
-            this.barLargeButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem3.ImageOptions.LargeImage")));
-            this.barLargeButtonItem3.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.barLargeButtonItem3.ItemAppearance.Normal.Options.UseFont = true;
-            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
+            this.bM_REPORT_BUY_SELLTableAdapter.ClearBeforeFill = true;
             // 
             // usReportBuySell
             // 
@@ -362,6 +389,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMREPORTBUYSELLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).EndInit();
             this.ResumeLayout(false);
@@ -396,5 +425,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem3;
+        private System.Windows.Forms.BindingSource bMREPORTBUYSELLBindingSource;
+        private myDataSet.dsSystem dsSystem;
+        private myDataSet.dsSystemTableAdapters.BM_REPORT_BUY_SELLTableAdapter bM_REPORT_BUY_SELLTableAdapter;
     }
 }

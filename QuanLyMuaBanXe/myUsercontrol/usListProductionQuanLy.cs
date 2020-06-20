@@ -44,6 +44,10 @@ namespace QuanLyMuaBanXe.myUsercontrol
                           myFroms.frmDinhGia frm = new myFroms.frmDinhGia(-1, id_xe);
                           frm.ShowDialog();
                     }
+                    else
+                    {
+                        XtraMessageBox.Show("Sản phẩm đã được định giá vui lòng kiểm tra.");
+                    }
                 }
             }
             catch (Exception ex)
@@ -174,7 +178,9 @@ namespace QuanLyMuaBanXe.myUsercontrol
                     }
                     else
                     {
-                        XtraMessageBox.Show("Bạn không thể cập nhật xe đã định giá");
+                        int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                        myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(id_xe,1);
+                        frm.ShowDialog();
                     }
                   
                 }

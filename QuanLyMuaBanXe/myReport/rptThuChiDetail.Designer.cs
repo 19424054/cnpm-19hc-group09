@@ -49,7 +49,14 @@
             this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.bM_REPORT_BUY_SELL_DETAILSTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_REPORT_BUY_SELL_DETAILSTableAdapter();
+            this.dsSystem1 = new QuanLyMuaBanXe.myDataSet.dsSystem();
+            this.bM_ThongTinXeBanTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter();
+            this.dsSystem2 = new QuanLyMuaBanXe.myDataSet.dsSystem();
+            this.bM_REPORT_BUY_SELL_DETAILS_EACHTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_REPORT_BUY_SELL_DETAILS_EACHTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -120,12 +127,14 @@
             this.xrTableCell1.Dpi = 254F;
             this.xrTableCell1.Multiline = true;
             this.xrTableCell1.Name = "xrTableCell1";
-            this.xrTableCell1.Text = "Mã sản phẩm:";
+            this.xrTableCell1.Text = "Mã số xe:";
             this.xrTableCell1.Weight = 0.73125025681617151D;
             // 
             // xrTableCell2
             // 
             this.xrTableCell2.Dpi = 254F;
+            this.xrTableCell2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Ma_so_xe]")});
             this.xrTableCell2.Multiline = true;
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.Weight = 1.2687497431838284D;
@@ -150,8 +159,11 @@
             // xrTableCell4
             // 
             this.xrTableCell4.Dpi = 254F;
+            this.xrTableCell4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[GiaMua]")});
             this.xrTableCell4.Multiline = true;
             this.xrTableCell4.Name = "xrTableCell4";
+            this.xrTableCell4.TextFormatString = "{0:n0}";
             this.xrTableCell4.Weight = 1.2687497431838284D;
             // 
             // xrTableRow3
@@ -168,14 +180,17 @@
             this.xrTableCell5.Dpi = 254F;
             this.xrTableCell5.Multiline = true;
             this.xrTableCell5.Name = "xrTableCell5";
-            this.xrTableCell5.Text = "Giá bán:";
+            this.xrTableCell5.Text = "Chi phí sửa chữa:";
             this.xrTableCell5.Weight = 0.73125025681617151D;
             // 
             // xrTableCell6
             // 
             this.xrTableCell6.Dpi = 254F;
+            this.xrTableCell6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ChiPhi]")});
             this.xrTableCell6.Multiline = true;
             this.xrTableCell6.Name = "xrTableCell6";
+            this.xrTableCell6.TextFormatString = "{0:n0}";
             this.xrTableCell6.Weight = 1.2687497431838284D;
             // 
             // xrTableRow4
@@ -192,14 +207,17 @@
             this.xrTableCell7.Dpi = 254F;
             this.xrTableCell7.Multiline = true;
             this.xrTableCell7.Name = "xrTableCell7";
-            this.xrTableCell7.Text = "Chi phí sửa chữa:";
+            this.xrTableCell7.Text = "Giá bán:";
             this.xrTableCell7.Weight = 0.73125025681617151D;
             // 
             // xrTableCell8
             // 
             this.xrTableCell8.Dpi = 254F;
+            this.xrTableCell8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Gia_ban]")});
             this.xrTableCell8.Multiline = true;
             this.xrTableCell8.Name = "xrTableCell8";
+            this.xrTableCell8.TextFormatString = "{0:n0}";
             this.xrTableCell8.Weight = 1.2687497431838284D;
             // 
             // xrTableRow5
@@ -222,8 +240,11 @@
             // xrTableCell10
             // 
             this.xrTableCell10.Dpi = 254F;
+            this.xrTableCell10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LoiNhuan]")});
             this.xrTableCell10.Multiline = true;
             this.xrTableCell10.Name = "xrTableCell10";
+            this.xrTableCell10.TextFormatString = "{0:n0}";
             this.xrTableCell10.Weight = 1.2687497431838284D;
             // 
             // xrLabel1
@@ -234,11 +255,33 @@
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(846.6669F, 76.94084F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(846.6668F, 140.4408F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "BÁO CÁO THU CHI SẢN PHẨM";
+            this.xrLabel1.Text = "BÁO CÁO THU CHI SẢN PHẨM XXXXXXX";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // bM_REPORT_BUY_SELL_DETAILSTableAdapter
+            // 
+            this.bM_REPORT_BUY_SELL_DETAILSTableAdapter.ClearBeforeFill = true;
+            // 
+            // dsSystem1
+            // 
+            this.dsSystem1.DataSetName = "dsSystem";
+            this.dsSystem1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bM_ThongTinXeBanTableAdapter
+            // 
+            this.bM_ThongTinXeBanTableAdapter.ClearBeforeFill = true;
+            // 
+            // dsSystem2
+            // 
+            this.dsSystem2.DataSetName = "dsSystem";
+            this.dsSystem2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bM_REPORT_BUY_SELL_DETAILS_EACHTableAdapter
+            // 
+            this.bM_REPORT_BUY_SELL_DETAILS_EACHTableAdapter.ClearBeforeFill = true;
             // 
             // rptThuChiDetail
             // 
@@ -247,6 +290,12 @@
             this.TopMargin,
             this.BottomMargin,
             this.ReportHeader});
+            this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
+            this.dsSystem1,
+            this.dsSystem2});
+            this.DataAdapter = this.bM_ThongTinXeBanTableAdapter;
+            this.DataMember = "BM_REPORT_BUY_SELL_DETAILS_EACH";
+            this.DataSource = this.dsSystem2;
             this.Dpi = 254F;
             this.Margins = new System.Drawing.Printing.Margins(24, 85, 0, 0);
             this.PageHeight = 2100;
@@ -256,6 +305,8 @@
             this.SnapGridSize = 25F;
             this.Version = "19.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -283,5 +334,10 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private myDataSet.dsSystemTableAdapters.BM_REPORT_BUY_SELL_DETAILSTableAdapter bM_REPORT_BUY_SELL_DETAILSTableAdapter;
+        private myDataSet.dsSystem dsSystem1;
+        private myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter bM_ThongTinXeBanTableAdapter;
+        private myDataSet.dsSystem dsSystem2;
+        private myDataSet.dsSystemTableAdapters.BM_REPORT_BUY_SELL_DETAILS_EACHTableAdapter bM_REPORT_BUY_SELL_DETAILS_EACHTableAdapter;
     }
 }

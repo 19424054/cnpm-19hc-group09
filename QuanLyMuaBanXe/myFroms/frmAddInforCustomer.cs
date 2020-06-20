@@ -49,10 +49,10 @@ namespace QuanLyMuaBanXe.myFroms
                 bM_ThongTinKhachHangTableAdapter.FillBy(dsSystem.BM_ThongTinKhachHang, m_id);
                 if(m_kiem!=-1)
                 {
-                    txtName.Enabled = false;
-                    txtPhone.Enabled = false;
-                    memoEdit1.Enabled = false;
-                    memoEdit2.Enabled = false;
+                    txtName.ReadOnly = true;
+                    txtPhone.ReadOnly = true;
+                    memoEdit1.ReadOnly = true;
+                    memoEdit2.ReadOnly = true;
                     btnSave.Enabled = false;
                 }
             }

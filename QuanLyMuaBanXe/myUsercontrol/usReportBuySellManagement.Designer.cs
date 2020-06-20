@@ -55,6 +55,9 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dsSystem = new QuanLyMuaBanXe.myDataSet.dsSystem();
+            this.bMREPORTBUYSELLDETAILSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bM_REPORT_BUY_SELL_DETAILSTableAdapter = new QuanLyMuaBanXe.myDataSet.dsSystemTableAdapters.BM_REPORT_BUY_SELL_DETAILSTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -66,6 +69,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMREPORTBUYSELLDETAILSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -247,6 +252,7 @@
             // 
             // gcMain
             // 
+            this.gcMain.DataSource = this.bMREPORTBUYSELLDETAILSBindingSource;
             this.gcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMain.Location = new System.Drawing.Point(0, 0);
             this.gcMain.MainView = this.gvMain;
@@ -282,6 +288,7 @@
             this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.Caption = "Mã số xe";
+            this.gridColumn1.FieldName = "Ma_so_xe";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
@@ -294,9 +301,10 @@
             this.gridColumn2.Caption = "Giá mua";
             this.gridColumn2.DisplayFormat.FormatString = "n0";
             this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn2.FieldName = "GiaMua";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "", "SUM={0:n0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GiaMua", "SUM={0:n0}")});
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
             this.gridColumn2.Width = 148;
@@ -308,9 +316,10 @@
             this.gridColumn3.Caption = "Giá bán";
             this.gridColumn3.DisplayFormat.FormatString = "n0";
             this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn3.FieldName = "Gia_ban";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "", "SUM={0:n0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Gia_ban", "SUM={0:n0}")});
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
             this.gridColumn3.Width = 137;
@@ -322,9 +331,10 @@
             this.gridColumn4.Caption = "Chi phí sửa chữa";
             this.gridColumn4.DisplayFormat.FormatString = "n0";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn4.FieldName = "ChiPhi";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "", "SUM={0:n0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ChiPhi", "SUM={0:n0}")});
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
             this.gridColumn4.Width = 152;
@@ -336,10 +346,11 @@
             this.gridColumn5.Caption = "Lợi nhuận";
             this.gridColumn5.DisplayFormat.FormatString = "n0";
             this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn5.FieldName = "LoiNhuan";
             this.gridColumn5.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "", "SUM={0:n0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "LoiNhuan", "SUM={0:n0}")});
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
             this.gridColumn5.Width = 139;
@@ -349,6 +360,7 @@
             this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.Caption = "Trạng thái";
+            this.gridColumn6.FieldName = "Trang_Thai";
             this.gridColumn6.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Right;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
@@ -360,6 +372,7 @@
             this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.gridColumn7.AppearanceHeader.Options.UseFont = true;
             this.gridColumn7.Caption = "Loại xe";
+            this.gridColumn7.FieldName = "Loai_xe";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 1;
@@ -368,7 +381,22 @@
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Id_xe";
+            this.gridColumn8.FieldName = "Id_xe";
             this.gridColumn8.Name = "gridColumn8";
+            // 
+            // dsSystem
+            // 
+            this.dsSystem.DataSetName = "dsSystem";
+            this.dsSystem.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bMREPORTBUYSELLDETAILSBindingSource
+            // 
+            this.bMREPORTBUYSELLDETAILSBindingSource.DataMember = "BM_REPORT_BUY_SELL_DETAILS";
+            this.bMREPORTBUYSELLDETAILSBindingSource.DataSource = this.dsSystem;
+            // 
+            // bM_REPORT_BUY_SELL_DETAILSTableAdapter
+            // 
+            this.bM_REPORT_BUY_SELL_DETAILSTableAdapter.ClearBeforeFill = true;
             // 
             // usReportBuySellManagement
             // 
@@ -392,6 +420,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSystem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bMREPORTBUYSELLDETAILSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,5 +454,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private System.Windows.Forms.BindingSource bMREPORTBUYSELLDETAILSBindingSource;
+        private myDataSet.dsSystem dsSystem;
+        private myDataSet.dsSystemTableAdapters.BM_REPORT_BUY_SELL_DETAILSTableAdapter bM_REPORT_BUY_SELL_DETAILSTableAdapter;
     }
 }

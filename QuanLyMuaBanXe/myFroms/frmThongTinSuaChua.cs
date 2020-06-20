@@ -15,10 +15,17 @@ namespace QuanLyMuaBanXe.myFroms
     public partial class frmThongTinSuaChua : DevExpress.XtraEditors.XtraForm
     {
         private int m_id=-1;
+        private int m_trangthai = -1;
         public frmThongTinSuaChua(int id)
         {
             InitializeComponent();
             m_id = id;
+        }
+        public frmThongTinSuaChua(int id, int trangthai)
+        {
+            InitializeComponent();
+            m_id = id;
+            m_trangthai = trangthai;
         }
 
         private void frmThongTinSuaChua_Load(object sender, EventArgs e)
@@ -67,6 +74,14 @@ namespace QuanLyMuaBanXe.myFroms
             this.bM_ThongTinXeBanTableAdapter.Fill(this.dsSystem.BM_ThongTinXeBan);
             searchLookUpEdit1.EditValue = m_id;
             textEdit1.EditValue = dsSystem.BM_ThongTinXeBan[0]["Loai_xe"];
+            if(m_trangthai!=-1)
+            {
+                barLargeButtonItem2.Enabled = false;
+                barLargeButtonItem4.Enabled = false;
+                gvMain.OptionsBehavior.ReadOnly = true;
+                gvMain.OptionsBehavior.Editable = false;
+                searchLookUpEdit1.ReadOnly = true;
+            }
         }
         private void saveData()
         {

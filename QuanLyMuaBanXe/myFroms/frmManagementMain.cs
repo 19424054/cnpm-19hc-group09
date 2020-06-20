@@ -62,6 +62,7 @@ namespace QuanLyMuaBanXe.myFroms
                 };
                 uc.Dock = DockStyle.Fill;
                 newPage.Controls.Add(uc);
+                uc.loadData();
                 tabMain.TabPages.Add(newPage);
                 tabMain.SelectedTabPage = newPage;
             }
@@ -86,6 +87,7 @@ namespace QuanLyMuaBanXe.myFroms
                 };
                 uc.Dock = DockStyle.Fill;
                 newPage.Controls.Add(uc);
+                uc.loadData();
                 tabMain.TabPages.Add(newPage);
                 tabMain.SelectedTabPage = newPage;
             }
