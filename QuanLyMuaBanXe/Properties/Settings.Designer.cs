@@ -26,7 +26,7 @@ namespace QuanLyMuaBanXe.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-D812UP6;Initial Catalog=QuanLyMuaBanXe;Integrated Security=Tr" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-AR23I9P;Initial Catalog=QuanLyMuaBanXe;Integrated Security=Tr" +
             "ue")]
         public string QuanLyMuaBanXeConnectionString {
             get {

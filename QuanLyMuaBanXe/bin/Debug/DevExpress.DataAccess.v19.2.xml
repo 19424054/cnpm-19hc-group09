@@ -4,11 +4,6 @@
     <name>DevExpress.DataAccess.v19.2</name>
   </assembly>
   <members>
-    <member name="N:DevExpress.DataAccess">
-      <summary>
-        <para>Contains classes that utilize the most popular approaches to access different data providers.</para>
-      </summary>
-    </member>
     <member name="N:DevExpress.DataAccess.ConnectionParameters">
       <summary>
         <para>Contains classes that incorporate connection parameters of various data providers.</para>
@@ -1162,7 +1157,7 @@
     </member>
     <member name="M:DevExpress.DataAccess.DataFederation.FederationDataSourceBase.LoadFromXml(System.Xml.Linq.XElement)">
       <summary>
-        <para>Loads the Federation Data Source schema definition from XML. For internal use.</para>
+        <para>Loads the Federation Data Source schema definition from XML.</para>
       </summary>
       <param name="element">A <see cref="T:System.Xml.Linq.XElement"/> value containing an XML definition of the data source schema.</param>
     </member>
@@ -1174,7 +1169,7 @@
     </member>
     <member name="M:DevExpress.DataAccess.DataFederation.FederationDataSourceBase.SaveToXml">
       <summary>
-        <para>Saves the XML definition of the SQL data source schema. For internal use.</para>
+        <para>Saves the XML definition of the SQL data source schema.</para>
       </summary>
       <returns>A <see cref="T:System.Xml.Linq.XElement"/> value containing an XML definition of the data source schema.</returns>
     </member>
@@ -4353,54 +4348,6 @@
       <summary>
         <para>For internal use.</para>
       </summary>
-      <value></value>
-    </member>
-    <member name="T:DevExpress.DataAccess.Json.PathParameter">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.DataAccess.Json.PathParameter.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.DataAccess.Json.PathParameter"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.DataAccess.Json.PathParameter.#ctor(System.String,System.Object)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.DataAccess.Json.PathParameter"/> class with specified settings.</para>
-      </summary>
-      <param name="name"></param>
-      <param name="value"></param>
-    </member>
-    <member name="M:DevExpress.DataAccess.Json.PathParameter.#ctor(System.String,System.Type,System.Object)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.DataAccess.Json.PathParameter"/> class with specified settings.</para>
-      </summary>
-      <param name="name"></param>
-      <param name="type"></param>
-      <param name="value"></param>
-    </member>
-    <member name="T:DevExpress.DataAccess.Json.PathParameterCollection">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.DataAccess.Json.PathParameterCollection.#ctor">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.DataAccess.Json.PathParameterCollection"/> class.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.DataAccess.Json.PathParameterCollection.AddRange(DevExpress.DataAccess.Json.PathParameter[])">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="items"></param>
-    </member>
-    <member name="P:DevExpress.DataAccess.Json.PathParameterCollection.Item(System.String)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="pathName"></param>
       <value></value>
     </member>
     <member name="T:DevExpress.DataAccess.Json.QueryParameter">
@@ -8897,14 +8844,14 @@
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.GroupBy(System.String)">
       <summary>
-        <para>Groups the data table by a specified column. These columns are obtained from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Groups the data table by a specified column. These columns are obtained from the last table added by the  or  method.</para>
       </summary>
       <param name="columnName">A <see cref="T:System.String"/> value, specifying the column name.</param>
       <returns>A <see cref="T:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder"/> object.</returns>
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.GroupBy(System.String[])">
       <summary>
-        <para>Groups the data table by the specified columns. These columns are obtained from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Groups the data table by the specified columns. These columns are obtained from the last table added by the  or  method.</para>
       </summary>
       <param name="columnNames">An array of <see cref="T:System.String"/> values, specifying the column names.</param>
       <returns>A <see cref="T:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder"/> object.</returns>
@@ -9050,20 +8997,20 @@
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.SelectAllColumnsFromTable">
       <summary>
-        <para>Selects all columns from the associated table. These columns are obtained from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Selects all columns from the associated table. These columns are obtained from the last table added by the  or  method.</para>
       </summary>
       <returns>A <see cref="T:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder"/> object.</returns>
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.SelectColumn(System.String)">
       <summary>
-        <para>Selects a specified column from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Selects a specified column from the last table added by the  or  method.</para>
       </summary>
       <param name="columnName">A <see cref="T:System.String"/> value, specifying the column name.</param>
       <returns>A <see cref="T:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder"/> object.</returns>
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.SelectColumn(System.String,DevExpress.DataAccess.Sql.AggregationType,System.String)">
       <summary>
-        <para>Selects a specified column from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Selects a specified column from the last table added by the  or  method.</para>
       </summary>
       <param name="columnName">A <see cref="T:System.String"/> value, specifying the column name.</param>
       <param name="aggregate">An <see cref="T:DevExpress.DataAccess.Sql.AggregationType"/> enumeration value.</param>
@@ -9072,7 +9019,7 @@
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.SelectColumn(System.String,System.String)">
       <summary>
-        <para>Selects a specified column from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Selects a specified column from the last table added by the  or  method.</para>
       </summary>
       <param name="columnName">A <see cref="T:System.String"/> value, specifying the column name.</param>
       <param name="alias">A <see cref="T:System.String"/> value, specifying the column alias.</param>
@@ -9080,7 +9027,7 @@
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.SelectColumns(System.String[])">
       <summary>
-        <para>Selects the specified columns from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Selects the specified columns from the last table added by the  or  method.</para>
       </summary>
       <param name="columnNames">An array of <see cref="T:System.String"/> values, specifying the column names.</param>
       <returns>A <see cref="T:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder"/> object.</returns>
@@ -9118,14 +9065,14 @@
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.SortBy(System.String)">
       <summary>
-        <para>Sorts the result set by a specified column. This column is obtained from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Sorts the result set by a specified column. This column is obtained from the last table added by the  or  method.</para>
       </summary>
       <param name="columnName">A <see cref="T:System.String"/> value, specifying the column name.</param>
       <returns>A <see cref="T:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder"/> object.</returns>
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.SortBy(System.String,DevExpress.DataAccess.Sql.AggregationType)">
       <summary>
-        <para>Sorts the result set by a specified column by applying an aggregate function. This column is obtained from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Sorts the result set by a specified column by applying an aggregate function. This column is obtained from the last table added by the  or  method.</para>
       </summary>
       <param name="columnName">A <see cref="T:System.String"/> value, specifying the column name.</param>
       <param name="aggregate">An <see cref="T:DevExpress.DataAccess.Sql.AggregationType"/> enumeration value.</param>
@@ -9133,7 +9080,7 @@
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.SortBy(System.String,DevExpress.DataAccess.Sql.AggregationType,System.ComponentModel.ListSortDirection)">
       <summary>
-        <para>Sorts the result set by a specified column in a required direction by applying an aggregate function. This column is obtained from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Sorts the result set by a specified column in a required direction by applying an aggregate function. This column is obtained from the last table added by the  or  method.</para>
       </summary>
       <param name="columnName">A <see cref="T:System.String"/> value, specifying the column name.</param>
       <param name="aggregate">An <see cref="T:DevExpress.DataAccess.Sql.AggregationType"/> enumeration value.</param>
@@ -9142,7 +9089,7 @@
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.SortBy(System.String,System.ComponentModel.ListSortDirection)">
       <summary>
-        <para>Sorts the result set by a specified column in a required direction. This column is obtained from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Sorts the result set by a specified column in a required direction. This column is obtained from the last table added by the  or  method.</para>
       </summary>
       <param name="columnName">A <see cref="T:System.String"/> value, specifying the column name.</param>
       <param name="direction">A <see cref="T:System.ComponentModel.ListSortDirection"/> enumeration value.</param>
@@ -9150,7 +9097,7 @@
     </member>
     <member name="M:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder.SortBy(System.String[])">
       <summary>
-        <para>Sorts the result set by specified columns. These columns are obtained from the last table added by the SelectQueryFluentBuilder.AddTable or SelectQueryFluentBuilder.Join method.</para>
+        <para>Sorts the result set by specified columns. These columns are obtained from the last table added by the  or  method.</para>
       </summary>
       <param name="columnNames">An array of <see cref="T:System.String"/> values, specifying the column names.</param>
       <returns>A <see cref="T:DevExpress.DataAccess.Sql.SelectQueryFluentBuilder"/> object.</returns>
@@ -13271,41 +13218,41 @@
     </member>
     <member name="T:DevExpress.DataAccess.Web.IObjectDataSourceConstructorFilterService">
       <summary>
-        <para>Provides the list of type constructors to display in the Report Wizard and Data Source Wizard.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.DataAccess.Web.IObjectDataSourceConstructorFilterService.Filter(System.Type,System.Collections.Generic.IEnumerable{System.Reflection.ConstructorInfo})">
       <summary>
-        <para>Returns the list of type constructors to display in the Report Wizard and Data Source Wizard.</para>
+        <para></para>
       </summary>
-      <param name="dataSourceType">A type that is registered for the Report Wizard and Data Source Wizard.</param>
-      <param name="constructors">The list of constructors declared in the specified type.</param>
-      <returns>A filtered list of constructors to display in the Report Wizard and Data Source Wizard.</returns>
+      <param name="dataSourceType"></param>
+      <param name="constructors"></param>
+      <returns></returns>
     </member>
     <member name="T:DevExpress.DataAccess.Web.IObjectDataSourceMemberFilterService">
       <summary>
-        <para>Provides the list of type members to display in the Report Wizard and Data Source Wizard.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.DataAccess.Web.IObjectDataSourceMemberFilterService.Filter(System.Type,System.Collections.Generic.IEnumerable{System.Reflection.MemberInfo})">
       <summary>
-        <para>Returns the list of type members to display in the Report Wizard and Data Source Wizard.</para>
+        <para></para>
       </summary>
-      <param name="dataSourceType">A type that is registered for the Report Wizard and Data Source Wizard.</param>
-      <param name="members">The list of type members that return <see cref="T:System.Collections.Generic.IEnumerable`1"/> values.</param>
-      <returns>The filtered list of type members to display in the Report Wizard and Data Source Wizard.</returns>
+      <param name="dataSourceType"></param>
+      <param name="members"></param>
+      <returns></returns>
     </member>
     <member name="T:DevExpress.DataAccess.Web.IObjectDataSourceWizardTypeProvider">
       <summary>
-        <para>Provides the list of types to display in the Report Wizard and Data Source Wizard.</para>
+        <para></para>
       </summary>
     </member>
     <member name="M:DevExpress.DataAccess.Web.IObjectDataSourceWizardTypeProvider.GetAvailableTypes(System.String)">
       <summary>
-        <para>Returns the list of types to display in the Report Wizard and Data Source Wizard.</para>
+        <para></para>
       </summary>
-      <param name="context">For internal use.</param>
-      <returns>The list of types to display in the Report Wizard and Data Source Wizard.</returns>
+      <param name="context"></param>
+      <returns></returns>
     </member>
     <member name="T:DevExpress.DataAccess.Web.ISqlDataSourceWizardCustomizationService">
       <summary>
@@ -13323,11 +13270,6 @@
         <para>Indicates whether or not custom SQL editing is disabled.</para>
       </summary>
       <value>true if custom SQL editing is disabled; otherwise false.</value>
-    </member>
-    <member name="N:DevExpress.DataAccess.Wizard">
-      <summary>
-        <para>Contains classes that are required to customize a data source connection wizard.</para>
-      </summary>
     </member>
     <member name="T:DevExpress.DataAccess.Wizard.EFWizardOptions">
       <summary>
@@ -16279,11 +16221,6 @@
     <member name="F:DevExpress.DataAccess.Wizard.SensitiveInfoSavingBehavior.Prompt">
       <summary>
         <para>After an existing connection is selected (or a new one is specified), the Data Source wizard prompts an end-user whether or not to save database credentials along with the document layout.</para>
-      </summary>
-    </member>
-    <member name="N:DevExpress.DataAccess.Wizard.Services">
-      <summary>
-        <para>Provides a service functionality to the Data Connection wizard.</para>
       </summary>
     </member>
     <member name="T:DevExpress.DataAccess.Wizard.Services.CustomQueryValidator">

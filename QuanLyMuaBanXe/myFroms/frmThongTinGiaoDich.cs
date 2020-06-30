@@ -105,59 +105,98 @@ namespace QuanLyMuaBanXe.myFroms
         }
         private void saveData()
         {
-
-            if (dxValidationProvider1.Validate())
+            try
             {
-                if(m_id==-1)
+                if (dxValidationProvider1.Validate())
                 {
-                    if (MessageBox.Show("Bạn có xác nhận lưu giao dịch vào hệ thống?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (m_id == -1)
                     {
-                        bMGiaoDichBindingSource.EndEdit();
-                        dsSystem.BM_GiaoDich.Rows[0]["Thoi_gian"] = DateTime.Now;
-                        bM_GiaoDichTableAdapter.Update(dsSystem.BM_GiaoDich);
-                        dsSystem.BM_GiaoDich.AcceptChanges();
-                        mIdXe = Convert.ToInt32(searchLookUpEdit2.EditValue);
-                        mIdXeKH = Convert.ToInt32(searchLookUpEdit1.EditValue);
-                        bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã giao dịch", mIdXe);
-                        bM_ThongTinKhachHangTableAdapter.UpdateQuery("Đã mua", mIdXeKH);
-                        this.Close();
-                    }
-                }
-                else
-                {
-                    if(m_check!= mIdXe)
-                    {
-                        if (MessageBox.Show("Bạn có xác nhận thay đổi xe giao dịch cho khách hàng vào hệ thống?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show("Bạn có xác nhận lưu giao dịch vào hệ thống?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-                            bMGiaoDichBindingSource.EndEdit();
-                            bM_GiaoDichTableAdapter.Update(dsSystem.BM_GiaoDich);
-                            dsSystem.BM_GiaoDich.AcceptChanges();
-                            mIdXe = Convert.ToInt32(searchLookUpEdit2.EditValue);
-                            mIdXeKH = Convert.ToInt32(searchLookUpEdit1.EditValue);
-                            bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã giao dịch", mIdXe);
-                            bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã định giá bán", m_check);
-                            bM_ThongTinKhachHangTableAdapter.UpdateQuery("Đã mua", mIdXeKH);
-                            this.Close();
+                            if(!Convert.IsDBNull(textEdit3.EditValue) && !Convert.IsDBNull(textEdit5.EditValue))
+                            {
+                                if(Convert.ToDouble(textEdit3.EditValue)>= Convert.ToDouble(textEdit5.EditValue))
+                                {
+                                    bMGiaoDichBindingSource.EndEdit();
+                                    dsSystem.BM_GiaoDich.Rows[0]["Thoi_gian"] = DateTime.Now;
+                                    bM_GiaoDichTableAdapter.Update(dsSystem.BM_GiaoDich);
+                                    dsSystem.BM_GiaoDich.AcceptChanges();
+                                    mIdXe = Convert.ToInt32(searchLookUpEdit2.EditValue);
+                                    mIdXeKH = Convert.ToInt32(searchLookUpEdit1.EditValue);
+                                    bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã giao dịch", mIdXe);
+                                    bM_ThongTinKhachHangTableAdapter.UpdateQuery("Đã mua", mIdXeKH);
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Giá bán không được phép dưới giá đã định");
+                                }
+                            }
+                           
                         }
                     }
                     else
                     {
-                        if (MessageBox.Show("Bạn có xác nhận cập nhật giao dịch vào hệ thống?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (m_check != mIdXe)
                         {
-                            bMGiaoDichBindingSource.EndEdit();
-                            bM_GiaoDichTableAdapter.Update(dsSystem.BM_GiaoDich);
-                            dsSystem.BM_GiaoDich.AcceptChanges();
-                            this.Close();
+                            if (MessageBox.Show("Bạn có xác nhận thay đổi xe giao dịch cho khách hàng vào hệ thống?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                if (!Convert.IsDBNull(textEdit3.EditValue) && !Convert.IsDBNull(textEdit5.EditValue))
+                                {
+                                    if (Convert.ToDouble(textEdit3.EditValue) >= Convert.ToDouble(textEdit5.EditValue))
+                                    {
+                                        bMGiaoDichBindingSource.EndEdit();
+                                        bM_GiaoDichTableAdapter.Update(dsSystem.BM_GiaoDich);
+                                        dsSystem.BM_GiaoDich.AcceptChanges();
+                                        mIdXe = Convert.ToInt32(searchLookUpEdit2.EditValue);
+                                        mIdXeKH = Convert.ToInt32(searchLookUpEdit1.EditValue);
+                                        bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã giao dịch", mIdXe);
+                                        bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã định giá bán", m_check);
+                                        bM_ThongTinKhachHangTableAdapter.UpdateQuery("Đã mua", mIdXeKH);
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Giá bán không được phép dưới giá đã định");
+                                    }
+                                }
+                                }
+                        }
+                        else
+                        {
+                            if (MessageBox.Show("Bạn có xác nhận cập nhật giao dịch vào hệ thống?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                if (!Convert.IsDBNull(textEdit3.EditValue) && !Convert.IsDBNull(textEdit5.EditValue))
+                                {
+                                    if (Convert.ToDouble(textEdit3.EditValue) >= Convert.ToDouble(textEdit5.EditValue))
+                                    {
+                                        bMGiaoDichBindingSource.EndEdit();
+                                        bM_GiaoDichTableAdapter.Update(dsSystem.BM_GiaoDich);
+                                        dsSystem.BM_GiaoDich.AcceptChanges();
+                                        this.Close();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Giá bán không được phép dưới giá đã định");
+                                    }
+                                }
+                                }
                         }
                     }
+
                 }
-               
+                else
+                {
+                    XtraMessageBox.Show("Bạn chưa nhập đầy đủ thông tin");
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                XtraMessageBox.Show("Bạn chưa nhập đầy đủ thông tin");
+
             }
-           
+
+          
         }
 
         private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -5219,14 +5219,14 @@ A specific version of the addressed image is automatically chosen based on the a
     </member>
     <member name="M:DevExpress.XtraBars.BarManager.ForceLinkCreate">
       <summary>
-        <para>Forces the manager to create item links based on bar items.</para>
+        <para>Forces the Bar Manager to create bar item links within the BarManager&#39;s bars and menus.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.Form">
       <summary>
-        <para>Gets or sets the <see cref="T:System.Windows.Forms.Form"/> or <see cref="T:System.Windows.Forms.UserControl"/> that bars are on.</para>
+        <para>Gets or sets the container for bar controls that are managed by the current BarManager.</para>
       </summary>
-      <value>A <see cref="T:System.Windows.Forms.Form"/> or <see cref="T:System.Windows.Forms.UserControl"/> object that specifies the container for bars.</value>
+      <value>The container control for bar controls.</value>
     </member>
     <member name="M:DevExpress.XtraBars.BarManager.GetBarItemImages">
       <summary>
@@ -5440,7 +5440,7 @@ This option is in effect if you subscribed to the parent BarManager&#39;s <see c
     </member>
     <member name="E:DevExpress.XtraBars.BarManager.Load">
       <summary>
-        <para>Fires when the manager is initialized.</para>
+        <para></para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraBars.BarManager.MainMenu">
@@ -8024,7 +8024,7 @@ Merge-related toolbars of inactive child forms are visible in these forms, and a
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.ShowingDockGuides">
       <summary>
-        <para>Occurs when an end-user drags a <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> into another panel and allows you to hide specific dock hints and guides. If the <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/> component is also present on the form, handle its <see cref="E:DevExpress.XtraBars.Docking2010.Views.BaseView.ShowingDockGuides"/> event to control which dock hints should be visible when a user drags a panel over this component.</para>
+        <para>Occurs each time an end-user drags a <see cref="T:DevExpress.XtraBars.Docking.DockPanel"/> into another panel and allows you to hide specific dock hints and guides. This event is in effect when the DockManager is coupled with the <see cref="T:DevExpress.XtraBars.Docking2010.DocumentManager"/> component.</para>
       </summary>
     </member>
     <member name="E:DevExpress.XtraBars.Docking.DockManager.Sizing">
@@ -8501,18 +8501,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
         <para>Gets the floating form which the panel resides on.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraBars.Docking.FloatForm"/> object referring to the form which the floating panel resides on.</value>
-    </member>
-    <member name="P:DevExpress.XtraBars.Docking.DockPanel.FloatFormRestoreBounds">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraBars.Docking.DockPanel.FloatFormWindowState">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Docking.DockPanel.FloatLocation">
       <summary>
@@ -9542,11 +9530,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
         <para>Gets or sets the index of the control within its parent control&#39;s collection.</para>
       </summary>
       <value>An integer specifying the control&#39;s position within its parent control&#39;s collection.</value>
-    </member>
-    <member name="N:DevExpress.XtraBars.Docking2010">
-      <summary>
-        <para>Contains classes that are used to emulate the UI found in Visual Studio 2010.</para>
-      </summary>
     </member>
     <member name="N:DevExpress.XtraBars.Docking2010.Base">
       <summary>
@@ -11243,7 +11226,7 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
     </member>
     <member name="E:DevExpress.XtraBars.Docking2010.Views.BaseView.ShowingDockGuides">
       <summary>
-        <para>Allows you to hide dock guides and hints that appear when a user drags a Document or a DockPanel.</para>
+        <para>Allows you to hide and disable individual dock hints.</para>
       </summary>
     </member>
     <member name="P:DevExpress.XtraBars.Docking2010.Views.BaseView.Style">
@@ -18078,35 +18061,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
       </summary>
       <value></value>
     </member>
-    <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.Manager">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.MdiMergeStyle">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="E:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.Merge">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.MergedToolbarFormControl">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="M:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.MergeToolbar(DevExpress.XtraBars.ToolbarForm.ToolbarFormControl)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="toolbarFormControl"></param>
-    </member>
     <member name="E:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.Paint">
       <summary>
         <para>Occurs when the control is redrawn.</para>
@@ -18128,16 +18082,6 @@ Dock Panels support &quot;Press and Tap&quot; and &quot;Two-Finger Tap&quot; ges
         <para>Provides access to <see cref="T:DevExpress.XtraBars.BarItemLink"/> objects displayed within the <see cref="T:DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm"/>&#39;s title bar.</para>
       </summary>
       <value>A DevExpress.XtraBars.FluentDesignSystem.FluentFormLinks.FluentDesignFormLinkCollection object that contains <see cref="T:DevExpress.XtraBars.BarItemLink"/> objects displayed within the <see cref="T:DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm"/>&#39;s title bar.</value>
-    </member>
-    <member name="E:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.UnMerge">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.UnMergeToolbar">
-      <summary>
-        <para></para>
-      </summary>
     </member>
     <member name="P:DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl.UseDirectXPaint">
       <summary>
@@ -19637,7 +19581,7 @@ This method is in effect if item selection is enabled with the <see cref="P:DevE
       <summary>
         <para>Shows the pop-up form.</para>
       </summary>
-      <param name="element">An object that specifies the element for which to show the pop-up form.</param>
+      <param name="elem">An object that specifies the element for which to show the pop-up form.</param>
     </member>
     <member name="E:DevExpress.XtraBars.Navigation.AccordionControl.StartElementDragging">
       <summary>
@@ -24887,13 +24831,13 @@ See Navigation Frame and Tab Pane.</para>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.ScrollMode">
       <summary>
-        <para>Gets or sets how the gallery is scrolled when the BaseGallery.ScrollTo method is called.</para>
+        <para>Gets or sets how the gallery is scrolled when the  method is called.</para>
       </summary>
       <value>A <see cref="T:DevExpress.XtraBars.Ribbon.Gallery.GalleryScrollMode"/> value that specifies the current scroll mode.</value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.Gallery.BaseGallery.ScrollSpeed">
       <summary>
-        <para>Gets or sets how fast the gallery is scrolled when calling the BaseGallery.ScrollTo method.</para>
+        <para>Gets or sets how fast the gallery is scrolled when calling the  method.</para>
       </summary>
       <value>A Single value that specifies the speed multiplier.</value>
     </member>
@@ -28467,9 +28411,9 @@ This option is in effect when a custom control is embedded into the gallery grou
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.OptionsPageCategories">
       <summary>
-        <para>Provides access to category settings. Categories are stored in the <see cref="P:DevExpress.XtraBars.Ribbon.RibbonControl.Categories"/> collection.</para>
+        <para></para>
       </summary>
-      <value>Stores settings applied to all categories owned by this Ribbon.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonControl.OptionsStubGlyphs">
       <summary>
@@ -28855,7 +28799,7 @@ This option is in effect when a custom control is embedded into the gallery grou
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonControl.UnMergeRibbon">
       <summary>
-        <para>Restores the original layout of Ribbon Controls after they have been manually merged via the RibbonControl.MergeRibbon method.</para>
+        <para>Restores the original layout of Ribbon Controls after they have been manually merged via the  method.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraBars.Ribbon.RibbonControl.UpdateViewInfo">
@@ -29078,9 +29022,9 @@ This option is in effect when a custom control is embedded into the gallery grou
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonForm.NavigationControl">
       <summary>
-        <para>Gets or sets the side navigation control for this Ribbon Form. The side navigation control is displayed below all other controls, and must have its  property set to either Left or Right.</para>
+        <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
       </summary>
-      <value>The navigation control for this form.</value>
+      <value></value>
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonForm.Padding">
       <summary>
@@ -29960,41 +29904,6 @@ A specific version of the addressed image is automatically chosen based on the a
       </summary>
       <value>A DevExpress.XtraBars.Ribbon.RibbonTotalPageCategory object that allows you to return all pages and visible pages owned by the RibbonControl.</value>
     </member>
-    <member name="T:DevExpress.XtraBars.Ribbon.RibbonPageCategoryOptions">
-      <summary>
-        <para>Stores settings applied to all categories owned by a parent Ribbon. To access these settings, use the <see cref="P:DevExpress.XtraBars.Ribbon.RibbonControl.OptionsPageCategories"/> property.</para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraBars.Ribbon.RibbonPageCategoryOptions.#ctor(DevExpress.XtraBars.Ribbon.RibbonControl)">
-      <summary>
-        <para>Initializes a new instance of the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonPageCategoryOptions"/> class with specified settings.</para>
-      </summary>
-      <param name="ribbon">A Ribbon that owns this object.</param>
-    </member>
-    <member name="P:DevExpress.XtraBars.Ribbon.RibbonPageCategoryOptions.Alignment">
-      <summary>
-        <para>Gets or sets whether categories and their tabs are shown imediatelly after the default category, or anchored to the right Ribbon edge. When this setting equals Default, the category location depends on the current Ribbon style (<see cref="P:DevExpress.XtraBars.Ribbon.RibbonControl.RibbonStyle"/>) and active Skin.</para>
-      </summary>
-      <value>Specifies the location of Ribbon Categories and their tabs.</value>
-    </member>
-    <member name="M:DevExpress.XtraBars.Ribbon.RibbonPageCategoryOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
-      <summary>
-        <para>Copies all settings from the target object and assignes them to this RibbonPageCategoryOptions object.</para>
-      </summary>
-      <param name="options">The object whose settings should be copied.</param>
-    </member>
-    <member name="P:DevExpress.XtraBars.Ribbon.RibbonPageCategoryOptions.AutoCorrectForeColor">
-      <summary>
-        <para>Gets or sets whether Ribbon categories automatically adjust their forecolors depending on a background color. Fore colors are adjusted when a contrast between fore and background colors is too low.</para>
-      </summary>
-      <value>DefaultBoolean.False or DefaultBoolean.Default if categories should use text fore colors assigned to their Appearance.ForeColor properties (or use a default skin color for categories with no custom color assigned). DefaultBoolean.True if categories should automatically change their caption fore colors.</value>
-    </member>
-    <member name="P:DevExpress.XtraBars.Ribbon.RibbonPageCategoryOptions.ShowCaptions">
-      <summary>
-        <para>Gets or sets whether categories whose pages are currently visible should display their captions.</para>
-      </summary>
-      <value>true, if active categories should display their captions; otherwise, false.</value>
-    </member>
     <member name="T:DevExpress.XtraBars.Ribbon.RibbonPageCollection">
       <summary>
         <para>Represents a collection of pages within the RibbonControl.</para>
@@ -30181,7 +30090,7 @@ A specific version of the addressed image is automatically chosen based on the a
     </member>
     <member name="P:DevExpress.XtraBars.Ribbon.RibbonPageGroup.ImageOptions">
       <summary>
-        <para>Provides access to properties that allow you to set up a raster or vector image displayed when the group is collapsed.</para>
+        <para>Provides access to properties that allow you to set up raster and vector images for this <see cref="T:DevExpress.XtraBars.Ribbon.RibbonPageGroup"/>.</para>
       </summary>
       <value>A DevExpress.XtraBars.Ribbon.RibbonPageGroupImageOptions object that stores image-related properties.</value>
     </member>
@@ -33416,29 +33325,6 @@ This image is shown when the notification has the Generic template applied.</par
       </summary>
       <value>The <see cref="T:DevExpress.XtraBars.ToolbarForm.ToolbarFormManager"/> that provides bar items for this ToolbarFormControl.</value>
     </member>
-    <member name="P:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.MdiMergeStyle">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="E:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.Merge">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="P:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.MergedToolbarFormControl">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
-    </member>
-    <member name="M:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.MergeToolbar(DevExpress.XtraBars.ToolbarForm.ToolbarFormControl)">
-      <summary>
-        <para></para>
-      </summary>
-      <param name="toolbarFormControl"></param>
-    </member>
     <member name="P:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.TitleItemLinks">
       <summary>
         <para>Provides access to bar item links displayed in this ToolbarFormControl.</para>
@@ -33456,16 +33342,6 @@ This image is shown when the notification has the Generic template applied.</par
         <para>Gets or sets the <see cref="T:DevExpress.Utils.ToolTipController"/> associated with this ToolbarFormControl.</para>
       </summary>
       <value>The <see cref="T:DevExpress.Utils.ToolTipController"/> associated with this ToolbarFormControl.</value>
-    </member>
-    <member name="E:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.UnMerge">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="M:DevExpress.XtraBars.ToolbarForm.ToolbarFormControl.UnMergeToolbar">
-      <summary>
-        <para></para>
-      </summary>
     </member>
     <member name="T:DevExpress.XtraBars.ToolbarForm.ToolbarFormManager">
       <summary>
@@ -34185,11 +34061,6 @@ This image is shown when the notification has the Generic template applied.</par
       <param name="enableQueue">true to add this content to the current queue; false to replace the current queue with this content.</param>
       <returns>An UpdateTileResult enumerator value specifying whether the operation was successfully completed.</returns>
     </member>
-    <member name="N:DevExpress.XtraEditors">
-      <summary>
-        <para>Contains editor classes. They provide the functionality for corresponding controls. Editor specific information is stored within the Persistent classes that are implemented in the <see cref="N:DevExpress.XtraEditors.Persistent"/> namespace.</para>
-      </summary>
-    </member>
     <member name="T:DevExpress.XtraEditors.PopupGalleryEdit">
       <summary>
         <para>The editor that displays a dropdown gallery of items categorized into groups.</para>
@@ -34217,12 +34088,6 @@ This image is shown when the notification has the Generic template applied.</par
         <para>Gets the editor&#39;s class name.</para>
       </summary>
       <value>A <see cref="T:System.String"/> object identifying the class name of the current editor.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.PopupGalleryEdit.PopupGallery">
-      <summary>
-        <para></para>
-      </summary>
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.PopupGalleryEdit.Properties">
       <summary>

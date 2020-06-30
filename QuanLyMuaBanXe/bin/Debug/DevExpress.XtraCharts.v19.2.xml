@@ -12481,13 +12481,13 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
       <summary>
         <para>Gets or sets the count of points used to calculate the exponential moving average (EMA).</para>
       </summary>
-      <value>A <see cref="T:System.Int32"/> value that specifies the count of points used to calculate EMA. The default value is 9.</value>
+      <value>A <see cref="T:System.Int32"/> value, specifying the count of points used to calculate EMA.</value>
     </member>
     <member name="P:DevExpress.XtraCharts.MassIndex.SumPointsCount">
       <summary>
         <para>Gets or sets the count of summable values.</para>
       </summary>
-      <value>A <see cref="T:System.Int32"/> value that specifies the count of summable ratios. The default value is 25.</value>
+      <value>A <see cref="T:System.Int32"/> value specifying the count of summable ratios.</value>
     </member>
     <member name="T:DevExpress.XtraCharts.MaxStripLimit">
       <summary>

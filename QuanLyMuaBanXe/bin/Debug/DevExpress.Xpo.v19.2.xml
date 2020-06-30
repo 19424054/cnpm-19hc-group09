@@ -661,7 +661,7 @@
     </member>
     <member name="F:DevExpress.Xpo.DB.AccessConnectionProvider.XpoProviderTypeString">
       <summary>
-        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the AccessConnectionProvider.GetConnectionString method.</para>
+        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the  method.</para>
       </summary>
       <value></value>
     </member>
@@ -773,7 +773,7 @@
     </member>
     <member name="F:DevExpress.Xpo.DB.AccessConnectionProviderMultiUserThreadSafe.XpoProviderTypeString">
       <summary>
-        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the AccessConnectionProviderMultiUserThreadSafe.GetConnectionString method.</para>
+        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the  method.</para>
       </summary>
       <value></value>
     </member>
@@ -1299,7 +1299,7 @@
     </member>
     <member name="F:DevExpress.Xpo.DB.FirebirdConnectionProvider.XpoProviderTypeString">
       <summary>
-        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the FirebirdConnectionProvider.GetConnectionString method.</para>
+        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the  method.</para>
       </summary>
       <value></value>
     </member>
@@ -1323,7 +1323,7 @@
       <summary>
         <para>Returns a cached data store provider, created based on specified settings.</para>
       </summary>
-      <param name="connectionString">A connection string. Use the MSSqlConnectionProvider.GetConnectionString method to create valid connection strings.</param>
+      <param name="connectionString">A connection string. Use the  method to create valid connection strings.</param>
       <param name="autoCreateOption">An <see cref="T:DevExpress.Xpo.DB.AutoCreateOption"/> value that specifies which operations should be performed when a data store is accessed for the first time.</param>
       <param name="objectsToDisposeOnDisconnect">An array of IDisposable objects that must be disposed on disconnect from the database.</param>
       <returns>A <see cref="T:DevExpress.Xpo.DB.DataCacheNodeLocal"/> instance (an <see cref="T:DevExpress.Xpo.DB.IDataStore"/> implementation) which is connected to a <see cref="T:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot"/> associated with a <see cref="T:DevExpress.Xpo.DB.MSSqlConnectionProvider"/>, that is created based on specified settings.</returns>
@@ -1513,13 +1513,13 @@
     </member>
     <member name="F:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.XpoProviderTypeString_CacheRoot">
       <summary>
-        <para>Gets the name of a cached data store provider that is created via the <see cref="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateProviderFromString_CacheRoot(System.String,DevExpress.Xpo.DB.AutoCreateOption,System.IDisposable[]@)"/> method. This name is used internally when generating a connection string via the MSSqlConnectionProvider.GetConnectionString2005CacheRoot method.</para>
+        <para>Gets the name of a cached data store provider that is created via the <see cref="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateProviderFromString_CacheRoot(System.String,DevExpress.Xpo.DB.AutoCreateOption,System.IDisposable[]@)"/> method. This name is used internally when generating a connection string via the  method.</para>
       </summary>
       <value></value>
     </member>
     <member name="F:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.XpoProviderTypeString_WithCache">
       <summary>
-        <para>Gets the name of a cached data store provider that is created via the <see cref="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateProviderFromString_WithCache(System.String,DevExpress.Xpo.DB.AutoCreateOption,System.IDisposable[]@)"/> method. This name is used internally when generating a connection string via the MSSqlConnectionProvider.GetConnectionString2005WithCache method.</para>
+        <para>Gets the name of a cached data store provider that is created via the <see cref="M:DevExpress.Xpo.DB.Helpers.MSSql2005SqlDependencyCacheRoot.CreateProviderFromString_WithCache(System.String,DevExpress.Xpo.DB.AutoCreateOption,System.IDisposable[]@)"/> method. This name is used internally when generating a connection string via the  method.</para>
       </summary>
       <value></value>
     </member>
@@ -2061,7 +2061,7 @@
     </member>
     <member name="F:DevExpress.Xpo.DB.InMemoryDataStore.XpoProviderTypeString">
       <summary>
-        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the InMemoryDataStore.GetConnectionString method.</para>
+        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the  method.</para>
       </summary>
       <value></value>
     </member>
@@ -2147,7 +2147,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.ISerializableObjectLayerService.LoadDelayedProperties(DevExpress.Xpo.XPDictionaryStub,DevExpress.Xpo.XPObjectStub,System.String[])">
       <summary>
-        <para>When implemented by a class, executes the corresponding ISerializableObjectLayerEx.LoadDelayedProperties overloaded method implementation of an object layer and returns the operation result.</para>
+        <para>When implemented by a class, executes the corresponding  overloaded method implementation of an object layer and returns the operation result.</para>
       </summary>
       <param name="dictionary">An <see cref="T:DevExpress.Xpo.XPDictionaryStub"/> object that is a metadata information provider.</param>
       <param name="theObject">A persistent object containing delayed properties specified by the props.</param>
@@ -2156,7 +2156,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.ISerializableObjectLayerService.LoadDelayedProperty(DevExpress.Xpo.XPDictionaryStub,DevExpress.Xpo.XPObjectStubCollection,System.String)">
       <summary>
-        <para>When implemented by a class, executes the corresponding ISerializableObjectLayerEx.LoadDelayedProperties overloaded method implementation of an object layer and returns the operation result.</para>
+        <para>When implemented by a class, executes the corresponding  overloaded method implementation of an object layer and returns the operation result.</para>
       </summary>
       <param name="dictionary">An <see cref="T:DevExpress.Xpo.XPDictionaryStub"/> object that is a metadata information provider.</param>
       <param name="objects">An <see cref="T:DevExpress.Xpo.XPObjectStubCollection"/> object which contains information on persistent objects containing the delayed property specified by the property.</param>
@@ -2556,7 +2556,7 @@
     </member>
     <member name="F:DevExpress.Xpo.DB.MSSqlConnectionProvider.XpoProviderTypeString">
       <summary>
-        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the MSSqlConnectionProvider.GetConnectionString method.</para>
+        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the  method.</para>
       </summary>
       <value></value>
     </member>
@@ -2985,7 +2985,7 @@
     </member>
     <member name="F:DevExpress.Xpo.DB.PostgreSqlConnectionProvider.XpoProviderTypeString">
       <summary>
-        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the PostgreSqlConnectionProvider.GetConnectionString metho</para>
+        <para>Gets the name of the current connection provider. This name is used internally when generating a connection string via the  metho</para>
       </summary>
       <value></value>
     </member>
@@ -3078,7 +3078,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.SerializableObjectLayerProxyBase.LoadDelayedProperties(DevExpress.Xpo.XPDictionaryStub,DevExpress.Xpo.XPObjectStub,System.String[])">
       <summary>
-        <para>Delegates the call to the corresponding SerializableObjectLayer.LoadDelayedProperties overloaded method of an object layer instance returned by the <see cref="T:DevExpress.Xpo.DB.SerializableObjectLayerProxyBase"/>.GetObjectLayer method implementation.</para>
+        <para>Delegates the call to the corresponding  overloaded method of an object layer instance returned by the <see cref="T:DevExpress.Xpo.DB.SerializableObjectLayerProxyBase"/>.GetObjectLayer method implementation.</para>
       </summary>
       <param name="dictionary"></param>
       <param name="theObject"></param>
@@ -3087,7 +3087,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.SerializableObjectLayerProxyBase.LoadDelayedProperties(DevExpress.Xpo.XPDictionaryStub,DevExpress.Xpo.XPObjectStubCollection,System.String)">
       <summary>
-        <para>Delegates the call to the corresponding SerializableObjectLayer.LoadDelayedProperties overloaded method of an object layer instance returned by the <see cref="T:DevExpress.Xpo.DB.SerializableObjectLayerProxyBase"/>.GetObjectLayer method implementation.</para>
+        <para>Delegates the call to the corresponding  overloaded method of an object layer instance returned by the <see cref="T:DevExpress.Xpo.DB.SerializableObjectLayerProxyBase"/>.GetObjectLayer method implementation.</para>
       </summary>
       <param name="dictionary"></param>
       <param name="objects"></param>
@@ -3213,7 +3213,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.SerializableObjectLayerService.LoadDelayedProperties(DevExpress.Xpo.XPDictionaryStub,DevExpress.Xpo.XPObjectStub,System.String[])">
       <summary>
-        <para>Delegates the call to the corresponding SerializableObjectLayer.LoadDelayedProperties overloaded method of an object layer instance passed to the <see cref="T:DevExpress.Xpo.DB.SerializableObjectLayerService"/>&#39;s constructor and returns the operation result.</para>
+        <para>Delegates the call to the corresponding  overloaded method of an object layer instance passed to the <see cref="T:DevExpress.Xpo.DB.SerializableObjectLayerService"/>&#39;s constructor and returns the operation result.</para>
       </summary>
       <param name="dictionary"></param>
       <param name="theObject"></param>
@@ -3222,7 +3222,7 @@
     </member>
     <member name="M:DevExpress.Xpo.DB.SerializableObjectLayerService.LoadDelayedProperty(DevExpress.Xpo.XPDictionaryStub,DevExpress.Xpo.XPObjectStubCollection,System.String)">
       <summary>
-        <para>Delegates the call to the corresponding SerializableObjectLayer.LoadDelayedProperties overloaded method of an object layer instance passed to the <see cref="T:DevExpress.Xpo.DB.SerializableObjectLayerService"/>&#39;s constructor and returns the operation result.</para>
+        <para>Delegates the call to the corresponding  overloaded method of an object layer instance passed to the <see cref="T:DevExpress.Xpo.DB.SerializableObjectLayerService"/>&#39;s constructor and returns the operation result.</para>
       </summary>
       <param name="dictionary"></param>
       <param name="objects"></param>
@@ -4438,12 +4438,6 @@
         <para>Declares asynchronous methods for an object access layer.</para>
       </summary>
     </member>
-    <member name="P:DevExpress.Xpo.IObjectLayerAsync.CanLoadCollectionObjectsAsynchronously">
-      <summary>
-        <para>Reserved for v20.1. For additional information, see The IObjectLayerAsync interface has been changed.</para>
-      </summary>
-      <value></value>
-    </member>
     <member name="M:DevExpress.Xpo.IObjectLayerAsync.CommitChangesAsync(DevExpress.Xpo.Session,System.Collections.ICollection,System.Collections.ICollection,System.Threading.CancellationToken)">
       <summary>
         <para>Asynchronously commits object changes made in a specified session and notifies upon completion.</para>
@@ -4462,16 +4456,6 @@
       <param name="queries">An array of <see cref="T:DevExpress.Xpo.ObjectsQuery"/> objects that specifies queries executed to retrieve persistent objects.</param>
       <param name="cancellationToken">A CancellationToken object that delivers a cancellation notice to the running operation.</param>
       <returns>A Task that returns an array of object collections. These object collections match specified query parameters.</returns>
-    </member>
-    <member name="M:DevExpress.Xpo.IObjectLayerAsync.LoadCollectionObjectsAsync(DevExpress.Xpo.Session,DevExpress.Xpo.Metadata.XPMemberInfo,System.Object,System.Threading.CancellationToken)">
-      <summary>
-        <para>Reserved for v20.1. For additional information, see The IObjectLayerAsync interface has been changed.</para>
-      </summary>
-      <param name="session"></param>
-      <param name="refProperty"></param>
-      <param name="ownerObject"></param>
-      <param name="cancellationToken"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.Xpo.IObjectLayerAsync.LoadDelayedPropertiesAsync(DevExpress.Xpo.Session,System.Collections.IList,DevExpress.Xpo.Metadata.XPMemberInfo,System.Threading.CancellationToken)">
       <summary>
@@ -7865,12 +7849,6 @@
       </summary>
       <value>true if collections can be loaded via the object layer&#39;s <see cref="M:DevExpress.Xpo.SerializableObjectLayerClient.LoadCollectionObjects(DevExpress.Xpo.Session,DevExpress.Xpo.Metadata.XPMemberInfo,System.Object)"/> method call; otherwise, false.</value>
     </member>
-    <member name="P:DevExpress.Xpo.SerializableObjectLayerClient.CanLoadCollectionObjectsAsynchronously">
-      <summary>
-        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
-      </summary>
-      <value></value>
-    </member>
     <member name="M:DevExpress.Xpo.SerializableObjectLayerClient.CommitChanges(DevExpress.Xpo.Session,System.Collections.ICollection,System.Collections.ICollection)">
       <summary>
         <para>Performs object layer specific operations that are required to commit object changes made in a specified session.</para>
@@ -8005,16 +7983,6 @@
       <param name="refProperty">The ownerObject&#39;s property that references a collection property.</param>
       <param name="ownerObject">The object that owns the collection property.</param>
       <returns>An array of collection objects.</returns>
-    </member>
-    <member name="M:DevExpress.Xpo.SerializableObjectLayerClient.LoadCollectionObjectsAsync(DevExpress.Xpo.Session,DevExpress.Xpo.Metadata.XPMemberInfo,System.Object,System.Threading.CancellationToken)">
-      <summary>
-        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
-      </summary>
-      <param name="session"></param>
-      <param name="refProperty"></param>
-      <param name="ownerObject"></param>
-      <param name="cancellationToken"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.Xpo.SerializableObjectLayerClient.LoadDelayedProperties(DevExpress.Xpo.Session,System.Collections.IList,DevExpress.Xpo.Metadata.XPMemberInfo)">
       <summary>
@@ -10207,7 +10175,7 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
     </member>
     <member name="M:DevExpress.Xpo.Session.Load(DevExpress.Xpo.Metadata.XPClassInfo,System.Collections.IEnumerable,System.String[])">
       <summary>
-        <para>This method is obsolete. Use Session.PreFetch or <see cref="M:DevExpress.Xpo.Session.PreFetch``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Collections.IEnumerable)"/> instead.</para>
+        <para>This method is obsolete. Use  or <see cref="M:DevExpress.Xpo.Session.PreFetch``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Collections.IEnumerable)"/> instead.</para>
       </summary>
       <param name="classInfo"></param>
       <param name="objects"></param>
@@ -10215,13 +10183,13 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
     </member>
     <member name="M:DevExpress.Xpo.Session.Load(DevExpress.Xpo.XPBaseCollection[])">
       <summary>
-        <para>This method is obsolete. Use Session.BulkLoad instead.</para>
+        <para>This method is obsolete. Use  instead.</para>
       </summary>
       <param name="collections"></param>
     </member>
     <member name="M:DevExpress.Xpo.Session.Load``1(System.Collections.Generic.IEnumerable{``0},System.String[])">
       <summary>
-        <para>This method is obsolete. Use Session.PreFetch or <see cref="M:DevExpress.Xpo.Session.PreFetch``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Collections.IEnumerable)"/> instead.</para>
+        <para>This method is obsolete. Use  or <see cref="M:DevExpress.Xpo.Session.PreFetch``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Collections.IEnumerable)"/> instead.</para>
       </summary>
       <param name="objects"></param>
       <param name="collections"></param>
@@ -10916,12 +10884,6 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       </summary>
       <value>true if collections can be loaded via an object layer&#39;s <see cref="M:DevExpress.Xpo.SessionObjectLayer.LoadCollectionObjects(DevExpress.Xpo.Session,DevExpress.Xpo.Metadata.XPMemberInfo,System.Object)"/> method call; otherwise, false.</value>
     </member>
-    <member name="P:DevExpress.Xpo.SessionObjectLayer.CanLoadCollectionObjectsAsynchronously">
-      <summary>
-        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
-      </summary>
-      <value></value>
-    </member>
     <member name="M:DevExpress.Xpo.SessionObjectLayer.ClearDatabase">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
@@ -11066,16 +11028,6 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       <param name="refProperty">The ownerObject&#39;s property that references a collection property.</param>
       <param name="owner">The object that owns the collection property.</param>
       <returns>An array of collection objects.</returns>
-    </member>
-    <member name="M:DevExpress.Xpo.SessionObjectLayer.LoadCollectionObjectsAsync(DevExpress.Xpo.Session,DevExpress.Xpo.Metadata.XPMemberInfo,System.Object,System.Threading.CancellationToken)">
-      <summary>
-        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
-      </summary>
-      <param name="session"></param>
-      <param name="refProperty"></param>
-      <param name="ownerObject"></param>
-      <param name="cancellationToken"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.Xpo.SessionObjectLayer.LoadDelayedProperties(DevExpress.Xpo.Session,System.Collections.IList,DevExpress.Xpo.Metadata.XPMemberInfo)">
       <summary>
@@ -11362,12 +11314,6 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       </summary>
       <value>true if collections can be loaded via an object layer&#39;s <see cref="M:DevExpress.Xpo.SimpleObjectLayer.LoadCollectionObjects(DevExpress.Xpo.Session,DevExpress.Xpo.Metadata.XPMemberInfo,System.Object)"/> method call; otherwise, false.</value>
     </member>
-    <member name="P:DevExpress.Xpo.SimpleObjectLayer.CanLoadCollectionObjectsAsynchronously">
-      <summary>
-        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
-      </summary>
-      <value></value>
-    </member>
     <member name="M:DevExpress.Xpo.SimpleObjectLayer.ClearDatabase">
       <summary>
         <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
@@ -11477,16 +11423,6 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       <param name="refProperty">The ownerObject&#39;s property that references a collection property.</param>
       <param name="ownerObject">The object that owns the collection property.</param>
       <returns>An array of collection objects.</returns>
-    </member>
-    <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadCollectionObjectsAsync(DevExpress.Xpo.Session,DevExpress.Xpo.Metadata.XPMemberInfo,System.Object,System.Threading.CancellationToken)">
-      <summary>
-        <para>This member supports the internal infrastructure and is not intended to be used directly from your code.</para>
-      </summary>
-      <param name="session"></param>
-      <param name="refProperty"></param>
-      <param name="ownerObject"></param>
-      <param name="cancellationToken"></param>
-      <returns></returns>
     </member>
     <member name="M:DevExpress.Xpo.SimpleObjectLayer.LoadDelayedProperties(DevExpress.Xpo.Session,System.Collections.IList,DevExpress.Xpo.Metadata.XPMemberInfo)">
       <summary>
@@ -15046,7 +14982,7 @@ The class must be decorated with <see cref="T:DevExpress.Xpo.NonPersistentAttrib
       <summary>
         <para>Gets the maximum optimal packet size (the number of operands in a packet) for the <see cref="P:DevExpress.Data.Filtering.InOperator.Operands"/> collection.</para>
       </summary>
-      <value>An integer value that is the maximum value returned by the XpoDefault.GetTerminalInSize method.</value>
+      <value>An integer value that is the maximum value returned by the  method.</value>
     </member>
     <member name="M:DevExpress.Xpo.XpoDefault.NewGuid">
       <summary>
