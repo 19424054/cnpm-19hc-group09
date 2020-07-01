@@ -28,7 +28,6 @@ namespace QuanLyMuaBanXe.myFroms
         }
         private void frmAddInforCustomer_Load(object sender, EventArgs e)
         {
-
             loadData();
         }
 
@@ -71,7 +70,6 @@ namespace QuanLyMuaBanXe.myFroms
                         bM_ThongTinKhachHangTableAdapter.Update(dsSystem.BM_ThongTinKhachHang);
                         dsSystem.BM_ThongTinKhachHang.AcceptChanges();
                         this.Close();
-
                     }
                     else
                     {
@@ -80,19 +78,14 @@ namespace QuanLyMuaBanXe.myFroms
                         dsSystem.BM_ThongTinKhachHang.AcceptChanges();
                         this.Close();
                     }
-                }
-               
+                }      
             }
-           
         }
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
             {
-               
-                    saveData();
-               
-              
+                saveData(); 
             }
             catch (Exception)
             {

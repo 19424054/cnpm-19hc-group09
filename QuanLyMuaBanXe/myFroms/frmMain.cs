@@ -19,8 +19,6 @@ namespace QuanLyMuaBanXe.myFroms
         }
         void phanquyenhethong()
         {
-           
-
 
         }
         private void UIButtonMain_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
@@ -101,8 +99,6 @@ namespace QuanLyMuaBanXe.myFroms
                 if (phan_quyen == 0)
                 {
                     lblTen.Text = "QUẢN LÝ";
-                
-
                 }
                 else if (phan_quyen==1)
                 {
@@ -117,7 +113,6 @@ namespace QuanLyMuaBanXe.myFroms
                     tileItemProduction.Enabled = false;
                     tileItemCRM.Enabled = false;
                     tileItemOMM.Enabled = false;
-
                 }
                 else if (phan_quyen == 3)
                 {
@@ -125,7 +120,6 @@ namespace QuanLyMuaBanXe.myFroms
                     tileItemOMM.Enabled = false;
                     tileItemOffice.Enabled = false;
                     tileItemProduction.Enabled = false;
-
                 }
             }
             catch (Exception ex)
@@ -482,7 +476,6 @@ namespace QuanLyMuaBanXe.myFroms
             {
                 XtraMessageBox.Show(ex.Message);
             }
-       
         }
 
         private void tileItemOutsourcing_ItemClick(object sender, TileItemEventArgs e)

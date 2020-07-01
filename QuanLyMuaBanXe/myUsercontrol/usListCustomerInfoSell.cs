@@ -89,11 +89,9 @@ namespace QuanLyMuaBanXe.myUsercontrol
             GridView view = gvMain;
             if (view.FocusedRowHandle > -1)
             {
-               
-                    int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
-                    myFroms.frmAddInforCustomer frm = new myFroms.frmAddInforCustomer(id_kh,2);
-                    frm.ShowDialog();
-               
+                int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
+                myFroms.frmAddInforCustomer frm = new myFroms.frmAddInforCustomer(id_kh,2);
+                frm.ShowDialog();
             }
         }
         public void loadDataBasic()

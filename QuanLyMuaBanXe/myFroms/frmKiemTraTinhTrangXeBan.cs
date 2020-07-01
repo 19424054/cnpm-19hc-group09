@@ -30,7 +30,6 @@ namespace QuanLyMuaBanXe.myFroms
         private void frmKiemTraTinhTrangXeBan_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dsSystem.BM_ThongTinXeBan' table. You can move, or remove it, as needed.
-          
             // TODO: This line of code loads data into the 'dsSystem.BM_DinhGia_MuaXe' table. You can move, or remove it, as needed.
             loadData();
 

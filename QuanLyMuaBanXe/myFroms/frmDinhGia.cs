@@ -32,10 +32,8 @@ namespace QuanLyMuaBanXe.myFroms
         private void frmDinhGia_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dsSystem.BM_ThongTinXeBan' table. You can move, or remove it, as needed.
-         
             // TODO: This line of code loads data into the 'dsSystem.BM_DinhGia_Ban' table. You can move, or remove it, as needed.
             loadData();
-
         }
 
         private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -47,7 +45,6 @@ namespace QuanLyMuaBanXe.myFroms
             this.bM_ThongTinXeBanTableAdapter.Fill(this.dsSystem.BM_ThongTinXeBan);
             if (m_id == -1)
             {
-              
                 bMDinhGiaBanBindingSource.EndEdit();
                 bMDinhGiaBanBindingSource.AddNew();
                 taDinhGia.Fill(dtDinhGia, id_xe);
@@ -58,7 +55,6 @@ namespace QuanLyMuaBanXe.myFroms
                     textEdit1.EditValue = dtDinhGia.Rows[0]["Gia_ban"];
                     textEdit2.EditValue = dtDinhGia.Rows[0]["ChiPhi"];
                 }
-
             }
             else
             {
@@ -93,9 +89,7 @@ namespace QuanLyMuaBanXe.myFroms
                         this.Close();
                     }
                 }
-              
             }
-          
         }
         private void barLargeButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

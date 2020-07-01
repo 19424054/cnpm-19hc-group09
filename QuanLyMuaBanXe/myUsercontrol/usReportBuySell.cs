@@ -62,7 +62,6 @@ namespace QuanLyMuaBanXe.myUsercontrol
             dateEdit1.EditValue = DateTime.Now;
             radioGroup1.SelectedIndex = 0;
             //loadDetail();
-           
         }
 
         private void barLargeButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -40,9 +40,9 @@ namespace QuanLyMuaBanXe.myUsercontrol
                     if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) != "Đã định giá bán")
                     {
                         int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
-                       // int id_dinhgia = Convert.ToInt32(view.GetFocusedRowCellValue("Id_gia_ban"));
-                          myFroms.frmDinhGia frm = new myFroms.frmDinhGia(-1, id_xe);
-                          frm.ShowDialog();
+                        // int id_dinhgia = Convert.ToInt32(view.GetFocusedRowCellValue("Id_gia_ban"));
+                        myFroms.frmDinhGia frm = new myFroms.frmDinhGia(-1, id_xe);
+                        frm.ShowDialog();
                         loadData(mYear, mMonth);
                     }
                     else
@@ -51,7 +51,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
 
@@ -87,7 +87,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
 
@@ -187,7 +187,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
                   
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
 

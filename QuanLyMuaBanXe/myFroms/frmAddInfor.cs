@@ -25,14 +25,13 @@ namespace QuanLyMuaBanXe.myFroms
             // TODO: This line of code loads data into the 'dsSystem.BM_ThongTinXeBan' table. You can move, or remove it, as needed.
             //this.bM_ThongTinXeBanTableAdapter.Fill(this.dsSystem.BM_ThongTinXeBan);
             loadData();
-
         }
 
         private void btnSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if(dxValidationProvider1.Validate())
             {
-                if(cbbLoaiXe.SelectedIndex==0)
+                if (cbbLoaiXe.SelectedIndex == 0)
                 {
                     if (dxValidationProvider2.Validate())
                     {
@@ -40,11 +39,10 @@ namespace QuanLyMuaBanXe.myFroms
                     }
 
                 }
-                else {
+                else
+                {
                     saveData();
-                        }
-              
-              
+                }
             }
             
         }
@@ -69,7 +67,6 @@ namespace QuanLyMuaBanXe.myFroms
                 }
                 this.Close();
             }
-           
         }
         private void loadData()
         {
@@ -85,7 +82,6 @@ namespace QuanLyMuaBanXe.myFroms
                 cbbLoaiXe.ReadOnly = true;
                 bM_ThongTinXeBanTableAdapter.FillBy(dsSystem.BM_ThongTinXeBan, id_xe);
             }
-
         }
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -110,7 +106,6 @@ namespace QuanLyMuaBanXe.myFroms
             int codeRun = Convert.ToInt32(bM_ThongTinXeBanTableAdapter.ScalarQueryGetMaxCode(codeDefault))+1;
             code = codeDefault + codeRun.ToString("000");
             return code;
-
         }
     }
 }

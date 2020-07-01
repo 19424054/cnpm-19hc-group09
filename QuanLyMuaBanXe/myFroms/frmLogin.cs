@@ -12,7 +12,7 @@ namespace QuanLyMuaBanXe.myFroms
     public partial class frmLogin : DevExpress.XtraEditors.XtraForm
     {
         private QuanLyMuaBanXe.Properties.Settings setting;
-        private string _idusername = "";
+        //private string _idusername = "";
         myDataSet.dsSystem.BM_TaiKhoanDataTable dtTaiKhoan = new myDataSet.dsSystem.BM_TaiKhoanDataTable();
         myDataSet.dsSystemTableAdapters.BM_TaiKhoanTableAdapter taTaiKhoan = new myDataSet.dsSystemTableAdapters.BM_TaiKhoanTableAdapter();
         public frmLogin()
@@ -21,9 +21,9 @@ namespace QuanLyMuaBanXe.myFroms
             InitializeComponent();
         }
 
-        private string m_User = "";
-        private string m_Password = "";
-        private string m_idcompany = "-1";
+       // private string m_User = "";
+       // private string m_Password = "";
+       // private string m_idcompany = "-1";
 
         private void checkLogin(string _username, string _password)
         {
@@ -98,7 +98,7 @@ namespace QuanLyMuaBanXe.myFroms
               //  frmForgotPassword frm = new frmForgotPassword();
               //  frm.Show();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 XtraMessageBox.Show("Lỗi đăng nhập. Vui lòng thử lại.", "Thông báo", MessageBoxButtons.OK);
             }
@@ -119,7 +119,7 @@ namespace QuanLyMuaBanXe.myFroms
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }

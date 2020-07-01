@@ -47,8 +47,6 @@ namespace QuanLyMuaBanXe.myFroms
         }
         private void loadData()
         {
-           
-
             this.bM_ThongTinKhachHangTableAdapter.Fill(this.dsSystem.BM_ThongTinKhachHang);
             if (m_id == -1)
             {
@@ -70,13 +68,11 @@ namespace QuanLyMuaBanXe.myFroms
                 }
             }
             else
-            {
-                
+            { 
                 bM_GiaoDichTableAdapter.FillBy(dsSystem.BM_GiaoDich, m_id);
                 m_check = Convert.ToInt32(dsSystem.BM_GiaoDich.Rows[0]["Id_xe"]);
                 mIdXe= Convert.ToInt32(dsSystem.BM_GiaoDich.Rows[0]["Id_xe"]);
-                loadDataxe();
-               
+                loadDataxe(); 
              }
         }
         private void loadDataxe()
@@ -91,7 +87,6 @@ namespace QuanLyMuaBanXe.myFroms
                         if (Convert.ToString(this.dsSystem.BM_ThongTinXeBan.Rows[i]["Trang_Thai"]) != "Đã định giá bán")
                             this.dsSystem.BM_ThongTinXeBan.Rows.Remove(this.dsSystem.BM_ThongTinXeBan.Rows[i]);
                     }
-                  
                 }
             }
             else
@@ -101,7 +96,6 @@ namespace QuanLyMuaBanXe.myFroms
                     if (Convert.ToString(this.dsSystem.BM_ThongTinXeBan.Rows[i]["Trang_Thai"]) != "Đã định giá bán")
                         this.dsSystem.BM_ThongTinXeBan.Rows.Remove(this.dsSystem.BM_ThongTinXeBan.Rows[i]);
                 }
-               
             }
         }
         private void saveData()
@@ -133,7 +127,6 @@ namespace QuanLyMuaBanXe.myFroms
                                     MessageBox.Show("Giá bán không được phép dưới giá đã định");
                                 }
                             }
-                           
                         }
                     }
                     else
@@ -161,7 +154,7 @@ namespace QuanLyMuaBanXe.myFroms
                                         MessageBox.Show("Giá bán không được phép dưới giá đã định");
                                     }
                                 }
-                                }
+                            }
                         }
                         else
                         {
@@ -185,10 +178,9 @@ namespace QuanLyMuaBanXe.myFroms
                                         MessageBox.Show("Giá bán không được phép dưới giá đã định");
                                     }
                                 }
-                                }
+                            }
                         }
                     }
-
                 }
                 else
                 {
@@ -196,23 +188,19 @@ namespace QuanLyMuaBanXe.myFroms
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
-
-          
         }
 
         private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
             {
-               
                     saveData();
-               
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -220,11 +208,10 @@ namespace QuanLyMuaBanXe.myFroms
 
         private void searchLookUpEdit1_EditValueChanged(object sender, EventArgs e)
         {
-            //object b = searchLookUpEdit1.EditValue;
-           
-             //   textEdit4.EditValue= this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Ho_ten").ToString()!=null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Ho_ten").ToString(): "";
-              //  memoEdit1.EditValue = this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Dia_chi").ToString() != null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Dia_chi").ToString() : "";
-              //  textEdit1.EditValue = this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("SDT").ToString() != null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("SDT").ToString() : "";
+             //  object b = searchLookUpEdit1.EditValue;
+             //  textEdit4.EditValue= this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Ho_ten").ToString()!=null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Ho_ten").ToString(): "";
+             //  memoEdit1.EditValue = this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Dia_chi").ToString() != null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Dia_chi").ToString() : "";
+             //  textEdit1.EditValue = this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("SDT").ToString() != null ? this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("SDT").ToString() : "";
         }
 
         private void searchLookUpEdit2_EditValueChanged(object sender, EventArgs e)
@@ -236,9 +223,6 @@ namespace QuanLyMuaBanXe.myFroms
                     textEdit2.EditValue = this.searchLookUpEdit2.Properties.View.GetFocusedRowCellValue("Loai_xe"); // Convert.ToString(this.searchLookUpEdit2.Properties.View.GetFocusedRowCellValue("Loai_xe")) != null ? Convert.ToString(this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Loai_xe").ToString()) : "";
                     textEdit5.EditValue = this.searchLookUpEdit2.Properties.View.GetFocusedRowCellValue("Dinh_gia");
                 }
-
-            
-
         }
 
         private void labelControl7_Click(object sender, EventArgs e)

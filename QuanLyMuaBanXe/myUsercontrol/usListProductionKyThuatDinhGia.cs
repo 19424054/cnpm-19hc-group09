@@ -102,7 +102,6 @@ namespace QuanLyMuaBanXe.myUsercontrol
                     // gvListTime.ExpandGroupRow(gvListTime.FocusedRowHandle, false);
                 }
             }
-
         }
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -113,13 +112,14 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 if (!Convert.IsDBNull(view.GetFocusedRowCellValue("Id_kiemTra")))
                 {
                     int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
-                    myFroms.frmKiemTraTinhTrangXeBan frm = new myFroms.frmKiemTraTinhTrangXeBan(Convert.ToInt32(view.GetFocusedRowCellValue("Id_kiemTra")),m_id);
+                    myFroms.frmKiemTraTinhTrangXeBan frm = new myFroms.frmKiemTraTinhTrangXeBan(Convert.ToInt32(view.GetFocusedRowCellValue("Id_kiemTra")), m_id);
                     frm.ShowDialog();
                     loadData(mYear, mMonth);
                 }
-                else {
+                else
+                {
                     XtraMessageBox.Show("Xe này chưa được định giá mua. Vui lòng kiểm tra");
-                        }
+                }
             }
         }
 
@@ -153,7 +153,6 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 frm.ShowDialog();
                 loadData(mYear, mMonth);
             }
-
         }
     }
 }

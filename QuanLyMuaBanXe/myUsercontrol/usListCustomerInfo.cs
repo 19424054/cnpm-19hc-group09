@@ -30,7 +30,6 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 {
                     if(Convert.ToString(view.GetFocusedRowCellValue("Trang_thai"))== "Mới tạo")
                     {
-                       
                         int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
                         bM_CUSTOMER_DETAILSTableAdapter.DeleteQuery(id_kh);
                         view.DeleteSelectedRows();
@@ -70,13 +69,12 @@ namespace QuanLyMuaBanXe.myUsercontrol
                 myFroms.frmAddInforCustomer frm = new myFroms.frmAddInforCustomer(id_kh);
                 frm.ShowDialog();
                 loadData(mYear, mMonth);
-
             }
         }
         public void loadDataBasic()
         {
-            //loadKeyPress();
-            bM_LISTPRODUCT_MENUTableAdapter.FillBy(dsSystem.BM_LISTPRODUCT_MENU, "KhachHang");
+           //loadKeyPress();
+           bM_LISTPRODUCT_MENUTableAdapter.FillBy(dsSystem.BM_LISTPRODUCT_MENU, "KhachHang");
            // DataTable dtMenu= new DataTable();// = Classes.Tools.laydata("api/purchasereceives/laydanhsachmenubywarehouseid/-1/-1/null/null/" + m_id);
             if (dsSystem.BM_LISTPRODUCT_MENU != null && dsSystem.BM_LISTPRODUCT_MENU.Rows.Count > 0)
             {

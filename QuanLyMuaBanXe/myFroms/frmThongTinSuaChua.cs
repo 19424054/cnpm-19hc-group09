@@ -59,10 +59,8 @@ namespace QuanLyMuaBanXe.myFroms
                     {
                         view.DeleteSelectedRows();
                     }
-                 
                 }
             }
-          
         }
 
         private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -96,28 +94,24 @@ namespace QuanLyMuaBanXe.myFroms
                         {
                             dr["Id_xe"] = m_id;
                         }
-
                     }
                     bM_ThongTin_SuaChuaTableAdapter.Update(dsSystem.BM_ThongTin_SuaChua);
 
                     dsSystem.BM_ThongTin_SuaChua.AcceptChanges();
                     bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Sửa chữa", m_id);
                 }
-              
             }
             else
             {
                 bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã mua", m_id);
             }
-          
         }
         private void loadDetail(int id)
         {
             bM_ThongTin_SuaChuaTableAdapter.FillBy(dsSystem.BM_ThongTin_SuaChua, id);
         }
         private void searchLookUpEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-            
+        {     
             textEdit1.EditValue = this.searchLookUpEdit1.Properties.View.GetFocusedRowCellValue("Loai_xe");
             m_id = Convert.ToInt32(searchLookUpEdit1.EditValue);
             loadDetail(m_id);
