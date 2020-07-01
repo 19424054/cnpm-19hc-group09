@@ -100,10 +100,21 @@ namespace QuanLyMuaBanXe.myUsercontrol
             GridView view = gvMain;
             if (view.FocusedRowHandle > -1)
             {
-                int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
-                myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(m_id);
-                frm.ShowDialog();
-                loadData(mYear, mMonth);
+                if(!Convert.IsDBNull(view.GetFocusedRowCellValue("Trang_Thai")))
+                {
+                    if(Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai"))== "Sửa chữa")
+                    {
+                        int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                        myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(m_id);
+                        frm.ShowDialog();
+                        loadData(mYear, mMonth);
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Không thể cập nhật xe chưa sửa chữa. Vui lòng kiểm tra lại");
+                    }
+                }
+           
             }
         }
 

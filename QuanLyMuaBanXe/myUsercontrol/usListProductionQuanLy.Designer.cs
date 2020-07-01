@@ -341,6 +341,8 @@
             this.gvMain.OptionsFind.AlwaysVisible = true;
             this.gvMain.OptionsView.ColumnAutoWidth = false;
             this.gvMain.OptionsView.ShowGroupPanel = false;
+            this.gvMain.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn3, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gvMain.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.gvMain_CustomDrawRowIndicator);
             // 
             // gridColumn3

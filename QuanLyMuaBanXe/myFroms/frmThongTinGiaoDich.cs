@@ -74,6 +74,7 @@ namespace QuanLyMuaBanXe.myFroms
                 
                 bM_GiaoDichTableAdapter.FillBy(dsSystem.BM_GiaoDich, m_id);
                 m_check = Convert.ToInt32(dsSystem.BM_GiaoDich.Rows[0]["Id_xe"]);
+                mIdXe= Convert.ToInt32(dsSystem.BM_GiaoDich.Rows[0]["Id_xe"]);
                 loadDataxe();
                
              }
@@ -173,6 +174,10 @@ namespace QuanLyMuaBanXe.myFroms
                                         bMGiaoDichBindingSource.EndEdit();
                                         bM_GiaoDichTableAdapter.Update(dsSystem.BM_GiaoDich);
                                         dsSystem.BM_GiaoDich.AcceptChanges();
+                                        mIdXe = Convert.ToInt32(searchLookUpEdit2.EditValue);
+                                        mIdXeKH = Convert.ToInt32(searchLookUpEdit1.EditValue);
+                                        bM_ThongTinXeBanTableAdapter.UpdateQueryTrangThai("Đã giao dịch", mIdXe);
+                                        bM_ThongTinKhachHangTableAdapter.UpdateQuery("Đã mua", mIdXeKH);
                                         this.Close();
                                     }
                                     else

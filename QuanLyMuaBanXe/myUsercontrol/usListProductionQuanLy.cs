@@ -43,6 +43,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
                        // int id_dinhgia = Convert.ToInt32(view.GetFocusedRowCellValue("Id_gia_ban"));
                           myFroms.frmDinhGia frm = new myFroms.frmDinhGia(-1, id_xe);
                           frm.ShowDialog();
+                        loadData(mYear, mMonth);
                     }
                     else
                     {
@@ -80,6 +81,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
                             int id_dinhgia = Convert.ToInt32(view.GetFocusedRowCellValue("Id_gia_ban"));
                             myFroms.frmDinhGia frm = new myFroms.frmDinhGia(id_dinhgia, id_xe);
                             frm.ShowDialog();
+                            loadData(mYear, mMonth);
                         }
                       
                     }
@@ -98,7 +100,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            reloadData();
+            loadData(mYear, mMonth);
         }
         public void loadDataBasic()
         {
