@@ -54,10 +54,6 @@ namespace QuanLyMuaBanXe.myUsercontrol
         {
             loadData(mYear, mMonth);
         }
-        private void loadData(int year, int month)
-        {
-            bM_CUSTOMER_DETAILSTableAdapter.Fill(dsSystem.BM_CUSTOMER_DETAILS, year, month);
-        }
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -90,7 +86,11 @@ namespace QuanLyMuaBanXe.myUsercontrol
                     // gvListTime.ExpandGroupRow(gvListTime.FocusedRowHandle, false);
                 }
             }
+        }
 
+        private void loadData(int year, int month)
+        {
+            bM_CUSTOMER_DETAILSTableAdapter.Fill(dsSystem.BM_CUSTOMER_DETAILS, year, month);
         }
 
         private void gvMenu_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -110,8 +110,8 @@ namespace QuanLyMuaBanXe.myUsercontrol
             }
             else
             {
-                mMonth = Convert.ToInt32(gvMenu.GetFocusedRowCellValue("month"));
-                mYear = Convert.ToInt32(gvMenu.GetFocusedRowCellValue("year"));
+                mMonth = Convert.ToInt32(gvMenu.GetFocusedRowCellValue("Pmonth"));
+                mYear = Convert.ToInt32(gvMenu.GetFocusedRowCellValue("PYear"));
             }
             loadData(mYear, mMonth);
         }

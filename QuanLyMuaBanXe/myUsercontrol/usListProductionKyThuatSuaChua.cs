@@ -85,8 +85,8 @@ namespace QuanLyMuaBanXe.myUsercontrol
             }
             else
             {
-                mMonth = Convert.ToInt32(gvMenu.GetFocusedRowCellValue("month"));
-                mYear = Convert.ToInt32(gvMenu.GetFocusedRowCellValue("year"));
+                mMonth = Convert.ToInt32(gvMenu.GetFocusedRowCellValue("Pmonth"));
+                mYear = Convert.ToInt32(gvMenu.GetFocusedRowCellValue("PYear"));
             }
             loadData(mYear, mMonth);
         }

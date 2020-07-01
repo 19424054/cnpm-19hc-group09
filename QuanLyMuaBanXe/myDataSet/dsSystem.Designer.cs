@@ -13019,7 +13019,7 @@ SELECT Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, Gia_ba
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, " +
-                "Gia_ban, Ngay_tao, Loai_xe, Ngay_mua\r\nFROM            BM_ThongTinXeBan";
+                "Gia_ban, Ngay_tao, Loai_xe, Ngay_mua\nFROM            BM_ThongTinXeBan";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -13029,19 +13029,19 @@ SELECT Id_xe, Ma_so_xe, Bien_so_xe, Ten_KH_Ban, SDT, Dia_chi, Trang_Thai, Gia_ba
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_xe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT A.*, B.Dinh_gia FROM BM_ThongTinXeBan A\r\nINNER JOIN BM_DinhGia_Ban B ON A." +
-                "Id_xe=B.Id_xe\r\n--WHERE A.Trang_Thai=N\'Đã định giá bán\' OR A.Trang_Thai=N\'Đã giao" +
-                " dịch\'";
+            this._commandCollection[2].CommandText = "SELECT A.*, B.Dinh_gia FROM BM_ThongTinXeBan A\nINNER JOIN BM_DinhGia_Ban B ON A.I" +
+                "d_xe=B.Id_xe\n--WHERE A.Trang_Thai=N\'Đã định giá bán\' OR A.Trang_Thai=N\'Đã giao d" +
+                "ịch\'";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "select MAX(ISNULL(SUBSTRING(Ma_so_xe,7,8),0)) from BM_ThongTinXeBan\r\nWHERE Ma_so_" +
-                "xe like @MaSoXe+\'%\'";
+            this._commandCollection[3].CommandText = "select MAX(ISNULL(SUBSTRING(Ma_so_xe,7,8),0)) from BM_ThongTinXeBan\nWHERE Ma_so_x" +
+                "e like @MaSoXe+\'%\'";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaSoXe", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_so_xe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "UPDATE [BM_ThongTinXeBan] SET  Trang_Thai=@trang_Thai\r\nWHERE Id_xe=@Id_xe";
+            this._commandCollection[4].CommandText = "UPDATE [BM_ThongTinXeBan] SET  Trang_Thai=@trang_Thai\nWHERE Id_xe=@Id_xe";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trang_Thai", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Trang_Thai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_xe", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -13812,24 +13812,24 @@ SELECT Id_KH, Ho_ten, SDT, Dia_chi, Yeu_cau, Trang_thai, Ma_KH, Thoi_gian FROM B
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Id_KH, Ho_ten, SDT, Dia_chi, Yeu_cau, Trang_thai, Ma_KH, Thoi_gian\r" +
-                "\nFROM            BM_ThongTinKhachHang";
+            this._commandCollection[0].CommandText = "SELECT        Id_KH, Ho_ten, SDT, Dia_chi, Yeu_cau, Trang_thai, Ma_KH, Thoi_gian\n" +
+                "FROM            BM_ThongTinKhachHang";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        Id_KH, Ho_ten, SDT, Dia_chi, Yeu_cau, Trang_thai, Ma_KH, Thoi_gian\r" +
-                "\nFROM            BM_ThongTinKhachHang\r\nwhere Id_KH=@Id_KH";
+            this._commandCollection[1].CommandText = "SELECT        Id_KH, Ho_ten, SDT, Dia_chi, Yeu_cau, Trang_thai, Ma_KH, Thoi_gian\n" +
+                "FROM            BM_ThongTinKhachHang\nwhere Id_KH=@Id_KH";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_KH", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_KH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "select MAX(ISNULL(SUBSTRING(Ma_KH,7,8),0)) from BM_ThongTinKhachHang\r\nWHERE Ma_KH" +
-                " like @MaKH+\'%\'";
+            this._commandCollection[2].CommandText = "select MAX(ISNULL(SUBSTRING(Ma_KH,7,8),0)) from BM_ThongTinKhachHang\nWHERE Ma_KH " +
+                "like @MaKH+\'%\'";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaKH", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_KH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE [BM_ThongTinKhachHang] SET Trang_thai=@trangthai\r\nWHERE Id_KH=@Id_KH";
+            this._commandCollection[3].CommandText = "UPDATE [BM_ThongTinKhachHang] SET Trang_thai=@trangthai\nWHERE Id_KH=@Id_KH";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@trangthai", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Trang_thai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_KH", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_KH", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -14430,8 +14430,8 @@ SELECT Id_ban, Id_KH, Id_xe, Gia_ban, Hinh_thuc, Ghi_chu, Thoi_gian FROM BM_Giao
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Id_ban, Id_KH, Id_xe, Gia_ban, Hinh_thuc, Ghi_chu, Thoi_gian\r\nFROM " +
-                "           BM_GiaoDich";
+            this._commandCollection[0].CommandText = "SELECT        Id_ban, Id_KH, Id_xe, Gia_ban, Hinh_thuc, Ghi_chu, Thoi_gian\nFROM  " +
+                "          BM_GiaoDich";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -14950,14 +14950,14 @@ SELECT Id_kiemTra, Id_xe, Trang_thai, Gia_thap_nhat, Gia_cao_nhat FROM BM_DinhGi
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Id_kiemTra, Id_xe, Trang_thai, Gia_thap_nhat, Gia_cao_nhat\r\nFROM   " +
-                "         BM_DinhGia_MuaXe";
+            this._commandCollection[0].CommandText = "SELECT        Id_kiemTra, Id_xe, Trang_thai, Gia_thap_nhat, Gia_cao_nhat\nFROM    " +
+                "        BM_DinhGia_MuaXe";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT        A.Id_kiemTra, A.Id_xe, A.Trang_thai, A.Gia_thap_nhat, A.Gia_cao_nha" +
-                "t, B.Bien_so_xe, B.Loai_xe\r\nFROM            BM_DinhGia_MuaXe A \r\nINNER JOIN BM_T" +
-                "hongTinXeBan B ON A.Id_xe=B.Id_xe\r\nWhere A.Id_kiemTra=@Id_kiemtra";
+                "t, B.Bien_so_xe, B.Loai_xe\nFROM            BM_DinhGia_MuaXe A \nINNER JOIN BM_Tho" +
+                "ngTinXeBan B ON A.Id_xe=B.Id_xe\nWhere A.Id_kiemTra=@Id_kiemtra";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_kiemtra", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_kiemTra", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -15415,19 +15415,24 @@ SELECT Id_gia_ban, Id_xe, Loi_nhuan, Chi_phi, Gia_mua, Dinh_gia FROM BM_DinhGia_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Id_gia_ban, Id_xe, Loi_nhuan, Chi_phi, Gia_mua, Dinh_gia\r\nFROM     " +
-                "       BM_DinhGia_Ban";
+            this._commandCollection[0].CommandText = "SELECT        Id_gia_ban, Id_xe, Loi_nhuan, Chi_phi, Gia_mua, Dinh_gia\nFROM      " +
+                "      BM_DinhGia_Ban";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "  select A.Chi_phi,A.Dinh_gia,A.Id_gia_ban, A.Gia_mua,B.Bien_so_xe,B.Loai_xe, A.I" +
-                "d_xe  from BM_DinhGia_Ban A\r\n  INNER JOIN BM_ThongTinXeBan B ON A.Id_xe=B.Id_xe\r" +
-                "\n  AND A.Id_gia_ban=@Id_gia_ban";
+            this._commandCollection[1].CommandText = "DELETE FROM [BM_DinhGia_Ban] WHERE Id_xe=@Id_xe";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_gia_ban", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_gia_ban", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_xe", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "  select A.Chi_phi,A.Dinh_gia,A.Id_gia_ban, A.Gia_mua,B.Bien_so_xe,B.Loai_xe, A.I" +
+                "d_xe  from BM_DinhGia_Ban A\n  INNER JOIN BM_ThongTinXeBan B ON A.Id_xe=B.Id_xe\n " +
+                " AND A.Id_gia_ban=@Id_gia_ban";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_gia_ban", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_gia_ban", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15459,7 +15464,7 @@ SELECT Id_gia_ban, Id_xe, Loi_nhuan, Chi_phi, Gia_mua, Dinh_gia FROM BM_DinhGia_
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillBy(dsSystem.BM_DinhGia_BanDataTable dataTable, int Id_gia_ban) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_gia_ban));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -15473,7 +15478,7 @@ SELECT Id_gia_ban, Id_xe, Loi_nhuan, Chi_phi, Gia_mua, Dinh_gia FROM BM_DinhGia_
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual dsSystem.BM_DinhGia_BanDataTable GetDataBy(int Id_gia_ban) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(Id_gia_ban));
             dsSystem.BM_DinhGia_BanDataTable dataTable = new dsSystem.BM_DinhGia_BanDataTable();
             this.Adapter.Fill(dataTable);
@@ -15722,6 +15727,35 @@ SELECT Id_gia_ban, Id_xe, Loi_nhuan, Chi_phi, Gia_mua, Dinh_gia FROM BM_DinhGia_
         public virtual int Update(global::System.Nullable<int> Id_xe, global::System.Nullable<double> Loi_nhuan, global::System.Nullable<double> Chi_phi, global::System.Nullable<double> Gia_mua, global::System.Nullable<double> Dinh_gia, int Original_Id_gia_ban, global::System.Nullable<int> Original_Id_xe, global::System.Nullable<double> Original_Loi_nhuan, global::System.Nullable<double> Original_Chi_phi, global::System.Nullable<double> Original_Gia_mua, global::System.Nullable<double> Original_Dinh_gia) {
             return this.Update(Id_xe, Loi_nhuan, Chi_phi, Gia_mua, Dinh_gia, Original_Id_gia_ban, Original_Id_xe, Original_Loi_nhuan, Original_Chi_phi, Original_Gia_mua, Original_Dinh_gia, Original_Id_gia_ban);
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQuery(global::System.Nullable<int> Id_xe) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Id_xe.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(Id_xe.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
     }
     
     /// <summary>
@@ -15929,7 +15963,7 @@ SELECT Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian, Bo_ph
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian," +
-                " Bo_phan\r\nFROM            BM_ThongTin_SuaChua";
+                " Bo_phan\nFROM            BM_ThongTin_SuaChua";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -15939,7 +15973,7 @@ SELECT Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian, Bo_ph
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT        Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian," +
-                " Bo_phan\r\nFROM            BM_ThongTin_SuaChua\r\nwhere Id_xe=@Id_xe";
+                " Bo_phan\nFROM            BM_ThongTin_SuaChua\nwhere Id_xe=@Id_xe";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_xe", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id_xe", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -17845,8 +17879,8 @@ SELECT Id_sua, Id_xe, Dien_giai, Phu_tung, Chi_phi, Hoan_thanh, Thoi_gian, Bo_ph
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [BM_TaiKhoan] ([tai_khoan], [mat_khau], [phan_quyen], [MD5Code]) VALU" +
-                "ES (@tai_khoan, @mat_khau, @phan_quyen, @MD5Code);\r\nSELECT Id_Tk, tai_khoan, mat" +
-                "_khau, phan_quyen, MD5Code FROM BM_TaiKhoan WHERE (Id_Tk = SCOPE_IDENTITY())";
+                "ES (@tai_khoan, @mat_khau, @phan_quyen, @MD5Code);\nSELECT Id_Tk, tai_khoan, mat_" +
+                "khau, phan_quyen, MD5Code FROM BM_TaiKhoan WHERE (Id_Tk = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tai_khoan", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tai_khoan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mat_khau", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mat_khau", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -17886,14 +17920,14 @@ SELECT Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code FROM BM_TaiKhoan WHERE (I
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code\r\nFROM            BM" +
-                "_TaiKhoan";
+            this._commandCollection[0].CommandText = "SELECT        Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code\nFROM            BM_" +
+                "TaiKhoan";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code\r\nFROM            BM" +
-                "_TaiKhoan\r\nWHERE mat_khau=@mat_khau AND  MD5Code=@MD5Code AND tai_khoan=@tai_kho" +
-                "an";
+            this._commandCollection[1].CommandText = "SELECT        Id_Tk, tai_khoan, mat_khau, phan_quyen, MD5Code\nFROM            BM_" +
+                "TaiKhoan\nWHERE mat_khau=@mat_khau AND  MD5Code=@MD5Code AND tai_khoan=@tai_khoan" +
+                "";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mat_khau", global::System.Data.SqlDbType.NChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "mat_khau", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MD5Code", global::System.Data.SqlDbType.VarChar, 1000, global::System.Data.ParameterDirection.Input, 0, 0, "MD5Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

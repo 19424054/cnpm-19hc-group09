@@ -16,6 +16,8 @@ namespace QuanLyMuaBanXe.myUsercontrol
     {
         private int mYear = DateTime.Now.Year;
         private int mMonth = -1;
+        myDataSet.dsSystemTableAdapters.BM_DinhGia_BanTableAdapter taBan = new myDataSet.dsSystemTableAdapters.BM_DinhGia_BanTableAdapter();
+        myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter taXe = new myDataSet.dsSystemTableAdapters.BM_ThongTinXeBanTableAdapter();
         public usListProductionQuanLy()
         {
             InitializeComponent();
@@ -23,10 +25,29 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(XtraMessageBox.Show("Bạn có muốn hủy bản định giá này không?","Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
+                if (XtraMessageBox.Show("Bạn có muốn hủy bản định giá này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    GridView view = gvMain;
 
+                    if (view.FocusedRowHandle > -1)
+                    {
+                        if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) == "Đã định giá bán")
+                        {
+                            int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                            taXe.UpdateQueryTrangThai("Đã mua", m_id);
+                            taBan.DeleteQuery(m_id);
+                            loadData(mYear, mMonth);
+
+                        }
+                    }
+                }
             }
+            catch (Exception)
+            {
+     
+            }    
         }
 
         private void barLargeButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -1218,7 +1218,6 @@ C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Debug\de\DevExpress.D
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Debug\es\DevExpress.Diagram.v19.2.Core.resources.dll
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Debug\ja\DevExpress.Diagram.v19.2.Core.resources.dll
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Debug\ru\DevExpress.Diagram.v19.2.Core.resources.dll
-C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.csprojResolveAssemblyReference.cache
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.frmMain.resources
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.myFroms.frmAddInfor.resources
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\obj\Debug\QuanLyMuaBanXe.myFroms.frmAddInforCustomer.resources
