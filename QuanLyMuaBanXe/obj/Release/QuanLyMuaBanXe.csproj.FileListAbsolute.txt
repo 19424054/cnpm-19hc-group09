@@ -207,7 +207,6 @@ D:\cnpm-19hc-group09-master\cnpm-19hc-group09-master\QuanLyMuaBanXe\obj\Release\
 D:\cnpm-19hc-group09-master\cnpm-19hc-group09-master\QuanLyMuaBanXe\obj\Release\QuanLyMuaBanXe.exe.licenses
 D:\cnpm-19hc-group09-master\cnpm-19hc-group09-master\QuanLyMuaBanXe\obj\Release\QuanLyMuaBanXe.exe
 D:\cnpm-19hc-group09-master\cnpm-19hc-group09-master\QuanLyMuaBanXe\obj\Release\QuanLyMuaBanXe.pdb
-C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\DevExpress.XtraCharts.v19.2.Wizard.dll
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\QuanLyMuaBanXe.exe.config
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\QuanLyMuaBanXe.exe
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\QuanLyMuaBanXe.pdb
@@ -240,6 +239,7 @@ C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\DevExpress.Xt
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\DevExpress.Xpo.v19.2.dll
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\DevExpress.DataAccess.v19.2.dll
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\DevExpress.DataAccess.v19.2.UI.dll
+C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\DevExpress.XtraCharts.v19.2.Wizard.dll
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\DevExpress.XtraPivotGrid.v19.2.dll
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\DevExpress.XtraCharts.v19.2.Extensions.dll
 C:\Users\ASUS\Desktop\cnpm-19hc-group09\QuanLyMuaBanXe\bin\Release\DevExpress.XtraDiagram.v19.2.dll

@@ -28,23 +28,53 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void btnAddNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            //GridView view = gvMain;
+            //if (view.FocusedRowHandle > -1)
+            //{
+            //    myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
+            //    frm.ShowDialog();
+            //    loadData(mYear, mMonth);
+            //}
             GridView view = gvMain;
             if (view.FocusedRowHandle > -1)
             {
-                myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
-                frm.ShowDialog();
-                loadData(mYear, mMonth);
+                int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) != "Sửa chữa")
+                {
+                    myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
+                    frm.ShowDialog();
+                    loadData(mYear, mMonth);
+                }
+                else
+                {
+                    XtraMessageBox.Show("Xe đã lên kế hoạch sửa chữa. Vui lòng kiểm tra lại");
+                }
             }
         }
 
         private void barLargeButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            //GridView view = gvMain;
+            //if (view.FocusedRowHandle > -1)
+            //{
+            //    myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
+            //    frm.ShowDialog();
+            //    loadData(mYear, mMonth);
+            //}
             GridView view = gvMain;
             if (view.FocusedRowHandle > -1)
             {
-                myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
-                frm.ShowDialog();
-                loadData(mYear, mMonth);
+                int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) != "Sửa chữa")
+                {
+                    myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
+                    frm.ShowDialog();
+                    loadData(mYear, mMonth);
+                }
+                else
+                {
+                    XtraMessageBox.Show("Xe đã lên kế hoạch sửa chữa. Vui lòng kiểm tra lại");
+                }
             }
         }
         public void loadDataBasic()

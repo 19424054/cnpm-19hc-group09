@@ -46,15 +46,33 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void btnAddNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            //GridView view = gvMain;
+            //if(Convert.IsDBNull(view.GetFocusedRowCellValue("Id_kiemTra")))
+            //{
+            //    int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+            //    myFroms.frmKiemTraTinhTrangXeBan frm = new myFroms.frmKiemTraTinhTrangXeBan(-1, m_id);
+            //    frm.ShowDialog();
+            //    loadData(mYear, mMonth);
+            //}
+
             GridView view = gvMain;
-            if(Convert.IsDBNull(view.GetFocusedRowCellValue("Id_kiemTra")))
+            if (view.FocusedRowHandle > -1)
             {
-                int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
-                myFroms.frmKiemTraTinhTrangXeBan frm = new myFroms.frmKiemTraTinhTrangXeBan(-1, m_id);
-                frm.ShowDialog();
-                loadData(mYear, mMonth);
+                if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) != "Đã kiểm tra")
+                {
+                    if (Convert.IsDBNull(view.GetFocusedRowCellValue("Id_kiemTra")))
+                    {
+                        int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                        myFroms.frmKiemTraTinhTrangXeBan frm = new myFroms.frmKiemTraTinhTrangXeBan(-1, m_id);
+                        frm.ShowDialog();
+                        loadData(mYear, mMonth);
+                    }
+                }
+                else
+                {
+                    XtraMessageBox.Show("Sản phẩm đã được định giá vui lòng kiểm tra.");
+                }
             }
-         
         }
 
         private void gvMenu_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
