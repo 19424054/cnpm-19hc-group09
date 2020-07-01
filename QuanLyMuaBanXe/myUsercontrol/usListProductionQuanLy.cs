@@ -67,32 +67,50 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void btnEdit_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            try
-            {
-                GridView view = gvMain;
+            //try
+            //{
+            //    GridView view = gvMain;
 
-                if (view.FocusedRowHandle > -1)
+            //    if (view.FocusedRowHandle > -1)
+            //    {
+            //        if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) == "Đã định giá bán")
+            //        {
+            //            if(!Convert.IsDBNull(view.GetFocusedRowCellValue("Id_gia_ban")))
+            //            {
+            //                int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+            //                int id_dinhgia = Convert.ToInt32(view.GetFocusedRowCellValue("Id_gia_ban"));
+            //                myFroms.frmDinhGia frm = new myFroms.frmDinhGia(id_dinhgia, id_xe);
+            //                frm.ShowDialog();
+            //                loadData(mYear, mMonth);
+            //            }
+
+            //        }
+            //    }
+            //}
+            //catch (Exception)
+            //{
+            //}
+            GridView view = gvMain;
+            if (view.FocusedRowHandle > -1)
+            {
+                if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) == "Đã định giá bán")
                 {
-                    if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) == "Đã định giá bán")
+                    if (!Convert.IsDBNull(view.GetFocusedRowCellValue("Id_gia_ban")))
                     {
-                        if(!Convert.IsDBNull(view.GetFocusedRowCellValue("Id_gia_ban")))
-                        {
-                            int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
-                            int id_dinhgia = Convert.ToInt32(view.GetFocusedRowCellValue("Id_gia_ban"));
-                            myFroms.frmDinhGia frm = new myFroms.frmDinhGia(id_dinhgia, id_xe);
-                            frm.ShowDialog();
-                            loadData(mYear, mMonth);
-                        }
-                      
+                        int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                        int id_dinhgia = Convert.ToInt32(view.GetFocusedRowCellValue("Id_gia_ban"));
+                        myFroms.frmDinhGia frm = new myFroms.frmDinhGia(id_dinhgia, id_xe);
+                        frm.ShowDialog();
+                        loadData(mYear, mMonth);
                     }
                 }
-            }
-            catch (Exception)
-            {
-
-
+                else
+                {
+                    XtraMessageBox.Show("Xe này chưa được định giá bán. Vui lòng kiểm tra");
+                }
             }
         }
+
         private void reloadData()
         {
 

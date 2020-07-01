@@ -90,6 +90,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
             }
             loadData(mYear, mMonth);
         }
+
         private void loadData(int mYear, int mMonth)
         {
             bM_INFORTECHNICAL_MAINTableAdapter.Fill(dsSystem.BM_INFORTECHNICAL_MAIN, mYear, mMonth);
@@ -114,7 +115,6 @@ namespace QuanLyMuaBanXe.myUsercontrol
                         XtraMessageBox.Show("Không thể cập nhật xe chưa sửa chữa. Vui lòng kiểm tra lại");
                     }
                 }
-           
             }
         }
 
@@ -141,8 +141,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
             GridView view = gvMain;
             if (view.FocusedRowHandle > -1)
             {
-                myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));
-               
+                myFroms.frmThongTinSuaChua frm = new myFroms.frmThongTinSuaChua(Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe")));   
                 frm.ShowDialog();
                 loadData(mYear, mMonth);
             }

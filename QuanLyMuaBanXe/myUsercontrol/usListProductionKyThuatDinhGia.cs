@@ -79,6 +79,7 @@ namespace QuanLyMuaBanXe.myUsercontrol
             }
             loadData( mYear,  mMonth);
         }
+
         private void loadData(int mYear, int mMonth)
         {
             bM_DINHGIA_MUA_DETAILSTableAdapter.Fill(dsSystem.BM_DINHGIA_MUA_DETAILS,  mYear,  mMonth);
