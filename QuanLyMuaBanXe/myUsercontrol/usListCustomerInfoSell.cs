@@ -23,21 +23,46 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            //GridView view = gvMain;
+            //if (view.FocusedRowHandle > -1)
+            //{
+            //    if (!Convert.IsDBNull(view.GetFocusedRowCellValue("Id_ban")))
+            //    {
+            //        int id_ban = Convert.ToInt32(view.GetFocusedRowCellValue("Id_ban"));
+            //        int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
+            //        int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+            //        if (XtraMessageBox.Show("Bạn có muốn hủy giao dịch này không?","Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+            //        {
+            //            bM_SELLPRODUCT_DETAILSTableAdapter.DeleteQueryId_Ban(id_ban);
+            //            bM_SELLPRODUCT_DETAILSTableAdapter.UpdateQuery("Mới tạo", id_kh);
+            //            bM_SELLPRODUCT_DETAILSTableAdapter.UpdateQueryTrangThaiXe("Đã định giá bán", id_xe);
+            //            loadData(mYear, mMonth);
+            //        }
+            //    }
+            //}
+
             GridView view = gvMain;
             if (view.FocusedRowHandle > -1)
             {
-                if (!Convert.IsDBNull(view.GetFocusedRowCellValue("Id_ban")))
+                if (Convert.ToString(view.GetFocusedRowCellValue("Trang_thai")) == "Đã mua")
                 {
-                    int id_ban = Convert.ToInt32(view.GetFocusedRowCellValue("Id_ban"));
-                    int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
-                    int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
-                    if (XtraMessageBox.Show("Bạn có muốn hủy giao dịch này không?","Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+                    if (!Convert.IsDBNull(view.GetFocusedRowCellValue("Id_ban")))
                     {
-                        bM_SELLPRODUCT_DETAILSTableAdapter.DeleteQueryId_Ban(id_ban);
-                        bM_SELLPRODUCT_DETAILSTableAdapter.UpdateQuery("Mới tạo", id_kh);
-                        bM_SELLPRODUCT_DETAILSTableAdapter.UpdateQueryTrangThaiXe("Đã định giá bán", id_xe);
-                        loadData(mYear, mMonth);
+                        int id_ban = Convert.ToInt32(view.GetFocusedRowCellValue("Id_ban"));
+                        int id_kh = Convert.ToInt32(view.GetFocusedRowCellValue("Id_KH"));
+                        int id_xe = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                        if (XtraMessageBox.Show("Bạn có muốn hủy giao dịch này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            bM_SELLPRODUCT_DETAILSTableAdapter.DeleteQueryId_Ban(id_ban);
+                            bM_SELLPRODUCT_DETAILSTableAdapter.UpdateQuery("Mới tạo", id_kh);
+                            bM_SELLPRODUCT_DETAILSTableAdapter.UpdateQueryTrangThaiXe("Đã định giá bán", id_xe);
+                            loadData(mYear, mMonth);
+                        }
                     }
+                }
+                else
+                {
+                    XtraMessageBox.Show("Bạn không thể hủy xe chưa thực hiện giao dịch");
                 }
             }
         }

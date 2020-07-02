@@ -25,29 +25,49 @@ namespace QuanLyMuaBanXe.myUsercontrol
 
         private void barLargeButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            try
+            //try
+            //{
+            //    if (XtraMessageBox.Show("Bạn có muốn hủy bản định giá này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //    {
+            //        GridView view = gvMain;
+
+            //        if (view.FocusedRowHandle > -1)
+            //        {
+            //            if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) == "Đã định giá bán")
+            //            {
+            //                int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+            //                taXe.UpdateQueryTrangThai("Đã mua", m_id);
+            //                taBan.DeleteQuery(m_id);
+            //                loadData(mYear, mMonth);
+
+            //            }
+            //        }
+            //    }
+            //}
+            //catch (Exception)
+            //{
+     
+            //}
+
+            GridView view = gvMain;
+            if (view.FocusedRowHandle > -1)
             {
-                if (XtraMessageBox.Show("Bạn có muốn hủy bản định giá này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
+                if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) == "Đã định giá bán")
                 {
-                    GridView view = gvMain;
-
-                    if (view.FocusedRowHandle > -1)
+                    if (XtraMessageBox.Show("Bạn có muốn hủy bản định giá này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        if (Convert.ToString(view.GetFocusedRowCellValue("Trang_Thai")) == "Đã định giá bán")
-                        {
-                            int m_id = Convert.ToInt32(view.GetFocusedRowCellValue("Id_xe"));
-                            taXe.UpdateQueryTrangThai("Đã mua", m_id);
-                            taBan.DeleteQuery(m_id);
-                            loadData(mYear, mMonth);
-
-                        }
+                        taXe.UpdateQueryTrangThai("Đã mua", m_id);
+                        taBan.DeleteQuery(m_id);
+                        loadData(mYear, mMonth);
                     }
                 }
+                else
+                {
+                    XtraMessageBox.Show("Bạn không thể hủy xe chưa kiểm định giá bán");
+                }
             }
-            catch (Exception)
-            {
-     
-            }    
+
         }
 
         private void barLargeButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
